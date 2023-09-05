@@ -21,6 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
-urlpatterns = [
-    path('DataBase/', include('DataBase.urls'))
+urlpatterns += [
+    path('database/', include('DataBase.urls'))
 ]
