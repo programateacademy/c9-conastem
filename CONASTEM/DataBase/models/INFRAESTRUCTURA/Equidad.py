@@ -3,7 +3,7 @@ from django.db.models import Case, Value, When
 from ..Person_Responsable import PersonResponsable
 from ..Auditory import Auditory
 
-
+# 1.5 Equidad
 class Equidad(models.Model):
 
     NUMERAL_CHOICE = (
