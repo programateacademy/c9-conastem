@@ -8,7 +8,7 @@ class AprendizajeCentrado (models.Model):
 
     criterio = models.ForeignKey (Criterio, on_delete=models.SET_NULL, null=True, default= "INFRAESTRUCTURA")
 
-    numeral = models.
+    numeral = models
 
 
     PRIORITY_MODEL_CHOICE = (

@@ -29,7 +29,7 @@ class Equidad(models.Model):
         ("La institución tiene por objetivo incrementar la participación de la mujer en las áreas STEM, de tal manera que la población estudiantil involucrada en el programa sea cada vez mayor. ", "4"),
     )
 
-    sub_numeral = models.CharField (max_length= 500)
+    sub_numeral = models.CharField (max_length= 500, default="")
 
     PRIORITY_MODEL_CHOICE = (
         (" ", "Exploratorio"),
@@ -42,7 +42,8 @@ class Equidad(models.Model):
     
     dep_responsable = models.CharField (max_length=30, default= "Dirección")
     
-    person_responsable = models.ManyToManyField(PersonResponsable, help_text= "Seleccione un responsable")
+    # person_responsable = models.ManyToManyField(PersonResponsable, help_text= "Seleccione un responsable")
+    person_responsable= models.ForeignKey(PersonResponsable, null=True, on_delete=models.SET_NULL)
     
     track_year = models.IntegerField (help_text="Ingrese año de seguimiento")
     
