@@ -12,7 +12,7 @@ class Criterio(models.Model):
         ("ESCUELA, COMUNIDAD Y PERTENENCIA", " ")
     )
 
-    name = models.CharField(max_length=100, choices= NAME_CHOICE, default="INFRAESTRUCTURA", primary_key= True, unique=False)
+    name = models.CharField(max_length=100, choices= NAME_CHOICE, default="INFRAESTRUCTURA", primary_key= True, unique=True)
 
     def __str__(self):
         return self.name
