@@ -40,7 +40,6 @@ class Equidad(models.Model):
     dep_responsable = models.CharField (max_length=30, default= "Dirección")
     
     person_responsable = models.ManyToManyField(PersonResponsable, help_text= "Seleccione un responsable")
-    # person_responsable= models.ForeignKey(PersonResponsable, null=True, on_delete=models.SET_NULL)
     
     track_year = models.IntegerField (help_text="Ingrese año de seguimiento")
     
