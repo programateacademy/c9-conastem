@@ -12,7 +12,8 @@ class Criterio(models.Model):
         ("ESCUELA, COMUNIDAD Y PERTENENCIA", "ESCUELA, COMUNIDAD Y PERTENENCIA")
     )
 
-    name = models.CharField(max_length=100, choices= NAME_CHOICE, default="INFRAESTRUCTURA", primary_key= True, unique=True)
+    name = models.CharField(max_length=100, choices= NAME_CHOICE, default="INFRAESTRUCTURA", unique= True)
+    # numeral = models.ForeignKey(Equidad, on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
         return self.name
