@@ -19,7 +19,7 @@ class GeneralModel (models.Model):
     
     dep_responsable = models.CharField (max_length=30, default= "Dirección")
     
-    person_responsable = models.ManyToManyField(PersonResponsable, help_text= "Seleccione un responsable")
+    person_responsable = models.OneToOneField(PersonResponsable, on_delete= models.CASCADE)
     
     track_year = models.IntegerField (help_text="Ingrese año de seguimiento")
     
