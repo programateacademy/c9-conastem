@@ -5,12 +5,12 @@ from ..GeneralModel import GeneralModel
 class ConvivenciaEscolar (GeneralModel):
 
     ITEM_CHOICE = [
-        ("531","Los miembros de la comunidad son socios en el liderazgo del Programa en Educación STEM, evaluación de necesidades y guía de ayuda para la institución."),
-        ("532","El programa ha incluido a diversos socios para guiar el trabajo en la institución."),
-        ("533","Existen oportunidades para presentar el trabajo de los estudiantes a través de eventos comunitarios a través de exposiciones en el sitio o en línea."),
-        ("534","La institución recopila y utiliza los comentarios de los padres / la comunidad para evaluar el progreso de la implementación del Programa en Educación STEM."),
-        ("535","La escuela proporciona oportunidades de sensibilización comunitaria para los padres. Hay comunicación permanente a los padres de familia.")
-        ("536","")
+        ("531","Los estudiantes se tratan con confianza y respeto."),
+        ("532","El docente facilita un ambiente positivo de aprendizaje social y emocional."),
+        ("533","El personal del colegio enfatiza en el código de conducta y los valores."),
+        ("534","El personal de la institución apoya las necesidades de todos los estudiantes."),
+        ("535","Los estudiantes contribuyen en las decisiones de la institución.")
+        ("536","Los estudiantes demuestran la aplicación del código de conducta y los valores.")
     ]
 
     numeral = models.CharField(
