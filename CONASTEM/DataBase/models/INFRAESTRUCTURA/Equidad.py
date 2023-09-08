@@ -29,7 +29,7 @@ class Equidad(models.Model):
         ("La institución tiene por objetivo incrementar la participación de la mujer en las áreas STEM, de tal manera que la población estudiantil involucrada en el programa sea cada vez mayor. ", "4"),
     )
 
-    sub_numeral = models.CharField (max_length= 500, default="")
+    sub_numeral = models.CharField (max_length= 500, default="", choices=SUB_ITEM_CHOICE)
 
     PRIORITY_MODEL_CHOICE = (
         (" ", "Exploratorio"),
