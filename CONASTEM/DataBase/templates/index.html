@@ -1,0 +1,16 @@
+{% extends "base_general.html" %}
+
+{%block content%}
+
+<section class= "criterios">
+    {%if criterio_list%}
+    <ul>
+        {%for criterio in criterio_list%}
+        <li> {{criterio.name}} </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</section>
+
+
+{%endblock content%}

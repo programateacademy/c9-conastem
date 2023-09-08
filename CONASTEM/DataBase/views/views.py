@@ -1,19 +1,9 @@
 from django.shortcuts import render
-
-# Create your views here.
-
-from ..models.Infraestructura.Equidad import Equidad
+from django.views import generic
 from ..models.Criterio import Criterio
 
-def index (request):
-    criterios= Criterio.objects.all()
 
-    return render (
-        request,
-        'database/index.html',
-        context=
-        {
-            "criterios": criterios
-        }
-    )
-    
+class CriterioList(generic.ListView):
+    model= Criterio
+    context_object_name= 'criterio_list'
+    template_name= 'index.html'
