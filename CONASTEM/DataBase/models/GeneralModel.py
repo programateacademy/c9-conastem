@@ -25,7 +25,7 @@ class GeneralModel (models.Model):
     
     track_date = models.CharField(max_length=5, help_text="Ingrese fecha de seguimiento")
     
-    internal_auditory_date = models.DateField(default="31/01/2000", null= True)
+    internal_auditory_date = models.DateField(default="31/01/2000", null= True, blank=True)
     internal_auditory_obs = models.TextField(max_length=1000, blank= True)
 
     external_auditory_date = models.DateField(default="31/01/2000", null= True, blank= True)
