@@ -11,7 +11,7 @@ from .models.Escuela_Comunidad_y_Pertenencia.RelacionesconlaComunidad import Rel
 from .models.Escuela_Comunidad_y_Pertenencia.ConvivenciaEscolar import ConvivenciaEscolar
 from .models.Escuela_Comunidad_y_Pertenencia.Sostenibilidad_EscuelaComunidadyPertenencia import Sostenibilidad_EscuelaComunidadyPertenencia
 # import curriculo
-from .models.Curriculo.Inclusion_ingenireia_aula import Inclusion_ingenieria_aula
+from .models.Curriculo.Inclusion_ingenieria_aula import Inclusion_ingenieria_aula
 
 # admin.site.register(Equidad)
 admin.site.register(ConvivenciaEscolar)

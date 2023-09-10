@@ -1,0 +1,9 @@
+{% block content %}
+{% if Curriculo %}
+<ul>
+    {% for Inclusion_ingenieria_aula in Inclusion_ingenieria_aula %}
+    <li><a href={{Inclusion_ingenieria_aula.get_absolute_url}}>{{Inclusion_ingenieria_aula.numeral}}</a></li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endblock content %}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Inclusiones de Ingeniería en el Aula</title>
+</head>
+<body>
+    <h1>Lista de Inclusiones de Ingeniería en el Aula</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Numeral</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for inclusion in inclusiones %}
+                <tr>
+                    <td>{{ inclusion.numeral }}</td>
+                    <td><a href="{% url 'inclusion-detail' inclusion.id %}">Ver detalle</a></td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="2">No hay inclusiones disponibles.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
