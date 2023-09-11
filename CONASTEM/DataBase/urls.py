@@ -8,5 +8,6 @@ urlpatterns= [
 ]
 
 urlpatterns += [
-    path("Escuelacomunidadypertenencia",EscuelaComunidadYPertenencia.CompromisodelaComunidadListView.as_view(),name="Escuelacomunidadypertenencia"),
+    path("Escuelacomunidadypertenencia",EscuelaComunidadYPertenencia.EscuelaComunidadyPertenenciaListView.as_view(),name="Escuelacomunidadypertenencia"),
+
 ]
