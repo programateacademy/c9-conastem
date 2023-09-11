@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 from django.views import generic
 
@@ -7,6 +8,7 @@ from ..models.Infraestructura.Equidad import Equidad
 from ..models.Criterio import Criterio
 
 def index(request):
+    return HttpResponse("Hello, World!")
     
     class CriterioList(generic.ListView):
         model= Criterio
