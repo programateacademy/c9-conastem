@@ -4,7 +4,7 @@ from django.views import generic
 
 # Create your views here.
 
-from ..models.Criterio import Criterio
+from ...models.Criterio import Criterio
 
 
 class CriterioList(generic.ListView):
