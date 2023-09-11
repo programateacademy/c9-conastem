@@ -5,17 +5,17 @@ from .views.Curriculo.Inclusion_ingenieria_aula import InclusionIngenieriaAulaLi
 from .views.Curriculo.Desarrollo_ciudadania_digital import DesarrolloCiudadaniaDigitalListView
 from .views.EscuelaComunidadYPertenencia import CompromisodelaComunidadListView
 
-urlpatterns = [
-    path('', views.index, name='index'),
+urlpatterns= [
+    path('', views.CriterioList.as_view(), name= 'criterio_list'),
 ]
 
 urlpatterns += [
-    path("Escuelacomunidadypertenencia", CompromisodelaComunidadListView.as_view(), name="Escuelacomunidadypertenencia"),
+    path("escuelacomunidadypertenencia", CompromisodelaComunidadListView.as_view(), name="Escuelacomunidadypertenencia"),
     
     # CURRICULO
     # 2.2 Inclusion_ingenieria_aula
     path('inclusion_ingenieria_aula/', InclusionIngenieriaAulaListView.as_view(), name='inclusion_ingenieria_aula_list'),
 
     # 2.3 Desarrollo ciudadania digital
-    path('desarrollo_ciudadania_digital/', DesarrolloCiudadaniaDigitalListView.as_view(), name='desarrollo_ciudadania_digital_list'),
+    path('desarrollo-ciudadania-digital/', DesarrolloCiudadaniaDigitalListView.as_view(), name='desarrollo_ciudadania_digital_list'),
 ]
