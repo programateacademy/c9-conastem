@@ -9,7 +9,7 @@ from .views.EscuelaComunidadYPertenencia import CompromisodelaComunidadListView
 urlpatterns= [
     path('', views.CriterioList.as_view() , name= 'criterio_list'),
     path('instituciones/', Register.RegisterListView.as_view(), name= 'register_list'),
-    path('instituciones/<int:pk>/', Register.RegisterListDetail.as_view(), name= 'register_detail')
+    path('instituciones/<int:pk>', Register.RegisterListDetail.as_view(), name= 'register_detail')
 ]
 
 urlpatterns += [

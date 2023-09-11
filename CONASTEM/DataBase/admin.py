@@ -54,7 +54,3 @@ admin.site.register(ConvivenciaEscolar)
 admin.site.register(Sostenibilidad_EscuelaComunidadyPertenencia)
 admin.site.register(CompromisodelaCominudad)
 admin.site.register(RelacionesconlaCominudad)
-
-
-
-

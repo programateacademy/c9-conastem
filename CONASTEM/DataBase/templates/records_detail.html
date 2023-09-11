@@ -1,0 +1,19 @@
+{% extends "base_general.html" %}
+
+{%block content%}
+
+<div class= "lista"> 
+    <ul>
+        <h1> Información de la institución {{register_detail}} </h1>
+
+        <li>Nombre: {{register_detail.institution_name}} </li>
+        <li>NIT: {{register_detail.nit}} </li>
+        <li>Dirección: {{register_detail.adress}} </li>
+        <li>Responsable: {{register_detail.institution_responsable}} </li>
+        <li>Teléfono: {{register_detail.phone}} </li>
+        <li>Correo electrónico: {{register_detail.email}} </li>
+    </ul>
+
+</div>    
+
+{%endblock content%}
