@@ -1,16 +1,21 @@
 from django.urls import path
+
 from .views import views
-from .views import EscuelaComunidadYPertenencia
+from .views.Curriculo.Inclusion_ingenieria_aula import InclusionIngenieriaAulaListView
+from .views.Curriculo.Desarrollo_ciudadania_digital import DesarrolloCiudadaniaDigitalListView
+from .views.EscuelaComunidadYPertenencia import CompromisodelaComunidadListView
 
-
-urlpatterns= [
-<<<<<<< HEAD
-    path('', views.CriterioList.as_view(), name= 'criterio_list'),
-=======
-    path('', views.index, name= 'index'),
+urlpatterns = [
+    path('', views.index, name='index'),
 ]
 
 urlpatterns += [
-    path("Escuelacomunidadypertenencia",EscuelaComunidadYPertenencia.CompromisodelaComunidadListView.as_view(),name="Escuelacomunidadypertenencia"),
->>>>>>> 5b9c164413a0b8f059e2c738262412d5491e3f7a
+    path("Escuelacomunidadypertenencia", CompromisodelaComunidadListView.as_view(), name="Escuelacomunidadypertenencia"),
+    
+    # CURRICULO
+    # 2.2 Inclusion_ingenieria_aula
+    path('inclusion_ingenieria_aula/', InclusionIngenieriaAulaListView.as_view(), name='inclusion_ingenieria_aula_list'),
+
+    # 2.3 Desarrollo ciudadania digital
+    path('desarrollo_ciudadania_digital/', DesarrolloCiudadaniaDigitalListView.as_view(), name='desarrollo_ciudadania_digital_list'),
 ]
