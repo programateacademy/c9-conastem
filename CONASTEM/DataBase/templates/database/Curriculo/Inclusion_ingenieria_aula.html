@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Inclusion de la Ingenieria en el Aula</title>
+</head>
+<body>
+    <h1>List of Inclusion de la Ingenieria en el Aula</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Numeral</th>
+                <th>Person Responsable</th>
+                <!-- Add more table headers as needed -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in inclusion_ingenieria_aula_list %}
+                <tr>
+                    <td>{{ item.numeral }}</td>
+                    <td>
+                        {% for responsible in item.person_responsable.all %}
+                            {{ responsible.nombre }} {% if not forloop.last %}, {% endif %}
+                        {% endfor %}
+                    </td>
+                    <!-- Add more table cells for other fields -->
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="2">No items available.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

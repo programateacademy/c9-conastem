@@ -11,4 +11,3 @@ class CompromisodelaComunidadListView (generic.ListView):
     model=CompromisodelaCominudad
     context_object_name='Compromiso_de_la_comunidad'
     template_name='database\EscuelaComunidadyPertenencia\Compromiso_de_la_comunidad.html'
-
