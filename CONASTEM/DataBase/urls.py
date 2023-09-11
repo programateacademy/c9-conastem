@@ -26,7 +26,7 @@ urlpatterns += [
 
     # PERSONAL DOCENTE Y ADMINISTRATIVO
 
-    # ESCUELA COMUNIDAD Y PERTENENCUA
+    # ESCUELA COMUNIDAD Y PERTENENCIA
     path("escuela-comunidad-y-pertenencia", CompromisodelaComunidadListView.as_view(), name="Escuelacomunidadypertenencia"),
     
     
