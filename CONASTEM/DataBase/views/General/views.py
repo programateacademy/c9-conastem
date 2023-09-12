@@ -1,10 +1,17 @@
-from django.http import HttpResponse
-from django.shortcuts import render
 from django.views import generic
-
-# Create your views here.
-
+from django.shortcuts import render
 from ...models.Criterio import Criterio
+
+def index (request):
+    criterios = Criterio.objects.all()
+
+    return render(
+        request,
+        'home.html',
+        context= {
+            'criterios':criterios
+        }
+    )
 
 
 class CriterioList(generic.ListView):
