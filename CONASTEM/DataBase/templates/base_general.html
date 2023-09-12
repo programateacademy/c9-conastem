@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en","es">
+<head>
+    {% block title %}
+    <title>Local Library</title>
+    {% endblock %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Add additional CSS in static file -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'static/' %}" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans"
+    rel="stylesheet"
+    type="text/css"
+    />
+</head>
+
+<body>
+
+    <header>
+        {%block sidebar%}
+        <div class="Logo">
+            <img src="{%static 'images/logo_conastem.png' %}" alt="Logo_CONASTEM">
+        </div>
+        <ul class: "menu">
+            <li><a href= "{%url 'criterio_list' %}"> Home </a></li>
+            <li><a href= "{%url '_list'%}">Infraestructura</a></li>
+            <li><a href= "{%url '_list'%}">Currículo</a></li>
+            <li><a href= "{%url 'formacion_instruccion_evaluacion_list'%}">Formación/ Instrucción/ Evaluación</a></li>
+            <li><a href= "{%url '_list'%}">Personal docente y administrativo</a></li>
+            <li><a href= "{%url '_list'%}">Escuela, comunidad y pertenencia</a></li>
+        {%endblock%}
+    </header>
+
+    {%block content%} {%endblock content%}
+
+</body>

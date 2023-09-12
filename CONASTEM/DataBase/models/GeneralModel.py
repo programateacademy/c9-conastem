@@ -8,14 +8,7 @@ class GeneralModel (models.Model):
 
     criterio = models.ForeignKey(Criterio, on_delete=models.SET_NULL, null=True)
 
-    PRIORITY_MODEL_CHOICE = (
-        (" ", "Exploratorio"),
-        (" ", "Introductorio"),
-        ("", "Inmerción parcial"),
-        (" ", "Inmerción completa"),
-    )
-
-    priority_model = models.CharField (max_length=4, choices= PRIORITY_MODEL_CHOICE, default= "Introductorio")
+    priority = models.IntegerField (null=True, help_text="Ingrese el nivel de prioridad del 1 al 10 para el numeral")
     
     dep_responsable = models.CharField (max_length=30, default= "Dirección")
     
@@ -25,7 +18,7 @@ class GeneralModel (models.Model):
     
     track_date = models.CharField(max_length=5, help_text="Ingrese fecha de seguimiento")
     
-    internal_auditory_date = models.DateField(default="31/01/2000", null= True)
+    internal_auditory_date = models.DateField(default="31/01/2000", null= True, blank=True)
     internal_auditory_obs = models.TextField(max_length=1000, blank= True)
 
     external_auditory_date = models.DateField(default="31/01/2000", null= True, blank= True)
