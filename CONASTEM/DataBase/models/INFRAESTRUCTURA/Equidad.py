@@ -16,7 +16,7 @@ class Equidad(models.Model):
         ("El aula STEM se diferencia en ubicar a todos los estudiantes, con una consideración especial hacia todos los grupos geográficos, socioeconómicos, raciales, étnicos y de género.", "5"),
         ("La institución está preparada para proveer una formación incluyente. Promueve las oportunidades de aprendizaje para todos los estudiantes, pero respeta las diferencias culturales y de género.", "6"),
     ]
-
+    
     numeral = models.CharField (max_length=1000, choices= ITEM_CHOICE)
 
     SUB_ITEM_CHOICE = [
