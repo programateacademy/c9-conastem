@@ -18,8 +18,5 @@ urlpatterns += [
 
     # 2.3 Desarrollo ciudadania digital
     path('desarrollo-ciudadania-digital/', DesarrolloCiudadaniaDigitalListView.as_view(), name='desarrollo_ciudadania_digital_list'),
-<<<<<<< HEAD
+
 ]
-=======
-]
->>>>>>> 86a5d27031f3716e5dfd1d4ac6bf337c7ad2ca6d
