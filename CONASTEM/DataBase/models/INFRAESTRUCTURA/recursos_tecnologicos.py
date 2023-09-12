@@ -3,7 +3,7 @@ from django.db.models import F, Q, When
 from ..Person_Responsable import PersonResponsable
 from ...models.Criterio import Criterio
 
-class Equidad(models.Model):
+class RecursosTecnologicos(models.Model):
 
     criterio = models.ForeignKey(Criterio, on_delete=models.SET_NULL, null=True)
 

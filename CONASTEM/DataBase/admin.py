@@ -2,13 +2,17 @@ from django.contrib import admin
 
 # Register your models here.
 
-from .models.INFRAESTRUCTURA.Equidad import Equidad 
 from .models.Criterio import Criterio
 from .models.Person_Responsable import PersonResponsable
 from .models.Register import Register
 
 # INFRAESTRUCTURA
-from .models.INFRAESTRUCTURA.Equidad import Equidad 
+from .models.INFRAESTRUCTURA.desarrollo_de_equipos_lideres import DesarrolloDeEquiposLideres
+from .models.INFRAESTRUCTURA.planeacion_institucional import PlaneacionInstitucional
+from .models.INFRAESTRUCTURA.ambiente_escolar import AmbienteEscolar
+from .models.INFRAESTRUCTURA.recursos_tecnologicos import RecursosTecnologicos
+from .models.INFRAESTRUCTURA.uso_de_informacion import UsoDeInformacion
+from .models.INFRAESTRUCTURA.Equidad import Equidad
 
 # CURRICULO
 from .models.Curriculo.Inclusion_ingenieria_aula import Inclusion_ingenieria_aula
