@@ -4,7 +4,7 @@ from .views.General import views, Register
 from .views.Curriculo.Inclusion_ingenieria_aula import InclusionIngenieriaAulaListView
 from .views.Curriculo.Desarrollo_ciudadania_digital import DesarrolloCiudadaniaDigitalListView
 from .views.EscuelaComunidadYPertenencia import CompromisodelaComunidadListView
-from .views.Curriculo.ConsideracionesSobreAreasYAsignaturas import ConsideracionesSobreAreasYAsignaturas
+from .views.Curriculo.ConsideracionesSobreAreasYAsignaturas import ConsideracionesSobreAreasyAsignaturasListView
 
 # GENERAL
 urlpatterns= [
@@ -18,7 +18,7 @@ urlpatterns += [
 
     # CURRICULO
     # 2.1 Consideraciones sobre Áreas y Asignaturas
-    path("consideraciones_sobre_las-areas-y-las-asignaturas/", ConsideracionesSobreAreasYAsignaturasListView.as_view(), name="ConsideracionesSobreAreasYAsignaturas_list"),
+    path("consideraciones_sobre_las-areas-y-las-asignaturas/", ConsideracionesSobreAreasyAsignaturasListView.as_view(), name="ConsideracionesSobreAreasYAsignaturas_list"),
 
     # 2.2 Inclusion_ingenieria_aula
     path('inclusion-ingenieria-aula/', InclusionIngenieriaAulaListView.as_view(), name='inclusion_ingenieria_aula_list'),
