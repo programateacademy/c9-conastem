@@ -1,13 +1,19 @@
 {% extends "base_general.html" %}
 
+
 <TABLE border="1" frame="border" rules="groups" align="center">
+
+    {%block encabezado%}
+
     <CAPTION>{{Subcriterio}}</CAPTION>
+
     <COLGROUP align="center"></COLGROUP>
     <COLGROUP align="left"></COLGROUP>
     <COLGROUP align="center" span="2"></COLGROUP>
     <COLGROUP align="center" span="2"></COLGROUP>
     <COLGROUP align="center" span="2"></COLGROUP>
     <COLGROUP align="center" span="6"></COLGROUP>
+
     <THEAD>
         <TR>
             <TH COLSPAN=1>Código</TH>
@@ -36,6 +42,8 @@
             <TH></TH>
         </TR>
     </THEAD>
+    {%endblock encabezado%}
+    {%block content%}
     <TBODY>
         <TR>
             <TD>A</TD>
@@ -50,5 +58,6 @@
             <TD>H</TD>
         </TR>
     </TBODY>
+    {%endblock content%}
 </TABLE>
 
