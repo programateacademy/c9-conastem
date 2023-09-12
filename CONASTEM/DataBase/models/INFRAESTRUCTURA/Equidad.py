@@ -1,12 +1,9 @@
 from django.db import models
 from django.db.models import F, Q, When
-from ..Person_Responsable import PersonResponsable
-from ...models.Criterio import Criterio
+from ..GeneralModel import GeneralModel
 
 # 1.5 Equidad
-class Equidad(models.Model):
-
-    criterio = models.ForeignKey(Criterio, on_delete=models.SET_NULL, null=True)
+class Equidad(GeneralModel):
 
     ITEM_CHOICE = [
         ("Todos los estudiantes reciben acceso equitativo a la formación y a los programas. No se selecciona únicamente a los estudiantes con gusto por las asignaturas S.T.E.M., todos los estudiantes hacen parte del programa", "1"),
@@ -27,30 +24,6 @@ class Equidad(models.Model):
     ]
 
     sub_numeral = models.CharField (max_length= 500, default="")
-
-    PRIORITY_MODEL_CHOICE = (
-        (" ", "Exploratorio"),
-        (" ", "Introductorio"),
-        ("", "Inmerción parcial"),
-        (" ", "Inmerción completa"),
-    )
-
-    priority_model = models.CharField (max_length=4, choices= PRIORITY_MODEL_CHOICE, default= "Introductorio")
-    
-    dep_responsable = models.CharField (max_length=30, default= "Dirección")
-    
-    person_responsable = models.ManyToManyField(PersonResponsable, help_text= "Seleccione un responsable")
-    
-    track_year = models.IntegerField (help_text="Ingrese año de seguimiento")
-    
-    track_date = models.CharField(max_length=5, help_text="Ingrese fecha de seguimiento")
-    
-    internal_auditory_date = models.DateField(default="31/01/2000", null= True)
-    internal_auditory_obs = models.TextField(max_length=1000, blank= True)
-
-    external_auditory_date = models.DateField(default="31/01/2000", null= True, blank= True)
-    external_auditory_obs = models.TextField(max_length=1000, blank= True)
-
 
 
     def __str__(self):
