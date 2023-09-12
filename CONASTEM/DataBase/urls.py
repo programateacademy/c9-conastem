@@ -8,6 +8,7 @@ from .views.EscuelaComunidadYPertenencia import CompromisodelaComunidadListView
 # GENERAL
 urlpatterns= [
     path ('', views.index, name= 'criterios'),
+    path ('instituciones/new', Register.register_new, name= 'register_new'),
     path('criterios/', views.CriterioList.as_view() , name= 'criterio_list'),
     path('instituciones/', Register.RegisterListView.as_view(), name= 'register_list'),
     path('instituciones/<int:pk>', Register.RegisterListDetail.as_view(), name= 'register_detail')
