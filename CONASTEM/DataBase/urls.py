@@ -1,21 +1,35 @@
 from django.urls import path
-
-from .views import views
+# from .views import *
+from .views.General import views, Register
 from .views.Curriculo.Inclusion_ingenieria_aula import InclusionIngenieriaAulaListView
 from .views.Curriculo.Desarrollo_ciudadania_digital import DesarrolloCiudadaniaDigitalListView
 from .views.EscuelaComunidadYPertenencia import CompromisodelaComunidadListView
 
-urlpatterns = [
-    path('', views.index, name='index'),
+# GENERAL
+urlpatterns= [
+    path ('', views.index, name= 'criterios'),
+    path ('instituciones/new', Register.register_new, name= 'register_new'),
+    path('criterios/', views.CriterioList.as_view() , name= 'criterio_list'),
+    path('instituciones/', Register.RegisterListView.as_view(), name= 'register_list'),
+    path('instituciones/<int:pk>', Register.RegisterListDetail.as_view(), name= 'register_detail')
 ]
 
 urlpatterns += [
-    path("Escuelacomunidadypertenencia", CompromisodelaComunidadListView.as_view(), name="Escuelacomunidadypertenencia"),
-    
+    # INFRAESTRUCTURA
+
     # CURRICULO
     # 2.2 Inclusion_ingenieria_aula
-    path('inclusion_ingenieria_aula/', InclusionIngenieriaAulaListView.as_view(), name='inclusion_ingenieria_aula_list'),
+    path('inclusion-ingenieria-aula/', InclusionIngenieriaAulaListView.as_view(), name='inclusion_ingenieria_aula_list'),
 
     # 2.3 Desarrollo ciudadania digital
-    path('desarrollo_ciudadania_digital/', DesarrolloCiudadaniaDigitalListView.as_view(), name='desarrollo_ciudadania_digital_list'),
+    path('desarrollo-ciudadania-digital/', DesarrolloCiudadaniaDigitalListView.as_view(), name='desarrollo_ciudadania_digital_list'),
+
+    # FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
+
+    # PERSONAL DOCENTE Y ADMINISTRATIVO
+
+    # ESCUELA COMUNIDAD Y PERTENENCIA
+    path("escuela-comunidad-y-pertenencia", CompromisodelaComunidadListView.as_view(), name="Escuelacomunidadypertenencia"),
+    
+    
 ]

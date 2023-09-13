@@ -22,10 +22,10 @@
     <header>
         {%block sidebar%}
         <div class="Logo">
-            <img src="{%static 'images/logo_conastem.png' %}" alt="Logo_CONASTEM">
+            <img src="{%static 'images/Logo_conastem.svg' %}" alt="Logo_CONASTEM">
         </div>
         <ul class: "menu">
-            <li><a href= "{{' '}}"> Home </a></li>
+            <li><a href= "{%url 'criterios' %}"> Home </a></li>
             <li><a href= "">Infraestructura</a></li>
             <li><a href= "">Currículo</a></li>
             <li><a href= "">Formación/ Instrucción/ Evaluación</a></li>
@@ -35,5 +35,9 @@
     </header>
 
     {%block content%} {%endblock content%}
+
+    <footer>
+        <h6>©2023 por CONASTEM</h6>
+    </footer>
 
 </body>
