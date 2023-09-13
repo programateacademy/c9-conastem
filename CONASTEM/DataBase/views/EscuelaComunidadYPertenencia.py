@@ -7,7 +7,7 @@ from django.views import generic
 from ..models.Escuela_Comunidad_y_Pertenencia.CompromisodelaComunidad import CompromisodelaComunidad
 from ..models.Escuela_Comunidad_y_Pertenencia.ConvivenciaEscolar import ConvivenciaEscolar
 from ..models.Escuela_Comunidad_y_Pertenencia.RelacionesconlaComunidad import RelacionesconlaCominudad
-from ..models.Escuela_Comunidad_y_Pertenencia.Sostenibilidad_EscuelaComunidadyPertenencia import Sostenibilidad_EscuelaComunidadyPertenencia
+from ..models.Escuela_Comunidad_y_Pertenencia.Sostenibilidad_EscuelaComunidadyPertenencia import SostenibilidadEscuelaComunidadyPertenencia
 
 class EscuelaComunidadyPertenenciaListView(generic.ListView):
     model=CompromisodelaComunidad
@@ -30,7 +30,7 @@ class RelacionesconlaComunidadListView (generic.ListView):
     context_object_name='Relacionesconlacomunidad_List'
     template_name='database\EscuelaComunidadyPertenencia\Relacionesconlacomunidad_List.html'
 
-class Sostenibilidad_EscuelaComunidadyPertenencia (generic.ListView):
-    model=Sostenibilidad_EscuelaComunidadyPertenencia
-    context_object_name='Sostenibilidad_escuelacomunidadypertenenecia_List'
-    template_name='database\EscuelaComunidadyPertenencia\Sostenibilidad_escuelacomunidadypertenencia_List.html'
+class SostenibilidadEscuelaComunidadyPertenenciaListView (generic.ListView):
+    model=SostenibilidadEscuelaComunidadyPertenencia
+    context_object_name='Sostenibilidadescuelacomunidadypertenenecia_List'
+    template_name='database\EscuelaComunidadyPertenencia\Sostenibilidadescuelacomunidadypertenencia_List.html'

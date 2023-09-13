@@ -7,6 +7,7 @@ from .views.EscuelaComunidadYPertenencia import CompromisodelaComunidadListView
 from .views.EscuelaComunidadYPertenencia import ConvivenciaescolarListView
 from .views.EscuelaComunidadYPertenencia import EscuelaComunidadyPertenenciaListView
 from .views.EscuelaComunidadYPertenencia import RelacionesconlaComunidadListView
+from .views.EscuelaComunidadYPertenencia import SostenibilidadEscuelaComunidadyPertenenciaListView
 
 urlpatterns= [
     path('', views.CriterioList.as_view(), name= 'criterio_list'),
@@ -16,6 +17,7 @@ urlpatterns += [
     path("compromisodelacomunidad", CompromisodelaComunidadListView.as_view(), name="Compromisodelacomunidad_List"),
     path("convivenciaescolar", ConvivenciaescolarListView.as_view(), name="Convivenciaescolar_List"),
     path("relacionesconlacomunidad", RelacionesconlaComunidadListView.as_view(), name="Relacionesconlacomunidad_List"),
+    path("sostenibilidadescuelacomunidadypertenencia", SostenibilidadEscuelaComunidadyPertenenciaListView.as_view(), name="Sostenibilidadescuelacomunidadypertenecia_List" ),
 
 
     path('inclusion_ingenieria_aula/', InclusionIngenieriaAulaListView.as_view(), name='inclusion_ingenieria_aula_list'),

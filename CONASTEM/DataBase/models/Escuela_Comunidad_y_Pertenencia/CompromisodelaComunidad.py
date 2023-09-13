@@ -18,6 +18,7 @@ class CompromisodelaComunidad (GeneralModel):
         choices= ITEM_CHOICE
         )
     
+    
     def __str__(self) :
         return self.numeral
     

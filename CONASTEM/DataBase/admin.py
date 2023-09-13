@@ -10,14 +10,14 @@ from .models.Formación_Instrucción_Evaluación.AprendizajeCentradoEstudiante i
 from .models.Escuela_Comunidad_y_Pertenencia.CompromisodelaComunidad import CompromisodelaComunidad
 from .models.Escuela_Comunidad_y_Pertenencia.RelacionesconlaComunidad import RelacionesconlaCominudad
 from .models.Escuela_Comunidad_y_Pertenencia.ConvivenciaEscolar import ConvivenciaEscolar
-from .models.Escuela_Comunidad_y_Pertenencia.Sostenibilidad_EscuelaComunidadyPertenencia import Sostenibilidad_EscuelaComunidadyPertenencia
+from .models.Escuela_Comunidad_y_Pertenencia.Sostenibilidad_EscuelaComunidadyPertenencia import SostenibilidadEscuelaComunidadyPertenencia
 # Currículo
 from .models.Curriculo.Inclusion_ingenieria_aula import Inclusion_ingenieria_aula
 from .models.Curriculo.Desarrollo_ciudadania_digital import Desarrollo_ciudadania_digital
 
 # admin.site.register(Equidad)
 admin.site.register(ConvivenciaEscolar)
-admin.site.register(Sostenibilidad_EscuelaComunidadyPertenencia)
+admin.site.register(SostenibilidadEscuelaComunidadyPertenencia)
 admin.site.register(Criterio)
 admin.site.register(PersonResponsable)
 admin.site.register(AprendizajeCentrado)
