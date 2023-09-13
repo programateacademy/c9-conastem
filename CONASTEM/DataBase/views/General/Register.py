@@ -1,4 +1,3 @@
-from django.shortcuts import redirect
 from django.http import HttpResponseRedirect
 from django.views import generic
 from ...models.Register import Register

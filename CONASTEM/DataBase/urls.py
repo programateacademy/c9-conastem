@@ -5,6 +5,8 @@ from .views.Curriculo.Inclusion_ingenieria_aula import InclusionIngenieriaAulaLi
 from .views.Curriculo.Desarrollo_ciudadania_digital import DesarrolloCiudadaniaDigitalListView
 from .views.EscuelaComunidadYPertenencia import CompromisodelaComunidadListView
 
+from .views import Formacion_Instruccion_Evaluacion
+
 # GENERAL
 urlpatterns= [
     path ('', views.index, name= 'criterios'),
@@ -25,6 +27,7 @@ urlpatterns += [
     path('desarrollo-ciudadania-digital/', DesarrolloCiudadaniaDigitalListView.as_view(), name='desarrollo_ciudadania_digital_list'),
 
     # FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
+    path('formacion-instruccion-evaluacion/new', Formacion_Instruccion_Evaluacion.data_new, name='data_new'),
 
     # PERSONAL DOCENTE Y ADMINISTRATIVO
 
