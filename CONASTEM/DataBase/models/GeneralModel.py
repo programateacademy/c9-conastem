@@ -8,14 +8,7 @@ class GeneralModel (models.Model):
 
     criterio = models.ForeignKey(Criterio, on_delete=models.SET_NULL, null=True)
 
-    PRIORITY_MODEL_CHOICE = (
-        (" ", "Exploratorio"),
-        (" ", "Introductorio"),
-        ("", "Inmerción parcial"),
-        (" ", "Inmerción completa"),
-    )
-
-    priority_model = models.CharField (max_length=4, choices= PRIORITY_MODEL_CHOICE, default= "Introductorio")
+    priority = models.IntegerField (null=True, help_text="Ingrese el nivel de prioridad del 1 al 10 para el numeral")
     
     dep_responsable = models.CharField (max_length=30, default= "Dirección")
     
