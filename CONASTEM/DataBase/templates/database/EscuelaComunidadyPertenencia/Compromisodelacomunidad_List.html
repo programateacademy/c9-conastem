@@ -1,0 +1,29 @@
+{% extends "base_general.html" %}
+
+{% block content %}
+    <h1>Compromiso de la comunidad</h1>
+
+    {% if Compromisodelacomunidad_List %}
+    <ul>
+
+      {% for compromisodelacomunidad in Compromisodelacomunidad_List %}
+      <li>
+        <h1><strong>Numeral:</strong> {{ compromisodelacomunidad.numeral }}</h1>
+        <h1><strong>Texto:</strong> {{ compromisodelacomunidad.Texto}}</h1>
+       <p><strong>Departamento Responsable:</strong> {{compromisodelacomunidad.dep_responsable}}</p>
+        <p><strong>Persona Responsable:</strong>{{compromisodelacomunidad.person_responsable}}</p>
+       <p><strong>Año:</strong>{{compromisodelacomunidad.track_year}}</p>
+        <p><strong>Fecha limite:</strong>{{compromisodelacomunidad.track_date}}</p>
+        <p><strong>Fecha de auditoria interna:</strong>{{compromisodelacomunidad.internal_audiory_date}}</p>
+       <p><strong>Comentarios</strong>{{compromisodelacomunidad.internal_audirory_obs}}</p>
+        <p><strong>Fecha de auditoria externa:</strong>{{compromisodelacomunidad.external_audiory_date}}</p>
+        <p><strong>Comentarios:</strong>{{compromisodelacomunidad.external_audirory_obs}}</p>
+  
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p>No hay numerales.</p>
+    {% endif %}
+{% endblock %}
