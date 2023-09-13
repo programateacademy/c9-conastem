@@ -16,7 +16,7 @@ from .models.Curriculo.Inclusion_ingenieria_aula import Inclusion_ingenieria_aul
 from .models.Curriculo.Desarrollo_ciudadania_digital import Desarrollo_ciudadania_digital
 
 # FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
-from .models.Formación_Instrucción_Evaluación.AprendizajeCentradoEstudiante import AprendizajeCentrado
+from .models.Formacion_Instruccion_Evaluacion.AprendizajeCentradoEstudiante import AprendizajeCentrado
 
 # PERSONAL DOCENTE Y ADMINISTRATIVO
 
