@@ -1,34 +1,27 @@
 from django.db import models
-from models.Criterio import Criterio
-from models.Person_Responsable import PersonResponsable
+from ..GeneralModel import GeneralModel
 
 
-class AprendizajeCentrado (models.Model):
+class AprendizajeCentrado (GeneralModel):
 
-    criterio = models.ForeignKey (Criterio, on_delete=models.SET_NULL, null=True, default= "INFRAESTRUCTURA")
+    ITEM_CHOICE = [
+        ("Formación/Instrucción basada en Aprendizaje Basado en Lecciones / Aprendizaje Basado en Proyectos / Aprendizaje enfocado en la indagación.", "3.1.1"),
+        ("El aprendizaje es centrado en el estudiante. La dinámica de aula y en general en la institución se prevé el tiempo para investigación y trabajo en equipo, así como de tiempo de consulta a los profesores en tiempo fuera del horario de la asignatura.", "3.1.2"),
+        ("Los proyectos son centrales al currículo. Los objetivos de los proyectos serán la meta más importante para lograr aprobar el grado escolar.", "3.1.3"),
+        ("Dentro de las experiencias de aula predominarán los retos de ingeniería como parte del ABP-ABL.", "3.1.4"),
+    ]
 
-    numeral = models
-
-
-    PRIORITY_MODEL_CHOICE = (
-        (" ", "Exploratorio"),
-        (" ", "Introductorio"),
-        ("", "Inmerción parcial"),
-        (" ", "Inmerción completa"),
-    )
-
-    priority_model = models.CharField (max_length=4, choices= PRIORITY_MODEL_CHOICE, default= "Introductorio")
+    numeral = models.CharField(
+        max_length= 10000,
+        choices= ITEM_CHOICE
+        )
     
-    dep_responsable = models.CharField (max_length=30, default= "Dirección")
+    SUB_NUMERAL_CHOICE = [
+        ("3.1.2.1","Autonomía del estudiante"),
+        ("3.1.2.2", "Los estudiantes descubren qué lo que están aprendiendo es importante para su vida y su comunidad."),
+        ("3.1.2.3", "Los estudiantes le dan importancia y relevancia a las actividades que se hacen durante sus clases. Toman control sobre el desarrollo del aprendizaje."),
+        ("3.1.2.4", "Los estudiantes demuestran su conocimiento sobre las áreas STEM y que son base de una formación en educación STEM"),
+    ]
     
-    person_responsable = models.ManyToManyField(PersonResponsable, help_text= "Seleccione un responsable")
-    
-    track_year = models.IntegerField (help_text="Ingrese año de seguimiento")
-    
-    track_date = models.CharField(max_length=5, help_text="Ingrese fecha de seguimiento")
-    
-    internal_auditory_date = models.DateField(default="31/01/2000", null= True)
-    internal_auditory_obs = models.TextField(max_length=1000, blank= True)
-
-    external_auditory_date = models.DateField(default="31/01/2000", null= True, blank= True)
-    external_auditory_obs = models.TextField(max_length=1000, blank= True)
+    def __str__(self) :
+        return self.numeral
