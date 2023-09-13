@@ -21,6 +21,4 @@ class CompromisodelaComunidad (GeneralModel):
     def __str__(self) :
         return self.numeral
     
-    def get_absolute_url(self):
-        return reverse("CompromisodelaCominudad", args={str(self.id)})
-    
+  

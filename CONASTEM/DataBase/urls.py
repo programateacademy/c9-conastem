@@ -4,12 +4,17 @@ from .views import views
 from .views.Curriculo.Inclusion_ingenieria_aula import InclusionIngenieriaAulaListView
 from .views.Curriculo.Desarrollo_ciudadania_digital import DesarrolloCiudadaniaDigitalListView
 from .views.EscuelaComunidadYPertenencia import CompromisodelaComunidadListView
+from .views.EscuelaComunidadYPertenencia import CompromisodelaComunidadDetailView
+from .views.EscuelaComunidadYPertenencia import EscuelaComunidadyPertenenciaListView
 
 urlpatterns= [
     path('', views.CriterioList.as_view(), name= 'criterio_list'),
 ]
 urlpatterns += [
-    path("Escuelacomunidadypertenencia",EscuelaComunidadYPertenencia.EscuelaComunidadyPertenenciaListView.as_view(),name="Escuelacomunidadypertenencia"),
+    path("escuelacomunidadypertenencia", EscuelaComunidadyPertenenciaListView.as_view(),name="Escuelacomunidadypertenencia"),
+    path("compromisodelacomunidad", CompromisodelaComunidadListView.as_view(), name="Compromisodelacomunidad_List"),
+    path("compromisodelacomunidad/<int:pk>", CompromisodelaComunidadDetailView.as_view(), name="compromisodelacomunidad_detail"),
+
 
     path('inclusion_ingenieria_aula/', InclusionIngenieriaAulaListView.as_view(), name='inclusion_ingenieria_aula_list'),
 
