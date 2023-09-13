@@ -5,9 +5,13 @@ from .views.Curriculo.Inclusion_ingenieria_aula import InclusionIngenieriaAulaLi
 from .views.Curriculo.Desarrollo_ciudadania_digital import DesarrolloCiudadaniaDigitalListView
 from .views.EscuelaComunidadYPertenencia import CompromisodelaComunidadListView
 
+from .views import Formacion_Instruccion_Evaluacion
+
 # GENERAL
 urlpatterns= [
-    path('', views.CriterioList.as_view() , name= 'criterio_list'),
+    path ('', views.index, name= 'criterios'),
+    path ('instituciones/new', Register.register_new, name= 'register_new'),
+    path('criterios/', views.CriterioList.as_view() , name= 'criterio_list'),
     path('instituciones/', Register.RegisterListView.as_view(), name= 'register_list'),
     path('instituciones/<int:pk>', Register.RegisterListDetail.as_view(), name= 'register_detail')
 ]
@@ -23,6 +27,7 @@ urlpatterns += [
     path('desarrollo-ciudadania-digital/', DesarrolloCiudadaniaDigitalListView.as_view(), name='desarrollo_ciudadania_digital_list'),
 
     # FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
+    path('formacion-instruccion-evaluacion/new', Formacion_Instruccion_Evaluacion.data_new, name='data_new'),
 
     # PERSONAL DOCENTE Y ADMINISTRATIVO
 
