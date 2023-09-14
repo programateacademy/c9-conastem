@@ -9,37 +9,37 @@
         <h2>Datos generales</h2>
 
         <div class="campo-formulario">
-            <label for="{{form_new.criterio}}">Criterio</label>
+            <label for="{{criterio}}">Criterio</label>
                 {{form_new.criterio}}
         </div>
     
         <div class="campo-formulario">
-            <label for="{{form_new.numeral}}">Numeral</label>
+            <label for="{{numeral}}">Numeral</label>
                 {{form_new.numeral}}
         </div>
         
         <div class="campo-formulario">
-            <label for="{{form_new.priority}}">Prioridad</label>
+            <label for="{{priority}}">Prioridad</label>
                 {{form_new.priority}}
         </div>
     
         <div class="campo-formulario">
-            <label for="{{ form_new.person_responsable }}">Responsable</label>
+            <label for="{{ person_responsable }}">Responsable</label>
                 {{ form_new.person_responsable }}
         </div>
     
         <div class="campo-formulario">
-            <label for="{{ form_new.dep_responsable}}">Departamento responsable</label>
+            <label for="{{ dep_responsable}}">Departamento responsable</label>
                 {{ form_new.dep_responsable }}
         </div>
         
         <div class="campo-formulario">
-            <label for="{{ form_new.track_year }}">Año límite</label>
+            <label for="{{ track_year }}">Año límite</label>
                 {{ form_new.track_year }}
         </div>
     
         <div class="campo-formulario">
-            <label for="{{ form_new.track_date }}">Fecha límite</label>
+            <label for="{{ track_date }}">Fecha límite</label>
                 {{ form_new.track_date }}
         </div>
 
@@ -49,12 +49,12 @@
         <h2>Auditoría interna</h2>
 
         <div class="campo-formulario">
-            <label for="{{ form_new.internal_auditory_date }}">Año de registro</label>
+            <label for="{{ internal_auditory_date }}">Año de registro</label>
                 {{ form_new.internal_auditory_date }}
         </div>
     
         <div class="campo-formulario">
-            <label for="{{ form_new.internal_auditory_obs }}">Año de registro</label>
+            <label for="{{ internal_auditory_obs }}">Año de registro</label>
                 {{ form_new.internal_auditory_obs }}
         </div>
 
@@ -65,12 +65,12 @@
         <h2>Auditoría externa</h2>
     
         <div class="campo-formulario">
-            <label for="{{ form_new.external_auditory_date }}">Año de registro</label>
+            <label for="{{ external_auditory_date }}">Año de registro</label>
                 {{ form_new.external_auditory_date }}
         </div>
     
         <div class="campo-formulario">
-            <label for="{{ form_new.external_auditory_obs }}">Año de registro</label>
+            <label for="{{ external_auditory_obs }}">Año de registro</label>
                 {{ form_new.external_auditory_obs }}
         </div>
 
@@ -78,7 +78,7 @@
 
     <section>
         <h2>Evidencias</h2>
-        {% comment %} Insertar vínculo para evidencias {% endcomment %}
+        <input type= "file">Agregar evidencias de las acciones</input>
     </section>
     
     <button type="submit" class="boton-formulario">Enviar</button>

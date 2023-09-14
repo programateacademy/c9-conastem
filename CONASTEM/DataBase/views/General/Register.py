@@ -15,7 +15,7 @@ def index(request):
             return HttpResponseRedirect('/database/home/')
     else:
         form = FormRegister ()
-    return render(request, 'record_new.html', {'form': form})
+    return render(request, 'registro_new.html', {'form': form})
 
 class RegisterListView(generic.ListView):
     model = Register
