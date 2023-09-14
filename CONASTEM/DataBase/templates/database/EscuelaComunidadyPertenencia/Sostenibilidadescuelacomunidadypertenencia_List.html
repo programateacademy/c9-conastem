@@ -1,0 +1,28 @@
+{% extends "base_general.html" %}
+
+{% block content %}
+    <h1>Sostenibilidad, Escuela, Comunidad y Pertenencia</h1>
+
+    {% if Sostenibilidadescuelacomunidadypertenenecia_List %}
+    <ul>
+
+      {% for sostenibilidadescuelacomunidadypertenencia in Sostenibilidadescuelacomunidadypertenenecia_List %}
+      <li>
+        <h1><strong>Numeral:</strong> {{ sostenibilidadescuelacomunidadypertenencia.numeral }}</h1>
+       <p><strong>Departamento Responsable:</strong> {{sostenibilidadescuelacomunidadypertenencia.dep_responsable}}</p>
+        <p><strong>Persona Responsable:</strong>{{sostenibilidadescuelacomunidadypertenencia.person_responsable}}</p>
+       <p><strong>Año:</strong>{{sostenibilidadescuelacomunidadypertenencia.track_year}}</p>
+        <p><strong>Fecha limite:</strong>{{sostenibilidadescuelacomunidadypertenencia.track_date}}</p>
+        <p><strong>Fecha de auditoria interna:</strong>{{sostenibilidadescuelacomunidadypertenencia.internal_audiory_date}}</p>
+       <p><strong>Comentarios</strong>{{sostenibilidadescuelacomunidadypertenencia.internal_audirory_obs}}</p>
+        <p><strong>Fecha de auditoria externa:</strong>{{sostenibilidadescuelacomunidadypertenencia.external_audiory_date}}</p>
+        <p><strong>Comentarios:</strong>{{sostenibilidadescuelacomunidadypertenencia.external_audirory_obs}}</p>
+  
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p>No hay numerales.</p>
+    {% endif %}
+{% endblock %}

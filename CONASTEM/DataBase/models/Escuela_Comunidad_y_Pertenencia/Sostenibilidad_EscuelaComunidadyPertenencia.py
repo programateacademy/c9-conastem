@@ -2,7 +2,7 @@ from django.db import models
 from ..GeneralModel import GeneralModel
 
 
-class Sostenibilidad_EscuelaComunidadyPertenencia (GeneralModel):
+class SostenibilidadEscuelaComunidadyPertenencia (GeneralModel):
 
     ITEM_CHOICE = [
         ("541","Se mantienen relaciones de cooperación de la empresa privada, entidades educativas y universidades para lograr las experiencias profesionales que requieren los estudiantes en su proceso de selección de carrera."),

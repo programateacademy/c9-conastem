@@ -1,6 +1,6 @@
 from django.db import models
 from django.urls import reverse
-import uuid
+from django.utils import timezone
 
 
 class Register (models.Model):
@@ -13,6 +13,7 @@ class Register (models.Model):
     institution_responsable = models.CharField(max_length= 50, blank= True, null= True, help_text="Ingrese el representante de la institución")
     phone = models.CharField(max_length=15, help_text="Ingrese el teléfono de la institución")
     email = models.EmailField (max_length=200, help_text="Ingrese el email principal de la institución")
+    year = models.IntegerField (help_text="Ingrese el año de registro")
 
     PRIORITY_MODEL_CHOICE = (
         ("Exploratorio", "Exploratorio"),
@@ -22,6 +23,7 @@ class Register (models.Model):
     )
 
     model = models.CharField (choices=PRIORITY_MODEL_CHOICE, max_length=18)
+    created_date = models.DateTimeField(default=timezone.now)
 
     class Meta:
         verbose_name = ("Formulario de registro de institucion")
