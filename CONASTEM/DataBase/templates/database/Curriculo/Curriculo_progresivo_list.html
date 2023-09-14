@@ -1,0 +1,41 @@
+{% extends "base_general.html" %}
+
+{% block content %}
+<h1>Curriculo progresivo y alineado con los estándares curriculares</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Numeral</th>
+            <th>Departamento Responsable</th>
+            <th>Persona Responsable</th>
+            <th>Año</th>
+            <th>Fecha límite</th>
+            <th>Fecha de auditoria interna</th>
+            <th>Comentarios Auditoria Interna</th>
+            <th>Fecha de auditoria externa</th>
+            <th>Comentarios Auditoria Externa</th>
+            <th>Enlaces</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for CurriculoProgresivo in Curriculo_progresivo_list %}
+        <tr>
+            <td>{{ CurriculoProgresivo.numeral }}</td>
+            <td>{{ CurriculoProgresivo.dep_responsable }}</td>
+            <td>{{ CurriculoProgresivo.person_responsable }}</td>
+            <td>{{ CurriculoProgresivo.track_year }}</td>
+            <td>{{ CurriculoProgresivo.track_date }}</td>
+            <td>{{ CurriculoProgresivo.internal_audiory_date }}</td>
+            <td>{{ CurriculoProgresivo.internal_audirory_obs }}</td>
+            <td>{{ CurriculoProgresivo.external_audiory_date }}</td>
+            <td>{{ CurriculoProgresivo.external_audirory_obs }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="9">No hay numerales.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

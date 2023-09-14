@@ -3,6 +3,7 @@ from django.urls import path
 from .views.General import views, Register
 from .views.Curriculo import InclusionIngenieriaAulaListView
 from .views.Curriculo import DesarrolloCiudadaniaDigitalListView
+from .views.Curriculo import CurriculoProgresivoListView
 from .views.EscuelaComunidadYPertenencia import CompromisodelaComunidadListView
 from .views.EscuelaComunidadYPertenencia import ConvivenciaescolarListView
 from .views.EscuelaComunidadYPertenencia import EscuelaComunidadyPertenenciaListView
@@ -21,10 +22,12 @@ urlpatterns= [
 urlpatterns += [
 
     # CURRICULO
-    # 2.2 Inclusion ingenieria aula
+        # 2.2 Inclusion ingenieria aula
     path('inclusion-ingenieria-aula', InclusionIngenieriaAulaListView.as_view(), name='Inclusion_ingenieria_aula_list'),
-    # 2.3 Desarrollo ciudadania digital
+        # 2.3 Desarrollo ciudadania digital
     path ('desarrollo-ciudadania-digital', DesarrolloCiudadaniaDigitalListView.as_view(), name='Desarrollo_ciudadania_digital_list'),
+        # 2.5 CURRÍCULO PROGRESIVO Y ALINEADO CON LOS ESTÁNDARES CURRICULARES
+    path ('curriculo-progresivo', CurriculoProgresivoListView.as_view(), name='Curriculo_progresivo_list'),
 
     # FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
     path('formacion-instruccion-evaluacion/new', Formacion_Instruccion_Evaluacion.data_new, name='data_new'),
