@@ -1,3 +1,5 @@
+{% {% extends 'base_general.html' %}%}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +23,7 @@
                     <td>{{ item.numeral }}</td>
                     <td>
                         {% for responsible in item.person_responsable.all %}
-                            {{ responsible.nombre }} {% if not forloop.last %}, {% endif %}
+                            {{ responsable.nombre }} {% if not forloop.last %}, {% endif %}
                         {% endfor %}
                     </td>
                     <!-- Add more table cells for other fields -->

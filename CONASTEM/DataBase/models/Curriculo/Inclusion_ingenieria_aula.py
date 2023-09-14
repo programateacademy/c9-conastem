@@ -2,7 +2,6 @@ from datetime import timezone
 from django.db import models
 from django.urls import reverse
 
-from ..Person_Responsable import PersonResponsable
 from ..GeneralModel import GeneralModel
 
 # 2.2 INCLUSION DE LA INGENIERIA EN EL AULA
@@ -16,8 +15,6 @@ class Inclusion_ingenieria_aula(GeneralModel):
         ("225", "Actividades de prototipado en espacios para la creatividad (Maker Spaces)"),
     ]
 
-    person_responsable = models.ManyToManyField(PersonResponsable, help_text="Seleccione un responsable", default=None)
-
     numeral = models.CharField(
         max_length=1000, 
         choices=ITEM_CHOICE
@@ -28,3 +25,8 @@ class Inclusion_ingenieria_aula(GeneralModel):
 
     def get_absolute_url(self):
         return reverse("Inclusion_ingenieria_aula", args=[str(self.id)])
+    
+# Create a concrete model that inherits from Inclusion_ingenieria_aula
+class ConcreteInclusionIngenieriaAula(Inclusion_ingenieria_aula):
+    pass
+

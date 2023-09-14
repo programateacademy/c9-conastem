@@ -2,7 +2,6 @@ from datetime import timezone
 from django.db import models
 from django.urls import reverse
 
-from ..Person_Responsable import PersonResponsable
 from ..GeneralModel import GeneralModel
 
 # 2.3 DESARROLLO DE UNA CIUDADANÍA DIGITAL
@@ -14,8 +13,6 @@ class Desarrollo_ciudadania_digital(GeneralModel):
         ("233", "Integración constante de nuevos desarrollos digitales dentro de actividades curriculares."),
         ("234", "Desarrollo de hábitos de aprendizaje continuo sobre nuevas alternativas y soluciones que aparecen dentro del mundo digital con miras al conocimiento crítico como consumidor y productor digital."),
     ]
-
-    person_responsable = models.ManyToManyField(PersonResponsable, help_text="Seleccione un responsable", default=None)
 
     numeral = models.CharField(
         max_length=1000, 
