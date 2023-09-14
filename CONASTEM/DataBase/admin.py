@@ -9,7 +9,7 @@ from .models.Person_Responsable import PersonResponsable
 from .models.Register import Register
 
 # INFRAESTRUCTURA
-from .models.INFRAESTRUCTURA.Equidad import Equidad 
+from .models.Infraestructura.Equidad import Equidad 
 
 # CURRICULO
 from .models.Curriculo.Inclusion_ingenieria_aula import Inclusion_ingenieria_aula
