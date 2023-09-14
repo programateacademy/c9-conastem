@@ -4,7 +4,6 @@ from ...models.Criterio import Criterio
 
 def home (request):
     criterios = Criterio.objects.all()
-
     return render(
         request,
         'home.html',
