@@ -1,11 +1,9 @@
-from datetime import timezone
 from django.db import models
 from django.urls import reverse
-
 from ..GeneralModel import GeneralModel
 
 # 2.2 INCLUSION DE LA INGENIERIA EN EL AULA
-class Inclusion_ingenieria_aula(GeneralModel):
+class InclusionIngenieriaAula(GeneralModel):
 
     ITEM_CHOICE = [
         ("221", "Inclusión del proceso de diseño en ingeniería en el currículo."),
@@ -16,17 +14,9 @@ class Inclusion_ingenieria_aula(GeneralModel):
     ]
 
     numeral = models.CharField(
-        max_length=1000, 
-        choices=ITEM_CHOICE
+        max_length = 10000, 
+        choices = ITEM_CHOICE
     )
 
     def __str__(self):
         return self.numeral
-
-    def get_absolute_url(self):
-        return reverse("Inclusion_ingenieria_aula", args=[str(self.id)])
-    
-# Create a concrete model that inherits from Inclusion_ingenieria_aula
-class ConcreteInclusionIngenieriaAula(Inclusion_ingenieria_aula):
-    pass
-

@@ -1,14 +1,13 @@
 from django.urls import path
 # from .views import *
 from .views.General import views, Register
-from .views.Curriculo.Inclusion_ingenieria_aula import InclusionIngenieriaAulaListView
-from .views.Curriculo.Desarrollo_ciudadania_digital import DesarrolloCiudadaniaDigitalListView
+from .views.Curriculo import InclusionIngenieriaAulaListView
+from .views.Curriculo import DesarrolloCiudadaniaDigitalListView
 from .views.EscuelaComunidadYPertenencia import CompromisodelaComunidadListView
 from .views.EscuelaComunidadYPertenencia import ConvivenciaescolarListView
 from .views.EscuelaComunidadYPertenencia import EscuelaComunidadyPertenenciaListView
 from .views.EscuelaComunidadYPertenencia import RelacionesconlaComunidadListView
 from .views.EscuelaComunidadYPertenencia import SostenibilidadEscuelaComunidadyPertenenciaListView
-
 from .views import Formacion_Instruccion_Evaluacion
 
 # GENERAL
@@ -23,10 +22,9 @@ urlpatterns += [
 
     # CURRICULO
     # 2.2 Inclusion ingenieria aula
-    path('inclusion_ingenieria_aula/', InclusionIngenieriaAulaListView.as_view(), name='inclusion_ingenieria_aula_list'),
-
+    path('inclusion-ingenieria-aula', InclusionIngenieriaAulaListView.as_view(), name='Inclusion_ingenieria_aula_list'),
     # 2.3 Desarrollo ciudadania digital
-    path ('desarrollo-ciudadania-digital/', DesarrolloCiudadaniaDigitalListView.as_view(), name='desarrollo_ciudadania_digital_list'),
+    path ('desarrollo-ciudadania-digital', DesarrolloCiudadaniaDigitalListView.as_view(), name='Desarrollo_ciudadania_digital_list'),
 
     # FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
     path('formacion-instruccion-evaluacion/new', Formacion_Instruccion_Evaluacion.data_new, name='data_new'),
@@ -39,9 +37,5 @@ urlpatterns += [
     path("convivenciaescolar", ConvivenciaescolarListView.as_view(), name="Convivenciaescolar_List"),
     path("relacionesconlacomunidad", RelacionesconlaComunidadListView.as_view(), name="Relacionesconlacomunidad_List"),
     path("sostenibilidadescuelacomunidadypertenencia", SostenibilidadEscuelaComunidadyPertenenciaListView.as_view(), name="Sostenibilidadescuelacomunidadypertenecia_List" ),
-
-    
-    
+   
 ]
-
-

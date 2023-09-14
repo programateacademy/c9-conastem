@@ -12,8 +12,8 @@ from .models.Register import Register
 from .models.Infraestructura.Equidad import Equidad 
 
 # CURRICULO
-from .models.Curriculo.Inclusion_ingenieria_aula import Inclusion_ingenieria_aula
-from .models.Curriculo.Desarrollo_ciudadania_digital import Desarrollo_ciudadania_digital
+from .models.Curriculo.Inclusion_ingenieria_aula import InclusionIngenieriaAula
+from .models.Curriculo.Desarrollo_ciudadania_digital import DesarrolloCiudadaniaDigital
 
 # FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
 from .models.Formacion_Instruccion_Evaluacion.AprendizajeCentradoEstudiante import AprendizajeCentrado
@@ -38,8 +38,8 @@ admin.site.register(Equidad)
 
 
 # ADMIN CURRICULO
-admin.site.register(Inclusion_ingenieria_aula)
-admin.site.register(Desarrollo_ciudadania_digital)
+admin.site.register(InclusionIngenieriaAula)
+admin.site.register(DesarrolloCiudadaniaDigital)
 
 
 # ADMIN FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
