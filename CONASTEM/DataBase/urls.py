@@ -4,6 +4,8 @@ from .views.General import views, Register
 from .views.Curriculo import InclusionIngenieriaAulaListView
 from .views.Curriculo import DesarrolloCiudadaniaDigitalListView
 from .views.Curriculo import CurriculoProgresivoListView
+from .views.Curriculo import CurriculoPropioListView
+from .views.Curriculo import EvaluacionEstudiantesListView
 from .views.EscuelaComunidadYPertenencia import CompromisodelaComunidadListView
 from .views.EscuelaComunidadYPertenencia import ConvivenciaescolarListView
 from .views.EscuelaComunidadYPertenencia import EscuelaComunidadyPertenenciaListView
@@ -28,6 +30,10 @@ urlpatterns += [
     path ('desarrollo-ciudadania-digital', DesarrolloCiudadaniaDigitalListView.as_view(), name='Desarrollo_ciudadania_digital_list'),
         # 2.5 CURRÍCULO PROGRESIVO Y ALINEADO CON LOS ESTÁNDARES CURRICULARES
     path ('curriculo-progresivo', CurriculoProgresivoListView.as_view(), name='Curriculo_progresivo_list'),
+        # 2.6 CURRÍCULO PROPIO
+    path ('curriculo-propio', CurriculoPropioListView.as_view(), name='Curriculo_propio_list'),
+        # 2.8 EVALUACIÓN DE LOS ESTUDIANTES
+    path ('evaluacion-estudiantes', EvaluacionEstudiantesListView.as_view(), name='Evaluacion_estudiantes_list'),
 
     # FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
     path('formacion-instruccion-evaluacion/new', Formacion_Instruccion_Evaluacion.data_new, name='data_new'),
