@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 
-from ..models.Infraestrucutra.Equidad import Equidad
+from ..models.Infraestructura.Equidad import Equidad
 from ..models.Criterio import Criterio
 
 def index (request):
