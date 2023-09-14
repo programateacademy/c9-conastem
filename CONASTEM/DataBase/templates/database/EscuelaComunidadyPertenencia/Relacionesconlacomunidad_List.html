@@ -1,0 +1,28 @@
+{% extends "base_general.html" %}
+
+{% block content %}
+    <h1>Relaciones con la comunidad</h1>
+
+    {% if Relacionesconlacomunidad_List %}
+    <ul>
+
+      {% for relacionesconlacomunidad in Relacionesconlacomunidad_List %}
+      <li>
+        <h1><strong>Numeral:</strong> {{ relacionesconlacomunidad.numeral }}</h1>
+       <p><strong>Departamento Responsable:</strong> {{relacionesconlacomunidad.dep_responsable}}</p>
+        <p><strong>Persona Responsable:</strong>{{relacionesconlacomunidad.person_responsable}}</p>
+       <p><strong>Año:</strong>{{relacionesconlacomunidad.track_year}}</p>
+        <p><strong>Fecha limite:</strong>{{relacionesconlacomunidad.track_date}}</p>
+        <p><strong>Fecha de auditoria interna:</strong>{{relacionesconlacomunidad.internal_audiory_date}}</p>
+       <p><strong>Comentarios</strong>{{relacionesconlacomunidad.internal_audirory_obs}}</p>
+        <p><strong>Fecha de auditoria externa:</strong>{{relacionesconlacomunidad.external_audiory_date}}</p>
+        <p><strong>Comentarios:</strong>{{relacionesconlacomunidad.external_audirory_obs}}</p>
+  
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p>No hay numerales.</p>
+    {% endif %}
+{% endblock %}
