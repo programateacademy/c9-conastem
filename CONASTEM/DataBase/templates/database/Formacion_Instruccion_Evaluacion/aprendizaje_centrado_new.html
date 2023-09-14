@@ -4,7 +4,7 @@
 
 <form method="POST" class="formulario"> {% csrf_token %}
 
-    <div>
+    <section>
 
         <h2>Datos generales</h2>
 
@@ -43,9 +43,9 @@
                 {{ form_new.track_date }}
         </div>
 
-    </div>
+    </section>
 
-    <div>
+    <section>
         <h2>Auditoría interna</h2>
 
         <div class="campo-formulario">
@@ -58,9 +58,9 @@
                 {{ form_new.internal_auditory_obs }}
         </div>
 
-    </div>
+    </section>
     
-    <div>
+    <section>
 
         <h2>Auditoría externa</h2>
     
@@ -74,15 +74,13 @@
                 {{ form_new.external_auditory_obs }}
         </div>
 
-    </div>
+    </section>
 
-    <div>
+    <section>
         <h2>Evidencias</h2>
         {% comment %} Insertar vínculo para evidencias {% endcomment %}
-    </div>
+    </section>
     
-    
-
     <button type="submit" class="boton-formulario">Enviar</button>
 
 </form>
