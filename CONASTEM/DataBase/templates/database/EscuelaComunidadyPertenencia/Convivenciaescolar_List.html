@@ -1,0 +1,28 @@
+{% extends "base_general.html" %}
+
+{% block content %}
+    <h1>Convivencia Escolar</h1>
+
+    {% if Convivenciaescolar_List %}
+    <ul>
+
+      {% for convivenciaescolar in Convivenciaescolar_List %}
+      <li>
+        <h1><strong>Numeral:</strong> {{ convivenciaescolar.numeral }}</h1>
+       <p><strong>Departamento Responsable:</strong> {{convivenciaescolar.dep_responsable}}</p>
+        <p><strong>Persona Responsable:</strong>{{convivenciaescolar.person_responsable}}</p>
+       <p><strong>Año:</strong>{{convivenciaescolar.track_year}}</p>
+        <p><strong>Fecha limite:</strong>{{convivenciaescolar.track_date}}</p>
+        <p><strong>Fecha de auditoria interna:</strong>{{convivenciaescolar.internal_audiory_date}}</p>
+       <p><strong>Comentarios</strong>{{convivenciaescolar.internal_audirory_obs}}</p>
+        <p><strong>Fecha de auditoria externa:</strong>{{convivenciaescolar.external_audiory_date}}</p>
+        <p><strong>Comentarios:</strong>{{convivenciaescolar.external_audirory_obs}}</p>
+  
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p>No hay numerales.</p>
+    {% endif %}
+{% endblock %}

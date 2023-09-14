@@ -1,0 +1,53 @@
+{% extends "base_general.html" %}
+
+{%block content%} 
+
+<h1>Registra tu Institución Educativa</h1>
+
+<form method="POST" class="formulario"> {% csrf_token %}
+
+    <div class="campo-formulario">
+        <label for="{{form.institution}}">Nombre de la institución</label>
+            {{form.institution_name}}
+    </div>
+
+    <div class="campo-formulario">
+        <label for="{{form.institution_nit}}">NIT</label>
+            {{form.nit}}
+    </div>
+
+    <div class="campo-formulario">
+        <label for="{{ form.institution_adress }}">Dirección</label>
+            {{ form.adress }}
+    </div>
+
+    <div class="campo-formulario">
+        <label for="{{ form.institution}}">Representante de la institución</label>
+            {{ form.institution_responsable }}
+    </div>
+    
+    <div class="campo-formulario">
+        <label for="{{ form.institution_phone }}">Teléfono</label>
+            {{ form.phone }}
+    </div>
+
+    <div class="campo-formulario">
+        <label for="{{ form.institution_email }}">Correo electrónico</label>
+            {{ form.email }}
+    </div>
+    
+    <div class="campo-formulario">
+        <label for="{{ form.institution_model }}">Modelo a aplicar</label>
+            {{ form.model }}
+    </div>
+    
+    <div class="campo-formulario">
+        <label for="{{ form.institution_year }}">Año de registro</label>
+            {{ form.year }}
+    </div>
+
+    <button type="submit" class="boton-formulario">Enviar</button>
+
+</form>
+
+{%endblock content%}

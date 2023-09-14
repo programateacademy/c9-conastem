@@ -3,7 +3,7 @@ from django.urls import reverse
 from ..GeneralModel import GeneralModel
 
 
-class CompromisodelaCominudad (GeneralModel):
+class CompromisodelaComunidad (GeneralModel):
 
     ITEM_CHOICE = [
         ("511","Los miembros de la comunidad son socios en el liderazgo del Programa en Educación STEM, evaluación de necesidades y guía de ayuda para la institución."),
@@ -18,9 +18,8 @@ class CompromisodelaCominudad (GeneralModel):
         choices= ITEM_CHOICE
         )
     
+    
     def __str__(self) :
         return self.numeral
     
-    def get_absolute_url(self):
-        return reverse("CompromisodelaCominudad", args={str(self.id)})
-    
+  

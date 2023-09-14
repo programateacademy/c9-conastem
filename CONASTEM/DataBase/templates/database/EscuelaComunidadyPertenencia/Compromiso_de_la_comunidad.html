@@ -1,9 +1,0 @@
-{% block content %}
-{% if Compromiso_de_la_comunidad %}
-<ul>
-    {% for CompromisodelaCominudad in Compromiso_de_la_comunidad %}
-    <li><a href={{CompromisodelaCominudad.get_absolute_url}}>{{CompromisodelaCominudad.numeral}}</a></li>
-    {% endfor %}
-</ul>
-{% endif %}
-{% endblock content %}

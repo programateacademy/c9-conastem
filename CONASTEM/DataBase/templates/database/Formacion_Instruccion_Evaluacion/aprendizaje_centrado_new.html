@@ -1,0 +1,90 @@
+{% extends "base_general.html" %}
+
+{%block content%}
+
+<form method="POST" class="formulario"> {% csrf_token %}
+
+    <div>
+
+        <h2>Datos generales</h2>
+
+        <div class="campo-formulario">
+            <label for="{{form_new.criterio}}">Criterio</label>
+                {{form_new.criterio}}
+        </div>
+    
+        <div class="campo-formulario">
+            <label for="{{form_new.numeral}}">Numeral</label>
+                {{form_new.numeral}}
+        </div>
+        
+        <div class="campo-formulario">
+            <label for="{{form_new.priority}}">Prioridad</label>
+                {{form_new.priority}}
+        </div>
+    
+        <div class="campo-formulario">
+            <label for="{{ form_new.person_responsable }}">Responsable</label>
+                {{ form_new.person_responsable }}
+        </div>
+    
+        <div class="campo-formulario">
+            <label for="{{ form_new.dep_responsable}}">Departamento responsable</label>
+                {{ form_new.dep_responsable }}
+        </div>
+        
+        <div class="campo-formulario">
+            <label for="{{ form_new.track_year }}">Año límite</label>
+                {{ form_new.track_year }}
+        </div>
+    
+        <div class="campo-formulario">
+            <label for="{{ form_new.track_date }}">Fecha límite</label>
+                {{ form_new.track_date }}
+        </div>
+
+    </div>
+
+    <div>
+        <h2>Auditoría interna</h2>
+
+        <div class="campo-formulario">
+            <label for="{{ form_new.internal_auditory_date }}">Año de registro</label>
+                {{ form_new.internal_auditory_date }}
+        </div>
+    
+        <div class="campo-formulario">
+            <label for="{{ form_new.internal_auditory_obs }}">Año de registro</label>
+                {{ form_new.internal_auditory_obs }}
+        </div>
+
+    </div>
+    
+    <div>
+
+        <h2>Auditoría externa</h2>
+    
+        <div class="campo-formulario">
+            <label for="{{ form_new.external_auditory_date }}">Año de registro</label>
+                {{ form_new.external_auditory_date }}
+        </div>
+    
+        <div class="campo-formulario">
+            <label for="{{ form_new.external_auditory_obs }}">Año de registro</label>
+                {{ form_new.external_auditory_obs }}
+        </div>
+
+    </div>
+
+    <div>
+        <h2>Evidencias</h2>
+        {% comment %} Insertar vínculo para evidencias {% endcomment %}
+    </div>
+    
+    
+
+    <button type="submit" class="boton-formulario">Enviar</button>
+
+</form>
+
+{%endblock content%}
