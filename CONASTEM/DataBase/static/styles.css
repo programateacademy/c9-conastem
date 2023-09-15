@@ -40,6 +40,6 @@ header {
 }
 
 #icons img{
-    transition: swapcd 0.3s;
+    transition: swap 0.3s;
     /* Transición para un cambio suave de color */
 }
