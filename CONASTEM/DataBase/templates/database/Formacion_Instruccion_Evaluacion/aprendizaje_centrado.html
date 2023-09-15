@@ -1,7 +1,58 @@
-{% extends "table_generic_detail.html" %}
+{% extends "base_general.html" %}
 
-{%block content%}
+<TABLE class='table' border="1" frame="border" id='scope' align="center">
 
+    {%block content%}
 
+    <CAPTION>{{Subcriterio}}</CAPTION>
 
-{%endblock content%}
+    <THEAD>
+        <tr>
+            <th colspan='1' scope='colgroup'>Código</th>
+            <th colspan='1' scope='colgroup'>Numeral</th>
+            <th colspan='2' scope='colgroup'>Responsable</th>
+            <th colspan='2' scope='colgroup'>Auditoría interna</th>
+            <th colspan='2' scope='colgroup'>Auditoría externa</th>
+            <th colspan='6' scope='colgroup'>Fecha límite</th>
+            <th colspan='1' scope='colgroup'>Enlaces</th>
+        </tr>
+    
+        <tr>
+            <TH scope='col'></TH>
+            <TH scope='col'></TH>
+            <TH scope='col'>Departamento</TH>
+            <TH scope='col'>Persona</TH>
+            <TH scope='col'>Fecha</TH>
+            <TH scope='col'>Observación</TH>
+            <TH scope='col'>Fecha</TH>
+            <TH scope='col'>Observación</TH>
+            <TH scope='col'>Año 1</TH>
+            <TH scope='col'>Año 2</TH>
+            <TH scope='col'>Año 3</TH>
+            <TH scope='col'>Año 4</TH>
+            <TH scope='col'>Año 5</TH>
+            <TH scope='col'>Año 6</TH>
+            <TH scope='col'></TH>
+        </tr>
+    </THEAD>
+    
+    <TBODY>
+        
+        {%for AprendizajeCentrado in aprendizaje_centrado_detail%}
+        <TR>
+            <TD>{{AprendizajeCentrado.numeral}}</TD>
+            <TD>B</TD>
+            <TD>C</TD>
+            <TD>D</TD>
+        </TR>
+        <TR>
+            <TD>E</TD>
+            <TD>F</TD>
+            <TD>G</TD>
+            <TD>H</TD>
+        </TR>
+        {% endfor %}
+        
+    </TBODY>
+    {%endblock content%}
+</TABLE>
