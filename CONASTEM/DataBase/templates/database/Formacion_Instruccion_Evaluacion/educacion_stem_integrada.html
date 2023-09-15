@@ -1,0 +1,29 @@
+{% extends "base_general.html" %}
+
+{% block content %}
+
+<h1>Educacion STEM Integrada</h1>
+
+{%if educacion_stem_integrada_list%}
+<ul>
+    {%for educacionstemintegrada in educacion_stem_integrada_list%}
+    <li>
+        {{educacionstemintegrada.numeral}}
+        {{educacionstemintegrada.dep_responsable}}
+        {{educacionstemintegrada.person_responsable}}
+        {{educacionstemintegrada.track_year}}
+        {{educacionstemintegrada.track_date}}
+        {{educacionstemintegrada.internal_audiory_date}}
+        {{educacionstemintegrada.internal_audirory_obs}}
+        {{educacionstemintegrada.external_audiory_date}}
+        {{educacionstemintegrada.external_audirory_obs}}
+    </li>
+
+    {%endfor%}
+</ul>
+
+{%else%}
+<p>No hay registros</p>
+{%endif%}
+
+{% endblock content %}
