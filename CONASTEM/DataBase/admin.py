@@ -1,19 +1,19 @@
 from django.contrib import admin
 
-# Register your models here.
-
-
 # GENERALES
 from .models.Criterio import Criterio
 from .models.Person_Responsable import PersonResponsable
 from .models.Register import Register
 
 # INFRAESTRUCTURA
-from .models.INFRAESTRUCTURA.Equidad import Equidad 
+from .models.Infraestructura.Equidad import Equidad 
 
 # CURRICULO
-from .models.Curriculo.Inclusion_ingenieria_aula import Inclusion_ingenieria_aula
-from .models.Curriculo.Desarrollo_ciudadania_digital import Desarrollo_ciudadania_digital
+from .models.Curriculo.Inclusion_ingenieria_aula import InclusionIngenieriaAula
+from .models.Curriculo.Desarrollo_ciudadania_digital import DesarrolloCiudadaniaDigital
+from .models.Curriculo.Curriculo_progresivo import CurriculoProgresivo
+from .models.Curriculo.Curriculo_propio import CurriculoPropio
+from .models.Curriculo.Evaluacion_estudiantes import EvaluacionEstudiantes
 
 # FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
 from .models.Formacion_Instruccion_Evaluacion.AprendizajeCentradoEstudiante import AprendizajeCentrado
@@ -38,9 +38,11 @@ admin.site.register(Equidad)
 
 
 # ADMIN CURRICULO
-admin.site.register(Inclusion_ingenieria_aula)
-admin.site.register(Desarrollo_ciudadania_digital)
-
+admin.site.register(InclusionIngenieriaAula)
+admin.site.register(DesarrolloCiudadaniaDigital)
+admin.site.register(CurriculoProgresivo)
+admin.site.register(CurriculoPropio)
+admin.site.register(EvaluacionEstudiantes)
 
 # ADMIN FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
 admin.site.register(AprendizajeCentrado)
