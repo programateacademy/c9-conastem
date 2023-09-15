@@ -1,23 +1,36 @@
 from django.urls import path
-# from .views import *
+
+# GENERAL
 from .views.General import views, Register
+
+# INFRAESTRUCTURA
+# from .views.Infraestructura import 
+
+# CURRICULO
 from .views.Curriculo import InclusionIngenieriaAulaListView
 from .views.Curriculo import DesarrolloCiudadaniaDigitalListView
 from .views.Curriculo import CurriculoProgresivoListView
 from .views.Curriculo import CurriculoPropioListView
 from .views.Curriculo import EvaluacionEstudiantesListView
+
+# FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
+from .views import Formacion_Instruccion_Evaluacion
+
+# PERSONAL DOCENTE Y ADMINISTRATIVO
+
+# ESCUELA COMUNIDAD Y PERTENENCIA
 from .views.EscuelaComunidadYPertenencia import CompromisodelaComunidadListView
 from .views.EscuelaComunidadYPertenencia import ConvivenciaescolarListView
 from .views.EscuelaComunidadYPertenencia import EscuelaComunidadyPertenenciaListView
 from .views.EscuelaComunidadYPertenencia import RelacionesconlaComunidadListView
 from .views.EscuelaComunidadYPertenencia import SostenibilidadEscuelaComunidadyPertenenciaListView
-from .views import Formacion_Instruccion_Evaluacion
+
 
 # GENERAL
 urlpatterns= [
-    path ('', views.index, name= 'criterios'),
-    path ('instituciones/new', Register.register_new, name= 'register_new'),
-    path ('criterios/', views.CriterioList.as_view() , name= 'criterio_list'),
+    path ('', Register.index, name= 'index'),
+    path ('home/', views.home , name= 'home'),
+    path("criterios/", views.CriterioList.as_view(), name="criterio_list"),
     path ('instituciones/', Register.RegisterListView.as_view(), name= 'register_list'),
     path ('instituciones/<int:pk>', Register.RegisterListDetail.as_view(), name= 'register_detail')
 ]
@@ -37,6 +50,8 @@ urlpatterns += [
 
     # FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
     path('formacion-instruccion-evaluacion/new', Formacion_Instruccion_Evaluacion.data_new, name='data_new'),
+    path("formacion-instruccion-evaluacion/", Formacion_Instruccion_Evaluacion.FormacionInstruccionEvaluacionListView.as_view(), name="FormacionInstruccionEvaluacion"),
+    path('aprendizaje-centrado', Formacion_Instruccion_Evaluacion.AprendizajeCentradoListView.as_view(), name='aprendizaje_centrado_detail'),
 
     # PERSONAL DOCENTE Y ADMINISTRATIVO
 
@@ -46,5 +61,4 @@ urlpatterns += [
     path("convivenciaescolar", ConvivenciaescolarListView.as_view(), name="Convivenciaescolar_List"),
     path("relacionesconlacomunidad", RelacionesconlaComunidadListView.as_view(), name="Relacionesconlacomunidad_List"),
     path("sostenibilidadescuelacomunidadypertenencia", SostenibilidadEscuelaComunidadyPertenenciaListView.as_view(), name="Sostenibilidadescuelacomunidadypertenecia_List" ),
-   
 ]

@@ -28,9 +28,13 @@ class AprendizajeCentrado (GeneralModel):
         choices= SUB_NUMERAL_CHOICE
     )
     
+    class Meta:
+        verbose_name = ("Aprendizaje centrado en el estudiante")
+        verbose_name_plural = ("Aprendizaje centrado en el estudiante")
+
     def __str__(self) :
         return self.numeral
     
     def get_absolute_url(self):
-        return reverse("Aprendizaje_Centrado_detail", kwargs={"pk": self.pk})
+        return reverse("aprendizaje_centrado_detail", kwargs={"pk": self.pk})
     
