@@ -37,4 +37,4 @@ def index(request):
             return HttpResponseRedirect('/database/instituciones/')
     else:
         form = FormRegister ()
-    return render(request, 'record_new.html', {'form': form})
+    return render(request, 'registro_new.html', {'form': form})

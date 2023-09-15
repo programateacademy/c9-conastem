@@ -1,44 +1,57 @@
 <!DOCTYPE html>
-<html lang="en","es">
-<head>
+<html lang="en">
+  <head>
     {% block title %}
-    <title>Local Library</title>
+      <title>Local Library</title>
     {% endblock %}
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
+
     <!-- Add additional CSS in static file -->
     {% load static %}
-    <link rel="stylesheet" href="{% static 'static/' %}" />
-    <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans"
-    rel="stylesheet"
-    type="text/css"
-    />
-</head>
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter" rel="stylesheet" type="text/css" />
+  </head>
 
-<body>
-
+  <body>
     <header>
-        {%block sidebar%}
-        <div class="Logo">
-            <img src="{%static 'images/Logo_conastem.svg' %}" alt="Logo_CONASTEM">
+      {% block sidebar %}
+        <div class="logo">
+          <img src="{% static 'images/Logo_conastem.svg' %}" alt="Logo_CONASTEM" />
         </div>
-        <ul class: "menu">
-            <li><a href= "{%url 'home'%}"> <img src="{%static 'images/icon_home.svg'%}" alt="Ícono home"></a></li>
-            <li><a href=""> <img src="{%static 'images/icon_infraestructura.svg'%}" alt="Ícono Infraestructura"></a></li>
-            <li><a href= ""> <img src="{%static 'images/icon_curriculo.svg'%}" alt="Ícono Currículo"></a></li>
-            <li><a href= "{% url "FormacionInstruccionEvaluacion"%}"> <img src="{%static 'images/icon_form_instruc_eva.svg'%}" alt="Ícono Formación/ Instrucción/ Evaluación"> </a></li>
-            <li><a href= ""> <img src="{%static 'images/icon_personal_doc_adm.svg'%}" alt="Ícono Personal docente y administrativo"></a></li>
-            <li><a href= "{% url "Escuelacomunidadypertenencia"%}"> <img src="{%static 'images/icon_escuela_comu_perten.svg'%}" alt="Ícono Escuela, comunidad y pertenencia"></a></li>
-        {%endblock%}
+        <div>
+          <div id="menu">
+            <div id="item">
+              <a href=""><img src="{% static 'images/icon_home.svg' %}" alt="Ícono Home" /></a>
+            </div>
+            <div id="item">
+              <a href=""><img src="{% static 'images/icon_infraestructura.svg' %}" alt="Ícono Infraestructura" /></a>
+            </div>
+            <div id="item">
+              <a href=""><img src="{% static 'images/icon_curriculo.svg' %}" alt="Ícono Currículo" /></a>
+            </div>
+            <div id="item">
+              <a href="{% url 'FormacionInstruccionEvaluacion' %}"><img src="{% static 'images/icon_form_instruc_eva.svg' %}" alt="Ícono Formación/ Instrucción/ Evaluación" /></a>
+            </div>
+            <div id="item">
+              <a href=""><img src="{% static 'images/icon_personal_doc_adm.svg' %}" alt="Ícono Personal docente y administrativo" /></a>
+            </div>
+            <div id="item">
+              <a href="{% url 'Escuelacomunidadypertenencia' %}"><img src="{% static 'images/icon_escuela_comu_perten.svg' %}" alt="Ícono Escuela, comunidad y pertenencia" /></a>
+            </div>
+          </div>
+        </div>
+      {% endblock %}
     </header>
 
-    {%block content%} {%endblock content%}
+    {% block content %}
+
+    {% endblock %}
 
     <footer>
-        <h6>©2023 por CONASTEM</h6>
+      <h6>©2023 por CONASTEM</h6>
     </footer>
 
-</body>
-
+    <script src="{% static 'script.js' %}"></script>
+  </body>
+</html>
