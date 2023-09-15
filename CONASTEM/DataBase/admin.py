@@ -1,8 +1,5 @@
 from django.contrib import admin
 
-# Register your models here.
-
-
 # GENERALES
 from .models.Criterio import Criterio
 from .models.Person_Responsable import PersonResponsable
@@ -15,17 +12,22 @@ from .models.Infraestructura.Equidad import Equidad
 from .models.Curriculo.ConsideracionesSobreAreasYAsignaturas import ConsideracionesSobreAreasyAsignaturas
 from .models.Curriculo.Inclusion_ingenieria_aula import Inclusion_ingenieria_aula
 from .models.Curriculo.Desarrollo_ciudadania_digital import Desarrollo_ciudadania_digital
+from .models.Curriculo.Inclusion_ingenieria_aula import InclusionIngenieriaAula
+from .models.Curriculo.Desarrollo_ciudadania_digital import DesarrolloCiudadaniaDigital
+from .models.Curriculo.Curriculo_progresivo import CurriculoProgresivo
+from .models.Curriculo.Curriculo_propio import CurriculoPropio
+from .models.Curriculo.Evaluacion_estudiantes import EvaluacionEstudiantes
 
 # FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
-from .models.Formación_Instrucción_Evaluación.AprendizajeCentradoEstudiante import AprendizajeCentrado
+from .models.Formacion_Instruccion_Evaluacion.AprendizajeCentradoEstudiante import AprendizajeCentrado
 
 # PERSONAL DOCENTE Y ADMINISTRATIVO
 
 # ESCUELA COMUNIDAD Y PERTENENCIA
-from .models.Escuela_Comunidad_y_Pertenencia.CompromisodelaComunidad import CompromisodelaCominudad
+from .models.Escuela_Comunidad_y_Pertenencia.CompromisodelaComunidad import CompromisodelaComunidad
 from .models.Escuela_Comunidad_y_Pertenencia.RelacionesconlaComunidad import RelacionesconlaCominudad
 from .models.Escuela_Comunidad_y_Pertenencia.ConvivenciaEscolar import ConvivenciaEscolar
-from .models.Escuela_Comunidad_y_Pertenencia.Sostenibilidad_EscuelaComunidadyPertenencia import Sostenibilidad_EscuelaComunidadyPertenencia
+from .models.Escuela_Comunidad_y_Pertenencia.Sostenibilidad_EscuelaComunidadyPertenencia import SostenibilidadEscuelaComunidadyPertenencia
 
 
 # ADMIN GENERALES
@@ -39,10 +41,18 @@ admin.site.register(Equidad)
 
 
 # ADMIN CURRICULO
+<<<<<<< HEAD
 admin.site.register(ConsideracionesSobreAreasyAsignaturas)
 admin.site.register(Inclusion_ingenieria_aula)
 admin.site.register(Desarrollo_ciudadania_digital)
 
+=======
+admin.site.register(InclusionIngenieriaAula)
+admin.site.register(DesarrolloCiudadaniaDigital)
+admin.site.register(CurriculoProgresivo)
+admin.site.register(CurriculoPropio)
+admin.site.register(EvaluacionEstudiantes)
+>>>>>>> 496fb42e053722d07d4e63a43279c8a3f4b540bc
 
 # ADMIN FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
 admin.site.register(AprendizajeCentrado)
@@ -53,6 +63,6 @@ admin.site.register(AprendizajeCentrado)
 
 # ADMIN ESCUELA COMUNIDAD Y PERTENENCIA
 admin.site.register(ConvivenciaEscolar)
-admin.site.register(Sostenibilidad_EscuelaComunidadyPertenencia)
-admin.site.register(CompromisodelaCominudad)
+admin.site.register(SostenibilidadEscuelaComunidadyPertenencia)
+admin.site.register(CompromisodelaComunidad)
 admin.site.register(RelacionesconlaCominudad)
