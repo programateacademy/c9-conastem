@@ -25,7 +25,8 @@ class AprendizajeCentrado (GeneralModel):
     ]
     subnumeral = models.CharField(
         max_length= 250,
-        choices= SUB_NUMERAL_CHOICE
+        choices= SUB_NUMERAL_CHOICE,
+        blank=True
     )
     
     def __str__(self) :
