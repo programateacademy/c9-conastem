@@ -2,9 +2,8 @@ from django.views import generic
 from django.shortcuts import render
 from ...models.Criterio import Criterio
 
-def index (request):
+def home (request):
     criterios = Criterio.objects.all()
-
     return render(
         request,
         'home.html',
