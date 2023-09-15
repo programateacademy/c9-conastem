@@ -1,54 +1,34 @@
 from django.db import models
-from django.db.models import F, Q, When
-from ..Person_Responsable import PersonResponsable
-from ...models.Criterio import Criterio
+from django.urls import reverse
+from ..GeneralModel import GeneralModel
 
-class AmbienteEscolar(models.Model):
+class AmbienteEscolar(GeneralModel):
 
-    criterio = models.ForeignKey(Criterio, on_delete=models.SET_NULL, null=True)
-
-    FIRST_ITEM_CHOICE = [
-        ("Aulas colaborativas donde los docentes comparten la autoridad con los estudiantes de maneras muy específicas.", "1"),
-        ("Aprendizaje Virtual como parte del desarrollo de la auto gestión y el auto desarrollo", "2"),
+    ITEM_CHOICE = [
+        ("131","Aulas colaborativas donde los docentes comparten la autoridad con los estudiantes de maneras muy específicas."),
+        ("132","Aprendizaje Virtual como parte del desarrollo de la auto gestión y el auto desarrollo."),
+        ("133","La distribución de los salones de clase facilita la integración de asignaturas."),
+        ("134","Una cultura de investigación y creatividad."),
+        ("135","Desarrollo de las habilidades del Siglo XXI en cada clase."), 
+        ("136","Autonomía del estudiante es parte del diseño institucional."), 
     ]
-
-    numeral = models.CharField (max_length=1000, choices= FIRST_ITEM_CHOICE)
     
-    FIRST_SUB_ITEM_CHOICE = [
-        ("Los estudiantes deben desenvolverse bien en el trabajo en equipo de forma virtual", "2.1"),
-    ]
-
-    sub_numeral = models.CharField (max_length= 500, choices=FIRST_SUB_ITEM_CHOICE)
+    numeral = models.CharField(
+        max_length= 10000,
+        choices= ITEM_CHOICE
+        )
     
-    FIRST_ITEM_CHOICE = [
-        ("Aulas colaborativas donde los docentes comparten la autoridad con los estudiantes de maneras muy específicas.", "1"),
-        ("Aprendizaje Virtual como parte del desarrollo de la auto gestión y el auto desarrollo", "2"),
+    SUB_ITEM_CHOICE = [
+        ("1321","Los estudiantes deben desenvolverse bien en el trabajo en equipo de forma virtual."),
+        ("1322","Los estudiantes deben conocer las herramientas electrónicas para trabajo en equipo virtual."),
+        ("1361","El acceso al colegio debe ofrecerse durante todo el día."), 
+        ("1362","Los estudiantes tienen tiempo disponible para realizar investigación y consultas a docentes."), 
     ]
-
-    PRIORITY_MODEL_CHOICE = (
-        (" ", "Exploratorio"),
-        (" ", "Introductorio"),
-        ("", "Inmerción parcial"),
-        (" ", "Inmerción completa"),
+    
+    sub_numeral = models.CharField(
+        max_length= 1000,
+        choices= SUB_ITEM_CHOICE
     )
-
-    priority_model = models.CharField (max_length=4, choices= PRIORITY_MODEL_CHOICE, default= "Introductorio")
     
-    dep_responsable = models.CharField (max_length=30, default= "Dirección")
-    
-    person_responsable = models.ManyToManyField(PersonResponsable, help_text= "Seleccione un responsable")
-    
-    track_year = models.IntegerField (help_text="Ingrese año de seguimiento")
-    
-    track_date = models.CharField(max_length=5, help_text="Ingrese fecha de seguimiento")
-    
-    internal_auditory_date = models.DateField(default="31/01/2000", null= True)
-    internal_auditory_obs = models.TextField(max_length=1000, blank= True)
-
-    external_auditory_date = models.DateField(default="31/01/2000", null= True, blank= True)
-    external_auditory_obs = models.TextField(max_length=1000, blank= True)
-
-
-
     def __str__(self):
         return self.numeral
