@@ -22,8 +22,8 @@
                 <tr>
                     <td>{{ item.numeral }}</td>
                     <td>
-                        {% for responsible in item.person_responsable.all %}
-                            {{ responsible.nombre }} {% if not forloop.last %}, {% endif %}
+                        {% for responsable in item.person_responsable.all %}
+                            {{ responsable.nombre }} {% if not forloop.last %}, {% endif %}
                         {% endfor %}
                     </td>
                     <!-- Add more table cells for other fields -->

@@ -5,7 +5,7 @@ from django.urls import reverse
 from ..Person_Responsable import PersonResponsable
 from ..GeneralModel import GeneralModel
 
-# 2.4 Desarrollo de las habilidadees del siglo XXI
+# 2.7 Desarrollo de las habilidadees del siglo XXI
 class DesarroloHabilidadesSigloXXI(GeneralModel):
 
     ITEM_CHOICE = [
