@@ -4,6 +4,7 @@ from django.shortcuts import render
 from django.views import generic
 
 # Create your views here.
+from ..models.Curriculo.ConsideracionesSobreAreasYAsignaturas import ConsideracionesSobreAreasYAsignaturas
 from ..models.Curriculo.Inclusion_ingenieria_aula import InclusionIngenieriaAula
 from ..models.Curriculo.Desarrollo_ciudadania_digital import DesarrolloCiudadaniaDigital
 from ..models.Curriculo.Curriculo_progresivo import CurriculoProgresivo
@@ -11,6 +12,10 @@ from ..models.Curriculo.Curriculo_propio import CurriculoPropio
 from ..models.Curriculo.Evaluacion_estudiantes import EvaluacionEstudiantes
 
 # 2.1 CONSIDERACIONES SOBRE LAS ÁREAS Y LAS ASIGNATURAS
+class ConsideracionesSobreAreasYAsignaturasListView(generic.ListView):
+    model = ConsideracionesSobreAreasYAsignaturas
+    context_object_name = 'ConsideracionesSobreAreasYAsignaturas_list'
+    template_name ='database/Curriculo/ConsidercionesSobreAreasYAsignaturas_list.html'
 
 # 2.2 Inclusion ingenieria aula
 class InclusionIngenieriaAulaListView(generic.ListView):

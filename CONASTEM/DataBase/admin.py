@@ -9,9 +9,7 @@ from .models.Register import Register
 from .models.Infraestructura.Equidad import Equidad 
 
 # CURRICULO
-from .models.Curriculo.ConsideracionesSobreAreasYAsignaturas import ConsideracionesSobreAreasyAsignaturas
-from .models.Curriculo.Inclusion_ingenieria_aula import Inclusion_ingenieria_aula
-from .models.Curriculo.Desarrollo_ciudadania_digital import Desarrollo_ciudadania_digital
+from .models.Curriculo.ConsideracionesSobreAreasYAsignaturas import ConsideracionesSobreAreasYAsignaturas
 from .models.Curriculo.Inclusion_ingenieria_aula import InclusionIngenieriaAula
 from .models.Curriculo.Desarrollo_ciudadania_digital import DesarrolloCiudadaniaDigital
 from .models.Curriculo.Curriculo_progresivo import CurriculoProgresivo
@@ -41,18 +39,12 @@ admin.site.register(Equidad)
 
 
 # ADMIN CURRICULO
-<<<<<<< HEAD
-admin.site.register(ConsideracionesSobreAreasyAsignaturas)
-admin.site.register(Inclusion_ingenieria_aula)
-admin.site.register(Desarrollo_ciudadania_digital)
-
-=======
+admin.site.register(ConsideracionesSobreAreasYAsignaturas)
 admin.site.register(InclusionIngenieriaAula)
 admin.site.register(DesarrolloCiudadaniaDigital)
 admin.site.register(CurriculoProgresivo)
 admin.site.register(CurriculoPropio)
 admin.site.register(EvaluacionEstudiantes)
->>>>>>> 496fb42e053722d07d4e63a43279c8a3f4b540bc
 
 # ADMIN FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
 admin.site.register(AprendizajeCentrado)

@@ -1,13 +1,10 @@
-from datetime import timezone
 from django.db import models
 from django.urls import reverse
-
-from ..Person_Responsable import PersonResponsable
 from ..GeneralModel import GeneralModel
 
 # 2.1 Consideraciones sobre las áreas y asignaturas
 
-class ConsideracionesSobreAreasyAsignaturas (GeneralModel):
+class ConsideracionesSobreAreasYAsignaturas (GeneralModel):
     ITEM_CHOICE = [
         ("2.1.1","Formas innovadoras de enseñanza y aprendizaje en las áreas y asignaturas")
     ]

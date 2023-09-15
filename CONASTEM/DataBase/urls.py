@@ -7,6 +7,7 @@ from .views.General import views, Register
 # from .views.Infraestructura import 
 
 # CURRICULO
+from .views.Curriculo import ConsideracionesSobreAreasYAsignaturasListView 
 from .views.Curriculo import InclusionIngenieriaAulaListView
 from .views.Curriculo import DesarrolloCiudadaniaDigitalListView
 from .views.Curriculo import CurriculoProgresivoListView
@@ -20,7 +21,6 @@ from .views import Formacion_Instruccion_Evaluacion
 
 # ESCUELA COMUNIDAD Y PERTENENCIA
 from .views.EscuelaComunidadYPertenencia import CompromisodelaComunidadListView
-from .views.Curriculo.ConsideracionesSobreAreasYAsignaturas import ConsideracionesSobreAreasyAsignaturasListView
 from .views.EscuelaComunidadYPertenencia import ConvivenciaescolarListView
 from .views.EscuelaComunidadYPertenencia import EscuelaComunidadyPertenenciaListView
 from .views.EscuelaComunidadYPertenencia import RelacionesconlaComunidadListView
@@ -38,27 +38,18 @@ urlpatterns= [
 urlpatterns += [
 
     # CURRICULO
-<<<<<<< HEAD
     # 2.1 Consideraciones sobre Áreas y Asignaturas
-    path("consideraciones_sobre_las-areas-y-las-asignaturas/", ConsideracionesSobreAreasyAsignaturasListView.as_view(), name="ConsideracionesSobreAreasYAsignaturas_list"),
-
+    path("consideracionesareasyasignaturas/", ConsideracionesSobreAreasYAsignaturasListView.as_view(), name="ConsideracionesSobreAreasYAsignaturas_list"),
     # 2.2 Inclusion_ingenieria_aula
     path('inclusion-ingenieria-aula/', InclusionIngenieriaAulaListView.as_view(), name='inclusion_ingenieria_aula_list'),
-
     # 2.3 Desarrollo ciudadania digital
     path('desarrollo-ciudadania-digital/', DesarrolloCiudadaniaDigitalListView.as_view(), name='desarrollo_ciudadania_digital_list'),
-=======
-        # 2.2 Inclusion ingenieria aula
-    path('inclusion-ingenieria-aula', InclusionIngenieriaAulaListView.as_view(), name='Inclusion_ingenieria_aula_list'),
-        # 2.3 Desarrollo ciudadania digital
-    path ('desarrollo-ciudadania-digital', DesarrolloCiudadaniaDigitalListView.as_view(), name='Desarrollo_ciudadania_digital_list'),
-        # 2.5 CURRÍCULO PROGRESIVO Y ALINEADO CON LOS ESTÁNDARES CURRICULARES
+    # 2.5 CURRÍCULO PROGRESIVO Y ALINEADO CON LOS ESTÁNDARES CURRICULARES
     path ('curriculo-progresivo', CurriculoProgresivoListView.as_view(), name='Curriculo_progresivo_list'),
-        # 2.6 CURRÍCULO PROPIO
+    # 2.6 CURRÍCULO PROPIO
     path ('curriculo-propio', CurriculoPropioListView.as_view(), name='Curriculo_propio_list'),
-        # 2.8 EVALUACIÓN DE LOS ESTUDIANTES
+    # 2.8 EVALUACIÓN DE LOS ESTUDIANTES
     path ('evaluacion-estudiantes', EvaluacionEstudiantesListView.as_view(), name='Evaluacion_estudiantes_list'),
->>>>>>> 496fb42e053722d07d4e63a43279c8a3f4b540bc
 
     # FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
     path('formacion-instruccion-evaluacion/new', Formacion_Instruccion_Evaluacion.data_new, name='data_new'),
