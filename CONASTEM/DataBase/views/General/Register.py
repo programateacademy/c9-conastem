@@ -16,7 +16,7 @@ class RegisterListDetail(generic.DetailView):
     context_object_name = 'register_detail'
     template_name= 'records_detail.html'
 
-def register_new(request):
+def index(request):
     if request.method == "POST":
         form = FormRegister(request.POST)
         if form.is_valid():

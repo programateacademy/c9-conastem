@@ -18,17 +18,17 @@
         </tr>
     </thead>
     <tbody>
-        {% for InclusionIngenieriaAula in inclusion_ingenieria_aula_list %}
+        {% for InclusionIngenieriaAula in Inclusion_ingenieria_aula_list %}
         <tr>
             <td>{{ InclusionIngenieriaAula.numeral }}</td>
             <td>{{ InclusionIngenieriaAula.dep_responsable }}</td>
             <td>{{ InclusionIngenieriaAula.person_responsable }}</td>
             <td>{{ InclusionIngenieriaAula.track_year }}</td>
             <td>{{ InclusionIngenieriaAula.track_date }}</td>
-            <td>{{ InclusionIngenieriaAula.internal_audiory_date }}</td>
-            <td>{{ InclusionIngenieriaAula.internal_audirory_obs }}</td>
-            <td>{{ InclusionIngenieriaAula.external_audiory_date }}</td>
-            <td>{{ InclusionIngenieriaAula.external_audirory_obs }}</td>
+            <td>{{ InclusionIngenieriaAula.internal_auditory_date }}</td>
+            <td>{{ InclusionIngenieriaAula.internal_auditory_obs }}</td>
+            <td>{{ InclusionIngenieriaAula.external_auditory_date }}</td>
+            <td>{{ InclusionIngenieriaAula.external_auditory_obs }}</td>
         </tr>
         {% empty %}
         <tr>
