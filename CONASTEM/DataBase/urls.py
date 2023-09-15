@@ -12,6 +12,7 @@ from .views.Curriculo import DesarrolloCiudadaniaDigitalListView
 from .views.Curriculo import CurriculoProgresivoListView
 from .views.Curriculo import CurriculoPropioListView
 from .views.Curriculo import EvaluacionEstudiantesListView
+from .views.Curriculo import CurriculoListView
 
 # FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
 from .views import Formacion_Instruccion_Evaluacion
@@ -29,14 +30,15 @@ from .views.EscuelaComunidadYPertenencia import SostenibilidadEscuelaComunidadyP
 # GENERAL
 urlpatterns= [
     path ('', Register.index, name= 'index'),
-    path ('home/', views.home , name= 'home'),
-    path("criterios/", views.CriterioList.as_view(), name="criterio_list"),
+    # path ('home/', views.home , name= 'home'),
+    path("home/", views.CriterioList.as_view(), name="criterio_list"),
     path ('instituciones/', Register.RegisterListView.as_view(), name= 'register_list'),
     path ('instituciones/<int:pk>', Register.RegisterListDetail.as_view(), name= 'register_detail')
 ]
 urlpatterns += [
 
     # CURRICULO
+    path("curriculo/", CurriculoListView.as_view(), name="Curriculo_list"),
         # 2.2 Inclusion ingenieria aula
     path('inclusion-ingenieria-aula', InclusionIngenieriaAulaListView.as_view(), name='Inclusion_ingenieria_aula_list'),
         # 2.3 Desarrollo ciudadania digital
