@@ -21,7 +21,6 @@
         </tr>
     </thead>
     <tbody>
-        {%if Tecnologia_para_Formacion_list%}
         {% for tecnologiaformacion in Tecnologia_para_Formacion_list %}
     <tr>
         <td>{{ tecnologiaformacion.numeral }}</h1>
@@ -41,7 +40,6 @@
         <td colstran="9">No hay registros.</td>
     </tr>
     {% endfor %}
-    {%endif%}
     </tbody>
 </table>
 

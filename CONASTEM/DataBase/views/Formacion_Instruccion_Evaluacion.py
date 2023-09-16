@@ -18,7 +18,7 @@ class FormacionInstruccionEvaluacionListView(generic.ListView):
 
 class AprendizajeCentradoListView(generic.ListView):
     model = AprendizajeCentrado
-    context_object_name = 'aprendizaje_centrado_detail'
+    context_object_name = 'aprendizaje_centrado_list'
     template_name = 'database/Formacion_Instruccion_Evaluacion/aprendizaje_centrado.html'
 
 # Formulario
