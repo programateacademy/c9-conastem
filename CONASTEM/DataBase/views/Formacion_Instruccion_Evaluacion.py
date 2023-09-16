@@ -23,6 +23,10 @@ class AprendizajeCentradoListView(generic.ListView):
     context_object_name = 'aprendizaje_centrado_list'
     template_name = 'database/Formacion_Instruccion_Evaluacion/aprendizaje_centrado.html'
 
+# VISTA DE APRENDIZAJE RIGUROSO
+
+# VISTA DE PLANEACIÓN Y CREACIÓN DE ACTIVIDADES
+
 # VISTA DE EDUCACIÓN STEM INTEGRADA
 class EducacionStemIntegradaListView(generic.ListView):
     model = EducacionStemIntegrada
@@ -35,11 +39,15 @@ class TecnologiaFormacionListView(generic.ListView):
     context_object_name = 'Tecnologia_para_Formacion_list'
     template_name = 'database/Formacion_Instruccion_Evaluacion/tecnologia_para_formacion.html'
 
+# VISTA DE ESTRATEGIAS FORMATIVAS
+
 # VISTA DE ELECCIÓN DE CARRERA
 class EleccionCarreraListView(generic.ListView):
     model = EleccionCarrera
     context_object_name= 'eleccion_carrera_list'
     template_name = 'database/Formacion_Instruccion_Evaluacion/eleccion_carrera.html'
+
+# VISTA DE APRENDIZAJE EXTENDIDO
 
 # VISTA DE SOSTENIBILIDAD - FORMACIÓN/INSTRUCCIÓN/EVALUACIÓN
 class SostenibilidadListView(generic.ListView):
