@@ -53,9 +53,24 @@ urlpatterns += [
     # FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
     path('formacion-instruccion-evaluacion/new', Formacion_Instruccion_Evaluacion.data_new, name='data_new'),
     path("formacion-instruccion-evaluacion/", Formacion_Instruccion_Evaluacion.FormacionInstruccionEvaluacionListView.as_view(), name="FormacionInstruccionEvaluacion"),
+        # 3.1 APRENDIZAJE CENTRADO EN EL ESTUDIANTE
     path('aprendizaje-centrado', Formacion_Instruccion_Evaluacion.AprendizajeCentradoListView.as_view(), name='aprendizaje_centrado_list'),
+        # 3.2 APRENDIZAJE RIGUROSO
+    
+        # 3.3 PLANEACIÓN Y CREACIÓN DE ACTIVIDADES
+
+        # 3.4 EDUCACIÓN STEM INTEGRADA
     path("educacion-stem-integrada/", Formacion_Instruccion_Evaluacion.EducacionStemIntegradaListView.as_view(), name='educacion_stem_integrada_list'),
+        # 3.5 TECNOLOGÍA PARA LA FORMACIÓN / INSTRUCCIÓN
     path("tecnologia-para-formacion/", Formacion_Instruccion_Evaluacion.TecnologiaFormacionListView.as_view(), name='tecnologia_para_Formacion_list' ), 
+        # 3.6 ESTRATEGIAS FORMATIVAS
+    
+        # 3.7 ELECCIÓN DE CARRERA
+    path("eleccion-carrera/", Formacion_Instruccion_Evaluacion.EleccionCarreraListView.as_view(), name='eleccion_carrera_list'),
+        # 3.8 APRENDIZAJE EXTENDIDO
+
+        # 3.9 SOSTENIBILIDAD - FORMACIÓN/INSTRUCCIÓN/EVALUACIÓN
+    path("sostenibilidad/", Formacion_Instruccion_Evaluacion.SostenibilidadListView.as_view(), name="sostenibilidad_list"),
     
     # PERSONAL DOCENTE Y ADMINISTRATIVO
 
