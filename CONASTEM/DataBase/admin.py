@@ -17,6 +17,8 @@ from .models.Curriculo.Evaluacion_estudiantes import EvaluacionEstudiantes
 
 # FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
 from .models.Formacion_Instruccion_Evaluacion.AprendizajeCentradoEstudiante import AprendizajeCentrado
+from .models.Formacion_Instruccion_Evaluacion.EducacionSTEMIntegrada import EducacionStemIntegrada
+from .models.Formacion_Instruccion_Evaluacion.TecnologiaFormacionInstruccion import TecnologiaFormacion
 
 # PERSONAL DOCENTE Y ADMINISTRATIVO
 
@@ -46,6 +48,8 @@ admin.site.register(EvaluacionEstudiantes)
 
 # ADMIN FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
 admin.site.register(AprendizajeCentrado)
+admin.site.register(EducacionStemIntegrada)
+admin.site.register(TecnologiaFormacion)
 
 
 # ADMIN PERSONAL DOCENTE Y ADMINISTRATIVO

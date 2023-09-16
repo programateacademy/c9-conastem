@@ -6,6 +6,7 @@ from django.utils import timezone
 
 from ..models.Formacion_Instruccion_Evaluacion.AprendizajeCentradoEstudiante import AprendizajeCentrado
 from ..models.Formacion_Instruccion_Evaluacion.EducacionSTEMIntegrada import EducacionStemIntegrada
+from ..models.Formacion_Instruccion_Evaluacion.TecnologiaFormacionInstruccion import TecnologiaFormacion
 
 # Vista de lista
 class FormacionInstruccionEvaluacionListView(generic.ListView):
@@ -35,3 +36,8 @@ class EducacionStemIntegradaListView(generic.ListView):
     model = EducacionStemIntegrada
     context_object_name = 'educacion_stem_integrada_list'
     template_name = 'database/Formacion_Instruccion_Evaluacion/educacion_stem_integrada.html'
+
+class TecnologiaFormacionListView(generic.ListView):
+    model = TecnologiaFormacion
+    context_object_name = 'Tecnologia_para_Formacion_list'
+    template_name = 'database/Formacion_Instruccion_Evaluacion/tecnologia_para_formacion.html'
