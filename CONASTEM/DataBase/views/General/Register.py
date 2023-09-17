@@ -5,7 +5,6 @@ from ...forms import FormRegister
 from django.shortcuts import render
 from django.utils import timezone
 
-
 class RegisterListView(generic.ListView):
     model = Register
     context_object_name= 'register_list'
@@ -16,7 +15,7 @@ class RegisterListDetail(generic.DetailView):
     context_object_name = 'register_detail'
     template_name= 'records_detail.html'
 
-def register_new(request):
+def index(request):
     if request.method == "POST":
         form = FormRegister(request.POST)
         if form.is_valid():
@@ -26,4 +25,4 @@ def register_new(request):
             return HttpResponseRedirect('/database/instituciones/')
     else:
         form = FormRegister ()
-    return render(request, 'record_new.html', {'form': form})
+    return render(request, 'registro_new.html', {'form': form})
