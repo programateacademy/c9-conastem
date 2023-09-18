@@ -15,23 +15,23 @@ class PersonalDocenteyAdministrativoListView (generic.ListView):
     template_name='database/PersonalDocenteyAdministrativo/PersonalDocenteyAdministrativo.html'
 
 
-class ApoyoPedagogicoParaelPersonalListView (generic.ListView):
+class ApoyoPedagogicoListView (generic.ListView):
     model=ApoyoPedagogicoParaelPersonal
-    context_object_name='ApoyoPedagogicoParaelPersonal_List'
-    template_name='database/PersonalDocenteyAdministrativo/ApoyoPedagogicoParaelPersonal_List.html'
+    context_object_name='ApoyoPedagogico_List'
+    template_name='database/PersonalDocenteyAdministrativo/ApoyoPedagogico_List.html'
 
-class DesarrolloProfesionalInicialyContinuoparaDocentesDirectoresdeEscuelayConsejerosProfesionalesListView (generic.ListView):
-    model=DesarrolloProfesionalInicialyContinuoparaDocentesDirectoresdeEscuelayConsejerosProfesionales
-    context_object_name='DesarrolloProfesionalInicialyContinuoparaDocentesDirectoresdeEscuelayConsejerosProfesionales_List'
-    template_name='database/PersonalDocenteyAdministrativo/DesarrolloProfesionalInicialyContinuoparaDocentesDirectoresdeEscuelayConsejerosProfesionales_List.html'
+class DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionalesListView (generic.ListView):
+    model=DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales
+    context_object_name='DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales_list'
+    template_name='database/PersonalDocenteyAdministrativo/DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales_list.html'
 
 
-class ProfesionalesAltamenteCalificadosEspecializadosenEducacionSTEMListView (generic.ListView):
-    model=ProfesionalesAltamenteCalificadosEspecializadosenEducacionSTEM
-    context_object_name='ProfesionalesAltamenteCalificadosEspecializadosenEducacionSTEM_List'
-    template_name='database/PersonalDocenteyAdministrativo/ProfesionalesAltamenteCalificadosEspecializadosenEducacionSTEM_List.html'
+class ProfesionalesEspecializadosEducacionSTEMListView (generic.ListView):
+    model=ProfesionalesEspecializadosEducacionSTEM
+    context_object_name='ProfesionalesEspecializadosEducacionSTEM_List'
+    template_name='database/PersonalDocenteyAdministrativo/ProfesionalesEspecializadosEducacionSTEM_List.html'
 
 class SostenibilidadPersonalDocenteyAdministrativoListView (generic.ListView):
-    model=SostenibilidadPersonalDocenteyAdministrativo
-    context_object_name='SostenibilidadPersonalDocenteyAdministrativo_List'
-    template_name='database/PersonalDocenteyAdministrativo/SostenibilidadPersonalDocenteyAdministrativo_List.html'
+    model=SostenibilidadDocenteAdministrativo
+    context_object_name='SostenibilidadDocenteAdministrativo_List'
+    template_name='database/PersonalDocenteyAdministrativo/SostenibilidadDocenteAdministrativo_List.html'
