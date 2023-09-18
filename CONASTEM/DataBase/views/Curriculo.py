@@ -11,6 +11,13 @@ from ..models.Curriculo.Curriculo_progresivo import CurriculoProgresivo
 from ..models.Curriculo.Curriculo_propio import CurriculoPropio
 from ..models.Curriculo.Evaluacion_estudiantes import EvaluacionEstudiantes
 
+
+class CurriculoListView(generic.ListView):
+    model = InclusionIngenieriaAula
+    context_object_name = 'Curriculo_list'
+    template_name = 'database/Curriculo/Curriculo_list.html'
+
+
 # 2.1 CONSIDERACIONES SOBRE LAS ÁREAS Y LAS ASIGNATURAS
 class ConsideracionesSobreAreasYAsignaturasListView(generic.ListView):
     model = ConsideracionesSobreAreasYAsignaturas

@@ -10,14 +10,23 @@
     un diagnóstico, subir avances, sistematizar y hacer seguimiento de sus iniciativas en STEM
     y Educación STEM institucionales
     </p>
-    {% comment %} <a href="{%url 'formacion-instruccion-evaluacion/new'%}"><img src="{%static 'images/crear_datos.svg'%}" alt="Logo crear usuario"></a> {% endcomment %}
-    {% comment %} <a href="{%url 'criterios'%}"><img src="{%static 'images/obtener_datos.svg'%}" alt=""></a> {% endcomment %}
+    
 </div>
+
+<section class= "criterios">
+    {%if criterio_list%}
+    <ul>
+        {%for criterio in criterio_list%}
+        <li> {{criterio.name}} </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</section>
 
 <div class="container-2">
     <img src="{%static 'images/Libro_STEM.svg'%}" alt="Educación STEM Marco de referencia para américa latina"/>
     <p>Página basada en el libro Educación STEM marco de referencia para América Latina </p>
-    <a href="https://www.conastem.org/" target="_blank">Descargar libro</a>
+    <a href="https://www.conastem.org/marcodereferencia" target="_blank">Descargar libro</a>
     <a href="">Manual de usuario</a> <!-- Enlazar con la documentación -->
 </div>
 
