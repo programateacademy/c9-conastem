@@ -1,5 +1,7 @@
 {% extends "base_general.html" %}
 
+{% load static %}
+
 {%block content%} 
 
 <h1>Registra tu Institución Educativa</h1>
@@ -49,5 +51,12 @@
     <button type="submit" class="boton-formulario">Enviar</button>
 
 </form>
+
+<div class="container-2">
+    <img src="{%static 'images/Libro_STEM.svg'%}" alt="Educación STEM Marco de referencia para américa latina"/>
+    <p>Página basada en el libro Educación STEM marco de referencia para América Latina </p>
+    <a href="https://www.conastem.org/marcodereferencia" target="_blank">Descargar libro</a>
+    <a href="">Manual de usuario</a> <!-- Enlazar con la documentación -->
+</div>
 
 {%endblock content%}

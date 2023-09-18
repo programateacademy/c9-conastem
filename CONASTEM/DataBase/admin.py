@@ -17,10 +17,17 @@ from .models.Curriculo.Evaluacion_estudiantes import EvaluacionEstudiantes
 
 # FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
 from .models.Formacion_Instruccion_Evaluacion.AprendizajeCentradoEstudiante import AprendizajeCentrado
+<<<<<<< HEAD
 from .models.Formacion_Instruccion_Evaluacion.ApredizajeRiguroso import AprendizajeRiguroso
 from .models.Formacion_Instruccion_Evaluacion.AprendizajeExtendido import AprendizajeExtendido
 from .models.Formacion_Instruccion_Evaluacion.EstrategiasFormativas import EstrategiasFormativas
 from .models.Formacion_Instruccion_Evaluacion.PlaneacionyCreaciondeActividades import PlaneacionyCreaciondeActividades
+=======
+from .models.Formacion_Instruccion_Evaluacion.EducacionSTEMIntegrada import EducacionStemIntegrada
+from .models.Formacion_Instruccion_Evaluacion.TecnologiaFormacionInstruccion import TecnologiaFormacion
+from .models.Formacion_Instruccion_Evaluacion.EleccionCarrera import EleccionCarrera
+from .models.Formacion_Instruccion_Evaluacion.Sostenibilidad import SostenibilidadFormacionInstruccion
+>>>>>>> 086d23576202237abc57b644020fed49dd5d7f64
 
 # PERSONAL DOCENTE Y ADMINISTRATIVO
 
@@ -50,10 +57,18 @@ admin.site.register(EvaluacionEstudiantes)
 
 # ADMIN FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
 admin.site.register(AprendizajeCentrado)
+<<<<<<< HEAD
 admin.site.register(AprendizajeExtendido)
 admin.site.register(AprendizajeRiguroso)
 admin.site.register(PlaneacionyCreaciondeActividades)
 admin.site.register(EstrategiasFormativas)
+=======
+admin.site.register(EducacionStemIntegrada)
+admin.site.register(TecnologiaFormacion)
+admin.site.register(EleccionCarrera)
+admin.site.register(SostenibilidadFormacionInstruccion)
+
+>>>>>>> 086d23576202237abc57b644020fed49dd5d7f64
 
 # ADMIN PERSONAL DOCENTE Y ADMINISTRATIVO
 

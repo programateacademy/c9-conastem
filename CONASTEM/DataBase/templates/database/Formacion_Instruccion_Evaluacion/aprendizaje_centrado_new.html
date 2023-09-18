@@ -9,14 +9,24 @@
         <h2>Datos generales</h2>
 
         <div class="campo-formulario">
-            <label for="{{criterio}}">Criterio</label>
+            <label for="{{form_new.criterio}}">Criterio</label>
                 {{form_new.criterio}}
         </div>
     
-        <div class="campo-formulario">
+        {% comment %} <div class="campo-formulario">
             <label for="{{numeral}}">Numeral</label>
                 {{form_new.numeral}}
-        </div>
+
+        {%if {{form_new.numeral}} == 'El aprendizaje es centrado en el estudiante. 
+        La dinámica de aula y en general en la institución se prevé el tiempo para investigación y trabajo en equipo, 
+        así como de tiempo de consulta a los profesores en tiempo fuera del horario de la asignatura.'%}
+            <div class="campo-formulario">
+                <label for="{{subnumeral}}">Subnumeral</label>
+                    {{form_new.subnumeral}}
+            </div>
+        {%endif%}
+        </div> {% endcomment %}
+
         
         <div class="campo-formulario">
             <label for="{{priority}}">Prioridad</label>
@@ -78,7 +88,7 @@
 
     <section>
         <h2>Evidencias</h2>
-        <input type= "file">Agregar evidencias de las acciones</input>
+        <a><input type= "text">Agregar evidencias de las acciones</input></a>
     </section>
     
     <button type="submit" class="boton-formulario">Enviar</button>
