@@ -17,6 +17,10 @@ from .models.Curriculo.Evaluacion_estudiantes import EvaluacionEstudiantes
 
 # FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
 from .models.Formacion_Instruccion_Evaluacion.AprendizajeCentradoEstudiante import AprendizajeCentrado
+from .models.Formacion_Instruccion_Evaluacion.ApredizajeRiguroso import AprendizajeRiguroso
+from .models.Formacion_Instruccion_Evaluacion.AprendizajeExtendido import AprendizajeExtendido
+from .models.Formacion_Instruccion_Evaluacion.EstrategiasFormativas import EstrategiasFormativas
+from .models.Formacion_Instruccion_Evaluacion.PlaneacionyCreaciondeActividades import PlaneacionyCreaciondeActividades
 
 # PERSONAL DOCENTE Y ADMINISTRATIVO
 
@@ -46,7 +50,10 @@ admin.site.register(EvaluacionEstudiantes)
 
 # ADMIN FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
 admin.site.register(AprendizajeCentrado)
-
+admin.site.register(AprendizajeExtendido)
+admin.site.register(AprendizajeRiguroso)
+admin.site.register(PlaneacionyCreaciondeActividades)
+admin.site.register(EstrategiasFormativas)
 
 # ADMIN PERSONAL DOCENTE Y ADMINISTRATIVO
 
