@@ -1,7 +1,7 @@
 {% extends "base_general.html" %}
 
 {% block content %}
-    <h1>5100-COMPROMISO DE LA COMUNIDAD</h1>
+    <h1>3200-APRENDIZAJE RIGUROSO</h1>
     <table>
        <thead>
           <tr>
@@ -19,18 +19,18 @@
           </tr>
        </thead>
        <tbody>
-           {% for compromisodelacomunidad in Compromisodelacomunidad_List %}
+           {% for aprendizajeriguroso in AprendizajeRiguroso_List %}
       <tr>
-        <td>{{compromisodelacomunidad.codigo}}</td>
-        <td> {{compromisodelacomunidad.numeral }}</td>
-        <td> {{compromisodelacomunidad.dep_responsable}}</td>
-        <td>{{compromisodelacomunidad.person_responsable}}</td>
-        <td>{{compromisodelacomunidad.track_year}}</td>
-        <td>{{compromisodelacomunidad.track_date}}</td>
-        <td>{{compromisodelacomunidad.internal_auditory_date}}</td>
-        <td>{{compromisodelacomunidad.internal_auditory_obs}}</td>
-        <td>{{compromisodelacomunidad.external_auditory_date}}</td>
-        <td>{{compromisodelacomunidad.external_auditory_obs}}</td>
+        <td>{{aprendizajeriguroso.codigo}}</td>
+        <td> {{aprendizajeriguroso.numeral }}</td>
+        <td> {{aprendizajeriguroso.dep_responsable}}</td>
+        <td>{{aprendizajeriguroso.person_responsable}}</td>
+        <td>{{aprendizajeriguroso.track_year}}</td>
+        <td>{{aprendizajeriguroso.track_date}}</td>
+        <td>{{aprendizajeriguroso.internal_auditory_date}}</td>
+        <td>{{aprendizajeriguroso.internal_auditory_obs}}</td>
+        <td>{{aprendizajeriguroso.external_auditory_date}}</td>
+        <td>{{aprendizajeriguroso.external_auditory_obs}}</td>
   |   </tr>
   {% empty %}
   <tr>
