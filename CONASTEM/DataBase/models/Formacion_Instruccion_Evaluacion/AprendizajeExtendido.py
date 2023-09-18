@@ -23,5 +23,6 @@ class AprendizajeExtendido (GeneralModel):
         choices= ITEM_CHOICE
         )
     codigo =models.CharField(max_length=7, default="3800")
-    def __str__(self) :
+    
+    def __str__(self):
         return self.numeral

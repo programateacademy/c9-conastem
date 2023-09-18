@@ -26,7 +26,7 @@ from .models.Formacion_Instruccion_Evaluacion.PlaneacionyCreaciondeActividades i
 
 # ESCUELA COMUNIDAD Y PERTENENCIA
 from .models.Escuela_Comunidad_y_Pertenencia.CompromisodelaComunidad import CompromisodelaComunidad
-from .models.Escuela_Comunidad_y_Pertenencia.RelacionesconlaComunidad import RelacionesconlaCominudad
+from .models.Escuela_Comunidad_y_Pertenencia.RelacionesconlaComunidad import RelacionesconlaComunidad
 from .models.Escuela_Comunidad_y_Pertenencia.ConvivenciaEscolar import ConvivenciaEscolar
 from .models.Escuela_Comunidad_y_Pertenencia.Sostenibilidad_EscuelaComunidadyPertenencia import SostenibilidadEscuelaComunidadyPertenencia
 
@@ -62,4 +62,4 @@ admin.site.register(EstrategiasFormativas)
 admin.site.register(ConvivenciaEscolar)
 admin.site.register(SostenibilidadEscuelaComunidadyPertenencia)
 admin.site.register(CompromisodelaComunidad)
-admin.site.register(RelacionesconlaCominudad)
+admin.site.register(RelacionesconlaComunidad)

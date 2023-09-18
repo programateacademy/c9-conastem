@@ -8,7 +8,7 @@ from ..models.Formacion_Instruccion_Evaluacion.AprendizajeCentradoEstudiante imp
 from ..models.Formacion_Instruccion_Evaluacion.ApredizajeRiguroso import AprendizajeRiguroso
 from ..models.Formacion_Instruccion_Evaluacion.PlaneacionyCreaciondeActividades import PlaneacionyCreaciondeActividades
 from ..models.Formacion_Instruccion_Evaluacion.EstrategiasFormativas import EstrategiasFormativas
-from ..models.Formacion_Instruccion_Evaluacion import AprendizajeExtendido
+from ..models.Formacion_Instruccion_Evaluacion.AprendizajeExtendido import AprendizajeExtendido
 
 # Vista de lista
 class FormacionInstruccionEvaluacionListView(generic.ListView):
