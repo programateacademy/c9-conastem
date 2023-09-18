@@ -1,12 +1,21 @@
 from django.contrib import admin
 
+# Register your models here.
+
+
 # GENERALES
 from .models.Criterio import Criterio
 from .models.Person_Responsable import PersonResponsable
 from .models.Register import Register
 
 # INFRAESTRUCTURA
-from .models.Infraestructura.Equidad import Equidad 
+from .models.Infraestructura.ambiente_escolar import AmbienteEscolar
+from .models.Infraestructura.desarrollo_de_equipos_lideres import DesarrolloDeEquiposLideres
+from .models.Infraestructura.equidad import Equidad
+from .models.Infraestructura.planeacion_institucional import PlaneacionInstitucional
+from .models.Infraestructura.recursos_tecnologicos import RecursosTecnologicos
+from .models.Infraestructura.sostenibilidad import Sostenibilidad
+from .models.Infraestructura.uso_de_informacion import UsoDeInformacion
 
 # CURRICULO
 from .models.Curriculo.Inclusion_ingenieria_aula import InclusionIngenieriaAula
@@ -38,8 +47,13 @@ admin.site.register(Register)
 
 
 # ADMIN INFRAESTRUCTURA
+admin.site.register(AmbienteEscolar)
+admin.site.register(DesarrolloDeEquiposLideres)
 admin.site.register(Equidad)
-
+admin.site.register(PlaneacionInstitucional)
+admin.site.register(RecursosTecnologicos)
+admin.site.register(Sostenibilidad)
+admin.site.register(UsoDeInformacion)
 
 # ADMIN CURRICULO
 admin.site.register(InclusionIngenieriaAula)

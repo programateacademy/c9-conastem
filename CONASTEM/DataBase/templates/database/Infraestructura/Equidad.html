@@ -1,0 +1,27 @@
+{% extends "base_general.html" %}
+
+{% block content %}
+    <h1>Equidad</h1>
+
+    {% if Equidad_list %}
+    <ul>
+
+      {% for Equidad in Equidad_list %}
+      <li>
+        <h1><strong>Numeral:</strong> {{ Equidad.numeral }}</h1>
+        <h1><strong>Texto:</strong> {{ Equidad.Texto}}</h1>
+       <p><strong>Departamento Responsable:</strong> {{Equidad.dep_responsable}}</p>
+        <p><strong>Persona Responsable:</strong>{{Equidad.person_responsable}}</p>
+       <p><strong>Año:</strong>{{Equidad.track_year}}</p>
+        <p><strong>Fecha limite:</strong>{{Equidad.track_date}}</p>
+        <p><strong>Fecha de auditoria interna:</strong>{{Equidad.internal_audiory_date}}</p>
+       <p><strong>Comentarios</strong>{{Equidad.internal_audirory_obs}}</p>
+        <p><strong>Fecha de auditoria externa:</strong>{{Equidad.external_audiory_date}}</p>
+        <p><strong>Comentarios:</strong>{{Equidad.external_audirory_obs}}</p>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+      <p>No hay numerales.</p>
+    {% endif %}
+{% endblock %}

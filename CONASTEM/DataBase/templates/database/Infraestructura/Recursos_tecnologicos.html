@@ -1,0 +1,27 @@
+{% extends "base_general.html" %}
+
+{% block content %}
+    <h1>Planeacion institucional</h1>
+
+    {% if Planeacion_institucional_list %}
+    <ul>
+
+      {% for Planeacion_institucional in Planeacion_institucional_list %}
+      <li>
+        <h1><strong>Numeral:</strong> {{ Planeacion_institucional.numeral }}</h1>
+        <h1><strong>Texto:</strong> {{ Planeacion_institucional.Texto}}</h1>
+       <p><strong>Departamento Responsable:</strong> {{Planeacion_institucional.dep_responsable}}</p>
+        <p><strong>Persona Responsable:</strong>{{Planeacion_institucional.person_responsable}}</p>
+       <p><strong>Año:</strong>{{Planeacion_institucional.track_year}}</p>
+        <p><strong>Fecha limite:</strong>{{Planeacion_institucional.track_date}}</p>
+        <p><strong>Fecha de auditoria interna:</strong>{{Planeacion_institucional.internal_audiory_date}}</p>
+       <p><strong>Comentarios</strong>{{Planeacion_institucional.internal_audirory_obs}}</p>
+        <p><strong>Fecha de auditoria externa:</strong>{{Planeacion_institucional.external_audiory_date}}</p>
+        <p><strong>Comentarios:</strong>{{Planeacion_institucional.external_audirory_obs}}</p>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+      <p>No hay numerales.</p>
+    {% endif %}
+{% endblock %}
