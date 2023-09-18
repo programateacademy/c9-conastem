@@ -6,7 +6,7 @@ from .models.Person_Responsable import PersonResponsable
 from .models.Register import Register
 
 # INFRAESTRUCTURA
-from .models.Infraestructura.Equidad import Equidad 
+
 
 # CURRICULO
 from .models.Curriculo.Inclusion_ingenieria_aula import InclusionIngenieriaAula
@@ -23,6 +23,10 @@ from .models.Formacion_Instruccion_Evaluacion.EleccionCarrera import EleccionCar
 from .models.Formacion_Instruccion_Evaluacion.Sostenibilidad import SostenibilidadFormacionInstruccion
 
 # PERSONAL DOCENTE Y ADMINISTRATIVO
+from .models.Personal_Docente_y_Administrativo.ProfesionalesAltamenteCalificadosEspecializadosenEducacionSTEM import ProfesionalesAltamenteCalificadosEspecializadosenEducacionSTEM
+from .models.Personal_Docente_y_Administrativo.DesarrolloProfesionalInicialyContinuoparaDocentesDirectoresdeEscuelayConsejerosProfesionales import DesarrolloProfesionalInicialyContinuoparaDocentesDirectoresdeEscuelayConsejerosProfesionales
+from .models.Personal_Docente_y_Administrativo.ApoyoPedagogicoParaelPersonal import ApoyoPedagogicoParaelPersonal
+from .models.Personal_Docente_y_Administrativo.SostenibilidadPersonalDocenteyAdministrativo import SostenibilidadPersonalDocenteyAdministrativo
 
 # ESCUELA COMUNIDAD Y PERTENENCIA
 from .models.Escuela_Comunidad_y_Pertenencia.CompromisodelaComunidad import CompromisodelaComunidad
@@ -38,7 +42,7 @@ admin.site.register(Register)
 
 
 # ADMIN INFRAESTRUCTURA
-admin.site.register(Equidad)
+
 
 
 # ADMIN CURRICULO
@@ -57,7 +61,10 @@ admin.site.register(SostenibilidadFormacionInstruccion)
 
 
 # ADMIN PERSONAL DOCENTE Y ADMINISTRATIVO
-
+admin.site.register(ProfesionalesAltamenteCalificadosEspecializadosenEducacionSTEM)
+admin.site.register(DesarrolloProfesionalInicialyContinuoparaDocentesDirectoresdeEscuelayConsejerosProfesionales)
+admin.site.register(ApoyoPedagogicoParaelPersonal)
+admin.site.register(SostenibilidadPersonalDocenteyAdministrativo)
 
 # ADMIN ESCUELA COMUNIDAD Y PERTENENCIA
 admin.site.register(ConvivenciaEscolar)

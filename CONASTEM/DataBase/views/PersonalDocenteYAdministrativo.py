@@ -1,0 +1,37 @@
+from typing import Any
+from django.db.models.query import QuerySet
+from django.shortcuts import render
+from django.views import generic
+
+# Create your views here.
+from ..models.Personal_Docente_y_Administrativo.ApoyoPedagogicoParaelPersonal import ApoyoPedagogicoParaelPersonal
+from ..models.Personal_Docente_y_Administrativo.DesarrolloProfesionalInicialyContinuoparaDocentesDirectoresdeEscuelayConsejerosProfesionales import DesarrolloProfesionalInicialyContinuoparaDocentesDirectoresdeEscuelayConsejerosProfesionales
+from ..models.Personal_Docente_y_Administrativo.ProfesionalesAltamenteCalificadosEspecializadosenEducacionSTEM import ProfesionalesAltamenteCalificadosEspecializadosenEducacionSTEM
+from ..models.Personal_Docente_y_Administrativo.SostenibilidadPersonalDocenteyAdministrativo import SostenibilidadPersonalDocenteyAdministrativo
+
+class PersonalDocenteyAdministrativoListView (generic.ListView):
+    model=ApoyoPedagogicoParaelPersonal
+    context_object_name='ApoyoPedagogicoParaelPersonal'
+    template_name='database/PersonalDocenteyAdministrativo/PersonalDocenteyAdministrativo.html'
+
+
+class ApoyoPedagogicoParaelPersonalListView (generic.ListView):
+    model=ApoyoPedagogicoParaelPersonal
+    context_object_name='ApoyoPedagogicoParaelPersonal_List'
+    template_name='database/PersonalDocenteyAdministrativo/ApoyoPedagogicoParaelPersonal_List.html'
+
+class DesarrolloProfesionalInicialyContinuoparaDocentesDirectoresdeEscuelayConsejerosProfesionalesListView (generic.ListView):
+    model=DesarrolloProfesionalInicialyContinuoparaDocentesDirectoresdeEscuelayConsejerosProfesionales
+    context_object_name='DesarrolloProfesionalInicialyContinuoparaDocentesDirectoresdeEscuelayConsejerosProfesionales_List'
+    template_name='database/PersonalDocenteyAdministrativo/DesarrolloProfesionalInicialyContinuoparaDocentesDirectoresdeEscuelayConsejerosProfesionales_List.html'
+
+
+class ProfesionalesAltamenteCalificadosEspecializadosenEducacionSTEMListView (generic.ListView):
+    model=ProfesionalesAltamenteCalificadosEspecializadosenEducacionSTEM
+    context_object_name='ProfesionalesAltamenteCalificadosEspecializadosenEducacionSTEM_List'
+    template_name='database/PersonalDocenteyAdministrativo/ProfesionalesAltamenteCalificadosEspecializadosenEducacionSTEM_List.html'
+
+class SostenibilidadPersonalDocenteyAdministrativoListView (generic.ListView):
+    model=SostenibilidadPersonalDocenteyAdministrativo
+    context_object_name='SostenibilidadPersonalDocenteyAdministrativo_List'
+    template_name='database/PersonalDocenteyAdministrativo/SostenibilidadPersonalDocenteyAdministrativo_List.html'

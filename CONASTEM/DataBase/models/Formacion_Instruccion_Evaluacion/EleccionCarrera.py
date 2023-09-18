@@ -26,7 +26,7 @@ class EleccionCarrera (GeneralModel):
         ('Las experiencias con expertos externos, así como las experiencias de orden universitario se incluyen dentro del diseño de actividades en educación STEM y no se limita a la educación media.', '3760'),
     ]
 
-    numeral = models.CharField (max_length=120, choices=ITEM_CHOICE)
+    numeral = models.CharField (max_length=500, choices=ITEM_CHOICE)
 
     class Meta:
         verbose_name = ('Elección de carrera')
