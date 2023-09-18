@@ -1,7 +1,7 @@
 {% extends "base_general.html" %}
 
 {% block content %}
-    <h1>Profesionales Altamente Calificados Especializados En Educación STEM </h1>
+    <h1> PROFESIONALES ALTAMENTE CALIFICADOS ESPECIALIZADOS EN EDUCACIÓN STEM </h1>
     <table>
         <thead>
             <tr>
@@ -21,17 +21,16 @@
         <tbody>
         {% for profesionalesaltamentecalificadosespecializadoseneducacionSTEM in ProfesionalesAltamenteCalificadosEspecializadosenEducacionSTEM_List %}
         <tr>
-        <td>{{ProfesionalesAltamenteCalificadosEspecializadosenEducacionSTEM.codigo}}</td>
-        <td>{{ProfesionalesAltamenteCalificadosEspecializadosenEducacionSTEM.numeral}}</h1>
-        <td>{{ProfesionalesAltamenteCalificadosEspecializadosenEducacionSTEM.dep_responsable}}</p>
-        <td>{{ProfesionalesAltamenteCalificadosEspecializadosenEducacionSTEM.person_responsable}}</p>
-        <td>{{ProfesionalesAltamenteCalificadosEspecializadosenEducacionSTEM.track_year}}</p>
-        <td>{{ProfesionalesAltamenteCalificadosEspecializadosenEducacionSTEM.track_date}}</p>
-        <td>{{ProfesionalesAltamenteCalificadosEspecializadosenEducacionSTEM.internal_auditory_date}}</p>
-        <td>{{ProfesionalesAltamenteCalificadosEspecializadosenEducacionSTEM.internal_auditory_obs}}</p>
-        <td>{{ProfesionalesAltamenteCalificadosEspecializadosenEducacionSTEM.external_auditory_date}}</p>
-        <td>{{ProfesionalesAltamenteCalificadosEspecializadosenEducacionSTEM.external_auditory_obs}}</p>
-
+        <td>{{profesionalesaltamentecalificadosespecializadoseneducacionSTEM.codigo}}</td>
+        <td>{{profesionalesaltamentecalificadosespecializadoseneducacionSTEM.numeral}}</h1>
+        <td>{{profesionalesaltamentecalificadosespecializadoseneducacionSTEM.dep_responsable}}</p>
+        <td>{{profesionalesaltamentecalificadosespecializadoseneducacionSTEM.person_responsable}}</p>
+        <td>{{profesionalesaltamentecalificadosespecializadoseneducacionSTEM.track_year}}</p>
+        <td>{{profesionalesaltamentecalificadosespecializadoseneducacionSTEM.track_date}}</p>
+        <td>{{profesionalesaltamentecalificadosespecializadoseneducacionSTEM.internal_auditory_date}}</p>
+        <td>{{profesionalesaltamentecalificadosespecializadoseneducacionSTEM.internal_auditory_obs}}</p>
+        <td>{{profesionalesaltamentecalificadosespecializadoseneducacionSTEM.external_auditory_date}}</p>
+        <td>{{profesionalesaltamentecalificadosespecializadoseneducacionSTEM.external_auditory_obs}}</p>
         </tr>
         {% empty %}
         <tr>
