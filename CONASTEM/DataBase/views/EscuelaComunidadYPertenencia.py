@@ -1,5 +1,6 @@
 from django.http import HttpResponseRedirect
 from ..forms import Form_Compromisodelacomunidad
+from ..forms import Form_Convivenciaescolar
 from django.shortcuts import render
 from django.views import generic
 from django.utils import timezone
@@ -23,21 +24,36 @@ class CompromisodelaComunidadListView (generic.ListView):
 
 # FORMULARIO
 def data_new(request):
+    contexto = {
+    'titulo': 'Compromiso de la comunidad'
+}
     if request.method == "POST":
         form_new = Form_Compromisodelacomunidad(request.POST)
         if form_new.is_valid():
             form_new.save()
-            return HttpResponseRedirect('/database/compromisodelacomunidad/')
+            return HttpResponseRedirect('/database/compromisodelacomunidad')
     else:
         form_new = Form_Compromisodelacomunidad ()
 
-    return render(request, 'database/EscuelaComunidadyPertenencia/compromisodelacomunidad_form.html', {'form_new': form_new})
+    return render(request, 'database/EscuelaComunidadyPertenencia/Form_Subcriterio.html', {'form_new': form_new, 'titulo':'Compromiso de la comunidad'})
 
 
 class ConvivenciaescolarListView (generic.ListView):
     model=ConvivenciaEscolar
     context_object_name='Convivenciaescolar_List'
     template_name='database\EscuelaComunidadyPertenencia\Convivenciaescolar_List.html'
+
+def convivenciaescolarnew(request):
+    if request.method == "POST":
+        form_new = Form_Convivenciaescolar(request.POST)
+        if form_new.is_valid():
+            form_new.save()
+            return HttpResponseRedirect('/database/convivenciaescolar')
+    else:
+        form_new = Form_Convivenciaescolar ()
+
+    return render(request, 'database/EscuelaComunidadyPertenencia/Form_Subcriterio.html', {'form_new': form_new , 'titulo':'Convivencia Escolar'})
+
 
 class RelacionesconlaComunidadListView (generic.ListView):
     model=RelacionesconlaComunidad

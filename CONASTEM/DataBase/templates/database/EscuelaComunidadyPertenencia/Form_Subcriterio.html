@@ -1,20 +1,20 @@
 {% extends "base_general.html" %}
 
+
 {%block content%}
 
 <form method="POST" class="formulario"> {% csrf_token %}
-
+   <h2>{{ titulo }}</h2>
     <section>
 
-        <h2>COMPROMISO DE LA COMUNIDAD</h2>
-
+        <meta charset="UTF-8">
+        
     
         <div class="campo-formulario">
             <label for="{{numeral}}">Numeral</label>
                 {{form_new.numeral}}
             </div>
         </div> 
-
         
         <div class="campo-formulario">
             <label for="{{priority}}">Prioridad</label>

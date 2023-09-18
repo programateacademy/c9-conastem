@@ -2,7 +2,7 @@ from django import forms
 from .models.Register import Register
 from .models.Formacion_Instruccion_Evaluacion import AprendizajeCentradoEstudiante
 from .models.Escuela_Comunidad_y_Pertenencia import CompromisodelaComunidad
-
+from .models.Escuela_Comunidad_y_Pertenencia import ConvivenciaEscolar
 
 class FormRegister(forms.ModelForm):
 
@@ -18,5 +18,9 @@ class Form_Criterio_3 (forms.ModelForm):
 class Form_Compromisodelacomunidad (forms.ModelForm):
     class Meta:
         model = CompromisodelaComunidad.CompromisodelaComunidad
-        exclude = ['created_at', 'updated_at']
+        exclude = ['created_at', 'updated_at','codigo']
 
+class Form_Convivenciaescolar (forms.ModelForm):
+    class Meta:
+        model = ConvivenciaEscolar.ConvivenciaEscolar
+        exclude = ['created_at', 'updated_at','codigo']
