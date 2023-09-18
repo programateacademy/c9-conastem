@@ -1,0 +1,10 @@
+{% extends "base_general.html" %}
+{% block content %}
+<h1>Personal Docente y Administrativo</h1>
+<ul>
+<li><a href="{% url 'ProfesionalesAltamenteCalificadosEspecializadosenEducacionSTEM_List' %}">Profesionales Altamente Calificados Especializados en Educación STEM</a></li>
+<li><a href="{% url 'DesarrolloProfesionalInicialyContinuoparaDocentesDirectoresdeEscuelayConsejerosProfesionales_List' %}">Desarrollo Profesional Inicial y Continuo para Docentes Directores de Escuela y Consejeros Profesionales</a></li>
+<li><a href="{% url 'ApoyoPedagogicoParaelPersonal_List' %}">Apoyo Pedagógico Para el Personal</a></li>
+<li><a href="{% url 'SostenibilidadPersonalDocenteyAdministrativo_List' %}">Sostenibilidad Personal Docente y Administrativo</a></li>
+</ul>
+{% endblock content %}
