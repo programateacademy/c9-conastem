@@ -19,10 +19,10 @@ from .views import Formacion_Instruccion_Evaluacion
 
 # PERSONAL DOCENTE Y ADMINISTRATIVO
 from .views.PersonalDocenteyAdministrativo import PersonalDocenteyAdministrativoListView
-from .views.PersonalDocenteyAdministrativo import ProfesionalesAltamenteCalificadosEspecializadosenEducacionSTEMListView
-from .views.PersonalDocenteyAdministrativo import DesarrolloProfesionalInicialyContinuoparaDocentesDirectoresdeEscuelayConsejerosProfesionalesListView
-from .views.PersonalDocenteyAdministrativo import ApoyoPedagogicoParaelPersonalListView
-from .views.PersonalDocenteyAdministrativo import SostenibilidadPersonalDocenteyAdministrativoListView
+from .views.PersonalDocenteyAdministrativo import ProfesionalesEspecializadosEducacionSTEM
+from .views.PersonalDocenteyAdministrativo import DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales
+from .views.PersonalDocenteyAdministrativo import ApoyoPedagogico
+from .views.PersonalDocenteyAdministrativo import SostenibilidadDocenteAdministrativo
 
 # ESCUELA COMUNIDAD Y PERTENENCIA
 from .views.EscuelaComunidadYPertenencia import CompromisodelaComunidadListView
@@ -63,11 +63,11 @@ urlpatterns += [
     path("tecnologia-para-formacion/", Formacion_Instruccion_Evaluacion.TecnologiaFormacionListView.as_view(), name='tecnologia_para_Formacion_list' ), 
     
     # PERSONAL DOCENTE Y ADMINISTRATIVO
-    path("personaldocenteyadministrativo",PersonalDocenteyAdministrativoListView.as_view(), name="PersonalDocenteyAdministrativo"),
-    path("profesionalesaltamentecalificadosespecializadoseneducacionstem",ProfesionalesAltamenteCalificadosEspecializadosenEducacionSTEMListView.as_view(), name="ProfesionalesAltamenteCalificadosEspecializadosenEducacionSTEM_List"),
-    path("desarrolloprofesionalinicialycontinuoparadocentesdirectoresdeescuelayconsejerosprofesionales", DesarrolloProfesionalInicialyContinuoparaDocentesDirectoresdeEscuelayConsejerosProfesionalesListView.as_view(), name="DesarrolloProfesionalInicialyContinuoparaDocentesDirectoresdeEscuelayConsejerosProfesionales_List"),
-    path("apoyopedagogicoparaelpersonal",ApoyoPedagogicoParaelPersonalListView.as_view(), name="ApoyoPedagogicoParaelPersonal_List"),
-    path("sostenibilidadpersonaldocenteyadministrativo", SostenibilidadPersonalDocenteyAdministrativoListView.as_view(), name="SostenibilidadPersonalDocenteyAdministrativo_List"),
+    path("personal-docente-y-administrativo",PersonalDocenteyAdministrativoListView.as_view(), name="PersonalDocenteyAdministrativo"),
+    path("profesional-calificado-en-educacion-stem",ProfesionalesEspecializadosEducacionSTEMListView.as_view(), name="ProfesionalesEspecializadosEducacionSTEM_List"),
+    path("desarrollo-profesional-docentes-directores-consejeros-profesionales", DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionalesListView.as_view(), name="DesarrolloProfesionalInicialyContinuoparaDocentesDirectoresdeEscuelayConsejerosProfesionales_list"),
+    path("apoyo-pedagogico-personal",ApoyoPedagogicoListView.as_view(), name="ApoyoPedagogicoParaelPersonal_List"),
+    path("sostenibilidad-personal-docente-administrativo", SostenibilidadDocenteAdministrativoListView.as_view(), name="SostenibilidadDocenteAdministrativo_List"),
 
     # ESCUELA COMUNIDAD Y PERTENENCIA
     path("escuelacomunidadypertenencia", EscuelaComunidadyPertenenciaListView.as_view(), name="Escuelacomunidadypertenencia"),
