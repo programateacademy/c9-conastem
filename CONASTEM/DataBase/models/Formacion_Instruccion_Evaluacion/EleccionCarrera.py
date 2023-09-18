@@ -5,6 +5,7 @@ from ..GeneralModel import GeneralModel
 class EleccionCarrera (GeneralModel):
 
     ITEM_CHOICE = [
+        ('ELECCIÓN DE CARRERA', '3700')
         ('La institución educativa programa y promueve actividades Universitarias tempranas.', '3710'),
         ('Los estudiantes participan en actividades universitarias tempranas, tales como cursos universitarios.', '3711'),
         ('Los estudiantes participan en clases universitarias desde los últimos grados de formación escolar.', '3712'),
