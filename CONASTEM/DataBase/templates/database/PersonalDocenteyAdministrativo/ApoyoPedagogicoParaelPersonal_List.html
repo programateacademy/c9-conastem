@@ -1,7 +1,7 @@
 {% extends "base_general.html" %}
 
 {% block content %}
-    <h1>Apoyo Pedagógico Para el Personal </h1>
+    <h1> APOYO PEDAGÓGICO PARA EL PERSONAL </h1>
     <table>
         <thead>
             <tr>
@@ -20,19 +20,18 @@
         </thead>
         <tbody>
             {% for apoyoaedagogicoparaelpersonal in ApoyoPedagogicoParaelPersonal_List  %}
-        <tr>
-        <td>{{ApoyoPedagogicoParaelPersonal.codigo}}</td>
-        <td>{{ApoyoPedagogicoParaelPersonal.numeral}}</h1>
-        <td>{{ApoyoPedagogicoParaelPersonal.dep_responsable}}</p>
-        <td>{{ApoyoPedagogicoParaelPersonal.person_responsable}}</p>
-        <td>{{ApoyoPedagogicoParaelPersonal.track_year}}</p>
-        <td>{{ApoyoPedagogicoParaelPersonal.track_date}}</p>
-        <td>{{ApoyoPedagogicoParaelPersonal.internal_auditory_date}}</p>
-        <td>{{ApoyoPedagogicoParaelPersonal.internal_auditory_obs}}</p>
-        <td>{{ApoyoPedagogicoParaelPersonal.external_auditory_date}}</p>
-        <td>{{ApoyoPedagogicoParaelPersonal.external_auditory_obs}}</p>
-
-        </tr>
+            <tr>
+                <td>{{apoyoaedagogicoparaelpersonal.codigo}}</td>
+                <td>{{apoyoaedagogicoparaelpersonal.numeral}}</h1>
+                <td>{{apoyoaedagogicoparaelpersonal.dep_responsable}}</p>
+                <td>{{apoyoaedagogicoparaelpersonal.person_responsable}}</p>
+                <td>{{apoyoaedagogicoparaelpersonal.track_year}}</p>
+                <td>{{apoyoaedagogicoparaelpersonal.track_date}}</p>
+                <td>{{apoyoaedagogicoparaelpersonal.internal_auditory_date}}</p>
+                <td>{{apoyoaedagogicoparaelpersonal.internal_auditory_obs}}</p>
+                <td>{{apoyoaedagogicoparaelpersonal.external_auditory_date}}</p>
+                <td>{{apoyoaedagogicoparaelpersonal.external_auditory_obs}}</p>
+                </tr>
         {% empty %}
         <tr>
             <td colstran="9">No hay numerales.</td>
