@@ -68,18 +68,15 @@ admin.site.register(EvaluacionEstudiantes)
 
 # ADMIN FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
 admin.site.register(AprendizajeCentrado)
-<<<<<<< HEAD
 admin.site.register(AprendizajeExtendido)
 admin.site.register(AprendizajeRiguroso)
 admin.site.register(PlaneacionyCreaciondeActividades)
 admin.site.register(EstrategiasFormativas)
-=======
 admin.site.register(EducacionStemIntegrada)
 admin.site.register(TecnologiaFormacion)
 admin.site.register(EleccionCarrera)
 admin.site.register(SostenibilidadFormacionInstruccion)
 
->>>>>>> 086d23576202237abc57b644020fed49dd5d7f64
 
 # ADMIN PERSONAL DOCENTE Y ADMINISTRATIVO
 
