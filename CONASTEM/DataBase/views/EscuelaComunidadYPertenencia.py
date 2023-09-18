@@ -1,7 +1,9 @@
-from typing import Any
-from django.db.models.query import QuerySet
+from django.http import HttpResponseRedirect
+from ..forms import Form_Compromisodelacomunidad
 from django.shortcuts import render
 from django.views import generic
+from django.utils import timezone
+
 
 # Create your views here.
 from ..models.Escuela_Comunidad_y_Pertenencia.CompromisodelaComunidad import CompromisodelaComunidad
@@ -14,11 +16,23 @@ class EscuelaComunidadyPertenenciaListView(generic.ListView):
     context_object_name='EscuelaComunidadyPertenencia'
     template_name='database\EscuelaComunidadyPertenencia\EscuelaComunidadyPertenencia.html'
 
-
 class CompromisodelaComunidadListView (generic.ListView):
     model=CompromisodelaComunidad
     context_object_name='Compromisodelacomunidad_List'
     template_name='database\EscuelaComunidadyPertenencia\Compromisodelacomunidad_List.html'
+
+# FORMULARIO
+def data_new(request):
+    if request.method == "POST":
+        form_new = Form_Compromisodelacomunidad(request.POST)
+        if form_new.is_valid():
+            form_new.save()
+            return HttpResponseRedirect('/database/compromisodelacomunidad/')
+    else:
+        form_new = Form_Compromisodelacomunidad ()
+
+    return render(request, 'database/EscuelaComunidadyPertenencia/compromisodelacomunidad_form.html', {'form_new': form_new})
+
 
 class ConvivenciaescolarListView (generic.ListView):
     model=ConvivenciaEscolar

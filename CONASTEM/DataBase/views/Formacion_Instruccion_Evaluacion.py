@@ -9,7 +9,7 @@ from ..models.Formacion_Instruccion_Evaluacion.ApredizajeRiguroso import Aprendi
 from ..models.Formacion_Instruccion_Evaluacion.PlaneacionyCreaciondeActividades import PlaneacionyCreaciondeActividades
 from ..models.Formacion_Instruccion_Evaluacion.EstrategiasFormativas import EstrategiasFormativas
 from ..models.Formacion_Instruccion_Evaluacion.AprendizajeExtendido import AprendizajeExtendido
-from ..models.Formacion_Instruccion_Evaluacion.EducacionSTEMIntegrada import EducacionStemIntegrada
+
 from ..models.Formacion_Instruccion_Evaluacion.TecnologiaFormacionInstruccion import TecnologiaFormacion
 from ..models.Formacion_Instruccion_Evaluacion.EleccionCarrera import EleccionCarrera
 from ..models.Formacion_Instruccion_Evaluacion.Sostenibilidad import SostenibilidadFormacionInstruccion
@@ -46,10 +46,10 @@ class PlaneacionyCreaciondeActividadesListView(generic.ListView):
     template_name='database\Formacion_Instruccion_Evaluacion\Planeacionycreaciondeactividades_List.html'
 
 # VISTA DE EDUCACIÓN STEM INTEGRADA
-class EducacionStemIntegradaListView(generic.ListView):
-    model = EducacionStemIntegrada
-    context_object_name = 'educacion_stem_integrada_list'
-    template_name = 'database/Formacion_Instruccion_Evaluacion/educacion_stem_integrada.html'
+# class EducacionStemIntegradaListView(generic.ListView):
+#     model = EducacionStemIntegrada
+#     context_object_name = 'educacion_stem_integrada_list'
+#     template_name = 'database/Formacion_Instruccion_Evaluacion/educacion_stem_integrada.html'
 
 # VISTA DE TECNOLOGÍA PARA LA FORMACIÓN / INSTRUCCIÓN
 class TecnologiaFormacionListView(generic.ListView):

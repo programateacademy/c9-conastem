@@ -5,7 +5,7 @@ from ..GeneralModel import GeneralModel
 class EleccionCarrera (GeneralModel):
 
     ITEM_CHOICE = [
-        ('ELECCIÓN DE CARRERA', '3700')
+        ('ELECCIÓN DE CARRERA', '3700'),
         ('La institución educativa programa y promueve actividades Universitarias tempranas.', '3710'),
         ('Los estudiantes participan en actividades universitarias tempranas, tales como cursos universitarios.', '3711'),
         ('Los estudiantes participan en clases universitarias desde los últimos grados de formación escolar.', '3712'),
@@ -27,7 +27,7 @@ class EleccionCarrera (GeneralModel):
         ('Las experiencias con expertos externos, así como las experiencias de orden universitario se incluyen dentro del diseño de actividades en educación STEM y no se limita a la educación media.', '3760'),
     ]
 
-    numeral = models.CharField (max_length=120, choices=ITEM_CHOICE)
+    numeral = models.CharField (max_length=1200, choices=ITEM_CHOICE)
 
     class Meta:
         verbose_name = ('Elección de carrera')
