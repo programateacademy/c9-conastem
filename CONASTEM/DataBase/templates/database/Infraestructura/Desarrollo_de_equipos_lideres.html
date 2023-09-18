@@ -1,0 +1,27 @@
+{% extends "base_general.html" %}
+
+{% block content %}
+    <h1>Ambiente escolar</h1>
+
+    {% if Desarrollo_de_equipos_lideres_list %}
+    <ul>
+
+      {% for Desarrollo_de_equipos_lideres in Desarrollo_de_equipos_lideres_list %}
+      <li>
+        <h1><strong>Numeral:</strong> {{ Desarrollo_de_equipos_lideres.numeral }}</h1>
+        <h1><strong>Texto:</strong> {{ Desarrollo_de_equipos_lideres.Texto}}</h1>
+       <p><strong>Departamento Responsable:</strong> {{Desarrollo_de_equipos_lideres.dep_responsable}}</p>
+        <p><strong>Persona Responsable:</strong>{{Desarrollo_de_equipos_lideres.person_responsable}}</p>
+       <p><strong>Año:</strong>{{Desarrollo_de_equipos_lideres.track_year}}</p>
+        <p><strong>Fecha limite:</strong>{{Desarrollo_de_equipos_lideres.track_date}}</p>
+        <p><strong>Fecha de auditoria interna:</strong>{{Desarrollo_de_equipos_lideres.internal_audiory_date}}</p>
+       <p><strong>Comentarios</strong>{{Desarrollo_de_equipos_lideres.internal_audirory_obs}}</p>
+        <p><strong>Fecha de auditoria externa:</strong>{{Desarrollo_de_equipos_lideres.external_audiory_date}}</p>
+        <p><strong>Comentarios:</strong>{{Desarrollo_de_equipos_lideres.external_audirory_obs}}</p>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+      <p>No hay numerales.</p>
+    {% endif %}
+{% endblock %}

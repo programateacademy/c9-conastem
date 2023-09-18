@@ -4,7 +4,15 @@ from django.urls import path
 from .views.General import views, Register
 
 # INFRAESTRUCTURA
-# from .views.Infraestructura import 
+from .views.Infraestructura import InfraestructuraListView
+from .views.Infraestructura import AmbienteEscolarListView
+from .views.Infraestructura import DesarrolloDeEquiposLideresListView
+from .views.Infraestructura import EquidadListView
+from .views.Infraestructura import PlaneacionInstitucionalListView
+from .views.Infraestructura import RecursosTecnologicosListView
+from .views.Infraestructura import SostenibilidadListView
+# from .views.Infraestructura import UsoDeInformacionListView
+
 
 # CURRICULO
 from .views.Curriculo import InclusionIngenieriaAulaListView
@@ -34,8 +42,21 @@ urlpatterns= [
     path ('instituciones/', Register.RegisterListView.as_view(), name= 'register_list'),
     path ('instituciones/<int:pk>', Register.RegisterListDetail.as_view(), name= 'register_detail')
 ]
-urlpatterns += [
 
+urlpatterns += [
+    # #INFRAESTRUCTURA
+    path("infraestructura/", InfraestructuraListView.as_view(),name="Infraestructura"),
+    path("ambiente-escolar/", AmbienteEscolarListView.as_view(), name="ambiente_escolar_List"),
+    path("desarrollo-de-equipos-lideres/", DesarrolloDeEquiposLideresListView.as_view(), name="Desarrollo_de_equipos_lideres_list"),
+    path("equidad/", EquidadListView.as_view(), name="Equidad_list"),
+    path("planeacion-institucional/", PlaneacionInstitucionalListView.as_view(), name="Planeacion_institucional_list" ),
+    path("recursos-tecnologicos/", RecursosTecnologicosListView.as_view(), name="Recursos_tecnologicos_list" ),
+    path("sostenibilidad/", SostenibilidadListView.as_view(), name="Sostenibilidad_list" ),
+    # path("uso-de-info/", UsoDeInformacionListView.as_view(), name="Uso_de_info_list" ),  
+]
+
+urlpatterns += [
+    
     # CURRICULO
         # 2.2 Inclusion ingenieria aula
     path('inclusion-ingenieria-aula', InclusionIngenieriaAulaListView.as_view(), name='Inclusion_ingenieria_aula_list'),
@@ -60,8 +81,5 @@ urlpatterns += [
     path("compromisodelacomunidad", CompromisodelaComunidadListView.as_view(), name="Compromisodelacomunidad_List"),
     path("convivenciaescolar", ConvivenciaescolarListView.as_view(), name="Convivenciaescolar_List"),
     path("relacionesconlacomunidad", RelacionesconlaComunidadListView.as_view(), name="Relacionesconlacomunidad_List"),
-    path("sostenibilidadescuelacomunidadypertenencia", SostenibilidadEscuelaComunidadyPertenenciaListView.as_view(), name="Sostenibilidadescuelacomunidadypertenecia_List" ),
-
-    
-    
+    path("sostenibilidadescuelacomunidadypertenencia", SostenibilidadEscuelaComunidadyPertenenciaListView.as_view(), name="Sostenibilidadescuelacomunidadypertenecia_List" ),   
 ]
