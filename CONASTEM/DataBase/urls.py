@@ -30,6 +30,11 @@ from .views.Formacion_Instruccion_Evaluacion import PlaneacionyCreaciondeActivid
 from .views.Formacion_Instruccion_Evaluacion import EstrategiasFormativasListView
 
 # PERSONAL DOCENTE Y ADMINISTRATIVO
+from .views.PersonalDocenteYAdministrativo import PersonalDocenteyAdministrativoListView
+from .views.PersonalDocenteYAdministrativo import ProfesionalesEspecializadosEducacionSTEMListView
+from .views.PersonalDocenteYAdministrativo import DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionalesListView
+from .views.PersonalDocenteYAdministrativo import ApoyoPedagogicoListView
+from .views.PersonalDocenteYAdministrativo import SostenibilidadDocenteAdministrativoListView
 
 # ESCUELA COMUNIDAD Y PERTENENCIA
 from .views.EscuelaComunidadYPertenencia import CompromisodelaComunidadListView
@@ -102,11 +107,16 @@ urlpatterns += [
     path("sostenibilidad/", Formacion_Instruccion_Evaluacion.SostenibilidadListView.as_view(), name="sostenibilidad_list"),
     
     # PERSONAL DOCENTE Y ADMINISTRATIVO
+    path("personal-docente-y-administrativo",PersonalDocenteyAdministrativoListView.as_view(), name="PersonalDocenteyAdministrativo"),
+    path("profesional-calificado-en-educacion-stem",ProfesionalesEspecializadosEducacionSTEMListView.as_view(), name="ProfesionalesEspecializadosEducacionSTEM_List"),
+    path("desarrollo-profesional-docentes-directores-consejeros-profesionales", DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionalesListView.as_view(), name="DesarrolloProfesionalInicialyContinuoparaDocentesDirectoresdeEscuelayConsejerosProfesionales_list"),
+    path("apoyo-pedagogico-personal",ApoyoPedagogicoListView.as_view(), name="ApoyoPedagogicoParaelPersonal_List"),
+    path("sostenibilidad-personal-docente-administrativo", SostenibilidadDocenteAdministrativoListView.as_view(), name="SostenibilidadDocenteAdministrativo_List"),
 
     # ESCUELA COMUNIDAD Y PERTENENCIA
-    path("escuelacomunidadypertenencia", EscuelaComunidadyPertenenciaListView.as_view(),name="Escuelacomunidadypertenencia"),
+    path("escuelacomunidadypertenencia", EscuelaComunidadyPertenenciaListView.as_view(), name="Escuelacomunidadypertenencia"),
     path("compromisodelacomunidad", CompromisodelaComunidadListView.as_view(), name="Compromisodelacomunidad_List"),
     path("convivenciaescolar", ConvivenciaescolarListView.as_view(), name="Convivenciaescolar_List"),
     path("relacionesconlacomunidad", RelacionesconlaComunidadListView.as_view(), name="Relacionesconlacomunidad_List"),
-    path("sostenibilidadescuelacomunidadypertenencia", SostenibilidadEscuelaComunidadyPertenenciaListView.as_view(), name="Sostenibilidadescuelacomunidadypertenecia_List" ),   
+    path("sostenibilidadescuelacomunidadypertenencia", SostenibilidadEscuelaComunidadyPertenenciaListView.as_view(), name="Sostenibilidadescuelacomunidadypertenecia_List" ),
 ]
