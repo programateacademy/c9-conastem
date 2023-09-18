@@ -1,6 +1,7 @@
 from django import forms
 from .models.Register import Register
 from .models.Formacion_Instruccion_Evaluacion import AprendizajeCentradoEstudiante
+
 class FormRegister(forms.ModelForm):
     class Meta:
         model = Register
