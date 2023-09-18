@@ -103,7 +103,6 @@ urlpatterns += [
         # 3.9 SOSTENIBILIDAD - FORMACIÓN/INSTRUCCIÓN/EVALUACIÓN
     path("sostenibilidad/", Formacion_Instruccion_Evaluacion.SostenibilidadListView.as_view(), name="sostenibilidad_list"),
     
->>>>>>> 086d23576202237abc57b644020fed49dd5d7f64
     # PERSONAL DOCENTE Y ADMINISTRATIVO
 
     # ESCUELA COMUNIDAD Y PERTENENCIA
