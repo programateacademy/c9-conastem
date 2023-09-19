@@ -4,11 +4,15 @@ from django.shortcuts import render
 from django.views import generic
 
 # Create your views here.
+from ..models.Curriculo.ConsideracionesSobreAreasYAsignaturas import ConsideracionesSobreAreasYAsignaturas
 from ..models.Curriculo.Inclusion_ingenieria_aula import InclusionIngenieriaAula
 from ..models.Curriculo.Desarrollo_ciudadania_digital import DesarrolloCiudadaniaDigital
+from ..models.Curriculo.IntegracionCurricular import Integracioncurricular
 from ..models.Curriculo.Curriculo_progresivo import CurriculoProgresivo
 from ..models.Curriculo.Curriculo_propio import CurriculoPropio
+from ..models.Curriculo.DesarrolloHabilidadesSigloXXI import DesarroloHabilidadesSigloXXI
 from ..models.Curriculo.Evaluacion_estudiantes import EvaluacionEstudiantes
+from ..models.Curriculo.SostenibilidadCurriculo import SostenibilidadCurriculo
 
 
 class CurriculoListView(generic.ListView):
@@ -18,6 +22,10 @@ class CurriculoListView(generic.ListView):
 
 
 # 2.1 CONSIDERACIONES SOBRE LAS ÁREAS Y LAS ASIGNATURAS
+class ConsideracionesSobreAreasYAsignaturasListView(generic.ListView):
+    model = ConsideracionesSobreAreasYAsignaturas
+    context_object_name = 'ConsideracionesSobreAreasYAsignaturas_list'
+    template_name ='database/Curriculo/ConsideracionesSobreAreasYAsignaturas_list.html'
 
 # 2.2 Inclusion ingenieria aula
 class InclusionIngenieriaAulaListView(generic.ListView):
@@ -32,6 +40,10 @@ class DesarrolloCiudadaniaDigitalListView(generic.ListView):
     template_name = 'database/Curriculo/Desarrollo_ciudadania_digital_list.html'
 
 # 2.4 INTEGRACIÓN CURRICULAR
+class IntegracionCurricularListView(generic.ListView):
+    model = Integracioncurricular
+    context_object_name = 'IntegracionCurricular_list'
+    template_name = 'database/Curriculo/IntegracionCurricular_list.html'
 
 # 2.5 CURRÍCULO PROGRESIVO Y ALINEADO CON LOS ESTÁNDARES CURRICULARES
 class CurriculoProgresivoListView(generic.ListView):
@@ -46,9 +58,19 @@ class CurriculoPropioListView(generic.ListView):
     template_name = 'database/Curriculo/Curriculo_propio_list.html'
 
 # 2.7 DESARROLLO DE LAS HABILIDADES DEL SIGLO XXI
+class DesarrolloHabilidadesSigloXXIListView(generic.ListView):
+    model = DesarroloHabilidadesSigloXXI
+    context_object_name = 'DesarrolloHabilidadesSigloXXI_list'
+    template_name = 'database/curriculo/DesarrolloHabilidadesSigloXXI_list.html'
 
 # 2.8 EVALUACIÓN DE LOS ESTUDIANTES
 class EvaluacionEstudiantesListView(generic.ListView):
     model = EvaluacionEstudiantes
     context_object_name = 'Evaluacion_estudiantes_list'
     template_name = 'database/Curriculo/Evaluacion_estudiantes_list.html'
+
+# 2.9 SOSTENIBILIDAD - CURRÍCULO
+class SostenibilidadCurriculoListView(generic.ListView):
+    model = SostenibilidadCurriculo
+    context_object_name = 'SostenibilidadCurriculo_list'
+    template_name = 'database/Curriculo/SostenibilidadCurriculo_list.html'

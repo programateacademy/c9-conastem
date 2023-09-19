@@ -20,7 +20,7 @@ class CompromisodelaComunidad (GeneralModel):
         choices= ITEM_CHOICE
         )
     
-    codigo =models.CharField(max_length=7, default="5.0.0.0")
+    codigo =models.CharField(max_length=7, default="5000")
     
     
     def __str__(self) :

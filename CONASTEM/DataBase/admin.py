@@ -18,6 +18,7 @@ from .models.Infraestructura.sostenibilidad import Sostenibilidad
 from .models.Infraestructura.uso_de_informacion import UsoDeInformacion
 
 # CURRICULO
+from .models.Curriculo.ConsideracionesSobreAreasYAsignaturas import ConsideracionesSobreAreasYAsignaturas
 from .models.Curriculo.Inclusion_ingenieria_aula import InclusionIngenieriaAula
 from .models.Curriculo.Desarrollo_ciudadania_digital import DesarrolloCiudadaniaDigital
 from .models.Curriculo.Curriculo_progresivo import CurriculoProgresivo
@@ -30,7 +31,7 @@ from .models.Formacion_Instruccion_Evaluacion.ApredizajeRiguroso import Aprendiz
 from .models.Formacion_Instruccion_Evaluacion.AprendizajeExtendido import AprendizajeExtendido
 from .models.Formacion_Instruccion_Evaluacion.EstrategiasFormativas import EstrategiasFormativas
 from .models.Formacion_Instruccion_Evaluacion.PlaneacionyCreaciondeActividades import PlaneacionyCreaciondeActividades
-from .models.Formacion_Instruccion_Evaluacion.EducacionSTEMIntegrada import EducacionStemIntegrada
+from .models.Formacion_Instruccion_Evaluacion.EducacionSTEM import EducacionStemIntegrada
 from .models.Formacion_Instruccion_Evaluacion.TecnologiaFormacionInstruccion import TecnologiaFormacion
 from .models.Formacion_Instruccion_Evaluacion.EleccionCarrera import EleccionCarrera
 from .models.Formacion_Instruccion_Evaluacion.Sostenibilidad import SostenibilidadFormacionInstruccion
@@ -64,6 +65,7 @@ admin.site.register(Sostenibilidad)
 admin.site.register(UsoDeInformacion)
 
 # ADMIN CURRICULO
+admin.site.register(ConsideracionesSobreAreasYAsignaturas)
 admin.site.register(InclusionIngenieriaAula)
 admin.site.register(DesarrolloCiudadaniaDigital)
 admin.site.register(CurriculoProgresivo)

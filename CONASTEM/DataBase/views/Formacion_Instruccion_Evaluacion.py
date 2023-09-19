@@ -1,25 +1,25 @@
 from django.http import HttpResponseRedirect
-from ..forms import Form_Criterio_3
 from django.shortcuts import render
 from django.views import generic
 from django.utils import timezone
 
 from ..models.Formacion_Instruccion_Evaluacion.AprendizajeCentradoEstudiante import AprendizajeCentrado
+from ..models.Formacion_Instruccion_Evaluacion.EducacionSTEM import EducacionSTEMIntegrada
 from ..models.Formacion_Instruccion_Evaluacion.ApredizajeRiguroso import AprendizajeRiguroso
 from ..models.Formacion_Instruccion_Evaluacion.PlaneacionyCreaciondeActividades import PlaneacionyCreaciondeActividades
 from ..models.Formacion_Instruccion_Evaluacion.EstrategiasFormativas import EstrategiasFormativas
 from ..models.Formacion_Instruccion_Evaluacion.AprendizajeExtendido import AprendizajeExtendido
-from ..models.Formacion_Instruccion_Evaluacion.EducacionSTEMIntegrada import EducacionStemIntegrada
+
 from ..models.Formacion_Instruccion_Evaluacion.TecnologiaFormacionInstruccion import TecnologiaFormacion
 from ..models.Formacion_Instruccion_Evaluacion.EleccionCarrera import EleccionCarrera
 from ..models.Formacion_Instruccion_Evaluacion.Sostenibilidad import SostenibilidadFormacionInstruccion
 
+# FORMULARIO
+from ..forms import Form_AprendizajeCentrado
 
 
-# Vista de lista
 
 # VISTA DE LOS SUBCITERIOS
-
 class FormacionInstruccionEvaluacionListView(generic.ListView):
     model = AprendizajeCentrado
     context_object_name = 'FormacionInstruccionEvaluacion'
@@ -32,14 +32,12 @@ class AprendizajeCentradoListView(generic.ListView):
     template_name = 'database/Formacion_Instruccion_Evaluacion/aprendizaje_centrado.html'
 
 # VISTA DE APRENDIZAJE RIGUROSO
-
 class AprendizajeRigurosoListView(generic.ListView):
     model=AprendizajeRiguroso
     context_object_name='AprendizajeRiguroso_List'
     template_name='database\Formacion_Instruccion_Evaluacion\Aprendizajeriguroso_List.html'
 
 # VISTA DE PLANEACIÓN Y CREACIÓN DE ACTIVIDADES
-
 class PlaneacionyCreaciondeActividadesListView(generic.ListView):
     model=PlaneacionyCreaciondeActividades
     context_object_name='PlaneacionyCreaciondeActividades_List'
@@ -47,7 +45,7 @@ class PlaneacionyCreaciondeActividadesListView(generic.ListView):
 
 # VISTA DE EDUCACIÓN STEM INTEGRADA
 class EducacionStemIntegradaListView(generic.ListView):
-    model = EducacionStemIntegrada
+    model = EducacionSTEMIntegrada
     context_object_name = 'educacion_stem_integrada_list'
     template_name = 'database/Formacion_Instruccion_Evaluacion/educacion_stem_integrada.html'
 
@@ -70,13 +68,10 @@ class EleccionCarreraListView(generic.ListView):
     template_name = 'database/Formacion_Instruccion_Evaluacion/eleccion_carrera.html'
 
 # VISTA DE APRENDIZAJE EXTENDIDO
-
 class AprendizajeExtendidoListView(generic.ListView):
     model=AprendizajeExtendido
     context_object_name='AprendizajeExtendido_List'
     template_name='database\Formacion_Instruccion_Evaluacion\Aprendizajeextendido_List.html'
-
-
 
 # VISTA DE SOSTENIBILIDAD - FORMACIÓN/INSTRUCCIÓN/EVALUACIÓN
 class SostenibilidadListView(generic.ListView):
@@ -85,13 +80,13 @@ class SostenibilidadListView(generic.ListView):
     template_name = 'database/Formacion_Instruccion_Evaluacion/sostenibilidad.html'
 
 # FORMULARIO
-def data_new(request):
+def aprendizaje_centradonew(request):
     if request.method == "POST":
-        form_new = Form_Criterio_3(request.POST)
+        form_new = Form_AprendizajeCentrado(request.POST)
         if form_new.is_valid():
             form_new.save()
-            return HttpResponseRedirect('/database/formacion-instruccion-evaluacion/')
+            return HttpResponseRedirect('/database/aprendizaje-centrado/')
     else:
-        form_new = Form_Criterio_3 ()
+        form_new = Form_AprendizajeCentrado ()
 
     return render(request, 'database/Formacion_Instruccion_Evaluacion/aprendizaje_centrado_new.html', {'form_new': form_new})
