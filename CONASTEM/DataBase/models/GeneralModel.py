@@ -1,8 +1,6 @@
 from django.db import models
 from django.urls import reverse
 from .Person_Responsable import PersonResponsable
-from .Criterio import Criterio
-
 
 class GeneralModel (models.Model):
 
@@ -22,6 +20,8 @@ class GeneralModel (models.Model):
     external_auditory_obs = models.TextField(max_length=1000, blank= True)
 
     evidence = models.URLField(blank= True, help_text= 'Ingrese sus evidencias aquí')
+    
+    codigo = models.CharField(max_length=5, help_text='Ingrese el código del numeral a evaluar', default="5000")
 
     created_at = models.DateTimeField(auto_now_add= True) 
     updated_at = models.DateTimeField(auto_now= True)

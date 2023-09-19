@@ -11,8 +11,7 @@ from .views.Infraestructura import EquidadListView
 from .views.Infraestructura import PlaneacionInstitucionalListView
 from .views.Infraestructura import RecursosTecnologicosListView
 from .views.Infraestructura import SostenibilidadListView
-# from .views.Infraestructura import UsoDeInformacionListView
-
+from .views.Infraestructura import UsoDeInformacionListView
 
 # CURRICULO
 from .views.Curriculo import ConsideracionesSobreAreasYAsignaturasListView 
@@ -52,10 +51,10 @@ from .views.EscuelaComunidadYPertenencia import SostenibilidadEscuelaComunidadyP
 # GENERAL
 urlpatterns= [
     path ('', Register.index, name= 'index'),
-    # path ('home/', views.home , name= 'home'),
     path("home/", views.CriterioList.as_view(), name="criterio_list"),
-    path ('instituciones/', Register.RegisterListView.as_view(), name= 'register_list'),
-    path ('instituciones/<int:pk>', Register.RegisterListDetail.as_view(), name= 'register_detail')
+    path('instituciones/', Register.RegisterListView.as_view(), name= 'register_list'),
+    path('instituciones/<int:pk>', Register.RegisterListDetail.as_view(), name= 'register_detail'),
+    path("registro-responsable/", views.person_responsablenew, name="person_responsablenew"),
 ]
 
 urlpatterns += [
@@ -67,22 +66,23 @@ urlpatterns += [
     path("planeacion-institucional/", PlaneacionInstitucionalListView.as_view(), name="Planeacion_institucional_list" ),
     path("recursos-tecnologicos/", RecursosTecnologicosListView.as_view(), name="Recursos_tecnologicos_list" ),
     path("sostenibilidad/", SostenibilidadListView.as_view(), name="Sostenibilidad_list" ),
-    # path("uso-de-info/", UsoDeInformacionListView.as_view(), name="Uso_de_info_list" ),  
+    path("uso-de-info/", UsoDeInformacionListView.as_view(), name="Uso_informacion_list" ),  
 ]
 
 urlpatterns += [
     
     # CURRICULO
+    path("curriculo/", CurriculoListView.as_view(), name="Curriculo_list"),
     # 2.1 Consideraciones sobre Áreas y Asignaturas
     path("consideracionesareasyasignaturas/", ConsideracionesSobreAreasYAsignaturasListView.as_view(), name="ConsideracionesSobreAreasYAsignaturas_list"),
     # 2.2 Inclusion_ingenieria_aula
-    path('inclusion-ingenieria-aula/', InclusionIngenieriaAulaListView.as_view(), name='inclusion_ingenieria_aula_list'),
+    path('inclusion-ingenieria-aula/', InclusionIngenieriaAulaListView.as_view(), name='Inclusion_ingenieria_aula_list'),
     # 2.3 Desarrollo ciudadania digital
     path('desarrollo-ciudadania-digital/', DesarrolloCiudadaniaDigitalListView.as_view(), name='desarrollo_ciudadania_digital_list'),
     # 2.4 Integración curricular
     path('integracion-curicular/', IntegracionCurricularListView.as_view(), name='IntegracionCurricular_list'),
     # 2.5 CURRÍCULO PROGRESIVO Y ALINEADO CON LOS ESTÁNDARES CURRICULARES
-    path("curriculo/", CurriculoListView.as_view(), name="Curriculo_list"),
+    path("curriculo-progresivo/", CurriculoProgresivoListView.as_view(), name="Curriculo_progresivo_list"),
     # 2.6 CURRÍCULO PROPIO
     path ('curriculo-propio', CurriculoPropioListView.as_view(), name='Curriculo_propio_list'),
     # 2.7 Desarrollo ahbilidades siglo XXI

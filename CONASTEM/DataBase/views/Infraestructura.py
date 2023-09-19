@@ -10,7 +10,7 @@ from ..models.Infraestructura.Equidad import Equidad
 from ..models.Infraestructura.planeacion_institucional import PlaneacionInstitucional
 from ..models.Infraestructura.recursos_tecnologicos import RecursosTecnologicos
 from ..models.Infraestructura.sostenibilidad import Sostenibilidad
-# from ..models.Infraestructura.uso_de_informacion import UsoDeInformacion
+from ..models.Infraestructura.uso_de_informacion import UsoDeInformacion
 
 class InfraestructuraListView(generic.ListView):
     model=AmbienteEscolar
@@ -30,24 +30,24 @@ class DesarrolloDeEquiposLideresListView(generic.ListView):
 class EquidadListView(generic.ListView):
     model=Equidad
     context_object_name='Equidad_list'
-    template_name='database\Infraestructura\Equidad.html'
+    template_name='database/Infraestructura/Equidad.html'
     
 class PlaneacionInstitucionalListView(generic.ListView):
     model=PlaneacionInstitucional
     context_object_name='Planeacion_institucional_list'
-    template_name='database\Infraestructura\Planeacion_institucional.html'
+    template_name='database/Infraestructura/Planeacion_institucional.html'
 
 class RecursosTecnologicosListView(generic.ListView):
     model=RecursosTecnologicos
     context_object_name='Recursos_tecnologicos_list'
-    template_name='database\Infraestructura\Recursos_tecnologicos.html'
+    template_name='database/Infraestructura/Recursos_tecnologicos.html'
 
 class SostenibilidadListView(generic.ListView):
     model=Sostenibilidad
     context_object_name='Sostenibilidad_list'
-    template_name='database\Infraestructura\Sostenibilidad.html'
+    template_name='database/Infraestructura/Sostenibilidad.html'
     
-# class UsoDeInformacionListView(generic.ListView):
-#     model=UsoDeInformacion
-#     context_object_name='Uso_de_informacion_list'
-#     template_name='database\Infraestructura\Uso_de_informacion.html'
+class UsoDeInformacionListView(generic.ListView):
+    model=UsoDeInformacion
+    context_object_name='Uso_informacion_list'
+    template_name='database/Infraestructura/Uso_informacion.html'

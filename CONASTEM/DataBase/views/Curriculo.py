@@ -20,7 +20,6 @@ class CurriculoListView(generic.ListView):
     context_object_name = 'Curriculo_list'
     template_name = 'database/Curriculo/Curriculo_list.html'
 
-
 # 2.1 CONSIDERACIONES SOBRE LAS ÁREAS Y LAS ASIGNATURAS
 class ConsideracionesSobreAreasYAsignaturasListView(generic.ListView):
     model = ConsideracionesSobreAreasYAsignaturas

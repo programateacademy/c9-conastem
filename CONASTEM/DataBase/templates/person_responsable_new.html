@@ -1,0 +1,35 @@
+{% extends "base_general.html" %}
+
+{% load static %}
+
+{%block content%} 
+
+<h1>Datos del responsable</h1>
+
+<form method="POST" class="formulario"> {% csrf_token %}
+
+    <div class="campo-formulario">
+        <label for="{{first_name}}">Nombre</label>
+            {{form.first_name}}
+    </div>
+
+    <div class="campo-formulario">
+        <label for="{{last_name}}">Apellido</label>
+            {{form.last_name}}
+    </div>
+
+    <div class="campo-formulario">
+        <label for="{{phone_number}}">Número de teléfono</label>
+            {{ form.phone_number }}
+    </div>
+
+    <div class="campo-formulario">
+        <label for="{{email}}">Correo electrónico</label>
+            {{ form.email }}
+    </div>
+
+    <button type="submit" class="boton-formulario">Enviar</button>
+
+</form>
+
+{% endblock %}
