@@ -13,7 +13,6 @@ from .views.Infraestructura import RecursosTecnologicosListView
 from .views.Infraestructura import SostenibilidadListView
 # from .views.Infraestructura import UsoDeInformacionListView
 
-
 # CURRICULO
 from .views.Curriculo import ConsideracionesSobreAreasYAsignaturasListView 
 from .views.Curriculo import InclusionIngenieriaAulaListView
@@ -52,10 +51,10 @@ from .views.EscuelaComunidadYPertenencia import SostenibilidadEscuelaComunidadyP
 # GENERAL
 urlpatterns= [
     path ('', Register.index, name= 'index'),
-    # path ('home/', views.home , name= 'home'),
     path("home/", views.CriterioList.as_view(), name="criterio_list"),
-    path ('instituciones/', Register.RegisterListView.as_view(), name= 'register_list'),
-    path ('instituciones/<int:pk>', Register.RegisterListDetail.as_view(), name= 'register_detail')
+    path('instituciones/', Register.RegisterListView.as_view(), name= 'register_list'),
+    path('instituciones/<int:pk>', Register.RegisterListDetail.as_view(), name= 'register_detail'),
+    path("registro-responsable/", views.person_responsablenew, name="person_responsablenew"),
 ]
 
 urlpatterns += [

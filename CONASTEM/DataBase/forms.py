@@ -1,6 +1,7 @@
 from django import forms
 # GENERALES
 from .models.Register import Register
+from .models.Person_Responsable import PersonResponsable
 
 # INFRAESTRUCTURA
 
@@ -21,6 +22,15 @@ class FormRegister(forms.ModelForm):
         model = Register
         exclude = ['id', 'created_date']
 
+class FormPersonResponsable (forms.ModelForm):
+    class Meta:
+        model = PersonResponsable
+        fields = ['first_name', 'last_name', 'phone_number', 'email']
+
+        def __init__(self, *args, **kwargs):
+            super().__init__(*args, **kwargs)
+            self.fields['email'].widget.attrs.update(forms.EmailInput)
+
 
 # INFRAESTRUCTURA
 
@@ -33,7 +43,7 @@ class FormRegister(forms.ModelForm):
 class Form_AprendizajeCentrado (forms.ModelForm):
     class Meta:
         model = AprendizajeCentradoEstudiante.AprendizajeCentrado
-        exclude = ['created_at', 'updated_at']
+        exclude = ['created_at', 'updated_at','codigo']
 
 # PERSONAL DOCENTE Y ADMINISTRATIVO
 
