@@ -5,13 +5,15 @@ from ..GeneralModel import GeneralModel
 class UsoDeInformacion(GeneralModel):
 
     ITEM_CHOICE = [
-        ("151","Uso de la información de pruebas estandarizadas estatales, además de otras evaluaciones."),
-        ("152","Seguimiento riguroso a la información de las evaluaciones formativas."),
-        ("153","Hay un proyecto de seguimiento del avance del programa con los estudiantes."),
-        ("154","Existe un plan individual de educación para cada estudiante."),
-        ("155","Se utilizan sistemas de protección y de seguimiento de la información."),
-        ("156","Los estudiantes y los padres tienen acceso a información."),
+        ("1510","Uso de la información de pruebas estandarizadas estatales, además de otras evaluaciones."),
+        ("1520","Seguimiento riguroso a la información de las evaluaciones formativas."),
+        ("1530","Hay un proyecto de seguimiento del avance del programa con los estudiantes."),
+        ("1540","Existe un plan individual de educación para cada estudiante."),
+        ("1550","Se utilizan sistemas de protección y de seguimiento de la información."),
+        ("1560","Los estudiantes y los padres tienen acceso a información."),
     ]
+
+    code = models.CharField(max_length=4, default="1510")
 
     numeral = models.CharField(
         max_length= 10000,

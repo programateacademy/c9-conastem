@@ -1,27 +1,43 @@
 {% extends "base_general.html" %}
 
 {% block content %}
-    <h1>Sostenibilidad</h1>
-
-    {% if Sostenibilidad_list %}
-    <ul>
-
+    <h1>1700-SOSTENIBILIDAD</h1>
+    <table>
+      <thead>
+         <tr>
+             <th>Codigo</th>
+             <th>Numeral</th>
+             <th>Departamento Responsable</th>
+             <th>Persona Responsable</th>
+             <th>Año</th>
+             <th>Fecha límite</th>
+             <th>Fecha de auditoria interna</th>
+             <th>Comentarios Auditoria Interna</th>
+             <th>Fecha de auditoria externa</th>
+             <th>Comentarios Auditoria Externa</th>
+             <th>Enlaces</th>
+         </tr>
+      </thead>
+      <tbody>
       {% for Sostenibilidad in Sostenibilidad_list %}
-      <li>
-        <h1><strong>Numeral:</strong> {{ Sostenibilidad.numeral }}</h1>
-        <h1><strong>Texto:</strong> {{ Sostenibilidad.Texto}}</h1>
-       <p><strong>Departamento Responsable:</strong> {{Sostenibilidad.dep_responsable}}</p>
-        <p><strong>Persona Responsable:</strong>{{Sostenibilidad.person_responsable}}</p>
-       <p><strong>Año:</strong>{{Sostenibilidad.track_year}}</p>
-        <p><strong>Fecha limite:</strong>{{Sostenibilidad.track_date}}</p>
-        <p><strong>Fecha de auditoria interna:</strong>{{Sostenibilidad.internal_audiory_date}}</p>
-       <p><strong>Comentarios</strong>{{Sostenibilidad.internal_audirory_obs}}</p>
-        <p><strong>Fecha de auditoria externa:</strong>{{Sostenibilidad.external_audiory_date}}</p>
-        <p><strong>Comentarios:</strong>{{Sostenibilidad.external_audirory_obs}}</p>
-      </li>
+      <tr>
+        <td>{{Sostenibilidad.codigo}}</td>
+        <td> {{ Sostenibilidad.numeral }}</h1>
+        <td>{{Sostenibilidad.dep_responsable}}</p>
+        <td>{{Sostenibilidad.person_responsable}}</p>
+        <td>{{Sostenibilidad.track_year}}</p>
+        <td>{{Sostenibilidad.track_date}}</p>
+        <td>{{Sostenibilidad.internal_auditory_date}}</p>
+        <td>{{Sostenibilidad.internal_auditory_obs}}</p>
+        <td>{{Sostenibilidad.external_auditory_date}}</p>
+        <td>{{Sostenibilidad.external_auditory_obs}}</p>
+  
+      </tr>
+      {% empty %}
+      <tr>
+          <td colstran="9">No hay numerales.</td>
+      </tr>
       {% endfor %}
-    </ul>
-    {% else %}
-      <p>No hay numerales.</p>
-    {% endif %}
+    </tbody>
+    </table>
 {% endblock %}

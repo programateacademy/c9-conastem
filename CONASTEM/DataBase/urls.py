@@ -46,7 +46,7 @@ urlpatterns= [
 urlpatterns += [
     # #INFRAESTRUCTURA
     path("infraestructura/", InfraestructuraListView.as_view(),name="Infraestructura"),
-    path("ambiente-escolar/", AmbienteEscolarListView.as_view(), name="ambiente_escolar_List"),
+    path("ambiente-escolar/", AmbienteEscolarListView.as_view(), name="Ambiente_escolar_list"),
     path("desarrollo-de-equipos-lideres/", DesarrolloDeEquiposLideresListView.as_view(), name="Desarrollo_de_equipos_lideres_list"),
     path("equidad/", EquidadListView.as_view(), name="Equidad_list"),
     path("planeacion-institucional/", PlaneacionInstitucionalListView.as_view(), name="Planeacion_institucional_list" ),

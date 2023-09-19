@@ -1,27 +1,43 @@
 {% extends "base_general.html" %}
 
 {% block content %}
-    <h1>Planeacion institucional</h1>
-
-    {% if Planeacion_institucional_list %}
-    <ul>
-
-      {% for Planeacion_institucional in Planeacion_institucional_list %}
-      <li>
-        <h1><strong>Numeral:</strong> {{ Planeacion_institucional.numeral }}</h1>
-        <h1><strong>Texto:</strong> {{ Planeacion_institucional.Texto}}</h1>
-       <p><strong>Departamento Responsable:</strong> {{Planeacion_institucional.dep_responsable}}</p>
-        <p><strong>Persona Responsable:</strong>{{Planeacion_institucional.person_responsable}}</p>
-       <p><strong>Año:</strong>{{Planeacion_institucional.track_year}}</p>
-        <p><strong>Fecha limite:</strong>{{Planeacion_institucional.track_date}}</p>
-        <p><strong>Fecha de auditoria interna:</strong>{{Planeacion_institucional.internal_audiory_date}}</p>
-       <p><strong>Comentarios</strong>{{Planeacion_institucional.internal_audirory_obs}}</p>
-        <p><strong>Fecha de auditoria externa:</strong>{{Planeacion_institucional.external_audiory_date}}</p>
-        <p><strong>Comentarios:</strong>{{Planeacion_institucional.external_audirory_obs}}</p>
-      </li>
+    <h1>1200-PLANEACIÓN INSTITUCIONAL</h1>
+    <table>
+      <thead>
+         <tr>
+             <th>Codigo</th>
+             <th>Numeral</th>
+             <th>Departamento Responsable</th>
+             <th>Persona Responsable</th>
+             <th>Año</th>
+             <th>Fecha límite</th>
+             <th>Fecha de auditoria interna</th>
+             <th>Comentarios Auditoria Interna</th>
+             <th>Fecha de auditoria externa</th>
+             <th>Comentarios Auditoria Externa</th>
+             <th>Enlaces</th>
+         </tr>
+      </thead>
+      <tbody>
+      {% for PlaneacionInstitucional in Planeacion_institucional_list %}
+      <tr>
+        <td>{{PlaneacionInstitucional.codigo}}</td>
+        <td> {{ PlaneacionInstitucional.numeral }}</h1>
+        <td>{{PlaneacionInstitucional.dep_responsable}}</p>
+        <td>{{PlaneacionInstitucional.person_responsable}}</p>
+        <td>{{PlaneacionInstitucional.track_year}}</p>
+        <td>{{PlaneacionInstitucional.track_date}}</p>
+        <td>{{PlaneacionInstitucional.internal_auditory_date}}</p>
+        <td>{{PlaneacionInstitucional.internal_auditory_obs}}</p>
+        <td>{{PlaneacionInstitucional.external_auditory_date}}</p>
+        <td>{{PlaneacionInstitucional.external_auditory_obs}}</p>
+  
+      </tr>
+      {% empty %}
+      <tr>
+          <td colstran="9">No hay numerales.</td>
+      </tr>
       {% endfor %}
-    </ul>
-    {% else %}
-      <p>No hay numerales.</p>
-    {% endif %}
+    </tbody>
+    </table>
 {% endblock %}
