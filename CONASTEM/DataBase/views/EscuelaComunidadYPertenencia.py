@@ -35,7 +35,7 @@ def compromiso_comunidadnew(request):
     else:
         form_new = Form_Compromisodelacomunidad ()
 
-    return render(request, 'database/Form_Subcriterio.html', {'form_new': form_new, 'titulo':'Compromiso de la comunidad'})
+    return render(request, 'Form_Subcriterio.html', {'form_new': form_new, 'titulo':'Compromiso de la comunidad'})
 
 
 class ConvivenciaescolarListView (generic.ListView):
@@ -52,7 +52,7 @@ def convivencia_escolarnew(request):
     else:
         form_new = Form_Convivenciaescolar ()
 
-    return render(request, 'database/Form_Subcriterio.html', {'form_new': form_new , 'titulo':'Convivencia Escolar'})
+    return render(request, 'Form_Subcriterio.html', {'form_new': form_new , 'titulo':'Convivencia Escolar'})
 
 
 class RelacionesconlaComunidadListView (generic.ListView):
