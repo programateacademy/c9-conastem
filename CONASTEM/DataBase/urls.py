@@ -41,6 +41,7 @@ from .views.PersonalDocenteYAdministrativo import ApoyoPedagogicoListView
 from .views.PersonalDocenteYAdministrativo import SostenibilidadDocenteAdministrativoListView
 
 # ESCUELA COMUNIDAD Y PERTENENCIA
+from .views import EscuelaComunidadYPertenencia
 from .views.EscuelaComunidadYPertenencia import CompromisodelaComunidadListView
 from .views.EscuelaComunidadYPertenencia import ConvivenciaescolarListView
 from .views.EscuelaComunidadYPertenencia import EscuelaComunidadyPertenenciaListView
@@ -94,13 +95,16 @@ urlpatterns += [
     # FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
     path('formacion-instruccion-evaluacion/new', Formacion_Instruccion_Evaluacion.data_new, name='data_new'),
     path("formacion-instruccion-evaluacion/", Formacion_Instruccion_Evaluacion.FormacionInstruccionEvaluacionListView.as_view(), name="FormacionInstruccionEvaluacion"),
+    path('aprendizaje-centrado', Formacion_Instruccion_Evaluacion.AprendizajeCentradoListView.as_view(), name='aprendizaje_centrado_detail'),
+
+        # 3.1 APRENDIZAJE CENTRADO EN EL ESTUDIANTE
     path('aprendizaje-centrado', Formacion_Instruccion_Evaluacion.AprendizajeCentradoListView.as_view(), name='aprendizaje_centrado_list'),
         # 3.2 APRENDIZAJE RIGUROSO
     path('aprendizajeriguroro', AprendizajeRigurosoListView.as_view(),name="AprendizajeRiguroso_List"),
         # 3.3 PLANEACIÓN Y CREACIÓN DE ACTIVIDADES
     path('planeacionycreaciondeactividades', PlaneacionyCreaciondeActividadesListView.as_view(),name="PlaneacionyCreaciondeActividades_List"),
         # 3.4 EDUCACIÓN STEM INTEGRADA
-    path("educacion-stem-integrada/", Formacion_Instruccion_Evaluacion.EducacionStemIntegradaListView.as_view(), name='educacion_stem_integrada_list'),
+    # path("educacion-stem-integrada/", Formacion_Instruccion_Evaluacion.EducacionStemIntegradaListView.as_view(), name='educacion_stem_integrada_list'),
         # 3.5 TECNOLOGÍA PARA LA FORMACIÓN / INSTRUCCIÓN
     path("tecnologia-para-formacion/", Formacion_Instruccion_Evaluacion.TecnologiaFormacionListView.as_view(), name='tecnologia_para_Formacion_list' ), 
         # 3.6 ESTRATEGIAS FORMATIVAS
@@ -120,7 +124,9 @@ urlpatterns += [
     path("sostenibilidad-personal-docente-administrativo", SostenibilidadDocenteAdministrativoListView.as_view(), name="SostenibilidadDocenteAdministrativo_List"),
 
     # ESCUELA COMUNIDAD Y PERTENENCIA
-    path("escuelacomunidadypertenencia", EscuelaComunidadyPertenenciaListView.as_view(), name="Escuelacomunidadypertenencia"),
+    path('compromisodelacomunidad/new', EscuelaComunidadYPertenencia.data_new, name='data_new'),
+    path("escuelacomunidadypertenencia", EscuelaComunidadyPertenenciaListView.as_view(),name="Escuelacomunidadypertenencia"),
+    path('convivenciaescolar/new', EscuelaComunidadYPertenencia.convivenciaescolarnew,name='convivenciaescolarnew'),
     path("compromisodelacomunidad", CompromisodelaComunidadListView.as_view(), name="Compromisodelacomunidad_List"),
     path("convivenciaescolar", ConvivenciaescolarListView.as_view(), name="Convivenciaescolar_List"),
     path("relacionesconlacomunidad", RelacionesconlaComunidadListView.as_view(), name="Relacionesconlacomunidad_List"),

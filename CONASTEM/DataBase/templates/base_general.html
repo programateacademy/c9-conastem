@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {% block title %}
-      <title>Local Library</title>
-    {% endblock %}
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -42,8 +40,9 @@
           </div>
         </div>
       {% endblock %}
+      
     </header>
-
+    <title>{% block my_custom_title %}Título Predeterminado{% endblock %}</title>
     {% block content %}
 
     {% endblock %}
