@@ -31,11 +31,7 @@ from .models.Formacion_Instruccion_Evaluacion.ApredizajeRiguroso import Aprendiz
 from .models.Formacion_Instruccion_Evaluacion.AprendizajeExtendido import AprendizajeExtendido
 from .models.Formacion_Instruccion_Evaluacion.EstrategiasFormativas import EstrategiasFormativas
 from .models.Formacion_Instruccion_Evaluacion.PlaneacionyCreaciondeActividades import PlaneacionyCreaciondeActividades
-<<<<<<< HEAD
 # from .models.Formacion_Instruccion_Evaluacion.EducacionSTEM import EducacionStemIntegrada
-=======
-from .models.Formacion_Instruccion_Evaluacion.EducacionSTEM import EducacionSTEMIntegrada
->>>>>>> 9f8e1bf7a41ac6582c2b37c462785bf549f03e7a
 from .models.Formacion_Instruccion_Evaluacion.TecnologiaFormacionInstruccion import TecnologiaFormacion
 from .models.Formacion_Instruccion_Evaluacion.EleccionCarrera import EleccionCarrera
 from .models.Formacion_Instruccion_Evaluacion.Sostenibilidad import SostenibilidadFormacionInstruccion
