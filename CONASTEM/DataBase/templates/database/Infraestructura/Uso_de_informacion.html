@@ -1,0 +1,27 @@
+{% comment %} {% extends "base_general.html" %}
+
+{% block content %}
+    <h1>Uso de informacion</h1>
+
+    {% if Uso_de_informacion_list %}
+    <ul>
+
+      {% for Uso_de_informacion in Uso_de_informacion_list %}
+      <li>
+        <h1><strong>Numeral:</strong> {{ Uso_de_informacion_list.numeral }}</h1>
+        <h1><strong>Texto:</strong> {{ Uso_de_informacion_list.Texto}}</h1>
+       <p><strong>Departamento Responsable:</strong> {{Uso_de_informacion_list.dep_responsable}}</p>
+        <p><strong>Persona Responsable:</strong>{{Uso_de_informacion_list.person_responsable}}</p>
+       <p><strong>Año:</strong>{{Uso_de_informacion_list.track_year}}</p>
+        <p><strong>Fecha limite:</strong>{{Uso_de_informacion_list.track_date}}</p>
+        <p><strong>Fecha de auditoria interna:</strong>{{Uso_de_informacion_list.internal_audiory_date}}</p>
+       <p><strong>Comentarios</strong>{{Uso_de_informacion_list.internal_audirory_obs}}</p>
+        <p><strong>Fecha de auditoria externa:</strong>{{Uso_de_informacion_list.external_audiory_date}}</p>
+        <p><strong>Comentarios:</strong>{{Uso_de_informacion_list.external_audirory_obs}}</p>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+      <p>No hay numerales.</p>
+    {% endif %}
+{% endblock %} {% endcomment %}

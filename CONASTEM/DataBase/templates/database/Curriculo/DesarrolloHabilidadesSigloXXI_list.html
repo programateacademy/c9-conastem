@@ -1,0 +1,40 @@
+{% extends "base_general.html" %}
+
+{% block content %}
+<h1>Desarrollo Habilidades Siglo XXI</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Numeral</th>
+            <th>Departamento Responsable</th>
+            <th>Persona Responsable</th>
+            <th>Año</th>
+            <th>Fecha límite</th>
+            <th>Fecha de auditoria interna</th>
+            <th>Comentarios Auditoria Interna</th>
+            <th>Fecha de auditoria externa</th>
+            <th>Comentarios Auditoria Externa</th>
+            <th>Enlaces</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for DesarrolloHabilidadesSigloXXI in DesarrolloHabilidadesSigloXXI_list %}
+        <tr>
+            <td>{{ DesarrolloHabilidadesSigloXXI.numeral }}</td>
+            <td>{{ DesarrolloHabilidadesSigloXXI.dep_responsable }}</td>
+            <td>{{ DesarrolloHabilidadesSigloXXI.person_responsable }}</td>
+            <td>{{ DesarrolloHabilidadesSigloXXI.track_year }}</td>
+            <td>{{ DesarrolloHabilidadesSigloXXI.track_date }}</td>
+            <td>{{ DesarrolloHabilidadesSigloXXI.internal_audiory_date }}</td>
+            <td>{{ DesarrolloHabilidadesSigloXXI.internal_audirory_obs }}</td>
+            <td>{{ DesarrolloHabilidadesSigloXXI.external_audiory_date }}</td>
+            <td>{{ DesarrolloHabilidadesSigloXXI.external_audirory_obs }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="9">No hay numerales.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}

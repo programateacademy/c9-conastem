@@ -52,7 +52,7 @@ class ConvivenciaescolarListView (generic.ListView):
         return ConvivenciaEscolar.objects.all().order_by('codigo')
 
 
-def convivenciaescolarnew(request):
+def convivencia_escolarnew(request):
     if request.method == "POST":
         form_new = Form_Convivenciaescolar(request.POST)
         if form_new.is_valid():
