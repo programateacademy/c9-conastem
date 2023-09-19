@@ -1,0 +1,13 @@
+{% extends "base_general.html" %}
+{% block content %}
+<h1>Infraestructura</h1>
+<ul>
+<li><a href="{% url 'ambiente_escolar_List' %}">Ambiente Escolar</a></li>
+<li><a href="{% url 'Desarrollo_de_equipos_lideres_list' %}">Desarrollo de equipos lideres</a></li>
+<li><a href="{% url 'Equidad_list' %}">Equidad</a></li>
+<li><a href="{% url 'Planeacion_institucional_list' %}">Planeacion institucional</a></li>
+<li><a href="{% url 'Recursos_tecnologicos_list' %}">Recursos tecnologicos</a></li>
+<li><a href="{% url 'Sostenibilidad_list' %}">Sostenibilidad</a></li>
+{% comment %} <li><a href="{% url 'Uso_de_info_list' %}">Uso de informacion</a></li> {% endcomment %}
+</ul> 
+{% endblock content %}

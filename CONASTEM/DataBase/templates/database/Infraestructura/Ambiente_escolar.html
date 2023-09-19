@@ -1,0 +1,27 @@
+{% extends "base_general.html" %}
+
+{% block content %}
+    <h1>Ambiente escolar</h1>
+
+    {% if AmbienteEscolar_List %}
+    <ul>
+
+      {% for Ambiente_escolar in AmbienteEscolar_List %}
+      <li>
+        <h1><strong>Numeral:</strong> {{ Ambiente_escolar.numeral }}</h1>
+        <h1><strong>Texto:</strong> {{ Ambiente_escolar.Texto}}</h1>
+       <p><strong>Departamento Responsable:</strong> {{Ambiente_escolar.dep_responsable}}</p>
+        <p><strong>Persona Responsable:</strong>{{Ambiente_escolar.person_responsable}}</p>
+       <p><strong>Año:</strong>{{Ambiente_escolar.track_year}}</p>
+        <p><strong>Fecha limite:</strong>{{Ambiente_escolar.track_date}}</p>
+        <p><strong>Fecha de auditoria interna:</strong>{{Ambiente_escolar.internal_audiory_date}}</p>
+       <p><strong>Comentarios</strong>{{Ambiente_escolar.internal_audirory_obs}}</p>
+        <p><strong>Fecha de auditoria externa:</strong>{{Ambiente_escolar.external_audiory_date}}</p>
+        <p><strong>Comentarios:</strong>{{Ambiente_escolar.external_audirory_obs}}</p>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+      <p>No hay numerales.</p>
+    {% endif %}
+{% endblock %}
