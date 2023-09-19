@@ -39,7 +39,7 @@ def Compromisodelacomunidad_new(request):
     else:
         form_new = Form_Compromisodelacomunidad ()
 
-    return render(request, 'Form_Subcriterio.html', {'form_new': form_new, 'titulo':'Compromiso de la comunidad'})
+    return render(request, 'Form_Subcriterio.html', {'form_new': form_new, 'titulo':'5100-COMPROMISO DE LA COMUNIDAD'})
 
 
 class ConvivenciaescolarListView (generic.ListView):
@@ -52,7 +52,7 @@ class ConvivenciaescolarListView (generic.ListView):
         return ConvivenciaEscolar.objects.all().order_by('codigo')
 
 
-def convivencia_escolarnew(request):
+def convivenciaescolarnew(request):
     if request.method == "POST":
         form_new = Form_Convivenciaescolar(request.POST)
         if form_new.is_valid():
@@ -61,7 +61,7 @@ def convivencia_escolarnew(request):
     else:
         form_new = Form_Convivenciaescolar ()
 
-    return render(request, 'Form_Subcriterio.html', {'form_new': form_new , 'titulo':'Convivencia Escolar'})
+    return render(request, 'Form_Subcriterio.html', {'form_new': form_new , 'titulo':'5300-CONVIVENCIA ESCOLAR'})
 
 
 class RelacionesconlaComunidadListView (generic.ListView):

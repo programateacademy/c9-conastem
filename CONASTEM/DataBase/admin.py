@@ -11,7 +11,7 @@ from .models.Register import Register
 # INFRAESTRUCTURA
 from .models.Infraestructura.ambiente_escolar import AmbienteEscolar
 from .models.Infraestructura.desarrollo_de_equipos_lideres import DesarrolloDeEquiposLideres
-from .models.Infraestructura.equidad import Equidad
+from .models.Infraestructura.Equidad import Equidad
 from .models.Infraestructura.planeacion_institucional import PlaneacionInstitucional
 from .models.Infraestructura.recursos_tecnologicos import RecursosTecnologicos
 from .models.Infraestructura.sostenibilidad import Sostenibilidad
@@ -31,7 +31,7 @@ from .models.Formacion_Instruccion_Evaluacion.ApredizajeRiguroso import Aprendiz
 from .models.Formacion_Instruccion_Evaluacion.AprendizajeExtendido import AprendizajeExtendido
 from .models.Formacion_Instruccion_Evaluacion.EstrategiasFormativas import EstrategiasFormativas
 from .models.Formacion_Instruccion_Evaluacion.PlaneacionyCreaciondeActividades import PlaneacionyCreaciondeActividades
-from .models.Formacion_Instruccion_Evaluacion.EducacionSTEM import EducacionStemIntegrada
+# from .models.Formacion_Instruccion_Evaluacion.EducacionSTEM import EducacionStemIntegrada
 from .models.Formacion_Instruccion_Evaluacion.TecnologiaFormacionInstruccion import TecnologiaFormacion
 from .models.Formacion_Instruccion_Evaluacion.EleccionCarrera import EleccionCarrera
 from .models.Formacion_Instruccion_Evaluacion.Sostenibilidad import SostenibilidadFormacionInstruccion
@@ -78,7 +78,7 @@ admin.site.register(AprendizajeExtendido)
 admin.site.register(AprendizajeRiguroso)
 admin.site.register(PlaneacionyCreaciondeActividades)
 admin.site.register(EstrategiasFormativas)
-admin.site.register(EducacionStemIntegrada)
+# admin.site.register(EducacionStemIntegrada)
 admin.site.register(TecnologiaFormacion)
 admin.site.register(EleccionCarrera)
 admin.site.register(SostenibilidadFormacionInstruccion)

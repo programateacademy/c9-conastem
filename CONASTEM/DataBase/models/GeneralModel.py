@@ -10,7 +10,7 @@ class GeneralModel (models.Model):
     
     dep_responsable = models.CharField (max_length=30, default= "Dirección")
     
-    person_responsable = models.OneToOneField(PersonResponsable, on_delete= models.CASCADE)
+    person_responsable = models.ForeignKey(PersonResponsable, on_delete= models.PROTECT)
     track_year = models.IntegerField (help_text="Ingrese año de seguimiento")
     
     track_date = models.CharField(max_length=5, help_text="Ingrese fecha de seguimiento")
