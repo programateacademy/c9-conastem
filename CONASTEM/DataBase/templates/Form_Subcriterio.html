@@ -9,12 +9,13 @@
 
         <meta charset="UTF-8">
         
-    
         <div class="campo-formulario">
             <label for="{{numeral}}">Numeral</label>
-                {{form_new.numeral}}
-            </div>
-        </div> 
+                {{ form_new.numeral }}
+
+        </div>
+
+        </div>
         
         <div class="campo-formulario">
             <label for="{{priority}}">Prioridad</label>
@@ -76,7 +77,10 @@
 
     <section>
         <h2>Evidencias</h2>
-        <a><input type= "text">Agregar evidencias de las acciones</input></a>
+        <div class="campo-formulario">
+            <label for="{{ evidence }}">Adjunta link de evidencia</label>
+                {{ form_new.evidence }}
+        </div>
     </section>
     
     <button type="submit" class="boton-formulario">Enviar</button>

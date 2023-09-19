@@ -89,4 +89,4 @@ def aprendizaje_centradonew(request):
     else:
         form_new = Form_AprendizajeCentrado ()
 
-    return render(request, 'database/Formacion_Instruccion_Evaluacion/aprendizaje_centrado_new.html', {'form_new': form_new})
+#     return render(request, 'database/Formacion_Instruccion_Evaluacion/aprendizaje_centrado_new.html', {'form_new': form_new})
