@@ -56,7 +56,6 @@ urlpatterns += [
     path ('evaluacion-estudiantes', EvaluacionEstudiantesListView.as_view(), name='Evaluacion_estudiantes_list'),
 
     # FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
-    path('formacion-instruccion-evaluacion/new', Formacion_Instruccion_Evaluacion.data_new, name='data_new'),
     path("formacion-instruccion-evaluacion/", Formacion_Instruccion_Evaluacion.FormacionInstruccionEvaluacionListView.as_view(), name="FormacionInstruccionEvaluacion"),
     path('aprendizaje-centrado', Formacion_Instruccion_Evaluacion.AprendizajeCentradoListView.as_view(), name='aprendizaje_centrado_detail'),
 
@@ -82,11 +81,13 @@ urlpatterns += [
     # PERSONAL DOCENTE Y ADMINISTRATIVO
 
     # ESCUELA COMUNIDAD Y PERTENENCIA
-    path('compromisodelacomunidad/new', EscuelaComunidadYPertenencia.data_new, name='data_new'),
     path("escuelacomunidadypertenencia", EscuelaComunidadyPertenenciaListView.as_view(),name="Escuelacomunidadypertenencia"),
-    path('convivenciaescolar/new', EscuelaComunidadYPertenencia.convivenciaescolarnew,name='convivenciaescolarnew'),
     path("compromisodelacomunidad", CompromisodelaComunidadListView.as_view(), name="Compromisodelacomunidad_List"),
+    path('compromisodelacomunidad/new', EscuelaComunidadYPertenencia.Compromisodelacomunidad_new, name='compromisodelacomunidadnew'),
     path("convivenciaescolar", ConvivenciaescolarListView.as_view(), name="Convivenciaescolar_List"),
+    path('convivenciaescolar/new', EscuelaComunidadYPertenencia.convivenciaescolarnew,name='convivenciaescolarnew'),
     path("relacionesconlacomunidad", RelacionesconlaComunidadListView.as_view(), name="Relacionesconlacomunidad_List"),
+    path("relacionesconlacomunidad/new", EscuelaComunidadYPertenencia.relacionesconlacomunidadnew, name='relacionesconlacomunidadnew'),
     path("sostenibilidadescuelacomunidadypertenencia", SostenibilidadEscuelaComunidadyPertenenciaListView.as_view(), name="Sostenibilidadescuelacomunidadypertenecia_List" ),
+    path("sostenibilidadescuela/new", EscuelaComunidadYPertenencia.sostenibilidadescuelanew, name='sostenibilidadescuelanew')
 ]

@@ -1,5 +1,5 @@
 from django.http import HttpResponseRedirect
-from ..forms import Form_Criterio_3
+# from ..forms import Form_Criterio_3
 from django.shortcuts import render
 from django.views import generic
 from django.utils import timezone
@@ -85,13 +85,13 @@ class SostenibilidadListView(generic.ListView):
     template_name = 'database/Formacion_Instruccion_Evaluacion/sostenibilidad.html'
 
 # FORMULARIO
-def data_new(request):
-    if request.method == "POST":
-        form_new = Form_Criterio_3(request.POST)
-        if form_new.is_valid():
-            form_new.save()
-            return HttpResponseRedirect('/database/formacion-instruccion-evaluacion/')
-    else:
-        form_new = Form_Criterio_3 ()
+# def data_new(request):
+#     if request.method == "POST":
+#         form_new = Form_Criterio_3(request.POST)
+#         if form_new.is_valid():
+#             form_new.save()
+#             return HttpResponseRedirect('/database/formacion-instruccion-evaluacion/')
+#     else:
+#         form_new = Form_Criterio_3 ()
 
-    return render(request, 'database/Formacion_Instruccion_Evaluacion/aprendizaje_centrado_new.html', {'form_new': form_new})
+#     return render(request, 'database/Formacion_Instruccion_Evaluacion/aprendizaje_centrado_new.html', {'form_new': form_new})
