@@ -1,6 +1,17 @@
 from django import forms
+# GENERALES
 from .models.Register import Register
+
+# INFRAESTRUCTURA
+
+# CURRÍCULO
+
+# FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
 from .models.Formacion_Instruccion_Evaluacion import AprendizajeCentradoEstudiante
+
+# PERSONAL DOCENTE Y ADMINISTRATIVO
+
+# ESCUELA COMUNIDAD Y PERTENENCIA
 from .models.Escuela_Comunidad_y_Pertenencia import CompromisodelaComunidad
 from .models.Escuela_Comunidad_y_Pertenencia import ConvivenciaEscolar
 
