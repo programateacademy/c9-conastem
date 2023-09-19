@@ -1,0 +1,21 @@
+{% extends "base_general.html" %}
+
+{%block content%}
+
+<section class= "lista">
+    {%if responsable_list%}
+
+        {%for personresponsable in responsable_list%}
+            <li>
+                <a href="{{personresponsable.get_absolute_url}}">{{personresponsable.last_name}} {{personresponsable.first_name}}</a>
+            </li>
+        {%endfor%}
+    
+    {%else%}
+    <p>No se encontraron registros</p>
+
+    {%endif%}
+
+</section>
+
+{%endblock content%}

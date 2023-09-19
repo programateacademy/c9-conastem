@@ -35,9 +35,9 @@ class FormPersonResponsable (forms.ModelForm):
         model = PersonResponsable
         fields = ['first_name', 'last_name', 'phone_number', 'email']
 
-        def __init__(self, *args, **kwargs):
-            super().__init__(*args, **kwargs)
-            self.fields['email'].widget.attrs.update(forms.EmailInput)
+        # def __init__(self, *args, **kwargs):
+        #     super().__init__(*args, **kwargs)
+        #     self.fields['email'].widget.attrs.update(forms.EmailInput)
 
 
 # INFRAESTRUCTURA

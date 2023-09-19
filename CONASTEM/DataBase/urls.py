@@ -1,7 +1,7 @@
 from django.urls import path
 
 # GENERAL
-from .views.General import views, Register
+from .views.General import views
 
 # INFRAESTRUCTURA
 from .views.Infraestructura import InfraestructuraListView
@@ -50,11 +50,13 @@ from .views.EscuelaComunidadYPertenencia import SostenibilidadEscuelaComunidadyP
 
 # GENERAL
 urlpatterns= [
-    path ('', Register.index, name= 'index'),
+    path ('', views.index, name= 'index'),
     path("home/", views.CriterioList.as_view(), name="criterio_list"),
-    path('instituciones/', Register.RegisterListView.as_view(), name= 'register_list'),
-    path('instituciones/<int:pk>', Register.RegisterListDetail.as_view(), name= 'register_detail'),
-    path("registro-responsable/", views.person_responsablenew, name="person_responsablenew"),
+    path('instituciones/', views.RegisterListView.as_view(), name= 'register_list'),
+    path('instituciones/<int:pk>', views.RegisterListDetail.as_view(), name= 'register_detail'),
+    path("responsable/new", views.person_responsablenew, name="person_responsablenew"),
+    path("responsables/", views.PersonResponsableListView .as_view(), name="responsable_list"),
+    path("responsables/<int:pk>", views.PersonResponsableDetail .as_view(), name="responsable_detail"),
 ]
 
 urlpatterns += [
