@@ -6,7 +6,7 @@ from ..Person_Responsable import PersonResponsable
 from ..GeneralModel import GeneralModel
 
 # 2.9 SOSTENBILIDAD - CURRÍCULO
-class SostenibidadCurriculo(GeneralModel):
+class SostenibilidadCurriculo(GeneralModel):
 
     ITEM_CHOICE = [
         ("2.9.1", "Mantener el currículo acorde a las necesidades del campo laboral futuro de los estudiantes y hacer los cambios necesarios para su correcta adaptación."),
