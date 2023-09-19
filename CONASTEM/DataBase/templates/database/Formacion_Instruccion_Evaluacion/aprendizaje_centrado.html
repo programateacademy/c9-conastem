@@ -2,7 +2,17 @@
 
 {%block content%}
 
-<h1 style="text-transform:uppercase">Aprendizaje centrado en el estudiante</h1>
+{% load static %}
+
+<div class= "titulo">
+    <img src="{%static 'images/icon_form_instruc_eva.svg' %}">
+    <h1>Formación / Instrucción / Evaluación</h1>
+</div>
+<div class="subtitulo">
+    <h2 style="text-transform:uppercase">Aprendizaje centrado en el estudiante</h2>
+    <a href="/database/aprendizaje-centrado/new"><img src="{%static 'images/crear_datos.svg'%}" alt="Crear datos"></a>
+</div>
+
 
 <table>
     <thead>

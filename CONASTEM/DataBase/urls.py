@@ -11,7 +11,7 @@ from .views.Infraestructura import EquidadListView
 from .views.Infraestructura import PlaneacionInstitucionalListView
 from .views.Infraestructura import RecursosTecnologicosListView
 from .views.Infraestructura import SostenibilidadListView
-# from .views.Infraestructura import UsoDeInformacionListView
+from .views.Infraestructura import UsoDeInformacionListView
 
 # CURRICULO
 from .views.Curriculo import ConsideracionesSobreAreasYAsignaturasListView 
@@ -66,7 +66,7 @@ urlpatterns += [
     path("planeacion-institucional/", PlaneacionInstitucionalListView.as_view(), name="Planeacion_institucional_list" ),
     path("recursos-tecnologicos/", RecursosTecnologicosListView.as_view(), name="Recursos_tecnologicos_list" ),
     path("sostenibilidad/", SostenibilidadListView.as_view(), name="Sostenibilidad_list" ),
-    # path("uso-de-info/", UsoDeInformacionListView.as_view(), name="Uso_de_info_list" ),  
+    path("uso-de-info/", UsoDeInformacionListView.as_view(), name="Uso_informacion_list" ),  
 ]
 
 urlpatterns += [
@@ -123,9 +123,7 @@ urlpatterns += [
     path("sostenibilidad-personal-docente-administrativo", SostenibilidadDocenteAdministrativoListView.as_view(), name="SostenibilidadDocenteAdministrativo_List"),
 
     # ESCUELA COMUNIDAD Y PERTENENCIA
-    path('compromisodelacomunidad/new', EscuelaComunidadYPertenencia.compromiso_comunidadnew, name='compromiso_comunidadnew'),
     path("escuelacomunidadypertenencia", EscuelaComunidadyPertenenciaListView.as_view(),name="Escuelacomunidadypertenencia"),
-    path('convivenciaescolar/new', EscuelaComunidadYPertenencia.convivencia_escolarnew,name='convivencia_escolarnew'),
     path("compromisodelacomunidad", CompromisodelaComunidadListView.as_view(), name="Compromisodelacomunidad_List"),
     path('compromisodelacomunidad/new', EscuelaComunidadYPertenencia.Compromisodelacomunidad_new, name='compromisodelacomunidadnew'),
     path("convivenciaescolar", ConvivenciaescolarListView.as_view(), name="Convivenciaescolar_List"),
