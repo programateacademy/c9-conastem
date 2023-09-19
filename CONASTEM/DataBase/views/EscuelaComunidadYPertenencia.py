@@ -24,9 +24,7 @@ class CompromisodelaComunidadListView (generic.ListView):
 
 # FORMULARIO
 def data_new(request):
-    contexto = {
-    'titulo': 'Compromiso de la comunidad'
-}
+  
     if request.method == "POST":
         form_new = Form_Compromisodelacomunidad(request.POST)
         if form_new.is_valid():
