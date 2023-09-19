@@ -24,3 +24,4 @@ class Form_Convivenciaescolar (forms.ModelForm):
     class Meta:
         model = ConvivenciaEscolar.ConvivenciaEscolar
         exclude = ['created_at', 'updated_at','codigo']
+
