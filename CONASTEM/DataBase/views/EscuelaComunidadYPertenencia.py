@@ -23,7 +23,7 @@ class CompromisodelaComunidadListView (generic.ListView):
     template_name='database\EscuelaComunidadyPertenencia\Compromisodelacomunidad_List.html'
 
 # FORMULARIO
-def data_new(request):
+def compromiso_comunidadnew(request):
     contexto = {
     'titulo': 'Compromiso de la comunidad'
 }
@@ -35,7 +35,7 @@ def data_new(request):
     else:
         form_new = Form_Compromisodelacomunidad ()
 
-    return render(request, 'database/EscuelaComunidadyPertenencia/Form_Subcriterio.html', {'form_new': form_new, 'titulo':'Compromiso de la comunidad'})
+    return render(request, 'database/Form_Subcriterio.html', {'form_new': form_new, 'titulo':'Compromiso de la comunidad'})
 
 
 class ConvivenciaescolarListView (generic.ListView):
@@ -43,7 +43,7 @@ class ConvivenciaescolarListView (generic.ListView):
     context_object_name='Convivenciaescolar_List'
     template_name='database\EscuelaComunidadyPertenencia\Convivenciaescolar_List.html'
 
-def convivenciaescolarnew(request):
+def convivencia_escolarnew(request):
     if request.method == "POST":
         form_new = Form_Convivenciaescolar(request.POST)
         if form_new.is_valid():
@@ -52,7 +52,7 @@ def convivenciaescolarnew(request):
     else:
         form_new = Form_Convivenciaescolar ()
 
-    return render(request, 'database/EscuelaComunidadyPertenencia/Form_Subcriterio.html', {'form_new': form_new , 'titulo':'Convivencia Escolar'})
+    return render(request, 'database/Form_Subcriterio.html', {'form_new': form_new , 'titulo':'Convivencia Escolar'})
 
 
 class RelacionesconlaComunidadListView (generic.ListView):

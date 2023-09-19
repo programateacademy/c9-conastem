@@ -9,7 +9,7 @@ class FormRegister(forms.ModelForm):
         model = Register
         exclude = ['id', 'created_date']
         
-class Form_Criterio_3 (forms.ModelForm):
+class Form_AprendizajeCentrado (forms.ModelForm):
     class Meta:
         model = AprendizajeCentradoEstudiante.AprendizajeCentrado
         exclude = ['created_at', 'updated_at']
