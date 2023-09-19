@@ -16,11 +16,11 @@ class CompromisodelaComunidad (GeneralModel):
     ]
 
     numeral = models.CharField(
-        max_length= 10000,
+        max_length= 1000,
         choices= ITEM_CHOICE
         )
     
-    codigo =models.CharField(max_length=7, default="5000")
+    codigo = models.CharField(max_length=7, default="5000")
     
     
     def __str__(self) :

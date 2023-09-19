@@ -73,16 +73,17 @@ urlpatterns += [
 urlpatterns += [
     
     # CURRICULO
+    path("curriculo/", CurriculoListView.as_view(), name="Curriculo_list"),
     # 2.1 Consideraciones sobre Áreas y Asignaturas
     path("consideracionesareasyasignaturas/", ConsideracionesSobreAreasYAsignaturasListView.as_view(), name="ConsideracionesSobreAreasYAsignaturas_list"),
     # 2.2 Inclusion_ingenieria_aula
-    path('inclusion-ingenieria-aula/', InclusionIngenieriaAulaListView.as_view(), name='inclusion_ingenieria_aula_list'),
+    path('inclusion-ingenieria-aula/', InclusionIngenieriaAulaListView.as_view(), name='Inclusion_ingenieria_aula_list'),
     # 2.3 Desarrollo ciudadania digital
     path('desarrollo-ciudadania-digital/', DesarrolloCiudadaniaDigitalListView.as_view(), name='desarrollo_ciudadania_digital_list'),
     # 2.4 Integración curricular
     path('integracion-curicular/', IntegracionCurricularListView.as_view(), name='IntegracionCurricular_list'),
     # 2.5 CURRÍCULO PROGRESIVO Y ALINEADO CON LOS ESTÁNDARES CURRICULARES
-    path("curriculo/", CurriculoListView.as_view(), name="Curriculo_list"),
+    path("curriculo-progresivo/", CurriculoProgresivoListView.as_view(), name="Curriculo_progresivo_list"),
     # 2.6 CURRÍCULO PROPIO
     path ('curriculo-propio', CurriculoPropioListView.as_view(), name='Curriculo_propio_list'),
     # 2.7 Desarrollo ahbilidades siglo XXI
@@ -93,7 +94,7 @@ urlpatterns += [
     path ('sostenibilidad-curriculo/', SostenibilidadCurriculoListView.as_view(), name='SostenibiliadCurriculo_list'),
 
     # FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
-    path('aprendizaje-centrado/new', Formacion_Instruccion_Evaluacion.data_new, name='aprendizaje_centradonew'),
+    path('aprendizaje-centrado/new', Formacion_Instruccion_Evaluacion.aprendizaje_centradonew, name='aprendizaje_centradonew'),
     path("formacion-instruccion-evaluacion/", Formacion_Instruccion_Evaluacion.FormacionInstruccionEvaluacionListView.as_view(), name="FormacionInstruccionEvaluacion"),
 
         # 3.1 APRENDIZAJE CENTRADO EN EL ESTUDIANTE
@@ -123,9 +124,9 @@ urlpatterns += [
     path("sostenibilidad-personal-docente-administrativo", SostenibilidadDocenteAdministrativoListView.as_view(), name="SostenibilidadDocenteAdministrativo_List"),
 
     # ESCUELA COMUNIDAD Y PERTENENCIA
-    path('compromisodelacomunidad/new', EscuelaComunidadYPertenencia.data_new, name='compromiso_comunidadnew'),
+    path('compromisodelacomunidad/new', EscuelaComunidadYPertenencia.compromiso_comunidadnew, name='compromiso_comunidadnew'),
     path("escuelacomunidadypertenencia", EscuelaComunidadyPertenenciaListView.as_view(),name="Escuelacomunidadypertenencia"),
-    path('convivenciaescolar/new', EscuelaComunidadYPertenencia.convivenciaescolarnew,name='convivencia_escolarnew'),
+    path('convivenciaescolar/new', EscuelaComunidadYPertenencia.convivencia_escolarnew,name='convivencia_escolarnew'),
     path("compromisodelacomunidad", CompromisodelaComunidadListView.as_view(), name="Compromisodelacomunidad_List"),
     path("convivenciaescolar", ConvivenciaescolarListView.as_view(), name="Convivenciaescolar_List"),
     path("relacionesconlacomunidad", RelacionesconlaComunidadListView.as_view(), name="Relacionesconlacomunidad_List"),
