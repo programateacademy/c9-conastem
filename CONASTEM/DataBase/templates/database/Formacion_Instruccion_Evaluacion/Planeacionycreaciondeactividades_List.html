@@ -1,0 +1,42 @@
+{% extends "base_general.html" %}
+
+{% block content %}
+    <h1>3300-PLANEACION Y CREACIÓN DE ACTIVIDADES</h1>
+    <table>
+       <thead>
+          <tr>
+              <th>Codigo</th>
+              <th>Numeral</th>
+              <th>Departamento Responsable</th>
+              <th>Persona Responsable</th>
+              <th>Año</th>
+              <th>Fecha límite</th>
+              <th>Fecha de auditoria interna</th>
+              <th>Comentarios Auditoria Interna</th>
+              <th>Fecha de auditoria externa</th>
+              <th>Comentarios Auditoria Externa</th>
+              <th>Enlaces</th>
+          </tr>
+       </thead>
+       <tbody>
+           {% for planeacionycreaciondeactividades in PlaneacionyCreaciondeActividades_List %}
+      <tr>
+        <td>{{planeacionycreaciondeactividades.codigo}}</td>
+        <td> {{planeacionycreaciondeactividades.numeral }}</td>
+        <td> {{planeacionycreaciondeactividades.dep_responsable}}</td>
+        <td>{{planeacionycreaciondeactividades.person_responsable}}</td>
+        <td>{{planeacionycreaciondeactividades.track_year}}</td>
+        <td>{{planeacionycreaciondeactividades.track_date}}</td>
+        <td>{{planeacionycreaciondeactividades.internal_auditory_date}}</td>
+        <td>{{planeacionycreaciondeactividades.internal_auditory_obs}}</td>
+        <td>{{planeacionycreaciondeactividades.external_auditory_date}}</td>
+        <td>{{planeacionycreaciondeactividades.external_auditory_obs}}</td>
+  |   </tr>
+  {% empty %}
+  <tr>
+      <td colstran="9">No hay numerales.</td>
+  </tr>
+  {% endfor %}
+</tbody>
+</table>
+{% endblock %}

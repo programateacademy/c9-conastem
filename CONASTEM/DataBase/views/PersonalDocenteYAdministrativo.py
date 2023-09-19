@@ -10,13 +10,13 @@ from ..models.Personal_Docente_y_Administrativo.ProfesionalesEspecializadosEduca
 from ..models.Personal_Docente_y_Administrativo.SostenibilidadDocenteAdministrativo import SostenibilidadDocenteAdministrativo
 
 class PersonalDocenteyAdministrativoListView (generic.ListView):
-    model=ApoyoPedagogicoParaelPersonal
-    context_object_name='ApoyoPedagogicoParaelPersonal'
+    model=ApoyoPedagogico
+    context_object_name='PersonalDocenteAdministrativo_list'
     template_name='database/PersonalDocenteyAdministrativo/PersonalDocenteyAdministrativo.html'
 
 
 class ApoyoPedagogicoListView (generic.ListView):
-    model=ApoyoPedagogicoParaelPersonal
+    model=ApoyoPedagogico
     context_object_name='ApoyoPedagogico_List'
     template_name='database/PersonalDocenteyAdministrativo/ApoyoPedagogico_List.html'
 
@@ -31,7 +31,7 @@ class ProfesionalesEspecializadosEducacionSTEMListView (generic.ListView):
     context_object_name='ProfesionalesEspecializadosEducacionSTEM_List'
     template_name='database/PersonalDocenteyAdministrativo/ProfesionalesEspecializadosEducacionSTEM_List.html'
 
-class SostenibilidadPersonalDocenteyAdministrativoListView (generic.ListView):
+class SostenibilidadDocenteAdministrativoListView (generic.ListView):
     model=SostenibilidadDocenteAdministrativo
     context_object_name='SostenibilidadDocenteAdministrativo_List'
     template_name='database/PersonalDocenteyAdministrativo/SostenibilidadDocenteAdministrativo_List.html'

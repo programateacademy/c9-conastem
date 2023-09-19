@@ -1,0 +1,27 @@
+{% extends "base_general.html" %}
+
+{% block content %}
+    <h1>Sostenibilidad</h1>
+
+    {% if Sostenibilidad_list %}
+    <ul>
+
+      {% for Sostenibilidad in Sostenibilidad_list %}
+      <li>
+        <h1><strong>Numeral:</strong> {{ Sostenibilidad.numeral }}</h1>
+        <h1><strong>Texto:</strong> {{ Sostenibilidad.Texto}}</h1>
+       <p><strong>Departamento Responsable:</strong> {{Sostenibilidad.dep_responsable}}</p>
+        <p><strong>Persona Responsable:</strong>{{Sostenibilidad.person_responsable}}</p>
+       <p><strong>Año:</strong>{{Sostenibilidad.track_year}}</p>
+        <p><strong>Fecha limite:</strong>{{Sostenibilidad.track_date}}</p>
+        <p><strong>Fecha de auditoria interna:</strong>{{Sostenibilidad.internal_audiory_date}}</p>
+       <p><strong>Comentarios</strong>{{Sostenibilidad.internal_audirory_obs}}</p>
+        <p><strong>Fecha de auditoria externa:</strong>{{Sostenibilidad.external_audiory_date}}</p>
+        <p><strong>Comentarios:</strong>{{Sostenibilidad.external_audirory_obs}}</p>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+      <p>No hay numerales.</p>
+    {% endif %}
+{% endblock %}
