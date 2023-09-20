@@ -5,11 +5,11 @@
 {% load static %}
 
 <div class= "titulo">
-    <img src="{%static 'images/icon_form_instruc_eva.svg' %}">
-    <h1>Formación / Instrucción / Evaluación</h1>
+    <img src="{%static 'images/tabla_detail/icon_for_instrucc_eva.svg' %}">
+    <h1 style="text-transform:uppercase">3000 - Formación / Instrucción / Evaluación</h1>
 </div>
 <div class="subtitulo">
-    <h2 style="text-transform:uppercase">Aprendizaje centrado en el estudiante</h2>
+    <h2 style="text-transform:uppercase">3100 - Aprendizaje centrado en el estudiante</h2>
     <a href="/database/aprendizaje-centrado/new"><img src="{%static 'images/crear_datos.svg'%}" alt="Crear datos"></a>
 </div>
 
@@ -17,10 +17,11 @@
 <table >
     <thead>
         <tr>
+            <th>Código</th>
             <th>Numeral</th>
             <th>Departamento Responsable</th>
             <th>Persona Responsable</th>
-            <th>Fecha límite</th>
+            <th>Fecha límite de seguimiento</th>
             <th>Fecha de auditoria interna</th>
             <th>Comentarios Auditoria Interna</th>
             <th>Fecha de auditoria externa</th>
@@ -32,6 +33,7 @@
         
         {% for aprendizajecentrado in aprendizaje_centrado_list %}
     <tr>
+        <td>{{ aprendizajecentrado.codigo }}</h1>
         <td>{{ aprendizajecentrado.numeral }}</h1>
         <td>{{aprendizajecentrado.dep_responsable}}</p>
         <td>{{aprendizajecentrado.person_responsable}}</p>
