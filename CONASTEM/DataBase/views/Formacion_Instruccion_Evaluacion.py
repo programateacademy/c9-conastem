@@ -81,13 +81,13 @@ class SostenibilidadListView(generic.ListView):
     template_name = 'database/Formacion_Instruccion_Evaluacion/sostenibilidad.html'
 
 # FORMULARIO
-# def data_new(request):
-#     if request.method == "POST":
-#         form_new = Form_Criterio_3(request.POST)
-#         if form_new.is_valid():
-#             form_new.save()
-#             return HttpResponseRedirect('/database/formacion-instruccion-evaluacion/')
-#     else:
-#         form_new = Form_Criterio_3 ()
+def Aprendizajecentrado_new(request):
+    if request.method == "POST":
+        form_new = Form_AprendizajeCentrado(request.POST)
+        if form_new.is_valid():
+            form_new.save()
+            return HttpResponseRedirect('/database/aprendizaje-centrado')
+    else:
+        form_new = Form_AprendizajeCentrado ()
 
-#     return render(request, 'database/Formacion_Instruccion_Evaluacion/aprendizaje_centrado_new.html', {'form_new': form_new})
+    return render(request, 'Form_Subcriterio.html', {'form_new': form_new, 'titulo': 'APRENDIZAJE CENTRADO EN EL ESTUDIANTE'})

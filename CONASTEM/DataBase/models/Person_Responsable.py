@@ -19,4 +19,4 @@ class PersonResponsable (models.Model):
             verbose_name_plural = ("Formulario de registro de responsables")
 
       def get_absolute_url(self):
-            return reverse("person_responsable_detail", args=[str(self.id)])
+            return reverse("responsable_detail", args=[str(self.id)])

@@ -1,0 +1,19 @@
+{% extends "base_general.html" %}
+
+{%block content%}
+
+<div class= "lista"> 
+    <ul>
+        <h1> Información de la institución {{responsable_detail}} </h1>
+
+        <li>Nombre: {{responsable_detail.first_name}} {{responsable_detail.last_name}}</li>
+        <li>Teléfono: {{responsable_detail.phone_number}} </li>
+        <li>Correo electrónico: {{responsable_detail.email}} </li>
+
+    </ul>
+</div>  
+<div>
+    <a href="{%url 'responsable_list'%}"> Atrás </a>
+</div>  
+
+{%endblock content%}
