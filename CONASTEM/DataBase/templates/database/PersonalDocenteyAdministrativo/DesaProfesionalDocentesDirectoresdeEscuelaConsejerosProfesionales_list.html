@@ -1,0 +1,42 @@
+{% extends "base_general.html" %}
+
+{% block content %}
+    <h1> DESARROLLO PROFESIONAL INICIAL Y CONTINUO PARA DOCENTES DIRECTORES DE ESCUELA Y CONSEJEROS PROFESIONALES </h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Codigo</th>
+                <th>Numeral</th>
+                <th>Departamento Responsable</th>
+                <th>Persona Responsable</th>
+                <th>Año</th>
+                <th>Fecha límite</th>
+                <th>Fecha de auditoria interna</th>
+                <th>Comentarios Auditoria Interna</th>
+                <th>Fecha de auditoria externa</th>
+                <th>Comentarios Auditoria Externa</th>
+                <th>Enlaces</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales in DesarrolloProfesionalInicialyContinuoparaDocentesDirectoresdeEscuelayConsejerosProfesionales_List %}
+        <tr>
+        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.codigo}}</td>
+        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.numeral}}</h1>
+        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.dep_responsable}}</p>
+        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.person_responsable}}</p>
+        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.track_year}}</p>
+        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.track_date}}</p>
+        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.internal_auditory_date}}</p>
+        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.internal_auditory_obs}}</p>
+        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.external_auditory_date}}</p>
+        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.external_auditory_obs}}</p>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colstran="9">No hay numerales.</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+        </table>
+{% endblock %}

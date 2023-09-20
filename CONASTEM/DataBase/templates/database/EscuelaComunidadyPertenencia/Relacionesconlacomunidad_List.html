@@ -1,28 +1,45 @@
 {% extends "base_general.html" %}
 
 {% block content %}
-    <h1>Relaciones con la comunidad</h1>
-
-    {% if Relacionesconlacomunidad_List %}
-    <ul>
-
+    <h1>5200-RELACIONES CON LA COMUNIDAD</h1>
+    <table>
+      <thead>
+         <tr>
+             <th>Codigo</th>
+             <th>Numeral</th>
+             <th>Departamento Responsable</th>
+             <th>Persona Responsable</th>
+             <th>Año</th>
+             <th>Fecha límite</th>
+             <th>Fecha de auditoria interna</th>
+             <th>Comentarios Auditoria Interna</th>
+             <th>Fecha de auditoria externa</th>
+             <th>Comentarios Auditoria Externa</th>
+             <th>Enlaces</th>
+         </tr>
+      </thead>
+      <tbody>
       {% for relacionesconlacomunidad in Relacionesconlacomunidad_List %}
-      <li>
-        <h1><strong>Numeral:</strong> {{ relacionesconlacomunidad.numeral }}</h1>
-       <p><strong>Departamento Responsable:</strong> {{relacionesconlacomunidad.dep_responsable}}</p>
-        <p><strong>Persona Responsable:</strong>{{relacionesconlacomunidad.person_responsable}}</p>
-       <p><strong>Año:</strong>{{relacionesconlacomunidad.track_year}}</p>
-        <p><strong>Fecha limite:</strong>{{relacionesconlacomunidad.track_date}}</p>
-        <p><strong>Fecha de auditoria interna:</strong>{{relacionesconlacomunidad.internal_audiory_date}}</p>
-       <p><strong>Comentarios</strong>{{relacionesconlacomunidad.internal_audirory_obs}}</p>
-        <p><strong>Fecha de auditoria externa:</strong>{{relacionesconlacomunidad.external_audiory_date}}</p>
-        <p><strong>Comentarios:</strong>{{relacionesconlacomunidad.external_audirory_obs}}</p>
-  
-      </li>
-      {% endfor %}
+      <tr>
+        <td>{{relacionesconlacomunidad.codigo}}</td>
+        <td> {{ relacionesconlacomunidad.numeral }}</h1>
+        <td>{{relacionesconlacomunidad.dep_responsable}}</p>
+        <td>{{relacionesconlacomunidad.person_responsable}}</p>
+        <td>{{relacionesconlacomunidad.track_year}}</p>
+        <td>{{relacionesconlacomunidad.track_date}}</p>
+        <td>{{relacionesconlacomunidad.internal_auditory_date}}</p>
+        <td>{{relacionesconlacomunidad.internal_audirtory_obs}}</p>
+        <td>{{relacionesconlacomunidad.external_auditory_date}}</p>
+        <td>{{relacionesconlacomunidad.external_audirtory_obs}}</p>
+        <td><a href="{{ relacionesconlacomunidad.evidence }}" target="_blank">{{ relacionesconlacomunidad.evidence }}</a></td>
 
-    </ul>
-    {% else %}
-      <p>No hay numerales.</p>
-    {% endif %}
+  
+        </tr>
+        {% empty %}
+        <tr>
+            <td colstran="9">No hay numerales.</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+      </table>
 {% endblock %}

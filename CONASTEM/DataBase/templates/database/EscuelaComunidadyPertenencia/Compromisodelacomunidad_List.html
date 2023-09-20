@@ -1,29 +1,43 @@
 {% extends "base_general.html" %}
 
 {% block content %}
-    <h1>Compromiso de la comunidad</h1>
-
-    {% if Compromisodelacomunidad_List %}
-    <ul>
-
-      {% for compromisodelacomunidad in Compromisodelacomunidad_List %}
-      <li>
-        <h1><strong>Numeral:</strong> {{ compromisodelacomunidad.numeral }}</h1>
-        <h1><strong>Texto:</strong> {{ compromisodelacomunidad.Texto}}</h1>
-       <p><strong>Departamento Responsable:</strong> {{compromisodelacomunidad.dep_responsable}}</p>
-        <p><strong>Persona Responsable:</strong>{{compromisodelacomunidad.person_responsable}}</p>
-       <p><strong>Año:</strong>{{compromisodelacomunidad.track_year}}</p>
-        <p><strong>Fecha limite:</strong>{{compromisodelacomunidad.track_date}}</p>
-        <p><strong>Fecha de auditoria interna:</strong>{{compromisodelacomunidad.internal_audiory_date}}</p>
-       <p><strong>Comentarios</strong>{{compromisodelacomunidad.internal_audirory_obs}}</p>
-        <p><strong>Fecha de auditoria externa:</strong>{{compromisodelacomunidad.external_audiory_date}}</p>
-        <p><strong>Comentarios:</strong>{{compromisodelacomunidad.external_audirory_obs}}</p>
-  
-      </li>
-      {% endfor %}
-
-    </ul>
-    {% else %}
-      <p>No hay numerales.</p>
-    {% endif %}
+    <h1>5100-COMPROMISO DE LA COMUNIDAD</h1>
+    <table>
+       <thead>
+          <tr>
+              <th>Codigo</th>
+              <th>Numeral</th>
+              <th>Departamento Responsable</th>
+              <th>Persona Responsable</th>
+              <th>Año</th>
+              <th>Fecha límite</th>
+              <th>Fecha de auditoria interna</th>
+              <th>Comentarios Auditoria Interna</th>
+              <th>Fecha de auditoria externa</th>
+              <th>Comentarios Auditoria Externa</th>
+              <th>Enlaces</th>
+          </tr>
+       </thead>
+       <tbody>
+           {% for compromisodelacomunidad in Compromisodelacomunidad_List %}
+      <tr>
+        <td>{{compromisodelacomunidad.codigo}}</td>
+        <td> {{compromisodelacomunidad.numeral }}</td>
+        <td> {{compromisodelacomunidad.dep_responsable}}</td>
+        <td>{{compromisodelacomunidad.person_responsable}}</td>
+        <td>{{compromisodelacomunidad.track_year}}</td>
+        <td>{{compromisodelacomunidad.track_date}}</td>
+        <td>{{compromisodelacomunidad.internal_auditory_date}}</td>
+        <td>{{compromisodelacomunidad.internal_auditory_obs}}</td>
+        <td>{{compromisodelacomunidad.external_auditory_date}}</td>
+        <td>{{compromisodelacomunidad.external_auditory_obs}}</td>
+        <td><a href="{{ compromisodelacomunidad.evidence }}" target="_blank">{{ compromisodelacomunidad.evidence }}</a></td>
+  |   </tr>
+  {% empty %}
+  <tr>
+      <td colstran="9">No hay numerales.</td>
+  </tr>
+  {% endfor %}
+</tbody>
+</table>
 {% endblock %}

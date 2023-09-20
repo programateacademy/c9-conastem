@@ -1,0 +1,46 @@
+{% extends "base_general.html" %}
+
+{% block content %}
+
+<h1 style="text-transform:uppercase">Educacion STEM Integrada</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Codigo</th>
+            <th>Numeral</th>
+            <th>Departamento Responsable</th>
+            <th>Persona Responsable</th>
+            <th>Año</th>
+            <th>Fecha límite</th>
+            <th>Fecha de auditoria interna</th>
+            <th>Comentarios Auditoria Interna</th>
+            <th>Fecha de auditoria externa</th>
+            <th>Comentarios Auditoria Externa</th>
+            <th>Enlaces</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for educacionstemintegrada in eleccion_carrera_list %}
+    <tr>
+        <td>{{ educacionstemintegrada.numeral }}</h1>
+        <td>{{educacionstemintegrada.dep_responsable}}</p>
+        <td>{{educacionstemintegrada.person_responsable}}</p>
+        <td>{{educacionstemintegrada.track_year}}</p>
+        <td>{{educacionstemintegrada.track_date}}</p>
+        <td>{{educacionstemintegrada.internal_auditory_date}}</p>
+        <td>{{educacionstemintegrada.internal_auditory_obs}}</p>
+        <td>{{educacionstemintegrada.external_auditory_date}}</p>
+        <td>{{educacionstemintegrada.external_auditory_obs}}</p>
+        <td><a>{{educacionstemintegrada.evidence}}</a></td>
+
+    </tr>
+    {% empty %}
+    <tr>
+        <td colstran="9">No hay registros.</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock content %}

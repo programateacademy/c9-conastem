@@ -1,28 +1,44 @@
 {% extends "base_general.html" %}
 
 {% block content %}
-    <h1>Convivencia Escolar</h1>
-
-    {% if Convivenciaescolar_List %}
-    <ul>
-
-      {% for convivenciaescolar in Convivenciaescolar_List %}
-      <li>
-        <h1><strong>Numeral:</strong> {{ convivenciaescolar.numeral }}</h1>
-       <p><strong>Departamento Responsable:</strong> {{convivenciaescolar.dep_responsable}}</p>
-        <p><strong>Persona Responsable:</strong>{{convivenciaescolar.person_responsable}}</p>
-       <p><strong>Año:</strong>{{convivenciaescolar.track_year}}</p>
-        <p><strong>Fecha limite:</strong>{{convivenciaescolar.track_date}}</p>
-        <p><strong>Fecha de auditoria interna:</strong>{{convivenciaescolar.internal_audiory_date}}</p>
-       <p><strong>Comentarios</strong>{{convivenciaescolar.internal_audirory_obs}}</p>
-        <p><strong>Fecha de auditoria externa:</strong>{{convivenciaescolar.external_audiory_date}}</p>
-        <p><strong>Comentarios:</strong>{{convivenciaescolar.external_audirory_obs}}</p>
+    <h1>5300-CONVIVENCIA ESCOLAR</h1>
+    <table>
+      <thead>
+          <tr>
+              <th>Codigo</th>
+              <th>Numeral</th>
+              <th>Departamento Responsable</th>
+              <th>Persona Responsable</th>
+              <th>Año</th>
+              <th>Fecha límite</th>
+              <th>Fecha de auditoria interna</th>
+              <th>Comentarios Auditoria Interna</th>
+              <th>Fecha de auditoria externa</th>
+              <th>Comentarios Auditoria Externa</th>
+              <th>Enlaces</th>
+          </tr>
+      </thead>
+      <tbody>
+          {% for convivenciaescolar in Convivenciaescolar_List %}
+      <tr>
+        <td>{{convivenciaescolar.codigo}}</td>
+        <td>{{convivenciaescolar.numeral }}</h1>
+        <td>{{convivenciaescolar.dep_responsable}}</p>
+        <td>{{convivenciaescolar.person_responsable}}</p>
+        <td>{{convivenciaescolar.track_year}}</p>
+        <td>{{convivenciaescolar.track_date}}</p>
+        <td>{{convivenciaescolar.internal_auditory_date}}</p>
+        <td>{{convivenciaescolar.internal_auditory_obs}}</p>
+        <td>{{convivenciaescolar.external_auditory_date}}</p>
+        <td>{{convivenciaescolar.external_auditory_obs}}</p>
+        <td><a href="{{ convivenciaescolar.evidence }}" target="_blank">{{ convivenciaescolar.evidence }}</a></td>
   
-      </li>
+      </tr>
+      {% empty %}
+      <tr>
+          <td colstran="9">No hay numerales.</td>
+      </tr>
       {% endfor %}
-
-    </ul>
-    {% else %}
-      <p>No hay numerales.</p>
-    {% endif %}
+    </tbody>
+    </table>
 {% endblock %}

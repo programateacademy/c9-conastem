@@ -13,7 +13,7 @@ class EvaluacionEstudiantes(GeneralModel):
         ("285", "La institución utiliza datos de evaluaciones estatales y escolares para impulsar las decisiones de la formación."),
         ("286", "Evaluación continua. Tipología de evaluación donde los alumnos son examinados continuamente."),
         ("287", "Asesoramiento personalizado. Tipología de evaluación enmarcada para demostrar si los alumnos han alcanzado objetivos educativos específicos, de acuerdo con su desarrollo personal."),
-  ]
+]
 
     numeral = models.CharField(
         max_length = 10000, 

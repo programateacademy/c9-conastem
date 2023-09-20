@@ -1,0 +1,42 @@
+{% extends "base_general.html" %}
+
+{% block content %}
+    <h1>3600-ESTRATEGIAS FORMATIVAS</h1>
+    <table>
+       <thead>
+          <tr>
+              <th>Codigo</th>
+              <th>Numeral</th>
+              <th>Departamento Responsable</th>
+              <th>Persona Responsable</th>
+              <th>Año</th>
+              <th>Fecha límite</th>
+              <th>Fecha de auditoria interna</th>
+              <th>Comentarios Auditoria Interna</th>
+              <th>Fecha de auditoria externa</th>
+              <th>Comentarios Auditoria Externa</th>
+              <th>Enlaces</th>
+          </tr>
+       </thead>
+       <tbody>
+           {% for estrategiasformativas in EstrategiasFormativas_List %}
+      <tr>
+        <td>{{estrategiasformativas.codigo}}</td>
+        <td> {{estrategiasformativas.numeral }}</td>
+        <td> {{estrategiasformativas.dep_responsable}}</td>
+        <td>{{estrategiasformativas.person_responsable}}</td>
+        <td>{{estrategiasformativas.track_year}}</td>
+        <td>{{estrategiasformativas.track_date}}</td>
+        <td>{{estrategiasformativas.internal_auditory_date}}</td>
+        <td>{{estrategiasformativas.internal_auditory_obs}}</td>
+        <td>{{estrategiasformativas.external_auditory_date}}</td>
+        <td>{{estrategiasformativas.external_auditory_obs}}</td>
+  |   </tr>
+  {% empty %}
+  <tr>
+      <td colstran="9">No hay numerales.</td>
+  </tr>
+  {% endfor %}
+</tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base_general.html" %}
+
+{% block content %}
+
+<h2>Curriculo</h2>
+
+<section class="lista">
+    <ul>
+        <li><a href="{%url 'Inclusion_ingenieria_aula_list'%}">Inclusión de la ingeniería en el aula</a></li>
+        <li><a href="{%url 'desarrollo_ciudadania_digital_list'%}">Desarrollo de una ciudadanía digital</a></li>
+        <li><a href="{%url 'Curriculo_progresivo_list'%}">Currículo progresivo y alineado con los estándares curriculares</a></li>
+        <li><a href="{%url 'Curriculo_propio_list'%}">Currículo propio</a></li>
+        <li><a href="{%url 'Evaluacion_estudiantes_list'%}">Evaluación de los estudiantes</a></li>
+    </ul>
+</section>
+
+{% endblock content %}
