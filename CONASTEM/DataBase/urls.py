@@ -14,6 +14,7 @@ from .views.Infraestructura import SostenibilidadListView
 from .views.Infraestructura import UsoDeInformacionListView
 
 # CURRICULO
+from .views import Curriculo
 from .views.Curriculo import ConsideracionesSobreAreasYAsignaturasListView 
 from .views.Curriculo import InclusionIngenieriaAulaListView
 from .views.Curriculo import DesarrolloCiudadaniaDigitalListView
@@ -79,43 +80,51 @@ urlpatterns += [
     path("consideracionesareasyasignaturas/", ConsideracionesSobreAreasYAsignaturasListView.as_view(), name="ConsideracionesSobreAreasYAsignaturas_list"),
     # 2.2 Inclusion_ingenieria_aula
     path('inclusion-ingenieria-aula/', InclusionIngenieriaAulaListView.as_view(), name='Inclusion_ingenieria_aula_list'),
+    path('inclusion-ingenieria-aula/new', Curriculo.IngenieriaAula_new, name='Inclusion_ingenieria_aula_new'),
     # 2.3 Desarrollo ciudadania digital
     path('desarrollo-ciudadania-digital/', DesarrolloCiudadaniaDigitalListView.as_view(), name='desarrollo_ciudadania_digital_list'),
+    path('desarrollo-ciudadania-digital/new', Curriculo.CiudadaniaDigital_new, name='desarrollo_ciudadania_digital_new'),
     # 2.4 Integración curricular
     path('integracion-curicular/', IntegracionCurricularListView.as_view(), name='IntegracionCurricular_list'),
     # 2.5 CURRÍCULO PROGRESIVO Y ALINEADO CON LOS ESTÁNDARES CURRICULARES
     path("curriculo-progresivo/", CurriculoProgresivoListView.as_view(), name="Curriculo_progresivo_list"),
+    path("curriculo-progresivo/new", Curriculo.CurriculoProgresivo_new, name="Curriculo_progresivo_new"),
     # 2.6 CURRÍCULO PROPIO
     path ('curriculo-propio', CurriculoPropioListView.as_view(), name='Curriculo_propio_list'),
+    path ('curriculo-propio/new', Curriculo.CurriculoPropio_new, name='Curriculo_propio_new'),
     # 2.7 Desarrollo ahbilidades siglo XXI
     path('desarrollo-habilidades-siglo-XXI/', DesarrolloHabilidadesSigloXXIListView.as_view(), name='DesarrolloHabilidadesSigloXXI_list'),
     # 2.8 EVALUACIÓN DE LOS ESTUDIANTES
     path ('evaluacion-estudiantes', EvaluacionEstudiantesListView.as_view(), name='Evaluacion_estudiantes_list'),
+    path ('evaluacion-estudiantes/new', Curriculo.EvaluacionEstudiantes_new, name='Evaluacion_estudiantes_new'),
     # 2.9 Sostenibilidad - Curriculo
     path ('sostenibilidad-curriculo/', SostenibilidadCurriculoListView.as_view(), name='SostenibiliadCurriculo_list'),
 
     # FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
-    path('aprendizaje-centrado/new', Formacion_Instruccion_Evaluacion.Aprendizajecentrado_new, name='Aprendizajecentrado_new'),
     path("formacion-instruccion-evaluacion/", Formacion_Instruccion_Evaluacion.FormacionInstruccionEvaluacionListView.as_view(), name="FormacionInstruccionEvaluacion"),
-
         # 3.1 APRENDIZAJE CENTRADO EN EL ESTUDIANTE
     path('aprendizaje-centrado', Formacion_Instruccion_Evaluacion.AprendizajeCentradoListView.as_view(), name='aprendizaje_centrado_list'),
+    path("aprendizaje-centrado/new", Formacion_Instruccion_Evaluacion.Aprendizajecentrado_new, name="aprendizaje_centrado_new"),
         # 3.2 APRENDIZAJE RIGUROSO
     path('aprendizajeriguroro', AprendizajeRigurosoListView.as_view(),name="AprendizajeRiguroso_List"),
         # 3.3 PLANEACIÓN Y CREACIÓN DE ACTIVIDADES
     path('planeacionycreaciondeactividades', PlaneacionyCreaciondeActividadesListView.as_view(),name="PlaneacionyCreaciondeActividades_List"),
         # 3.4 EDUCACIÓN STEM INTEGRADA
     path("educacion-stem-integrada/", Formacion_Instruccion_Evaluacion.EducacionStemIntegradaListView.as_view(), name='educacion_stem_integrada_list'),
+    path("educacion-stem-integrada/new", Formacion_Instruccion_Evaluacion.EducacionSTEM_new, name="educacion_stem_integrada_new"),
         # 3.5 TECNOLOGÍA PARA LA FORMACIÓN / INSTRUCCIÓN
-    path("tecnologia-para-formacion/", Formacion_Instruccion_Evaluacion.TecnologiaFormacionListView.as_view(), name='tecnologia_para_Formacion_list' ), 
+    path("tecnologia-para-formacion/", Formacion_Instruccion_Evaluacion.TecnologiaFormacionListView.as_view(), name='tecnologia_para_Formacion_list'), 
+    path("tecnologia-para-formacion/new", Formacion_Instruccion_Evaluacion.TecnologiaFormacion_new , name="tecnologia_para_Formacion_new"),
         # 3.6 ESTRATEGIAS FORMATIVAS
     path('estrategiasformativas', EstrategiasFormativasListView.as_view(), name="EstrategiasFormativas_List"),
         # 3.7 ELECCIÓN DE CARRERA
     path("eleccion-carrera/", Formacion_Instruccion_Evaluacion.EleccionCarreraListView.as_view(), name='eleccion_carrera_list'),
+    path("eleccion-carrera/new", Formacion_Instruccion_Evaluacion.Eleccioncarrera_new, name="eleccion_carrera_new"),
         # 3.8 APRENDIZAJE EXTENDIDO
     path('aprendizajeextendido', AprendizajeExtendidoListView.as_view(),name="AprendizajeExtendido_List"),
         # 3.9 SOSTENIBILIDAD - FORMACIÓN/INSTRUCCIÓN/EVALUACIÓN
-    path("sostenibilidad/", Formacion_Instruccion_Evaluacion.SostenibilidadListView.as_view(), name="sostenibilidad_list"),
+    path("sostenibilidad-formacion-instruccion/", Formacion_Instruccion_Evaluacion.SostenibilidadListView.as_view(), name="sostenibilidad_list"),
+    path("sostenibilidad-formacion-instruccion/new", Formacion_Instruccion_Evaluacion.SostenibilidadFormacion_new, name="sostenibilidad_new"),
     
     # PERSONAL DOCENTE Y ADMINISTRATIVO
     path("personal-docente-y-administrativo",PersonalDocenteyAdministrativoListView.as_view(), name="PersonalDocenteyAdministrativo"),

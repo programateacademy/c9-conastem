@@ -2,17 +2,26 @@
 
 {% block content %}
 
-<h1 style="text-transform:uppercase">Tecnología para la formacion / instrucción</h1>
+{% load static %}
+
+<div class= "titulo">
+    <img src="{%static 'images/tabla_detail/icon_for_instrucc_eva.svg' %}">
+    <h1 style="text-transform:uppercase">3000 - Formación / Instrucción / Evaluación</h1>
+</div>
+<div class="subtitulo">
+    <h2 style="text-transform:uppercase">3500 - Tecnología para la formacion / instrucción</h2>
+    <a href="/database/tecnologia-para-formacion/new"><img src="{%static 'images/crear_datos.svg'%}" alt="Crear datos"></a>
+</div>
+
 
 <table>
     <thead>
         <tr>
-            <th>Codigo</th>
+            <th>Código</th>
             <th>Numeral</th>
             <th>Departamento Responsable</th>
             <th>Persona Responsable</th>
-            <th>Año</th>
-            <th>Fecha límite</th>
+            <th>Fecha límite de seguimiento</th>
             <th>Fecha de auditoria interna</th>
             <th>Comentarios Auditoria Interna</th>
             <th>Fecha de auditoria externa</th>
@@ -23,16 +32,16 @@
     <tbody>
         {% for tecnologiaformacion in Tecnologia_para_Formacion_list %}
     <tr>
+        <td>{{ tecnologiaformacion.codigo }}</h1>
         <td>{{ tecnologiaformacion.numeral }}</h1>
         <td>{{tecnologiaformacion.dep_responsable}}</p>
         <td>{{tecnologiaformacion.person_responsable}}</p>
-        <td>{{tecnologiaformacion.track_year}}</p>
         <td>{{tecnologiaformacion.track_date}}</p>
         <td>{{tecnologiaformacion.internal_auditory_date}}</p>
         <td>{{tecnologiaformacion.internal_auditory_obs}}</p>
         <td>{{tecnologiaformacion.external_auditory_date}}</p>
         <td>{{tecnologiaformacion.external_auditory_obs}}</p>
-        <td><a>{{tecnologiaformacion.evidence}}</a></td>
+        <td><a href= "{{tecnologiaformacion.evidence}}" target="_blank">{{tecnologiaformacion.evidence}}</a></td>
 
     </tr>
     {% empty %}
