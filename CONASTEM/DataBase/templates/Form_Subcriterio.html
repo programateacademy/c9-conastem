@@ -4,17 +4,14 @@
 {%block content%}
 
 <form method="POST" class="formulario"> {% csrf_token %}
-   <h2>{{ titulo }}</h2>
+    <h2>{{ titulo }}</h2>
+
     <section>
 
-        <meta charset="UTF-8">
-        
-    
         <div class="campo-formulario">
-            <label for="{{numeral}}">Numeral</label>
-                {{form_new.numeral}}
-            </div>
-        </div> 
+            <label for="{{nuemral}}">Numeral</label>
+                {{ form_new.numeral }}
+        </div>
         
         <div class="campo-formulario">
             <label for="{{priority}}">Prioridad</label>
@@ -29,11 +26,6 @@
         <div class="campo-formulario">
             <label for="{{ dep_responsable}}">Departamento responsable</label>
                 {{ form_new.dep_responsable }}
-        </div>
-        
-        <div class="campo-formulario">
-            <label for="{{ track_year }}">Año límite</label>
-                {{ form_new.track_year }}
         </div>
     
         <div class="campo-formulario">
@@ -76,7 +68,10 @@
 
     <section>
         <h2>Evidencias</h2>
-        <a><input type= "text">Agregar evidencias de las acciones</input></a>
+        <div class="campo-formulario">
+            <label for="{{ evidence }}">Adjunta link de evidencia</label>
+                {{ form_new.evidence }}
+        </div>
     </section>
     
     <button type="submit" class="boton-formulario">Enviar</button>

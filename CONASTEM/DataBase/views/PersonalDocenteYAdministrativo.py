@@ -11,7 +11,7 @@ from ..models.Personal_Docente_y_Administrativo.SostenibilidadDocenteAdministrat
 
 class PersonalDocenteyAdministrativoListView (generic.ListView):
     model=ApoyoPedagogico
-    context_object_name='PersonalDocenteAdministrativo_list'
+    context_object_name='PersonalDocenteAdministrativo_List'
     template_name='database/PersonalDocenteyAdministrativo/PersonalDocenteyAdministrativo.html'
 
 

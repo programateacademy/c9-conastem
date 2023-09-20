@@ -1,7 +1,7 @@
 from django.urls import path
 
 # GENERAL
-from .views.General import views, Register
+from .views.General import views
 
 # INFRAESTRUCTURA
 from .views.Infraestructura import InfraestructuraListView
@@ -11,8 +11,7 @@ from .views.Infraestructura import EquidadListView
 from .views.Infraestructura import PlaneacionInstitucionalListView
 from .views.Infraestructura import RecursosTecnologicosListView
 from .views.Infraestructura import SostenibilidadListView
-# from .views.Infraestructura import UsoDeInformacionListView
-
+from .views.Infraestructura import UsoDeInformacionListView
 
 # CURRICULO
 from .views.Curriculo import ConsideracionesSobreAreasYAsignaturasListView 
@@ -51,11 +50,13 @@ from .views.EscuelaComunidadYPertenencia import SostenibilidadEscuelaComunidadyP
 
 # GENERAL
 urlpatterns= [
-    path ('', Register.index, name= 'index'),
-    # path ('home/', views.home , name= 'home'),
+    path ('', views.index, name= 'index'),
     path("home/", views.CriterioList.as_view(), name="criterio_list"),
-    path ('instituciones/', Register.RegisterListView.as_view(), name= 'register_list'),
-    path ('instituciones/<int:pk>', Register.RegisterListDetail.as_view(), name= 'register_detail')
+    path('instituciones/', views.RegisterListView.as_view(), name= 'register_list'),
+    path('instituciones/<int:pk>', views.RegisterListDetail.as_view(), name= 'register_detail'),
+    path("responsable/new", views.person_responsablenew, name="person_responsablenew"),
+    path("responsables/", views.PersonResponsableListView .as_view(), name="responsable_list"),
+    path("responsables/<int:pk>", views.PersonResponsableDetail .as_view(), name="responsable_detail"),
 ]
 
 urlpatterns += [
@@ -67,22 +68,23 @@ urlpatterns += [
     path("planeacion-institucional/", PlaneacionInstitucionalListView.as_view(), name="Planeacion_institucional_list" ),
     path("recursos-tecnologicos/", RecursosTecnologicosListView.as_view(), name="Recursos_tecnologicos_list" ),
     path("sostenibilidad/", SostenibilidadListView.as_view(), name="Sostenibilidad_list" ),
-    # path("uso-de-info/", UsoDeInformacionListView.as_view(), name="Uso_de_info_list" ),  
+    path("uso-de-info/", UsoDeInformacionListView.as_view(), name="Uso_informacion_list" ),  
 ]
 
 urlpatterns += [
     
     # CURRICULO
+    path("curriculo/", CurriculoListView.as_view(), name="Curriculo_list"),
     # 2.1 Consideraciones sobre Áreas y Asignaturas
     path("consideracionesareasyasignaturas/", ConsideracionesSobreAreasYAsignaturasListView.as_view(), name="ConsideracionesSobreAreasYAsignaturas_list"),
     # 2.2 Inclusion_ingenieria_aula
-    path('inclusion-ingenieria-aula/', InclusionIngenieriaAulaListView.as_view(), name='inclusion_ingenieria_aula_list'),
+    path('inclusion-ingenieria-aula/', InclusionIngenieriaAulaListView.as_view(), name='Inclusion_ingenieria_aula_list'),
     # 2.3 Desarrollo ciudadania digital
     path('desarrollo-ciudadania-digital/', DesarrolloCiudadaniaDigitalListView.as_view(), name='desarrollo_ciudadania_digital_list'),
     # 2.4 Integración curricular
     path('integracion-curicular/', IntegracionCurricularListView.as_view(), name='IntegracionCurricular_list'),
     # 2.5 CURRÍCULO PROGRESIVO Y ALINEADO CON LOS ESTÁNDARES CURRICULARES
-    path("curriculo/", CurriculoListView.as_view(), name="Curriculo_list"),
+    path("curriculo-progresivo/", CurriculoProgresivoListView.as_view(), name="Curriculo_progresivo_list"),
     # 2.6 CURRÍCULO PROPIO
     path ('curriculo-propio', CurriculoPropioListView.as_view(), name='Curriculo_propio_list'),
     # 2.7 Desarrollo ahbilidades siglo XXI
@@ -93,7 +95,7 @@ urlpatterns += [
     path ('sostenibilidad-curriculo/', SostenibilidadCurriculoListView.as_view(), name='SostenibiliadCurriculo_list'),
 
     # FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
-    path('aprendizaje-centrado/new', Formacion_Instruccion_Evaluacion.data_new, name='aprendizaje_centradonew'),
+    path('aprendizaje-centrado/new', Formacion_Instruccion_Evaluacion.Aprendizajecentrado_new, name='Aprendizajecentrado_new'),
     path("formacion-instruccion-evaluacion/", Formacion_Instruccion_Evaluacion.FormacionInstruccionEvaluacionListView.as_view(), name="FormacionInstruccionEvaluacion"),
 
         # 3.1 APRENDIZAJE CENTRADO EN EL ESTUDIANTE
@@ -117,17 +119,19 @@ urlpatterns += [
     
     # PERSONAL DOCENTE Y ADMINISTRATIVO
     path("personal-docente-y-administrativo",PersonalDocenteyAdministrativoListView.as_view(), name="PersonalDocenteyAdministrativo"),
-    path("profesional-calificado-en-educacion-stem",ProfesionalesEspecializadosEducacionSTEMListView.as_view(), name="ProfesionalesEspecializadosEducacionSTEM_List"),
-    path("desarrollo-profesional-docentes-directores-consejeros-profesionales", DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionalesListView.as_view(), name="DesarrolloProfesionalInicialyContinuoparaDocentesDirectoresdeEscuelayConsejerosProfesionales_list"),
-    path("apoyo-pedagogico-personal",ApoyoPedagogicoListView.as_view(), name="ApoyoPedagogicoParaelPersonal_List"),
-    path("sostenibilidad-personal-docente-administrativo", SostenibilidadDocenteAdministrativoListView.as_view(), name="SostenibilidadDocenteAdministrativo_List"),
+    path("profesional-calificado-educacion-stem",ProfesionalesEspecializadosEducacionSTEMListView.as_view(), name="ProfesionalesEspecializadosEducacionSTEM_List"),
+    path("desarrollo-profesional-docentes-directores-consejeros-profesionales", DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionalesListView.as_view(), name="DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales_list"),
+    path("apoyo-pedagogico-personal",ApoyoPedagogicoListView.as_view(), name="ApoyoPedagogico_List"),
+    path("sostenibilidad-docente-administrativo", SostenibilidadDocenteAdministrativoListView.as_view(), name="SostenibilidadDocenteAdministrativo_List"),
 
     # ESCUELA COMUNIDAD Y PERTENENCIA
-    path('compromisodelacomunidad/new', EscuelaComunidadYPertenencia.data_new, name='compromiso_comunidadnew'),
     path("escuelacomunidadypertenencia", EscuelaComunidadyPertenenciaListView.as_view(),name="Escuelacomunidadypertenencia"),
-    path('convivenciaescolar/new', EscuelaComunidadYPertenencia.convivenciaescolarnew,name='convivencia_escolarnew'),
     path("compromisodelacomunidad", CompromisodelaComunidadListView.as_view(), name="Compromisodelacomunidad_List"),
+    path('compromisodelacomunidad/new', EscuelaComunidadYPertenencia.Compromisodelacomunidad_new, name='compromisodelacomunidadnew'),
     path("convivenciaescolar", ConvivenciaescolarListView.as_view(), name="Convivenciaescolar_List"),
+    path('convivenciaescolar/new', EscuelaComunidadYPertenencia.convivenciaescolarnew,name='convivenciaescolarnew'),
     path("relacionesconlacomunidad", RelacionesconlaComunidadListView.as_view(), name="Relacionesconlacomunidad_List"),
+    path("relacionesconlacomunidad/new", EscuelaComunidadYPertenencia.relacionesconlacomunidadnew, name='relacionesconlacomunidadnew'),
     path("sostenibilidadescuelacomunidadypertenencia", SostenibilidadEscuelaComunidadyPertenenciaListView.as_view(), name="Sostenibilidadescuelacomunidadypertenecia_List" ),
+    path("sostenibilidadescuela/new", EscuelaComunidadYPertenencia.sostenibilidadescuelanew, name='sostenibilidadescuelanew')
 ]

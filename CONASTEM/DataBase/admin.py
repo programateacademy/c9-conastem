@@ -31,7 +31,7 @@ from .models.Formacion_Instruccion_Evaluacion.ApredizajeRiguroso import Aprendiz
 from .models.Formacion_Instruccion_Evaluacion.AprendizajeExtendido import AprendizajeExtendido
 from .models.Formacion_Instruccion_Evaluacion.EstrategiasFormativas import EstrategiasFormativas
 from .models.Formacion_Instruccion_Evaluacion.PlaneacionyCreaciondeActividades import PlaneacionyCreaciondeActividades
-from .models.Formacion_Instruccion_Evaluacion.EducacionSTEM import EducacionStemIntegrada
+from .models.Formacion_Instruccion_Evaluacion.EducacionSTEM import EducacionSTEMIntegrada
 from .models.Formacion_Instruccion_Evaluacion.TecnologiaFormacionInstruccion import TecnologiaFormacion
 from .models.Formacion_Instruccion_Evaluacion.EleccionCarrera import EleccionCarrera
 from .models.Formacion_Instruccion_Evaluacion.Sostenibilidad import SostenibilidadFormacionInstruccion
@@ -78,7 +78,7 @@ admin.site.register(AprendizajeExtendido)
 admin.site.register(AprendizajeRiguroso)
 admin.site.register(PlaneacionyCreaciondeActividades)
 admin.site.register(EstrategiasFormativas)
-admin.site.register(EducacionStemIntegrada)
+admin.site.register(EducacionSTEMIntegrada)
 admin.site.register(TecnologiaFormacion)
 admin.site.register(EleccionCarrera)
 admin.site.register(SostenibilidadFormacionInstruccion)
