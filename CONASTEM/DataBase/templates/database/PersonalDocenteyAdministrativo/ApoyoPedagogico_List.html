@@ -19,18 +19,18 @@
         </tr>
         </thead>
         <tbody>
-            {% for apoyoaedagogicoparaelpersonal in ApoyoPedagogicoParaelPersonal_List  %}
+            {% for apoyoaedagogico in ApoyoPedagogico_List  %}
             <tr>
-                <td>{{apoyoaedagogicoparaelpersonal.codigo}}</td>
-                <td>{{apoyoaedagogicoparaelpersonal.numeral}}</h1>
-                <td>{{apoyoaedagogicoparaelpersonal.dep_responsable}}</p>
-                <td>{{apoyoaedagogicoparaelpersonal.person_responsable}}</p>
-                <td>{{apoyoaedagogicoparaelpersonal.track_year}}</p>
-                <td>{{apoyoaedagogicoparaelpersonal.track_date}}</p>
-                <td>{{apoyoaedagogicoparaelpersonal.internal_auditory_date}}</p>
-                <td>{{apoyoaedagogicoparaelpersonal.internal_auditory_obs}}</p>
-                <td>{{apoyoaedagogicoparaelpersonal.external_auditory_date}}</p>
-                <td>{{apoyoaedagogicoparaelpersonal.external_auditory_obs}}</p>
+                <td>{{apoyoaedagogico.codigo}}</td>
+                <td>{{apoyoaedagogico.numeral}}</h1>
+                <td>{{apoyoaedagogico.dep_responsable}}</p>
+                <td>{{apoyoaedagogico.person_responsable}}</p>
+                <td>{{apoyoaedagogico.track_year}}</p>
+                <td>{{apoyoaedagogico.track_date}}</p>
+                <td>{{apoyoaedagogico.internal_auditory_date}}</p>
+                <td>{{apoyoaedagogico.internal_auditory_obs}}</p>
+                <td>{{apoyoaedagogico.external_auditory_date}}</p>
+                <td>{{apoyoaedagogico.external_auditory_obs}}</p>
                 </tr>
         {% empty %}
         <tr>

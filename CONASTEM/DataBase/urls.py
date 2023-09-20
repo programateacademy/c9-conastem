@@ -119,10 +119,10 @@ urlpatterns += [
     
     # PERSONAL DOCENTE Y ADMINISTRATIVO
     path("personal-docente-y-administrativo",PersonalDocenteyAdministrativoListView.as_view(), name="PersonalDocenteyAdministrativo"),
-    path("profesional-calificado-en-educacion-stem",ProfesionalesEspecializadosEducacionSTEMListView.as_view(), name="ProfesionalesEspecializadosEducacionSTEM_List"),
-    path("desarrollo-profesional-docentes-directores-consejeros-profesionales", DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionalesListView.as_view(), name="DesarrolloProfesionalInicialyContinuoparaDocentesDirectoresdeEscuelayConsejerosProfesionales_list"),
-    path("apoyo-pedagogico-personal",ApoyoPedagogicoListView.as_view(), name="ApoyoPedagogicoParaelPersonal_List"),
-    path("sostenibilidad-personal-docente-administrativo", SostenibilidadDocenteAdministrativoListView.as_view(), name="SostenibilidadDocenteAdministrativo_List"),
+    path("profesional-calificado-educacion-stem",ProfesionalesEspecializadosEducacionSTEMListView.as_view(), name="ProfesionalesEspecializadosEducacionSTEM_List"),
+    path("desarrollo-profesional-docentes-directores-consejeros-profesionales", DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionalesListView.as_view(), name="DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales_list"),
+    path("apoyo-pedagogico-personal",ApoyoPedagogicoListView.as_view(), name="ApoyoPedagogico_List"),
+    path("sostenibilidad-docente-administrativo", SostenibilidadDocenteAdministrativoListView.as_view(), name="SostenibilidadDocenteAdministrativo_List"),
 
     # ESCUELA COMUNIDAD Y PERTENENCIA
     path("escuelacomunidadypertenencia", EscuelaComunidadyPertenenciaListView.as_view(),name="Escuelacomunidadypertenencia"),
