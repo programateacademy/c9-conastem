@@ -6,7 +6,7 @@ from ..Person_Responsable import PersonResponsable
 from ..GeneralModel import GeneralModel
 
 # 2.4 Integración curricular
-class Integracioncurricular(GeneralModel):
+class IntegracionCurricular(GeneralModel):
 
     ITEM_CHOICE = [
         ("2.4.1", "Las unidades de formación del tipo  Aprendizaje Basado en Proyectos ABP / Investigación incluyen educación STEM integrada a las ciencias y las matemáticas y con todas las áreas del currículo, durante los cuatro trimestres del año académico."),

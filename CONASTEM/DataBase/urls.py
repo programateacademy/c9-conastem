@@ -76,7 +76,7 @@ urlpatterns += [
     # CURRICULO
     path("curriculo/", CurriculoListView.as_view(), name="Curriculo_list"),
     # 2.1 Consideraciones sobre Áreas y Asignaturas
-    path("consideracionesareasyasignaturas/", ConsideracionesSobreAreasYAsignaturasListView.as_view(), name="ConsideracionesSobreAreasYAsignaturas_list"),
+    path("consideraciones-areas-y-asignaturas/", ConsideracionesSobreAreasYAsignaturasListView.as_view(), name="ConsideracionesSobreAreasYAsignaturas_list"),
     # 2.2 Inclusion_ingenieria_aula
     path('inclusion-ingenieria-aula/', InclusionIngenieriaAulaListView.as_view(), name='Inclusion_ingenieria_aula_list'),
     # 2.3 Desarrollo ciudadania digital

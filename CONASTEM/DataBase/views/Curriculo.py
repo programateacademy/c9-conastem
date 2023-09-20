@@ -1,13 +1,19 @@
+from django.http import HttpResponseRedirect
+from ..forms import Form_ConsideracionesSobreAreasYAsignaturas
+from ..forms import Form_IntegracionCurricular
+from ..forms import Form_DesarrolloHabilidadesSigloXXI
+from ..forms import Form_SostenibilidadCurriculo
 from typing import Any
 from django.db.models.query import QuerySet
 from django.shortcuts import render
 from django.views import generic
+from django.utils import timezone
 
 # Create your views here.
 from ..models.Curriculo.ConsideracionesSobreAreasYAsignaturas import ConsideracionesSobreAreasYAsignaturas
 from ..models.Curriculo.Inclusion_ingenieria_aula import InclusionIngenieriaAula
 from ..models.Curriculo.Desarrollo_ciudadania_digital import DesarrolloCiudadaniaDigital
-from ..models.Curriculo.IntegracionCurricular import Integracioncurricular
+from ..models.Curriculo.IntegracionCurricular import IntegracionCurricular
 from ..models.Curriculo.Curriculo_progresivo import CurriculoProgresivo
 from ..models.Curriculo.Curriculo_propio import CurriculoPropio
 from ..models.Curriculo.DesarrolloHabilidadesSigloXXI import DesarroloHabilidadesSigloXXI
@@ -25,6 +31,24 @@ class ConsideracionesSobreAreasYAsignaturasListView(generic.ListView):
     model = ConsideracionesSobreAreasYAsignaturas
     context_object_name = 'ConsideracionesSobreAreasYAsignaturas_list'
     template_name ='database/Curriculo/ConsideracionesSobreAreasYAsignaturas_list.html'
+    ordering = ['codigo']  # Ordena por el campo 'codigo'
+
+    def get_queryset(self):
+        return ConsideracionesSobreAreasYAsignaturas.objects.all().order_by('codigo')
+
+# FORMULARIO
+def _new(request):
+    
+    if request.method == "POST":
+        form_new = Form_ConsideracionesSobreAreasYAsignaturas(request.POST)
+        if form_new.is_valid():
+            form_new.save()
+            return HttpResponseRedirect('/database/consideraciones-areas-y-asignaturas')
+    else:
+        form_new = Form_ConsideracionesSobreAreasYAsignaturas ()
+
+    return render(request, 'Form_Subcriterio.html', {'form_new': form_new, 'titulo':'2100-CONSIDERACIONES SOBRE LAS ÁREAS Y LAS ASIGNATURAS'})
+
 
 # 2.2 Inclusion ingenieria aula
 class InclusionIngenieriaAulaListView(generic.ListView):
@@ -40,9 +64,27 @@ class DesarrolloCiudadaniaDigitalListView(generic.ListView):
 
 # 2.4 INTEGRACIÓN CURRICULAR
 class IntegracionCurricularListView(generic.ListView):
-    model = Integracioncurricular
+    model = IntegracionCurricular
     context_object_name = 'IntegracionCurricular_list'
     template_name = 'database/Curriculo/IntegracionCurricular_list.html'
+    ordering = ['codigo']  # Ordena por el campo 'codigo'
+
+    def get_queryset(self):
+        return IntegracionCurricular.objects.all().order_by('codigo')
+
+# FORMULARIO
+def IntegracionCurricular_new(request):
+    
+    if request.method == "POST":
+        form_new = Form_IntegracionCurricular(request.POST)
+        if form_new.is_valid():
+            form_new.save()
+            return HttpResponseRedirect('/database/integracion-curicular/')
+    else:
+        form_new = Form_IntegracionCurricular ()
+
+    return render(request, 'Form_Subcriterio.html', {'form_new': form_new, 'titulo':'2400-INTEGRACIÓN CURRICULAR'})
+
 
 # 2.5 CURRÍCULO PROGRESIVO Y ALINEADO CON LOS ESTÁNDARES CURRICULARES
 class CurriculoProgresivoListView(generic.ListView):
@@ -61,6 +103,24 @@ class DesarrolloHabilidadesSigloXXIListView(generic.ListView):
     model = DesarroloHabilidadesSigloXXI
     context_object_name = 'DesarrolloHabilidadesSigloXXI_list'
     template_name = 'database/curriculo/DesarrolloHabilidadesSigloXXI_list.html'
+    ordering = ['codigo']  # Ordena por el campo 'codigo'
+
+    def get_queryset(self):
+        return DesarroloHabilidadesSigloXXI.objects.all().order_by('codigo')
+
+# FORMULARIO
+def DesarrolloHabilidadesSigloXXI_new(request):
+    
+    if request.method == "POST":
+        form_new = Form_DesarrolloHabilidadesSigloXXI(request.POST)
+        if form_new.is_valid():
+            form_new.save()
+            return HttpResponseRedirect('/database/desarrollo-habilidades-siglo-XXI/')
+    else:
+        form_new = Form_DesarrolloHabilidadesSigloXXI ()
+
+    return render(request, 'Form_Subcriterio.html', {'form_new': form_new, 'titulo':'2700-DESARROLLO DE LAS HABILIDADES DEL SIGLO XXI'})
+
 
 # 2.8 EVALUACIÓN DE LOS ESTUDIANTES
 class EvaluacionEstudiantesListView(generic.ListView):
@@ -73,3 +133,20 @@ class SostenibilidadCurriculoListView(generic.ListView):
     model = SostenibilidadCurriculo
     context_object_name = 'SostenibilidadCurriculo_list'
     template_name = 'database/Curriculo/SostenibilidadCurriculo_list.html'
+    ordering = ['codigo']  # Ordena por el campo 'codigo'
+
+    def get_queryset(self):
+        return SostenibilidadCurriculo.objects.all().order_by('codigo')
+
+# FORMULARIO
+def SostenibilidadCurriculo_new(request):
+    
+    if request.method == "POST":
+        form_new = Form_SostenibilidadCurriculo(request.POST)
+        if form_new.is_valid():
+            form_new.save()
+            return HttpResponseRedirect('/database/sostenibilidad-curriculo/')
+    else:
+        form_new = Form_SostenibilidadCurriculo ()
+
+    return render(request, 'Form_Subcriterio.html', {'form_new': form_new, 'titulo':'2900-SOSTENIBILIDAD - CURRÍCULO'})
