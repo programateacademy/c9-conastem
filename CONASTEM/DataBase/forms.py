@@ -5,6 +5,10 @@ from .models.Register import Register
 # INFRAESTRUCTURA
 
 # CURRÍCULO
+from .models.Curriculo import ConsideracionesSobreAreasYAsignaturas
+from .models.Curriculo import IntegracionCurricular
+from .models.Curriculo import DesarrolloHabilidadesSigloXXI
+from .models.Curriculo import SostenibilidadCurriculo
 
 # FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
 from .models.Formacion_Instruccion_Evaluacion import AprendizajeCentradoEstudiante
@@ -26,6 +30,26 @@ class FormRegister(forms.ModelForm):
 
 
 # CURRÍCULO
+class Form_ConsideracionesSobreAreasYAsignaturas(forms.ModelForm):
+    class Meta:
+        model = ConsideracionesSobreAreasYAsignaturas.ConsideracionesSobreAreasYAsignaturas
+        exclude = ['created_at', 'updated_at','codigo']
+
+class Form_IntegracionCurricular(forms.ModelForm):
+    class Meta:
+        model = IntegracionCurricular.Integracioncurricular
+        exclude = ['created_at', 'updated_at','codigo']
+
+class Form_DesarrolloHabilidadesSigloXXI(forms.ModelForm):
+    class Meta:
+        model = DesarrolloHabilidadesSigloXXI.DesarroloHabilidadesSigloXXI
+        exclude = ['created_at', 'updated_at','codigo']
+
+class Form_SostenibilidadCurriculo(forms.Form):
+    class Meta:
+        model = SostenibilidadCurriculo.SostenibilidadCurriculo
+        exclude = ['created_at', 'updated_at','codigo']
+
 
 
 # FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
