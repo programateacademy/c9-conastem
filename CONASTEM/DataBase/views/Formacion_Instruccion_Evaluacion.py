@@ -17,7 +17,10 @@ from ..models.Formacion_Instruccion_Evaluacion.Sostenibilidad import Sostenibili
 
 # FORMULARIO
 from ..forms import Form_AprendizajeCentrado
-
+from ..forms import Form_Aprendizajeriguroso
+from ..forms import Form_Aprendizajeextendido
+from ..forms import Form_Estrategiasformativas
+from ..forms import Form_Planeacionycreaciondeactividades
 
 
 # VISTA DE LOS SUBCITERIOS
@@ -37,12 +40,47 @@ class AprendizajeRigurosoListView(generic.ListView):
     model=AprendizajeRiguroso
     context_object_name='AprendizajeRiguroso_List'
     template_name='database\Formacion_Instruccion_Evaluacion\Aprendizajeriguroso_List.html'
+    ordering = ['codigo']  # Ordena por el campo 'codigo'
+
+    def get_queryset(self):
+        return AprendizajeRiguroso.objects.all().order_by('codigo')
+    
+def Aprendizajeriguroso_new(request):
+  
+    if request.method == "POST":
+        form_new = Form_Aprendizajeriguroso(request.POST)
+        if form_new.is_valid():
+            form_new.save()
+            return HttpResponseRedirect('/database/aprendizajeriguroso')
+    else:
+        form_new = Form_Aprendizajeriguroso()
+
+    return render(request, 'Form_Subcriterio.html', {'form_new': form_new, 'titulo':'3200-APRENDIZAJE RIGUROSO'})
+
+
 
 # VISTA DE PLANEACIÓN Y CREACIÓN DE ACTIVIDADES
 class PlaneacionyCreaciondeActividadesListView(generic.ListView):
     model=PlaneacionyCreaciondeActividades
     context_object_name='PlaneacionyCreaciondeActividades_List'
     template_name='database\Formacion_Instruccion_Evaluacion\Planeacionycreaciondeactividades_List.html'
+    ordering = ['codigo']  # Ordena por el campo 'codigo'
+
+    def get_queryset(self):
+        return PlaneacionyCreaciondeActividades.objects.all().order_by('codigo')
+    
+def Planeacionycreaciondeactividades_new(request):
+  
+    if request.method == "POST":
+        form_new = Form_Planeacionycreaciondeactividades(request.POST)
+        if form_new.is_valid():
+            form_new.save()
+            return HttpResponseRedirect('/database/planeacionycreaciondeactividades')
+    else:
+        form_new = Form_Planeacionycreaciondeactividades()
+
+    return render(request, 'Form_Subcriterio.html', {'form_new': form_new, 'titulo':'3300-PLANEACION Y CREACIÓN DE ACTIVIDADES'})
+
 
 # VISTA DE EDUCACIÓN STEM INTEGRADA
 class EducacionStemIntegradaListView(generic.ListView):
@@ -61,6 +99,24 @@ class EstrategiasFormativasListView(generic.ListView):
     model=EstrategiasFormativas
     context_object_name='EstrategiasFormativas_List'
     template_name='database\Formacion_Instruccion_Evaluacion\Estrategiasformativas_List.html'
+    ordering = ['codigo']  # Ordena por el campo 'codigo'
+
+    def get_queryset(self):
+        return EstrategiasFormativas.objects.all().order_by('codigo')
+    
+def Estrategiasformativas_new(request):
+  
+    if request.method == "POST":
+        form_new = Form_Estrategiasformativas(request.POST)
+        if form_new.is_valid():
+            form_new.save()
+            return HttpResponseRedirect('/database/estrategiasformativas')
+    else:
+        form_new = Form_Estrategiasformativas()
+
+    return render(request, 'Form_Subcriterio.html', {'form_new': form_new, 'titulo':'3600-ESTRATEGIAS FORMATIVAS'})
+
+
 
 # VISTA DE ELECCIÓN DE CARRERA
 class EleccionCarreraListView(generic.ListView):
@@ -73,6 +129,24 @@ class AprendizajeExtendidoListView(generic.ListView):
     model=AprendizajeExtendido
     context_object_name='AprendizajeExtendido_List'
     template_name='database\Formacion_Instruccion_Evaluacion\Aprendizajeextendido_List.html'
+    ordering = ['codigo']  # Ordena por el campo 'codigo'
+
+    def get_queryset(self):
+        return AprendizajeExtendido.objects.all().order_by('codigo')
+
+def Aprendizajeextendido_new(request):
+  
+    if request.method == "POST":
+        form_new = Form_Aprendizajeextendido(request.POST)
+        if form_new.is_valid():
+            form_new.save()
+            return HttpResponseRedirect('/database/aprendizajeextendido')
+    else:
+        form_new = Form_Aprendizajeextendido()
+
+    return render(request, 'Form_Subcriterio.html', {'form_new': form_new, 'titulo':'3800-APRENDIZAJE EXTENDIDO'})
+
+
 
 # VISTA DE SOSTENIBILIDAD - FORMACIÓN/INSTRUCCIÓN/EVALUACIÓN
 class SostenibilidadListView(generic.ListView):
@@ -81,13 +155,13 @@ class SostenibilidadListView(generic.ListView):
     template_name = 'database/Formacion_Instruccion_Evaluacion/sostenibilidad.html'
 
 # FORMULARIO
-def Aprendizajecentrado_new(request):
-    if request.method == "POST":
-        form_new = Form_AprendizajeCentrado(request.POST)
-        if form_new.is_valid():
-            form_new.save()
-            return HttpResponseRedirect('/database/aprendizaje-centrado')
-    else:
-        form_new = Form_AprendizajeCentrado ()
+# def data_new(request):
+#     if request.method == "POST":
+#         form_new = Form_Criterio_3(request.POST)
+#         if form_new.is_valid():
+#             form_new.save()
+#             return HttpResponseRedirect('/database/formacion-instruccion-evaluacion/')
+#     else:
+#         form_new = Form_Criterio_3 ()
 
-    return render(request, 'Form_Subcriterio.html', {'form_new': form_new, 'titulo': 'APRENDIZAJE CENTRADO EN EL ESTUDIANTE'})
+    # return render(request, 'Form_Subcriterio.html', {'form_new': form_new, 'titulo': 'APRENDIZAJE CENTRADO EN EL ESTUDIANTE'})
