@@ -95,7 +95,7 @@ urlpatterns += [
     path ('sostenibilidad-curriculo/', SostenibilidadCurriculoListView.as_view(), name='SostenibiliadCurriculo_list'),
 
     # FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
-    path('aprendizaje-centrado/new', Formacion_Instruccion_Evaluacion.aprendizaje_centradonew, name='aprendizaje_centradonew'),
+    path('aprendizaje-centrado/new', Formacion_Instruccion_Evaluacion.Aprendizajecentrado_new, name='Aprendizajecentrado_new'),
     path("formacion-instruccion-evaluacion/", Formacion_Instruccion_Evaluacion.FormacionInstruccionEvaluacionListView.as_view(), name="FormacionInstruccionEvaluacion"),
 
         # 3.1 APRENDIZAJE CENTRADO EN EL ESTUDIANTE

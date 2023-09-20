@@ -4,17 +4,15 @@
 {%block content%}
 
 <form method="POST" class="formulario"> {% csrf_token %}
-   <h2>{{ titulo }}</h2>
+    <h2>{{ titulo }}</h2>
+
+    {% comment %} {{form_new}} {% endcomment %}
+
     <section>
 
-        <meta charset="UTF-8">
-        
         <div class="campo-formulario">
-            <label for="{{numeral}}">Numeral</label>
+            <label for="{{nuemral}}">Numeral</label>
                 {{ form_new.numeral }}
-
-        </div>
-
         </div>
         
         <div class="campo-formulario">
@@ -30,11 +28,6 @@
         <div class="campo-formulario">
             <label for="{{ dep_responsable}}">Departamento responsable</label>
                 {{ form_new.dep_responsable }}
-        </div>
-        
-        <div class="campo-formulario">
-            <label for="{{ track_year }}">Año límite</label>
-                {{ form_new.track_year }}
         </div>
     
         <div class="campo-formulario">
