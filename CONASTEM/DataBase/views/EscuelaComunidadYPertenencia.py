@@ -30,6 +30,7 @@ class CompromisodelaComunidadListView (generic.ListView):
 
 # FORMULARIO
 def Compromisodelacomunidad_new(request):
+  
     if request.method == "POST":
         form_new = Form_Compromisodelacomunidad(request.POST)
         if form_new.is_valid():
@@ -38,7 +39,7 @@ def Compromisodelacomunidad_new(request):
     else:
         form_new = Form_Compromisodelacomunidad ()
 
-    return render(request, 'Form_Subcriterio.html', {'form_new': form_new, 'titulo':'Compromiso de la comunidad'})
+    return render(request, 'Form_Subcriterio.html', {'form_new': form_new, 'titulo':'5100-COMPROMISO DE LA COMUNIDAD'})
 
 
 class ConvivenciaescolarListView (generic.ListView):
@@ -60,7 +61,7 @@ def convivenciaescolarnew(request):
     else:
         form_new = Form_Convivenciaescolar ()
 
-    return render(request, 'Form_Subcriterio.html', {'form_new': form_new , 'titulo':'Convivencia Escolar'})
+    return render(request, 'Form_Subcriterio.html', {'form_new': form_new , 'titulo':'5300-CONVIVENCIA ESCOLAR'})
 
 
 class RelacionesconlaComunidadListView (generic.ListView):
@@ -81,7 +82,7 @@ def relacionesconlacomunidadnew(request):
     else:
         form_new = Form_Relacionesconlacomunidad ()
 
-    return render(request, 'Form_Subcriterio.html', {'form_new': form_new , 'titulo':'Relaciones con la comunidad'})
+    return render(request, 'Form_Subcriterio.html', {'form_new': form_new , 'titulo':'5200-RELACIONES CON LA COMUNIDAD'})
 
 
 class SostenibilidadEscuelaComunidadyPertenenciaListView (generic.ListView):
@@ -103,4 +104,4 @@ def sostenibilidadescuelanew(request):
     else:
         form_new = Form_Sostenibilidadescuela ()
 
-    return render(request, 'Form_Subcriterio.html', {'form_new': form_new , 'titulo':'Sostenibilidad-Escuela, comunidad y compromiso'})
+    return render(request, 'Form_Subcriterio.html', {'form_new': form_new , 'titulo':'5400-SOSTENIBILIDAD-ESCUELA,COMUNIDAD Y PERTENENCIA'})
