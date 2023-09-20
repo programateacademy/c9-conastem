@@ -54,11 +54,10 @@ class FormPersonResponsable (forms.ModelForm):
 # FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
 
 class Form_AprendizajeCentrado (forms.ModelForm):
-    # numeral = 
+    dep_responsable = forms.CharField(label= 'Departamento responsable', required= True, widget= forms.TextInput(attrs={'placeholder': 'Dirección'}))
     class Meta:
         model = AprendizajeCentradoEstudiante.AprendizajeCentrado
         exclude = ['created_at', 'updated_at','codigo']
-        fields = ['numeral', 'priority', 'dep_responsable', 'person_responsable', 'track_date', 'internal_auditory_date', 'internal_auditory_obs', 'external_auditory_date', 'external_auditory_obs', 'evidence']
         widgets = {
             'priority' : TextInput(attrs={'class' : 'campo-formulario'}),
             'track_date' : DateInput(attrs={'class': 'campo-formulario'}),
