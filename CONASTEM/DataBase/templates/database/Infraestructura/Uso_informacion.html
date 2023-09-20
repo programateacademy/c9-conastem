@@ -1,0 +1,69 @@
+{% extends "base_general.html" %}
+
+{% block content %}
+<<<<<<< HEAD:CONASTEM/DataBase/templates/database/Infraestructura/Uso_de_informacion.html
+    <h1>1700-USO DE INFORMACION</h1>
+    <table>
+      <thead>
+         <tr>
+             <th>Codigo</th>
+             <th>Numeral</th>
+             <th>Departamento Responsable</th>
+             <th>Persona Responsable</th>
+             <th>Año</th>
+             <th>Fecha límite</th>
+             <th>Fecha de auditoria interna</th>
+             <th>Comentarios Auditoria Interna</th>
+             <th>Fecha de auditoria externa</th>
+             <th>Comentarios Auditoria Externa</th>
+             <th>Enlaces</th>
+         </tr>
+      </thead>
+      <tbody>
+      {% for UsoDeInformacion in Uso_de_informacion_list %}
+      <tr>
+        <td>{{UsoDeInformacion.codigo}}</td>
+        <td> {{ UsoDeInformacion.numeral }}</h1>
+        <td>{{UsoDeInformacion.dep_responsable}}</p>
+        <td>{{UsoDeInformacion.person_responsable}}</p>
+        <td>{{UsoDeInformacion.track_year}}</p>
+        <td>{{UsoDeInformacion.track_date}}</p>
+        <td>{{UsoDeInformacion.internal_auditory_date}}</p>
+        <td>{{UsoDeInformacion.internal_auditory_obs}}</p>
+        <td>{{UsoDeInformacion.external_auditory_date}}</p>
+        <td>{{UsoDeInformacion.external_auditory_obs}}</p>
+  
+      </tr>
+      {% empty %}
+      <tr>
+          <td colstran="9">No hay numerales.</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+    </table>
+=======
+    <h1>Uso de informacion</h1>
+
+    {% if Uso_de_informacion_list %}
+    <ul>
+
+      {% for Uso_de_informacion in Uso_de_informacion_list %}
+      <li>
+        <h1><strong>Numeral:</strong> {{ Uso_de_informacion_list.numeral }}</h1>
+        <h1><strong>Texto:</strong> {{ Uso_de_informacion_list.Texto}}</h1>
+      <p><strong>Departamento Responsable:</strong> {{Uso_de_informacion_list.dep_responsable}}</p>
+        <p><strong>Persona Responsable:</strong>{{Uso_de_informacion_list.person_responsable}}</p>
+      <p><strong>Año:</strong>{{Uso_de_informacion_list.track_year}}</p>
+        <p><strong>Fecha limite:</strong>{{Uso_de_informacion_list.track_date}}</p>
+        <p><strong>Fecha de auditoria interna:</strong>{{Uso_de_informacion_list.internal_audiory_date}}</p>
+      <p><strong>Comentarios</strong>{{Uso_de_informacion_list.internal_audirory_obs}}</p>
+        <p><strong>Fecha de auditoria externa:</strong>{{Uso_de_informacion_list.external_audiory_date}}</p>
+        <p><strong>Comentarios:</strong>{{Uso_de_informacion_list.external_audirory_obs}}</p>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+      <p>No hay numerales.</p>
+    {% endif %}
+>>>>>>> 7a2a9e09d5f8b6d26330ffa2bfabfc29df2aecaa:CONASTEM/DataBase/templates/database/Infraestructura/Uso_informacion.html
+{% endblock %}

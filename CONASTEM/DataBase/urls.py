@@ -1,7 +1,7 @@
 from django.urls import path
 
 # GENERAL
-from .views.General import views, Register
+from .views.General import views
 
 # INFRAESTRUCTURA
 from .views.Infraestructura import InfraestructuraListView
@@ -11,7 +11,7 @@ from .views.Infraestructura import EquidadListView
 from .views.Infraestructura import PlaneacionInstitucionalListView
 from .views.Infraestructura import RecursosTecnologicosListView
 from .views.Infraestructura import SostenibilidadListView
-# from .views.Infraestructura import UsoDeInformacionListView
+from .views.Infraestructura import UsoDeInformacionListView
 
 # CURRICULO
 from .views.Curriculo import ConsideracionesSobreAreasYAsignaturasListView 
@@ -50,11 +50,13 @@ from .views.EscuelaComunidadYPertenencia import SostenibilidadEscuelaComunidadyP
 
 # GENERAL
 urlpatterns= [
-    path ('', Register.index, name= 'index'),
+    path ('', views.index, name= 'index'),
     path("home/", views.CriterioList.as_view(), name="criterio_list"),
-    path('instituciones/', Register.RegisterListView.as_view(), name= 'register_list'),
-    path('instituciones/<int:pk>', Register.RegisterListDetail.as_view(), name= 'register_detail'),
-    path("registro-responsable/", views.person_responsablenew, name="person_responsablenew"),
+    path('instituciones/', views.RegisterListView.as_view(), name= 'register_list'),
+    path('instituciones/<int:pk>', views.RegisterListDetail.as_view(), name= 'register_detail'),
+    path("responsable/new", views.person_responsablenew, name="person_responsablenew"),
+    path("responsables/", views.PersonResponsableListView .as_view(), name="responsable_list"),
+    path("responsables/<int:pk>", views.PersonResponsableDetail .as_view(), name="responsable_detail"),
 ]
 
 urlpatterns += [
@@ -66,7 +68,7 @@ urlpatterns += [
     path("planeacion-institucional/", PlaneacionInstitucionalListView.as_view(), name="Planeacion_institucional_list" ),
     path("recursos-tecnologicos/", RecursosTecnologicosListView.as_view(), name="Recursos_tecnologicos_list" ),
     path("sostenibilidad/", SostenibilidadListView.as_view(), name="Sostenibilidad_list" ),
-    # path("uso-de-info/", UsoDeInformacionListView.as_view(), name="Uso_de_info_list" ),  
+    path("uso-de-info/", UsoDeInformacionListView.as_view(), name="Uso_informacion_list" ),  
 ]
 
 urlpatterns += [
@@ -93,7 +95,7 @@ urlpatterns += [
     path ('sostenibilidad-curriculo/', SostenibilidadCurriculoListView.as_view(), name='SostenibiliadCurriculo_list'),
 
     # FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
-    path('aprendizaje-centrado/new', Formacion_Instruccion_Evaluacion.aprendizaje_centradonew, name='aprendizaje_centradonew'),
+    path('aprendizaje-centrado/new', Formacion_Instruccion_Evaluacion.Aprendizajecentrado_new, name='Aprendizajecentrado_new'),
     path("formacion-instruccion-evaluacion/", Formacion_Instruccion_Evaluacion.FormacionInstruccionEvaluacionListView.as_view(), name="FormacionInstruccionEvaluacion"),
 
         # 3.1 APRENDIZAJE CENTRADO EN EL ESTUDIANTE
@@ -117,15 +119,13 @@ urlpatterns += [
     
     # PERSONAL DOCENTE Y ADMINISTRATIVO
     path("personal-docente-y-administrativo",PersonalDocenteyAdministrativoListView.as_view(), name="PersonalDocenteyAdministrativo"),
-    path("profesional-calificado-en-educacion-stem",ProfesionalesEspecializadosEducacionSTEMListView.as_view(), name="ProfesionalesEspecializadosEducacionSTEM_List"),
-    path("desarrollo-profesional-docentes-directores-consejeros-profesionales", DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionalesListView.as_view(), name="DesarrolloProfesionalInicialyContinuoparaDocentesDirectoresdeEscuelayConsejerosProfesionales_list"),
-    path("apoyo-pedagogico-personal",ApoyoPedagogicoListView.as_view(), name="ApoyoPedagogicoParaelPersonal_List"),
-    path("sostenibilidad-personal-docente-administrativo", SostenibilidadDocenteAdministrativoListView.as_view(), name="SostenibilidadDocenteAdministrativo_List"),
+    path("profesional-calificado-educacion-stem",ProfesionalesEspecializadosEducacionSTEMListView.as_view(), name="ProfesionalesEspecializadosEducacionSTEM_List"),
+    path("desarrollo-profesional-docentes-directores-consejeros-profesionales", DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionalesListView.as_view(), name="DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales_list"),
+    path("apoyo-pedagogico-personal",ApoyoPedagogicoListView.as_view(), name="ApoyoPedagogico_List"),
+    path("sostenibilidad-docente-administrativo", SostenibilidadDocenteAdministrativoListView.as_view(), name="SostenibilidadDocenteAdministrativo_List"),
 
     # ESCUELA COMUNIDAD Y PERTENENCIA
-    path('compromisodelacomunidad/new', EscuelaComunidadYPertenencia.compromiso_comunidadnew, name='compromiso_comunidadnew'),
     path("escuelacomunidadypertenencia", EscuelaComunidadyPertenenciaListView.as_view(),name="Escuelacomunidadypertenencia"),
-    path('convivenciaescolar/new', EscuelaComunidadYPertenencia.convivencia_escolarnew,name='convivencia_escolarnew'),
     path("compromisodelacomunidad", CompromisodelaComunidadListView.as_view(), name="Compromisodelacomunidad_List"),
     # path('compromisodelacomunidad/new', EscuelaComunidadYPertenencia.Compromisodelacomunidad_new, name='compromisodelacomunidadnew'),
     path("convivenciaescolar", ConvivenciaescolarListView.as_view(), name="Convivenciaescolar_List"),
