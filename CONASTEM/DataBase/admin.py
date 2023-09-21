@@ -21,9 +21,12 @@ from .models.Infraestructura.uso_de_informacion import UsoDeInformacion
 from .models.Curriculo.ConsideracionesSobreAreasYAsignaturas import ConsideracionesSobreAreasYAsignaturas
 from .models.Curriculo.Inclusion_ingenieria_aula import InclusionIngenieriaAula
 from .models.Curriculo.Desarrollo_ciudadania_digital import DesarrolloCiudadaniaDigital
+from .models.Curriculo.IntegracionCurricular import IntegracionCurricular
 from .models.Curriculo.Curriculo_progresivo import CurriculoProgresivo
 from .models.Curriculo.Curriculo_propio import CurriculoPropio
+from .models.Curriculo.DesarrolloHabilidadesSigloXXI import DesarrolloHabilidadesSigloXXI
 from .models.Curriculo.Evaluacion_estudiantes import EvaluacionEstudiantes
+from .models.Curriculo.SostenibilidadCurriculo import SostenibilidadCurriculo
 
 # FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
 from .models.Formacion_Instruccion_Evaluacion.AprendizajeCentradoEstudiante import AprendizajeCentrado
@@ -68,9 +71,12 @@ admin.site.register(UsoDeInformacion)
 admin.site.register(ConsideracionesSobreAreasYAsignaturas)
 admin.site.register(InclusionIngenieriaAula)
 admin.site.register(DesarrolloCiudadaniaDigital)
+admin.site.register(IntegracionCurricular)
 admin.site.register(CurriculoProgresivo)
 admin.site.register(CurriculoPropio)
+admin.site.register(DesarrolloHabilidadesSigloXXI)
 admin.site.register(EvaluacionEstudiantes)
+admin.site.register(SostenibilidadCurriculo)
 
 # ADMIN FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
 admin.site.register(AprendizajeCentrado)
