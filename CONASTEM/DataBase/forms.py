@@ -7,6 +7,10 @@ from .models.Person_Responsable import PersonResponsable
 # INFRAESTRUCTURA
 
 # CURRÍCULO
+from .models.Curriculo import ConsideracionesSobreAreasYAsignaturas
+from .models.Curriculo import IntegracionCurricular
+from .models.Curriculo import DesarrolloHabilidadesSigloXXI
+from .models.Curriculo import SostenibilidadCurriculo
 from .models.Curriculo import Inclusion_ingenieria_aula
 from .models.Curriculo import Desarrollo_ciudadania_digital
 from .models.Curriculo import Curriculo_progresivo
@@ -66,7 +70,56 @@ class FormPersonResponsable (forms.ModelForm):
 # INFRAESTRUCTURA
 
 
-# CURRÍCULO
+# 2000 CURRÍCULO
+# 2100
+class Form_ConsideracionesSobreAreasYAsignaturas(forms.ModelForm):
+    dep_responsable = forms.CharField(label= 'Departamento responsable', required= True, widget= forms.TextInput(attrs={'placeholder': 'Dirección'}))
+    class Meta:
+        model = ConsideracionesSobreAreasYAsignaturas.ConsideracionesSobreAreasYAsignaturas
+        exclude = ['created_at', 'updated_at','codigo']
+        widgets = {
+            'priority' : TextInput(attrs={'class' : 'campo-formulario'}),
+            'track_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'internal_auditory_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'external_auditory_date' : DateInput(attrs={'class': 'campo-formulario'})
+        }
+# 2400
+class Form_IntegracionCurricular(forms.ModelForm):
+    dep_responsable = forms.CharField(label= 'Departamento responsable', required= True, widget= forms.TextInput(attrs={'placeholder': 'Dirección'}))
+    class Meta:
+        model = IntegracionCurricular.IntegracionCurricular
+        exclude = ['created_at', 'updated_at','codigo']
+        widgets = {
+            'priority' : TextInput(attrs={'class' : 'campo-formulario'}),
+            'track_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'internal_auditory_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'external_auditory_date' : DateInput(attrs={'class': 'campo-formulario'})
+        }
+# 2700
+class Form_DesarrolloHabilidadesSigloXXI(forms.ModelForm):
+    dep_responsable = forms.CharField(label= 'Departamento responsable', required= True, widget= forms.TextInput(attrs={'placeholder': 'Dirección'}))
+    class Meta:
+        model = DesarrolloHabilidadesSigloXXI.DesarrolloHabilidadesSigloXXI
+        exclude = ['created_at', 'updated_at','codigo']
+        widgets = {
+            'priority' : TextInput(attrs={'class' : 'campo-formulario'}),
+            'track_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'internal_auditory_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'external_auditory_date' : DateInput(attrs={'class': 'campo-formulario'})
+        }
+# 2900
+class Form_SostenibilidadCurriculo(forms.Form):
+    dep_responsable = forms.CharField(label= 'Departamento responsable', required= True, widget= forms.TextInput(attrs={'placeholder': 'Dirección'}))
+    class Meta:
+        model = SostenibilidadCurriculo.SostenibilidadCurriculo
+        exclude = ['created_at', 'updated_at','codigo']
+        widgets = {
+            'priority' : TextInput(attrs={'class' : 'campo-formulario'}),
+            'track_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'internal_auditory_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'external_auditory_date' : DateInput(attrs={'class': 'campo-formulario'})
+        }
+
 
 class Form_IngenieriaAula(forms.ModelForm):
     dep_responsable = forms.CharField(label= 'Departamento responsable', required= True, widget= forms.TextInput(attrs={'placeholder': 'Dirección'}))

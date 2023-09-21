@@ -77,7 +77,8 @@ urlpatterns += [
     # CURRICULO
     path("curriculo/", CurriculoListView.as_view(), name="Curriculo_list"),
     # 2.1 Consideraciones sobre Áreas y Asignaturas
-    path("consideracionesareasyasignaturas/", ConsideracionesSobreAreasYAsignaturasListView.as_view(), name="ConsideracionesSobreAreasYAsignaturas_list"),
+    path("consideraciones-areas-y-asignaturas/", ConsideracionesSobreAreasYAsignaturasListView.as_view(), name="ConsideracionesSobreAreasYAsignaturas_list"),
+    path("consideraciones-areas-y-asignaturas/new", Curriculo.ConsideracionesSobreAreasYAsignaturas_new, name="ConsideracionesSobreAreasYAsignaturas_new"),
     # 2.2 Inclusion_ingenieria_aula
     path('inclusion-ingenieria-aula/', InclusionIngenieriaAulaListView.as_view(), name='Inclusion_ingenieria_aula_list'),
     path('inclusion-ingenieria-aula/new', Curriculo.IngenieriaAula_new, name='Inclusion_ingenieria_aula_new'),
@@ -85,7 +86,8 @@ urlpatterns += [
     path('desarrollo-ciudadania-digital/', DesarrolloCiudadaniaDigitalListView.as_view(), name='desarrollo_ciudadania_digital_list'),
     path('desarrollo-ciudadania-digital/new', Curriculo.CiudadaniaDigital_new, name='desarrollo_ciudadania_digital_new'),
     # 2.4 Integración curricular
-    path('integracion-curicular/', IntegracionCurricularListView.as_view(), name='IntegracionCurricular_list'),
+    path('integracion-curricular/', IntegracionCurricularListView.as_view(), name='IntegracionCurricular_list'),
+    path('integracion-curricular/new', Curriculo.IntegracionCurricular_new, name='IntegracionCurricular_new'),
     # 2.5 CURRÍCULO PROGRESIVO Y ALINEADO CON LOS ESTÁNDARES CURRICULARES
     path("curriculo-progresivo/", CurriculoProgresivoListView.as_view(), name="Curriculo_progresivo_list"),
     path("curriculo-progresivo/new", Curriculo.CurriculoProgresivo_new, name="Curriculo_progresivo_new"),
@@ -94,11 +96,13 @@ urlpatterns += [
     path ('curriculo-propio/new', Curriculo.CurriculoPropio_new, name='Curriculo_propio_new'),
     # 2.7 Desarrollo ahbilidades siglo XXI
     path('desarrollo-habilidades-siglo-XXI/', DesarrolloHabilidadesSigloXXIListView.as_view(), name='DesarrolloHabilidadesSigloXXI_list'),
+    path('desarrollo-habilidades-siglo-XXI/new', Curriculo.DesarrolloHabilidadesSigloXXI_new, name='DesarrolloHabilidadesSigloXXI_new'),
     # 2.8 EVALUACIÓN DE LOS ESTUDIANTES
     path ('evaluacion-estudiantes', EvaluacionEstudiantesListView.as_view(), name='Evaluacion_estudiantes_list'),
     path ('evaluacion-estudiantes/new', Curriculo.EvaluacionEstudiantes_new, name='Evaluacion_estudiantes_new'),
     # 2.9 Sostenibilidad - Curriculo
     path ('sostenibilidad-curriculo/', SostenibilidadCurriculoListView.as_view(), name='SostenibiliadCurriculo_list'),
+    path ('sostenibilidad-curriculo/new', Curriculo.SostenibilidadCurriculo_new, name='SostenibiliadCurriculo_new'),
 
     # FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
     path("formacion-instruccion-evaluacion/", Formacion_Instruccion_Evaluacion.FormacionInstruccionEvaluacionListView.as_view(), name="FormacionInstruccionEvaluacion"),

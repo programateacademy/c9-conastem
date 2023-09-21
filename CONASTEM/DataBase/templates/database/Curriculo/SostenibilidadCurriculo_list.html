@@ -1,15 +1,26 @@
 {% extends "base_general.html" %}
 
 {% block content %}
-<h1>Sostenibilidad - Curriculo</h1>
+
+{% load static %}
+
+<div class= "titulo">
+    <img src="{%static 'images/tabla_detail/icon_curriculo.svg' %}">
+    <h1>2000 - CURRÍCULO</h1>
+</div>
+<div class="subtitulo">
+    <h2>2900 - SOSTENIBILIDAD - CURRICULO</h2>
+    <a href="/database/sostenibilidad-curriculo/new"><img src="{%static 'images/crear_datos.svg'%}" alt="Crear datos"></a>
+</div>
+
 <table>
     <thead>
         <tr>
+            <th>Código</th>
             <th>Numeral</th>
             <th>Departamento Responsable</th>
             <th>Persona Responsable</th>
-            <th>Año</th>
-            <th>Fecha límite</th>
+            <th>Fecha límite de seguimiento</th>
             <th>Fecha de auditoria interna</th>
             <th>Comentarios Auditoria Interna</th>
             <th>Fecha de auditoria externa</th>
@@ -18,23 +29,26 @@
         </tr>
     </thead>
     <tbody>
+
         {% for SostenibilidadCurriculo in SostenibilidadCurriculo_list %}
         <tr>
+            <td>{{ SostenibilidadCurriculo.codigo }}</td>
             <td>{{ SostenibilidadCurriculo.numeral }}</td>
             <td>{{ SostenibilidadCurriculo.dep_responsable }}</td>
             <td>{{ SostenibilidadCurriculo.person_responsable }}</td>
-            <td>{{ SostenibilidadCurriculo.track_year }}</td>
             <td>{{ SostenibilidadCurriculo.track_date }}</td>
             <td>{{ SostenibilidadCurriculo.internal_audiory_date }}</td>
             <td>{{ SostenibilidadCurriculo.internal_audirory_obs }}</td>
             <td>{{ SostenibilidadCurriculo.external_audiory_date }}</td>
             <td>{{ SostenibilidadCurriculo.external_audirory_obs }}</td>
+            <td><a href="{{SostenibilidadCurriculo.evidence }}" target="_blank">{{SostenibilidadCurriculo.evidence }}</a></td>
         </tr>
         {% empty %}
         <tr>
-            <td colspan="9">No hay numerales.</td>
+            <td colspan="9">No hay registros.</td>
         </tr>
         {% endfor %}
     </tbody>
 </table>
+
 {% endblock content %}
