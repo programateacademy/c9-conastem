@@ -2,9 +2,7 @@
 
 {%block content%}
 
-{% load static %}
-
-<div class= "titulo">
+{% load static %}<div class= "titulo">
     <img src="{%static 'images/tabla_detail/icon_for_instrucc_eva.svg' %}">
     <h1 style="text-transform:uppercase">3000 - Formación / Instrucción / Evaluación</h1>
 </div>
@@ -34,6 +32,8 @@
         {% for aprendizajecentrado in aprendizaje_centrado_list %}
     <tr>
         <td>{{ aprendizajecentrado.codigo }}</h1>
+
+
         <td>{{ aprendizajecentrado.numeral }}</h1>
         <td>{{aprendizajecentrado.dep_responsable}}</p>
         <td>{{aprendizajecentrado.person_responsable}}</p>

@@ -22,26 +22,7 @@ class PersonalDocenteyAdministrativoListView (generic.ListView):
     template_name='database/PersonalDocenteyAdministrativo/PersonalDocenteyAdministrativo.html'
 
 
-class ApoyoPedagogicoListView (generic.ListView):
-    model=ApoyoPedagogico
-    context_object_name='ApoyoPedagogico_List'
-    template_name='database/PersonalDocenteyAdministrativo/ApoyoPedagogico_List.html'
 
-class DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionalesListView (generic.ListView):
-    model=DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales
-    context_object_name='DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales_list'
-    template_name='database/PersonalDocenteyAdministrativo/DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales_list.html'
-
-
-class ProfesionalesEspecializadosEducacionSTEMListView (generic.ListView):
-    model=ProfesionalesEspecializadosEducacionSTEM
-    context_object_name='ProfesionalesEspecializadosEducacionSTEM_List'
-    template_name='database/PersonalDocenteyAdministrativo/ProfesionalesEspecializadosEducacionSTEM_List.html'
-
-class SostenibilidadDocenteAdministrativoListView (generic.ListView):
-    model=SostenibilidadDocenteAdministrativo
-    context_object_name='SostenibilidadDocenteAdministrativo_List'
-    template_name='database/PersonalDocenteyAdministrativo/SostenibilidadDocenteAdministrativo_List.html'
 
 
 # VISTA DE APOYO PEDAGÓGICO PARA EL PERSONAL
@@ -56,12 +37,12 @@ class ApoyoPedagogicoListView (generic.ListView):
 
 # FORMULARIO DE APOYO PEDAGÓGICO PARA EL PERSONAL
 
-def apoyopedagogiconew(request):
+def Apoyopedagogico_new(request):
     if request.method == "POST":
         form_new = Form_ApoyoPedagogico(request.POST)
         if form_new.is_valid():
             form_new.save()
-            return HttpResponseRedirect('/database/Apoyo-Pedagogico')
+            return HttpResponseRedirect('/database/apoyo-pedagogico')
     else:
         form_new = Form_ApoyoPedagogico ()
     return render(request, 'Form_Subcriterio.html', {'form_new': form_new, 'titulo': '4300 - APOYO PEDAGÓGICO PARA EL PERSONAL'})
@@ -80,12 +61,12 @@ class DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionalesListView 
 
 # FORMULARIO DE DESARROLLO PROFESIONAL INICIAL Y CONTINUO PARA DOCENTES, DIRECTORES DE ESCUELA Y CONSEJEROS PROFESIONALES
 
-def desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionalesnew(request):
+def Desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales_new(request):
     if request.method == "POST":
         form_new = Form_DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales(request.POST)
         if form_new.is_valid():
             form_new.save()
-            return HttpResponseRedirect('/database/DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales')
+            return HttpResponseRedirect('/database/desarrollo-profesional-docentes-directores-consejeros-profesionales')
     else:
         form_new = Form_DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales ()
 
@@ -103,12 +84,12 @@ class ProfesionalesEspecializadosEducacionSTEMListView (generic.ListView):
     
 # FORMULARIO DE PROFESIONALES ALTAMENTE CALIFICADOS ESPECIALIZADOS EN EDUCACIÓN STEM
 
-def profesionalesespecializadoseducacionSTEMnew(request):
+def ProfesionalesespecializadoseducacionSTEM_new(request):
     if request.method == "POST":
         form_new = Form_ProfesionalesEspecializadosEducacionSTEM(request.POST)
         if form_new.is_valid():
             form_new.save()
-            return HttpResponseRedirect('/database/ProfesionalesEspecializadosEducacionSTEM')
+            return HttpResponseRedirect('/database/profesional-calificado-educacion-stem')
     else:
         form_new = Form_ProfesionalesEspecializadosEducacionSTEM ()
 
@@ -127,12 +108,12 @@ class SostenibilidadDocenteAdministrativoListView (generic.ListView):
 
 # FORMULARIO DE SOSTENIBILIDAD - PERSONAL DOCENTE Y ADMINISTRATIVO
 
-def  sostenibilidaddocenteadministrativonew(request):
+def  Sostenibilidaddocenteadministrativo_new(request):
     if request.method == "POST":
         form_new = Form_SostenibilidadDocenteAdministrativo(request.POST)
         if form_new.is_valid():
             form_new.save()
-            return HttpResponseRedirect('/database/SostenibilidadDocenteAdministrativo')
+            return HttpResponseRedirect('/database/sostenibilidad-docente-administrativo')
     else:
         form_new = Form_SostenibilidadDocenteAdministrativo ()
 
