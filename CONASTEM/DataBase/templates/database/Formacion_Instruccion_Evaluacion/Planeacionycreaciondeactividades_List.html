@@ -5,7 +5,7 @@
 
 <div class= "titulo">
     <img src="{%static 'images/icon_form_instruc_eva.svg' %}">
-    <h1>Formación / Instrucción / Evaluación</h1>
+    <h1 style="text-transform:uppercase">3000 - Formación / Instrucción / Evaluación</h1>
 </div>
 <div class="subtitulo">
     <h2 style="text-transform:uppercase">3300-PLANEACION Y CREACIÓN DE ACTIVIDADES</h2>
@@ -14,7 +14,7 @@
     <table>
        <thead>
           <tr>
-              <th>Codigo</th>
+              <th>Código</th>
               <th>Numeral</th>
               <th>Departamento Responsable</th>
               <th>Persona Responsable</th>
@@ -33,7 +33,6 @@
         <td> {{planeacionycreaciondeactividades.numeral }}</td>
         <td> {{planeacionycreaciondeactividades.dep_responsable}}</td>
         <td>{{planeacionycreaciondeactividades.person_responsable}}</td>
-        <td>{{planeacionycreaciondeactividades.track_year}}</td>
         <td>{{planeacionycreaciondeactividades.track_date}}</td>
         <td>{{planeacionycreaciondeactividades.internal_auditory_date}}</td>
         <td>{{planeacionycreaciondeactividades.internal_auditory_obs}}</td>
@@ -44,7 +43,7 @@
   |   </tr>
   {% empty %}
   <tr>
-      <td colstran="9">No hay numerales.</td>
+      <td colstran="9">No hay registros.</td>
   </tr>
   {% endfor %}
 </tbody>
