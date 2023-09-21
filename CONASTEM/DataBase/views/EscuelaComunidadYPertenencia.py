@@ -63,7 +63,6 @@ def convivenciaescolarnew(request):
 
     return render(request, 'Form_Subcriterio.html', {'form_new': form_new , 'titulo':'5300-CONVIVENCIA ESCOLAR'})
 
-
 class RelacionesconlaComunidadListView (generic.ListView):
     model=RelacionesconlaComunidad
     context_object_name='Relacionesconlacomunidad_List'

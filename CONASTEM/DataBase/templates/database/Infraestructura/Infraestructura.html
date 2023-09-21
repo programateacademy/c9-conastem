@@ -1,13 +1,27 @@
 {% extends "base_general.html" %}
-{% block content %}
-<h1>Infraestructura</h1>
+
+{%block content%}
+
+{% load static %}
+
+<div class= "titulo">
+        <img src="{%static 'images/tabla_detail/icon_infraestructura.svg' %}">
+        <h1 style="text-transform:uppercase">1000-INFRAESTRUCTURA</h1>
+</div>
+
+<p>Selecciona un subcriterio para continuar:</p>
+
+<section class= "lista">
 <ul>
-<li><a href="{% url 'ambiente_escolar_List' %}">Ambiente Escolar</a></li>
-<li><a href="{% url 'Desarrollo_de_equipos_lideres_list' %}">Desarrollo de equipos lideres</a></li>
-<li><a href="{% url 'Equidad_list' %}">Equidad</a></li>
-<li><a href="{% url 'Planeacion_institucional_list' %}">Planeacion institucional</a></li>
-<li><a href="{% url 'Recursos_tecnologicos_list' %}">Recursos tecnologicos</a></li>
-<li><a href="{% url 'Sostenibilidad_list' %}">Sostenibilidad</a></li>
-<li><a href="{% url 'Uso_informacion_list' %}">Uso de informacion</a></li>
+    <li><a href="{% url 'Desarrollo_de_equipos_lideres_list' %}">1100-DESARROLLO DE EQUIPOS LIDERES</a></li>
+    <li><a href="{% url 'Planeacion_institucional_list' %}">1200-PLANEACIÓN INSTITUCIONAL</a></li>
+    <li><a href="{% url 'Ambiente_escolar_list' %}">1300-AMBIENTE ESCOLAR</a></li>
+    <li><a href="{% url 'Recursos_tecnologicos_list' %}">1400-RECURSOS TECNOLÓGICOS</a></li>
+    <li><a href="{% url 'Uso_informacion_list' %}">1500-USO DE INFORMACION</a></li>
+    <li><a href="{% url 'Equidad_list' %}">1600-EQUIDAD</a></li>
+    <li><a href="{% url 'Sostenibilidad_list' %}">1700-SOSTENIBILIDAD</a></li>
 </ul> 
-{% endblock content %}
+
+</section>
+
+{%endblock content%}
