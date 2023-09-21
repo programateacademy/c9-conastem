@@ -1,15 +1,26 @@
 {% extends "base_general.html" %}
 
 {% block content %}
-<h1>Inclusion ingenieria aula</h1>
+
+{% load static %}
+
+<div class= "titulo">
+    <img src="{%static 'images/tabla_detail/icon_curriculo.svg' %}">
+    <h1 style="text-transform:uppercase">2000 - Currículo</h1>
+</div>
+<div class="subtitulo">
+    <h2 style="text-transform:uppercase">2200 - Inclusion ingenieria aula</h2>
+    <a href="/database/inclusion-ingenieria-aula/new"><img src="{%static 'images/crear_datos.svg'%}" alt="Crear datos"></a>
+</div>
+
 <table>
     <thead>
         <tr>
+            <th>Código</th>
             <th>Numeral</th>
             <th>Departamento Responsable</th>
             <th>Persona Responsable</th>
-            <th>Año</th>
-            <th>Fecha límite</th>
+            <th>Fecha límite de seguimiento</th>
             <th>Fecha de auditoria interna</th>
             <th>Comentarios Auditoria Interna</th>
             <th>Fecha de auditoria externa</th>
@@ -20,19 +31,20 @@
     <tbody>
         {% for InclusionIngenieriaAula in Inclusion_ingenieria_aula_list %}
         <tr>
+            <td>{{ InclusionIngenieriaAula.codigo }}</td>
             <td>{{ InclusionIngenieriaAula.numeral }}</td>
             <td>{{ InclusionIngenieriaAula.dep_responsable }}</td>
             <td>{{ InclusionIngenieriaAula.person_responsable }}</td>
-            <td>{{ InclusionIngenieriaAula.track_year }}</td>
             <td>{{ InclusionIngenieriaAula.track_date }}</td>
             <td>{{ InclusionIngenieriaAula.internal_auditory_date }}</td>
             <td>{{ InclusionIngenieriaAula.internal_auditory_obs }}</td>
             <td>{{ InclusionIngenieriaAula.external_auditory_date }}</td>
             <td>{{ InclusionIngenieriaAula.external_auditory_obs }}</td>
+            <td><a href="{{InclusionIngenieriaAula.evidence}}" traget="_blank">{{InclusionIngenieriaAula.evidence}}</a></td>
         </tr>
         {% empty %}
         <tr>
-            <td colspan="9">No hay numerales.</td>
+            <td colspan="9">No hay registros.</td>
         </tr>
         {% endfor %}
     </tbody>

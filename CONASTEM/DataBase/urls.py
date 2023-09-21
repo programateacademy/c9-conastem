@@ -111,7 +111,6 @@ urlpatterns += [
         # 3.3 PLANEACIÓN Y CREACIÓN DE ACTIVIDADES
     path('planeacionycreaciondeactividades', PlaneacionyCreaciondeActividadesListView.as_view(),name="PlaneacionyCreaciondeActividades_List"),
     path('planeacionycreaciondeactividades/new', Formacion_Instruccion_Evaluacion.Planeacionycreaciondeactividades_new, name='planeacionycreaciondeactividadesnew'),
-
         # 3.4 EDUCACIÓN STEM INTEGRADA
     path("educacion-stem-integrada/", Formacion_Instruccion_Evaluacion.EducacionStemIntegradaListView.as_view(), name='educacion_stem_integrada_list'),
     path("educacion-stem-integrada/new", Formacion_Instruccion_Evaluacion.EducacionSTEM_new, name="educacion_stem_integrada_new"),
@@ -121,14 +120,12 @@ urlpatterns += [
         # 3.6 ESTRATEGIAS FORMATIVAS
     path('estrategiasformativas', EstrategiasFormativasListView.as_view(), name="EstrategiasFormativas_List"),
     path('estrategiasformativas/new', Formacion_Instruccion_Evaluacion.Estrategiasformativas_new, name='estrategiasformativasnew'),
-
         # 3.7 ELECCIÓN DE CARRERA
     path("eleccion-carrera/", Formacion_Instruccion_Evaluacion.EleccionCarreraListView.as_view(), name='eleccion_carrera_list'),
     path("eleccion-carrera/new", Formacion_Instruccion_Evaluacion.Eleccioncarrera_new, name="eleccion_carrera_new"),
         # 3.8 APRENDIZAJE EXTENDIDO
     path('aprendizajeextendido', AprendizajeExtendidoListView.as_view(),name="AprendizajeExtendido_List"),
     path('aprendizajeextendido/new', Formacion_Instruccion_Evaluacion.Aprendizajeextendido_new, name='aprendizajeextendidonew'),
-
         # 3.9 SOSTENIBILIDAD - FORMACIÓN/INSTRUCCIÓN/EVALUACIÓN
     path("sostenibilidad-formacion-instruccion/", Formacion_Instruccion_Evaluacion.SostenibilidadListView.as_view(), name="sostenibilidad_list"),
     path("sostenibilidad-formacion-instruccion/new", Formacion_Instruccion_Evaluacion.SostenibilidadFormacion_new, name="sostenibilidad_new"),

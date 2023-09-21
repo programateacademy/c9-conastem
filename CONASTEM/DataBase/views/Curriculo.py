@@ -48,7 +48,7 @@ def IngenieriaAula_new(request):
         form_new = Form_IngenieriaAula(request.POST)
         if form_new.is_valid():
             form_new.save()
-            return HttpResponseRedirect('/database/aprendizaje-centrado')
+            return HttpResponseRedirect('/database/curriculo')
     else:
         form_new = Form_IngenieriaAula ()
 
@@ -69,7 +69,7 @@ def CiudadaniaDigital_new(request):
         form_new = Form_DesarrolloCiudadania(request.POST)
         if form_new.is_valid():
             form_new.save()
-            return HttpResponseRedirect('/database/aprendizaje-centrado')
+            return HttpResponseRedirect('/database/curriculo')
     else:
         form_new = Form_DesarrolloCiudadania ()
 
@@ -96,7 +96,7 @@ def CurriculoProgresivo_new(request):
         form_new = Form_CurriculoProgresivo(request.POST)
         if form_new.is_valid():
             form_new.save()
-            return HttpResponseRedirect('/database/aprendizaje-centrado')
+            return HttpResponseRedirect('/database/curriculo')
     else:
         form_new = Form_CurriculoProgresivo ()
 
@@ -117,7 +117,7 @@ def CurriculoPropio_new(request):
         form_new = Form_CurriculoPropio(request.POST)
         if form_new.is_valid():
             form_new.save()
-            return HttpResponseRedirect('/database/aprendizaje-centrado')
+            return HttpResponseRedirect('/database/curriculo')
     else:
         form_new = Form_CurriculoPropio ()
 
@@ -144,7 +144,7 @@ def EvaluacionEstudiantes_new(request):
         form_new = Form_EvaluacionEstudiantes(request.POST)
         if form_new.is_valid():
             form_new.save()
-            return HttpResponseRedirect('/database/aprendizaje-centrado')
+            return HttpResponseRedirect('/database/curriculo')
     else:
         form_new = Form_EvaluacionEstudiantes ()
 
