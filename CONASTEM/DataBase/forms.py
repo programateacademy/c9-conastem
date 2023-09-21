@@ -1,5 +1,5 @@
 from django import forms
-# GENERALES
+
 # GENERALES
 from .models.Register import Register
 from .models.Person_Responsable import PersonResponsable
@@ -23,12 +23,13 @@ from .models.Formacion_Instruccion_Evaluacion import EducacionSTEM
 from .models.Formacion_Instruccion_Evaluacion import TecnologiaFormacionInstruccion
 from .models.Formacion_Instruccion_Evaluacion import EleccionCarrera
 from .models.Formacion_Instruccion_Evaluacion import Sostenibilidad
+from .models.Formacion_Instruccion_Evaluacion import ApredizajeRiguroso
+from .models.Formacion_Instruccion_Evaluacion import EstrategiasFormativas
+from .models.Formacion_Instruccion_Evaluacion import PlaneacionyCreaciondeActividades
+from .models.Formacion_Instruccion_Evaluacion import AprendizajeExtendido
 
 # PERSONAL DOCENTE Y ADMINISTRATIVO
 
-# ESCUELA COMUNIDAD Y PERTENENCIA
-
-# PERSONAL DOCENTE Y ADMINISTRATIVO
 
 # ESCUELA COMUNIDAD Y PERTENENCIA
 from .models.Escuela_Comunidad_y_Pertenencia import CompromisodelaComunidad
@@ -45,6 +46,13 @@ class TextInput(forms.TextInput):
 
 # FORMULARIOS GENERALES
 class FormRegister(forms.ModelForm):
+    institution_name = forms.CharField(required= True, widget= forms.TextInput(attrs={'placeholder': 'Nombre institución'}))
+    nit = forms.IntegerField(required= False, widget= forms.NumberInput(attrs={'placeholder' : 'NIT'}) )
+    adress = forms.CharField(required= True, widget= forms.TextInput(attrs={'placeholder' : 'Dirección'}))
+    institution_responsable = forms.CharField(required= True, widget= forms.TextInput(attrs={'placeholder' : 'Responsable'}))
+    phone = forms.IntegerField(required= True, widget= forms.NumberInput(attrs={'placeholder' : 'Teléfono'}))
+    email = forms.EmailField(required= True, widget= forms.EmailInput(attrs={'placeholder' : 'Correo electrónico'}))
+    year = forms.IntegerField(required= True, widget= forms.NumberInput(attrs={'placeholder' : 'Año de inscripción'}))
     class Meta:
         model = Register
         exclude = ['id', 'created_date']
@@ -160,7 +168,7 @@ class Form_CurriculoPropio(forms.ModelForm):
             'external_auditory_date' : DateInput(attrs={'class': 'campo-formulario'})
         }
 
-class Form_EvaluacionEstudiantes(forms.Form):
+class Form_EvaluacionEstudiantes(forms.ModelForm):
     dep_responsable = forms.CharField(label= 'Departamento responsable', required= True, widget= forms.TextInput(attrs={'placeholder': 'Dirección'}))
     class Meta:
         model = Evaluacion_estudiantes.EvaluacionEstudiantes
@@ -199,10 +207,33 @@ class Form_EducacionSTEM (forms.ModelForm):
             'external_auditory_date' : DateInput(attrs={'class': 'campo-formulario'})
         }
 
+class Form_Aprendizajeriguroso (forms.ModelForm):
+    dep_responsable = forms.CharField(label= 'Departamento responsable', required= True, widget= forms.TextInput(attrs={'placeholder': 'Dirección'}))
+    class Meta:
+        model = ApredizajeRiguroso.AprendizajeRiguroso
+        exclude = ['created_at', 'updated_at','codigo']
+        widgets = {
+            'priority' : TextInput(attrs={'class' : 'campo-formulario'}),
+            'track_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'internal_auditory_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'external_auditory_date' : DateInput(attrs={'class': 'campo-formulario'})
+        }
+
 class Form_TecFormacionInstruccion (forms.ModelForm):
     dep_responsable = forms.CharField(label= 'Departamento responsable', required= True, widget= forms.TextInput(attrs={'placeholder': 'Dirección'}))
     class Meta:
         model = TecnologiaFormacionInstruccion.TecnologiaFormacion
+        exclude = ['created_at', 'updated_at','codigo']
+        widgets = {
+            'priority' : TextInput(attrs={'class' : 'campo-formulario'}),
+            'track_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'internal_auditory_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'external_auditory_date' : DateInput(attrs={'class': 'campo-formulario'})
+        }
+class Form_Planeacionycreaciondeactividades (forms.ModelForm):
+    dep_responsable = forms.CharField(label= 'Departamento responsable', required= True, widget= forms.TextInput(attrs={'placeholder': 'Dirección'}))
+    class Meta:
+        model = PlaneacionyCreaciondeActividades.PlaneacionyCreaciondeActividades
         exclude = ['created_at', 'updated_at','codigo']
         widgets = {
             'priority' : TextInput(attrs={'class' : 'campo-formulario'}),
@@ -222,11 +253,35 @@ class Form_EleccionCarrera (forms.ModelForm):
             'internal_auditory_date' : DateInput(attrs={'class': 'campo-formulario'}),
             'external_auditory_date' : DateInput(attrs={'class': 'campo-formulario'})
         }
+        
+class Form_Estrategiasformativas (forms.ModelForm):
+    dep_responsable = forms.CharField(label= 'Departamento responsable', required= True, widget= forms.TextInput(attrs={'placeholder': 'Dirección'}))
+    class Meta:
+        model = EstrategiasFormativas.EstrategiasFormativas
+        exclude = ['created_at', 'updated_at','codigo']
+        widgets = {
+            'priority' : TextInput(attrs={'class' : 'campo-formulario'}),
+            'track_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'internal_auditory_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'external_auditory_date' : DateInput(attrs={'class': 'campo-formulario'})
+        }
 
 class Form_SostenibilidadFormacion (forms.ModelForm):
     dep_responsable = forms.CharField(label= 'Departamento responsable', required= True, widget= forms.TextInput(attrs={'placeholder': 'Dirección'}))
     class Meta:
         model = Sostenibilidad.SostenibilidadFormacionInstruccion
+        exclude = ['created_at', 'updated_at','codigo']
+        widgets = {
+            'priority' : TextInput(attrs={'class' : 'campo-formulario'}),
+            'track_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'internal_auditory_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'external_auditory_date' : DateInput(attrs={'class': 'campo-formulario'})
+        }
+        
+class Form_Aprendizajeextendido (forms.ModelForm):
+    dep_responsable = forms.CharField(label= 'Departamento responsable', required= True, widget= forms.TextInput(attrs={'placeholder': 'Dirección'}))
+    class Meta:
+        model = AprendizajeExtendido.AprendizajeExtendido
         exclude = ['created_at', 'updated_at','codigo']
         widgets = {
             'priority' : TextInput(attrs={'class' : 'campo-formulario'}),
@@ -241,22 +296,50 @@ class Form_SostenibilidadFormacion (forms.ModelForm):
 # ESCUELA COMUNIDAD Y PERTENENCIA
 
 class Form_Compromisodelacomunidad (forms.ModelForm):
+    dep_responsable = forms.CharField(label= 'Departamento responsable', required= True, widget= forms.TextInput(attrs={'placeholder': 'Dirección'}))
     class Meta:
         model = CompromisodelaComunidad.CompromisodelaComunidad
         exclude = ['created_at', 'updated_at','codigo']
+        widgets = {
+            'priority' : TextInput(attrs={'class' : 'campo-formulario'}),
+            'track_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'internal_auditory_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'external_auditory_date' : DateInput(attrs={'class': 'campo-formulario'})
+        }
 
 class Form_Convivenciaescolar (forms.ModelForm):
+    dep_responsable = forms.CharField(label= 'Departamento responsable', required= True, widget= forms.TextInput(attrs={'placeholder': 'Dirección'}))
     class Meta:
         model = ConvivenciaEscolar.ConvivenciaEscolar
         exclude = ['created_at', 'updated_at','codigo']
+        widgets = {
+            'priority' : TextInput(attrs={'class' : 'campo-formulario'}),
+            'track_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'internal_auditory_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'external_auditory_date' : DateInput(attrs={'class': 'campo-formulario'})
+        }
 
 class Form_Relacionesconlacomunidad (forms.ModelForm):
+    dep_responsable = forms.CharField(label= 'Departamento responsable', required= True, widget= forms.TextInput(attrs={'placeholder': 'Dirección'}))
     class Meta:
         model = RelacionesconlaComunidad.RelacionesconlaComunidad
         exclude = ['created_at', 'updated_at','codigo']
+        widgets = {
+            'priority' : TextInput(attrs={'class' : 'campo-formulario'}),
+            'track_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'internal_auditory_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'external_auditory_date' : DateInput(attrs={'class': 'campo-formulario'})
+        }
 
 
 class Form_Sostenibilidadescuela (forms.ModelForm):
+    dep_responsable = forms.CharField(label= 'Departamento responsable', required= True, widget= forms.TextInput(attrs={'placeholder': 'Dirección'}))
     class Meta:
         model = Sostenibilidad_EscuelaComunidadyPertenencia.SostenibilidadEscuelaComunidadyPertenencia
         exclude = ['created_at', 'updated_at','codigo']
+        widgets = {
+            'priority' : TextInput(attrs={'class' : 'campo-formulario'}),
+            'track_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'internal_auditory_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'external_auditory_date' : DateInput(attrs={'class': 'campo-formulario'})
+        }

@@ -1,7 +1,16 @@
 {% extends "base_general.html" %}
 
 {% block content %}
-    <h1>5300-CONVIVENCIA ESCOLAR</h1>
+{% load static %}
+
+<div class= "titulo">
+    <img src="{%static 'images/tabla_detail/icon_escu_comu_perten.svg' %}">
+    <h1>5000-Escuela, Comunidad y Pertenencia.</h1>
+</div>
+<div class="subtitulo">
+    <h2 style="text-transform:uppercase">5300-CONVIVENCIA ESCOLAR</h2>
+    <a href="/database/convivenciaescolar/new"><img src="{%static 'images/crear_datos.svg'%}" alt="Crear datos"></a>
+</div>
     <table>
       <thead>
           <tr>
@@ -9,8 +18,7 @@
               <th>Numeral</th>
               <th>Departamento Responsable</th>
               <th>Persona Responsable</th>
-              <th>Año</th>
-              <th>Fecha límite</th>
+              <th>Fecha límite de seguimiento</th>
               <th>Fecha de auditoria interna</th>
               <th>Comentarios Auditoria Interna</th>
               <th>Fecha de auditoria externa</th>
@@ -25,7 +33,6 @@
         <td>{{convivenciaescolar.numeral }}</h1>
         <td>{{convivenciaescolar.dep_responsable}}</p>
         <td>{{convivenciaescolar.person_responsable}}</p>
-        <td>{{convivenciaescolar.track_year}}</p>
         <td>{{convivenciaescolar.track_date}}</p>
         <td>{{convivenciaescolar.internal_auditory_date}}</p>
         <td>{{convivenciaescolar.internal_auditory_obs}}</p>
