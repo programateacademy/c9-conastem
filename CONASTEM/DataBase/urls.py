@@ -33,6 +33,7 @@ from .views.Formacion_Instruccion_Evaluacion import PlaneacionyCreaciondeActivid
 from .views.Formacion_Instruccion_Evaluacion import EstrategiasFormativasListView
 
 # PERSONAL DOCENTE Y ADMINISTRATIVO
+from .views import PersonalDocenteYAdministrativo
 from .views.PersonalDocenteYAdministrativo import PersonalDocenteyAdministrativoListView
 from .views.PersonalDocenteYAdministrativo import ProfesionalesEspecializadosEducacionSTEMListView
 from .views.PersonalDocenteYAdministrativo import DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionalesListView
@@ -120,9 +121,13 @@ urlpatterns += [
     # PERSONAL DOCENTE Y ADMINISTRATIVO
     path("personal-docente-y-administrativo",PersonalDocenteyAdministrativoListView.as_view(), name="PersonalDocenteyAdministrativo"),
     path("profesional-calificado-educacion-stem",ProfesionalesEspecializadosEducacionSTEMListView.as_view(), name="ProfesionalesEspecializadosEducacionSTEM_List"),
+    path('profesionalesespecializadoseducacionSTEM/new', PersonalDocenteYAdministrativo.profesionalesespecializadoseducacionSTEMnew,name='profesionalesespecializadoseducacionSTEMnew'),
     path("desarrollo-profesional-docentes-directores-consejeros-profesionales", DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionalesListView.as_view(), name="DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales_list"),
-    path("apoyo-pedagogico-personal",ApoyoPedagogicoListView.as_view(), name="ApoyoPedagogico_List"),
+    path('desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales/new', PersonalDocenteYAdministrativo.desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionalesnew,name='desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionalesnew'),
+    path("apoyo-pedagogico",ApoyoPedagogicoListView.as_view(), name="ApoyoPedagogico_List"),
+    path('apoyopedagogico/new', PersonalDocenteYAdministrativo.apoyopedagogiconew,name='apoyopedagogiconew'),
     path("sostenibilidad-docente-administrativo", SostenibilidadDocenteAdministrativoListView.as_view(), name="SostenibilidadDocenteAdministrativo_List"),
+    path('sostenibilidaddocenteadministrativo/new', PersonalDocenteYAdministrativo.sostenibilidaddocenteadministrativonew,name='sostenibilidaddocenteadministrativonew'),
 
     # ESCUELA COMUNIDAD Y PERTENENCIA
     path("escuelacomunidadypertenencia", EscuelaComunidadyPertenenciaListView.as_view(),name="Escuelacomunidadypertenencia"),

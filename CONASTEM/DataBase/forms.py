@@ -12,10 +12,10 @@ from .models.Person_Responsable import PersonResponsable
 from .models.Formacion_Instruccion_Evaluacion import AprendizajeCentradoEstudiante
 
 # PERSONAL DOCENTE Y ADMINISTRATIVO
-
-# ESCUELA COMUNIDAD Y PERTENENCIA
-
-# PERSONAL DOCENTE Y ADMINISTRATIVO
+from .models.Personal_Docente_y_Administrativo import ProfesionalesEspecializadosEducacionSTEM
+from .models.Personal_Docente_y_Administrativo import DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales
+from .models.Personal_Docente_y_Administrativo import ApoyoPedagogico
+from .models.Personal_Docente_y_Administrativo import SostenibilidadDocenteAdministrativo
 
 # ESCUELA COMUNIDAD Y PERTENENCIA
 from .models.Escuela_Comunidad_y_Pertenencia import CompromisodelaComunidad
@@ -66,10 +66,56 @@ class Form_AprendizajeCentrado (forms.ModelForm):
         }
 
 # PERSONAL DOCENTE Y ADMINISTRATIVO
+class Form_ApoyoPedagogico (forms.ModelForm):
+    dep_responsable = forms.CharField(label= 'Departamento responsable', required= True, widget= forms.TextInput(attrs={'placeholder': 'Dirección'}))
+    class Meta:
+        model = ApoyoPedagogico.ApoyoPedagogico
+        exclude = ['created_at', 'updated_at','codigo']
+        widgets = {
+            'priority' : TextInput(attrs={'class' : 'campo-formulario'}),
+            'track_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'internal_auditory_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'external_auditory_date' : DateInput(attrs={'class': 'campo-formulario'})
+        }
 
+class Form_DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales (forms.ModelForm):
+    dep_responsable = forms.CharField(label= 'Departamento responsable', required= True, widget= forms.TextInput(attrs={'placeholder': 'Dirección'}))
+    class Meta:
+        model = DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales.DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales
+        exclude = ['created_at', 'updated_at','codigo']
+        widgets = {
+            'priority' : TextInput(attrs={'class' : 'campo-formulario'}),
+            'track_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'internal_auditory_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'external_auditory_date' : DateInput(attrs={'class': 'campo-formulario'})
+        }
+
+class Form_ProfesionalesEspecializadosEducacionSTEM (forms.ModelForm):
+    dep_responsable = forms.CharField(label= 'Departamento responsable', required= True, widget= forms.TextInput(attrs={'placeholder': 'Dirección'}))
+    class Meta:
+        model = ProfesionalesEspecializadosEducacionSTEM.ProfesionalesEspecializadosEducacionSTEM
+        exclude = ['created_at', 'updated_at','codigo']
+        widgets = {
+            'priority' : TextInput(attrs={'class' : 'campo-formulario'}),
+            'track_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'internal_auditory_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'external_auditory_date' : DateInput(attrs={'class': 'campo-formulario'})
+        }
+
+
+class Form_SostenibilidadDocenteAdministrativo (forms.ModelForm):
+    dep_responsable = forms.CharField(label= 'Departamento responsable', required= True, widget= forms.TextInput(attrs={'placeholder': 'Dirección'}))
+    class Meta:
+        model = SostenibilidadDocenteAdministrativo.SostenibilidadDocenteAdministrativo
+        exclude = ['created_at', 'updated_at','codigo']
+        widgets = {
+            'priority' : TextInput(attrs={'class' : 'campo-formulario'}),
+            'track_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'internal_auditory_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'external_auditory_date' : DateInput(attrs={'class': 'campo-formulario'})
+        }
 
 # ESCUELA COMUNIDAD Y PERTENENCIA
-
 class Form_Compromisodelacomunidad (forms.ModelForm):
     class Meta:
         model = CompromisodelaComunidad.CompromisodelaComunidad
