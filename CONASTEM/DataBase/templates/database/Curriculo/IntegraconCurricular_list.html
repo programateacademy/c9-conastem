@@ -1,15 +1,26 @@
 {% extends "base_general.html" %}
 
 {% block content %}
-<h1>Integración Curricular</h1>
+
+{% load static %}
+
+<div class= "titulo">
+    <img src="{%static 'images/tabla_detail/icon_for_instrucc_eva.svg' %}">
+    <h1>2000 - CURRÍCULO</h1>
+</div>
+<div class="subtitulo">
+    <h2>2400 - INTEGRACIÓN CURRICULAR</h2>
+    <a href="/database/integracion-curicular/new"><img src="{%static 'images/crear_datos.svg'%}" alt="Crear datos"></a>
+</div>
+
 <table>
     <thead>
         <tr>
+            <th>Código</th>
             <th>Numeral</th>
             <th>Departamento Responsable</th>
             <th>Persona Responsable</th>
-            <th>Año</th>
-            <th>Fecha límite</th>
+            <th>Fecha límite de seguimiento</th>
             <th>Fecha de auditoria interna</th>
             <th>Comentarios Auditoria Interna</th>
             <th>Fecha de auditoria externa</th>
@@ -20,15 +31,16 @@
     <tbody>
         {% for IntegracionCurricular in IntegracionCurricular_list %}
         <tr>
+            <td>{{ IntegracionCurricular.codigo }}</td>
             <td>{{ IntegracionCurricular.numeral }}</td>
             <td>{{ IntegracionCurricular.dep_responsable }}</td>
             <td>{{ IntegracionCurricular.person_responsable }}</td>
-            <td>{{ IntegracionCurricular.track_year }}</td>
             <td>{{ IntegracionCurricular.track_date }}</td>
             <td>{{ IntegracionCurricular.internal_audiory_date }}</td>
             <td>{{ IntegracionCurricular.internal_audirory_obs }}</td>
             <td>{{ IntegracionCurricular.external_audiory_date }}</td>
             <td>{{ IntegracionCurricular.external_audirory_obs }}</td>
+            <td><a href="{{IntegracionCurricular.evidence }}" target="_blank">{{IntegracionCurricular.evidence }}</a></td>
         </tr>
         {% empty %}
         <tr>
