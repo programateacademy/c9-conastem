@@ -1,7 +1,11 @@
-from typing import Any
-from django.db.models.query import QuerySet
+from django.http import HttpResponseRedirect
+from ..forms import Form_Compromisodelacomunidad
+from ..forms import Form_Convivenciaescolar
+from ..forms import Form_Relacionesconlacomunidad
+from ..forms import Form_Sostenibilidadescuela
 from django.shortcuts import render
 from django.views import generic
+from django.utils import timezone
 
 # Create your views here.
 from ..models.Infraestructura.ambiente_escolar import AmbienteEscolar
@@ -21,6 +25,23 @@ class AmbienteEscolarListView(generic.ListView):
     model=AmbienteEscolar
     context_object_name='Ambiente_escolar_list'
     template_name='database\Infraestructura\Ambiente_escolar.html'
+    ordering = ['codigo']  # Ordena por el campo 'codigo'
+
+    def get_queryset(self):
+        return AmbienteEscolar.objects.all().order_by('codigo')
+    
+# FORMULARIO
+def Compromisodelacomunidad_new(request):
+    if request.method == "POST":
+        form_new = Form_Compromisodelacomunidad(request.POST)
+        if form_new.is_valid():
+            form_new.save()
+            return HttpResponseRedirect('/database/compromisodelacomunidad')
+    else:
+        form_new = Form_Compromisodelacomunidad ()
+
+    return render(request, 'Form_Subcriterio.html', {'form_new': form_new, 'titulo':'Compromiso de la comunidad'})
+
     
 class DesarrolloDeEquiposLideresListView(generic.ListView):
     model=DesarrolloDeEquiposLideres
