@@ -25,7 +25,7 @@ class DesarrolloDeEquiposLideres(GeneralModel):
         for choice in self.ITEM_CHOICE:
             if choice[0] == self.numeral:
                 self.codigo = choice[0]
-                self.numeral = choice[1]
+
                 break
 
         super(DesarrolloDeEquiposLideres, self).save(*args, **kwargs)
