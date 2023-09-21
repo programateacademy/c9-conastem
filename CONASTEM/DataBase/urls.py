@@ -78,7 +78,7 @@ urlpatterns += [
     path("curriculo/", CurriculoListView.as_view(), name="Curriculo_list"),
     # 2.1 Consideraciones sobre Áreas y Asignaturas
     path("consideraciones-areas-y-asignaturas/", ConsideracionesSobreAreasYAsignaturasListView.as_view(), name="ConsideracionesSobreAreasYAsignaturas_list"),
-    path("consideraciones-areas-y-asignaturas/new", Curriculo.ConsideracionesSobreAreasYAsignaturas_new(), name="ConsideracionesSobreAreasYAsignaturas_new"),
+    path("consideraciones-areas-y-asignaturas/new", Curriculo.ConsideracionesSobreAreasYAsignaturas_new, name="ConsideracionesSobreAreasYAsignaturas_new"),
     # 2.2 Inclusion_ingenieria_aula
     path('inclusion-ingenieria-aula/', InclusionIngenieriaAulaListView.as_view(), name='Inclusion_ingenieria_aula_list'),
     path('inclusion-ingenieria-aula/new', Curriculo.IngenieriaAula_new, name='Inclusion_ingenieria_aula_new'),
