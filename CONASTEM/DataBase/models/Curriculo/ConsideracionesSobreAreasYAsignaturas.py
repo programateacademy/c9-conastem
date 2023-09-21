@@ -6,9 +6,9 @@ from ..GeneralModel import GeneralModel
 
 class ConsideracionesSobreAreasYAsignaturas (GeneralModel):
     ITEM_CHOICE = [
-        ("2000","CURRÍCULO")
+        ("2000","CURRÍCULO"),
         ("2100","CONSIDERACIONES SOBRE LAS ÁREAS Y LAS ASIGNATURAS"),
-        ("2110","Formas innovadoras de enseñanza y aprendizaje en las áreas y asignaturas")
+        ("2110","Formas innovadoras de enseñanza y aprendizaje en las áreas y asignaturas"),
         ("2111","Ciencias naturales: Nueva forma de la enseñanza de las ciencias, indagación, aprender haciendo, prácticas de ciencia e ingeniería, conceptos transversales como hábitos mentales desde los primeros años escolares."),
         ("2112","Tecnología: Mayor intensidad horaria a la asignatura de tecnología. Se incluyen nuevos temas más amplios en la enseñanza de la tecnología. Se lideran proyectos interdisciplinarios asociados al currículo escolar."),
         ("2113","Matemáticas: Las prácticas de matemáticas son fundamentales en la enseñanza y el aprendizaje, esta asignatura prima dentro de la gran mayoría de las actividades interdisciplinarias."),

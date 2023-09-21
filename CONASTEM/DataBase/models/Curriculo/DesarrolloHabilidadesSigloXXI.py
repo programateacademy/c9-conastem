@@ -3,7 +3,7 @@ from django.urls import reverse
 from ..GeneralModel import GeneralModel
 
 # 2.7 Desarrollo de las habilidadees del siglo XXI
-class DesarroloHabilidadesSigloXXI(GeneralModel):
+class DesarrolloHabilidadesSigloXXI(GeneralModel):
 
     ITEM_CHOICE = [
         ("2700", "DESARROLLO DE LAS HABILIDADES DEL SIGLO XXI"),
@@ -26,11 +26,11 @@ class DesarroloHabilidadesSigloXXI(GeneralModel):
             if choice[0] == self.numeral:
                 self.codigo = choice[0]
                 break
-        super(DesarroloHabilidadesSigloXXI, self).save(*args, **kwargs)
+        super(DesarrolloHabilidadesSigloXXI, self).save(*args, **kwargs)
     
     def __str__(self) :
         return self.numeral
     
     def get_absolute_url(self):
-        return reverse("DesarroloHabilidadesSigloXXI", kwargs={"pk": self.pk})
+        return reverse("DesarrolloHabilidadesSigloXXI", kwargs={"pk": self.pk})
     

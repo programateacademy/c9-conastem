@@ -98,7 +98,7 @@ class Form_IntegracionCurricular(forms.ModelForm):
 class Form_DesarrolloHabilidadesSigloXXI(forms.ModelForm):
     dep_responsable = forms.CharField(label= 'Departamento responsable', required= True, widget= forms.TextInput(attrs={'placeholder': 'Dirección'}))
     class Meta:
-        model = DesarrolloHabilidadesSigloXXI.DesarroloHabilidadesSigloXXI
+        model = DesarrolloHabilidadesSigloXXI.DesarrolloHabilidadesSigloXXI
         exclude = ['created_at', 'updated_at','codigo']
         widgets = {
             'priority' : TextInput(attrs={'class' : 'campo-formulario'}),

@@ -17,7 +17,7 @@ from ..models.Curriculo.Desarrollo_ciudadania_digital import DesarrolloCiudadani
 from ..models.Curriculo.IntegracionCurricular import IntegracionCurricular
 from ..models.Curriculo.Curriculo_progresivo import CurriculoProgresivo
 from ..models.Curriculo.Curriculo_propio import CurriculoPropio
-from ..models.Curriculo.DesarrolloHabilidadesSigloXXI import DesarroloHabilidadesSigloXXI
+from ..models.Curriculo.DesarrolloHabilidadesSigloXXI import DesarrolloHabilidadesSigloXXI
 from ..models.Curriculo.Evaluacion_estudiantes import EvaluacionEstudiantes
 from ..models.Curriculo.SostenibilidadCurriculo import SostenibilidadCurriculo
 
@@ -45,7 +45,7 @@ class ConsideracionesSobreAreasYAsignaturasListView(generic.ListView):
         return ConsideracionesSobreAreasYAsignaturas.objects.all().order_by('codigo')
 
 # FORMULARIO
-def _new(request):
+def ConsideracionesSobreAreasYAsignaturas_new(request):
     
     if request.method == "POST":
         form_new = Form_ConsideracionesSobreAreasYAsignaturas(request.POST)
@@ -168,13 +168,13 @@ def CurriculoPropio_new(request):
 
 # 2.7 DESARROLLO DE LAS HABILIDADES DEL SIGLO XXI
 class DesarrolloHabilidadesSigloXXIListView(generic.ListView):
-    model = DesarroloHabilidadesSigloXXI
+    model = DesarrolloHabilidadesSigloXXI
     context_object_name = 'DesarrolloHabilidadesSigloXXI_list'
     template_name = 'database/curriculo/DesarrolloHabilidadesSigloXXI_list.html'
     ordering = ['codigo']  # Ordena por el campo 'codigo'
 
     def get_queryset(self):
-        return DesarroloHabilidadesSigloXXI.objects.all().order_by('codigo')
+        return DesarrolloHabilidadesSigloXXI.objects.all().order_by('codigo')
 
 # FORMULARIO
 def DesarrolloHabilidadesSigloXXI_new(request):
