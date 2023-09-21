@@ -6,7 +6,7 @@ from ..GeneralModel import GeneralModel
 class AprendizajeCentrado (GeneralModel):
 
     ITEM_CHOICE = [
-        ('3000', 'Formación / Instrucción / Evaluación'),
+        ('3000', 'FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN'),
         ('3100', 'APRENDIZAJE CENTRADO EN EL ESTUDIANTE'),
         ("3110", "Formación/Instrucción basada en Aprendizaje Basado en Lecciones / Aprendizaje Basado en Proyectos / Aprendizaje enfocado en la indagación."),
         ("3120", "El aprendizaje es centrado en el estudiante. La dinámica de aula y en general en la institución se prevé el tiempo para investigación y trabajo en equipo, así como de tiempo de consulta a los profesores en tiempo fuera del horario de la asignatura."),
