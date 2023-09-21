@@ -9,10 +9,7 @@
 <form method="POST" class="formulario"> {% csrf_token %}
 
     <div class="campo-formulario">
-        {{ form.first_name }}
-        {{ form.last_name }}
-        {{ form.phone_number }}
-        {{ form.email }}
+        {{form.as_p}}
     </div>
 
     <button type="submit" class="boton-formulario">Guardar</button>

@@ -1,15 +1,27 @@
 {% extends "base_general.html" %}
 
 {% block content %}
-<h1>Evaluación de Estudiantes</h1>
+
+{% load static %}
+
+<div class= "titulo">
+    <img src="{%static 'images/tabla_detail/icon_curriculo.svg' %}">
+    <h1 style="text-transform:uppercase">2000 - Currículo</h1>
+</div>
+<div class="subtitulo">
+    <h2 style="text-transform:uppercase">2800 - Evaluación de Estudiantes</h2>
+    <a href="/database/evaluacion-estudiantes/new"><img src="{%static 'images/crear_datos.svg'%}" alt="Crear datos"></a>
+</div>
+
+
 <table>
     <thead>
         <tr>
+            <th>Código</th>
             <th>Numeral</th>
             <th>Departamento Responsable</th>
             <th>Persona Responsable</th>
-            <th>Año</th>
-            <th>Fecha límite</th>
+            <th>Fecha límite de seguimiento</th>
             <th>Fecha de auditoria interna</th>
             <th>Comentarios Auditoria Interna</th>
             <th>Fecha de auditoria externa</th>
@@ -20,19 +32,21 @@
     <tbody>
         {% for EvaluacionEstudiantes in Evaluacion_estudiantes_list %}
         <tr>
+            <td>{{ EvaluacionEstudiantes.codigo }}</td>
             <td>{{ EvaluacionEstudiantes.numeral }}</td>
             <td>{{ EvaluacionEstudiantes.dep_responsable }}</td>
             <td>{{ EvaluacionEstudiantes.person_responsable }}</td>
-            <td>{{ EvaluacionEstudiantes.track_year }}</td>
             <td>{{ EvaluacionEstudiantes.track_date }}</td>
             <td>{{ EvaluacionEstudiantes.internal_audiory_date }}</td>
             <td>{{ EvaluacionEstudiantes.internal_audirory_obs }}</td>
             <td>{{ EvaluacionEstudiantes.external_audiory_date }}</td>
             <td>{{ EvaluacionEstudiantes.external_audirory_obs }}</td>
+            <td><a href="{{EvaluacionEstudiantes.evidence}}" traget="_blank">{{EvaluacionEstudiantes.evidence}}</a></td>
+
         </tr>
         {% empty %}
         <tr>
-            <td colspan="9">No hay numerales.</td>
+            <td colspan="9">No hay registros.</td>
         </tr>
         {% endfor %}
     </tbody>

@@ -2,17 +2,26 @@
 
 {% block content %}
 
-<h1 style="text-transform:uppercase">Sostenibilidad - Formación / Instrucción / Evaluación</h1>
+{% load static %}
+
+<div class= "titulo">
+    <img src="{%static 'images/tabla_detail/icon_for_instrucc_eva.svg' %}">
+    <h1 style="text-transform:uppercase">3000 - Formación / Instrucción / Evaluación</h1>
+</div>
+<div class="subtitulo">
+    <h2 style="text-transform:uppercase">3900 - Sostenibilidad - Formación / Instrucción / Evaluación</h2>
+    <a href="/database/sostenibilidad-formacion-instruccion/new"><img src="{%static 'images/crear_datos.svg'%}" alt="Crear datos"></a>
+</div>
+
 
 <table>
     <thead>
         <tr>
-            <th>Codigo</th>
+            <th>Código</th>
             <th>Numeral</th>
             <th>Departamento Responsable</th>
             <th>Persona Responsable</th>
-            <th>Año</th>
-            <th>Fecha límite</th>
+            <th>Fecha límite de seguimiento</th>
             <th>Fecha de auditoria interna</th>
             <th>Comentarios Auditoria Interna</th>
             <th>Fecha de auditoria externa</th>
@@ -23,16 +32,16 @@
     <tbody>
         {% for sostenibilidadformacioninstruccion in sostenibilidad_list %}
     <tr>
+        <td>{{sostenibilidadformacioninstruccion.codigo}}</h1>
         <td>{{sostenibilidadformacioninstruccion.numeral}}</h1>
         <td>{{sostenibilidadformacioninstruccion.dep_responsable}}</p>
         <td>{{sostenibilidadformacioninstruccion.person_responsable}}</p>
-        <td>{{sostenibilidadformacioninstruccion.track_year}}</p>
         <td>{{sostenibilidadformacioninstruccion.track_date}}</p>
         <td>{{sostenibilidadformacioninstruccion.internal_auditory_date}}</p>
         <td>{{sostenibilidadformacioninstruccion.internal_auditory_obs}}</p>
         <td>{{sostenibilidadformacioninstruccion.external_auditory_date}}</p>
         <td>{{sostenibilidadformacioninstruccion.external_auditory_obs}}</p>
-        <td><a>{{sostenibilidadformacioninstruccion.evidence}}</a></td>
+        <td><a href="{{sostenibilidadformacioninstruccion.evidence}}" target="_blank">{{sostenibilidadformacioninstruccion.evidence}}</a></td>
 
     </tr>
     {% empty %}

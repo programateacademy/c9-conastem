@@ -1,7 +1,16 @@
 {% extends "base_general.html" %}
 
 {% block content %}
-    <h1>3300-PLANEACION Y CREACIÓN DE ACTIVIDADES</h1>
+{% load static %}
+
+<div class= "titulo">
+    <img src="{%static 'images/icon_form_instruc_eva.svg' %}">
+    <h1>Formación / Instrucción / Evaluación</h1>
+</div>
+<div class="subtitulo">
+    <h2 style="text-transform:uppercase">3300-PLANEACION Y CREACIÓN DE ACTIVIDADES</h2>
+    <a href="/database/planeacionycreaciondeactividades/new"><img src="{%static 'images/crear_datos.svg'%}" alt="Crear datos"></a>
+</div>
     <table>
        <thead>
           <tr>
@@ -9,8 +18,7 @@
               <th>Numeral</th>
               <th>Departamento Responsable</th>
               <th>Persona Responsable</th>
-              <th>Año</th>
-              <th>Fecha límite</th>
+              <th>Fecha límite de seguimiento</th>
               <th>Fecha de auditoria interna</th>
               <th>Comentarios Auditoria Interna</th>
               <th>Fecha de auditoria externa</th>
@@ -31,6 +39,8 @@
         <td>{{planeacionycreaciondeactividades.internal_auditory_obs}}</td>
         <td>{{planeacionycreaciondeactividades.external_auditory_date}}</td>
         <td>{{planeacionycreaciondeactividades.external_auditory_obs}}</td>
+        <td><a href="{{ planeacionycreaciondeactividades.evidence }}" target="_blank">{{planeacionycreaciondeactividades.evidence }}</a></td>
+
   |   </tr>
   {% empty %}
   <tr>
