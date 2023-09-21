@@ -86,8 +86,8 @@ urlpatterns += [
     path('desarrollo-ciudadania-digital/', DesarrolloCiudadaniaDigitalListView.as_view(), name='desarrollo_ciudadania_digital_list'),
     path('desarrollo-ciudadania-digital/new', Curriculo.CiudadaniaDigital_new, name='desarrollo_ciudadania_digital_new'),
     # 2.4 Integración curricular
-    path('integracion-curicular/', IntegracionCurricularListView.as_view(), name='IntegracionCurricular_list'),
-    path('integracion-curicular/new', Curriculo.IntegracionCurricular_new, name='IntegracionCurricular_new'),
+    path('integracion-curricular/', IntegracionCurricularListView.as_view(), name='IntegracionCurricular_list'),
+    path('integracion-curricular/new', Curriculo.IntegracionCurricular_new, name='IntegracionCurricular_new'),
     # 2.5 CURRÍCULO PROGRESIVO Y ALINEADO CON LOS ESTÁNDARES CURRICULARES
     path("curriculo-progresivo/", CurriculoProgresivoListView.as_view(), name="Curriculo_progresivo_list"),
     path("curriculo-progresivo/new", Curriculo.CurriculoProgresivo_new, name="Curriculo_progresivo_new"),
