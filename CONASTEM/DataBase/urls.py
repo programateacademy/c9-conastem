@@ -4,6 +4,7 @@ from django.urls import path
 from .views.General import views
 
 # INFRAESTRUCTURA
+from .views import Infraestructura
 from .views.Infraestructura import InfraestructuraListView
 from .views.Infraestructura import AmbienteEscolarListView
 from .views.Infraestructura import DesarrolloDeEquiposLideresListView
@@ -69,6 +70,17 @@ urlpatterns += [
     path("recursos-tecnologicos/", RecursosTecnologicosListView.as_view(), name="Recursos_tecnologicos_list" ),
     path("sostenibilidad/", SostenibilidadListView.as_view(), name="Sostenibilidad_list" ),
     path("uso-de-info/", UsoDeInformacionListView.as_view(), name="Uso_informacion_list" ),  
+]
+
+urlpatterns += [
+    # INFRAESTRUCTURA NEW PATHS
+    path("ambiente-escolar/new/", Infraestructura.Ambiente_escolar_new, name="Ambiente_escolar_new"),
+    path("desarrollo-de-equipos-lideres/new/", Infraestructura.desarrollo_de_equipos_lideres_new, name="Desarrollo_de_equipos_lideres_new"),
+    path("equidad/new/", Infraestructura.Equidad_new, name="Equidad_list"),
+    path("planeacion-institucional/new/", Infraestructura.Planeacion_institucional_new, name="Planeacion_institucional_list_new" ),
+    path("recursos-tecnologicos/new/", Infraestructura.Recursos_tecnologicos_new, name="Recursos_tecnologicos_new" ),
+    path("sostenibilidad/new/", Infraestructura.Sostenibilidad_new, name="Sostenibilidad_new" ),
+    path("uso-de-info/new/", Infraestructura.Uso_de_info_new, name="Uso_informacion_new" ),  
 ]
 
 urlpatterns += [
