@@ -4,17 +4,17 @@
 {% load static %}
 
 <div class= "titulo">
-    <img src="{%static 'images/icon_form_instruc_eva.svg' %}">
-    <h1>Formación / Instrucción / Evaluación</h1>
+    <img src="{%static 'images/tabla_detail/icon_for_instrucc_eva.svg' %}">
+    <h1 style="text-transform:uppercase">3000 - Formación / Instrucción / Evaluación</h1>
 </div>
 <div class="subtitulo">
-    <h2 style="text-transform:uppercase">3300-PLANEACION Y CREACIÓN DE ACTIVIDADES</h2>
+    <h2 style="text-transform:uppercase">3300-PLANEACIÓN Y CREACIÓN DE ACTIVIDADES</h2>
     <a href="/database/planeacionycreaciondeactividades/new"><img src="{%static 'images/crear_datos.svg'%}" alt="Crear datos"></a>
 </div>
     <table>
        <thead>
           <tr>
-              <th>Codigo</th>
+              <th>Código</th>
               <th>Numeral</th>
               <th>Departamento Responsable</th>
               <th>Persona Responsable</th>
@@ -28,12 +28,11 @@
        </thead>
        <tbody>
            {% for planeacionycreaciondeactividades in PlaneacionyCreaciondeActividades_List %}
-      <tr>
+    <tr>
         <td>{{planeacionycreaciondeactividades.codigo}}</td>
         <td> {{planeacionycreaciondeactividades.numeral }}</td>
         <td> {{planeacionycreaciondeactividades.dep_responsable}}</td>
         <td>{{planeacionycreaciondeactividades.person_responsable}}</td>
-        <td>{{planeacionycreaciondeactividades.track_year}}</td>
         <td>{{planeacionycreaciondeactividades.track_date}}</td>
         <td>{{planeacionycreaciondeactividades.internal_auditory_date}}</td>
         <td>{{planeacionycreaciondeactividades.internal_auditory_obs}}</td>
@@ -41,10 +40,10 @@
         <td>{{planeacionycreaciondeactividades.external_auditory_obs}}</td>
         <td><a href="{{ planeacionycreaciondeactividades.evidence }}" target="_blank">{{planeacionycreaciondeactividades.evidence }}</a></td>
 
-  |   </tr>
+    </tr>
   {% empty %}
   <tr>
-      <td colstran="9">No hay numerales.</td>
+      <td colstran="9">No hay registros.</td>
   </tr>
   {% endfor %}
 </tbody>
