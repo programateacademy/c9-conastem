@@ -15,13 +15,15 @@
 
 <section class= "criterios">
     <ul>
-        <li><img src="{%static 'images/tabla_detail/icon_infraestructura.svg'%}"><br> 1000 <br> INFRAESTRUCTURA</li>
-        <li><img src="{%static 'images/tabla_detail/icon_curriculo.svg'%}"><br> 2000 <br> CURRÍCULO</li>
-        <li><img src="{%static 'images/tabla_detail/icon_for_instrucc_eva.svg'%}"><br> 3000 <br> FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN</li>
-        <li><img src="{%static 'images/tabla_detail/icon_docente_admin.svg'%}"> <br> 4000 <br> PERSONAL DOCENTE Y ADMINISTRATIVO</li>
-        <li><img src="{%static 'images/tabla_detail/icon_escu_comu_perten.svg'%}"><br>5000 <br> ESCUELA COMUNIDAD Y PERTENENCIA</li>
+        <li><a href="{%url 'Infraestructura'%}"><img src="{%static 'images/tabla_detail/icon_infraestructura.svg'%}"><br> 1000 <br> INFRAESTRUCTURA</a></li>
+        <li><a href="{%url 'Curriculo'%}"><img src="{%static 'images/tabla_detail/icon_curriculo.svg'%}"><br> 2000 <br> CURRÍCULO</a></li>
+        <li><a href="{%url 'FormacionInstruccionEvaluacion'%}"><img src="{%static 'images/tabla_detail/icon_for_instrucc_eva.svg'%}"><br> 3000 <br> FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN</a></li>
+        <li><a href="{%url 'PersonalDocenteyAdministrativo'%}"><img src="{%static 'images/tabla_detail/icon_docente_admin.svg'%}"> <br> 4000 <br> PERSONAL DOCENTE Y ADMINISTRATIVO</a></li>
+        <li><a href="{% url 'Escuelacomunidadypertenencia' %}"><img src="{%static 'images/tabla_detail/icon_escu_comu_perten.svg'%}"><br>5000 <br> ESCUELA COMUNIDAD Y PERTENENCIA</a></li>
     </ul>
 </section>
+
+<a href="{%url 'person_responsable_new'%}"><button>Apregue responsable</button></a>
 
 <div class="container-2">
     <a href="{%url 'person_responsable_new'%}"><button>Apregue responsable</button></a>
