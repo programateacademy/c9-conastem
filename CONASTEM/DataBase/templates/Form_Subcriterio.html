@@ -18,8 +18,9 @@
                 {{form_new.priority}}
         </div>
     
-        <div class="campo-formulario">
-            <label for="{{ person_responsable }}">Responsable</label>
+        
+        <a href="{%url 'person_responsable_new'%}" target="_blank"><div class="campo-formulario">
+            <label for="{{ person_responsable }}">Responsable</label></a>
                 {{ form_new.person_responsable }}
         </div>
     

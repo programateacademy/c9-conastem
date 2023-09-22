@@ -36,15 +36,15 @@
             <td>{{ IntegracionCurricular.dep_responsable }}</td>
             <td>{{ IntegracionCurricular.person_responsable }}</td>
             <td>{{ IntegracionCurricular.track_date }}</td>
-            <td>{{ IntegracionCurricular.internal_audiory_date }}</td>
-            <td>{{ IntegracionCurricular.internal_audirory_obs }}</td>
-            <td>{{ IntegracionCurricular.external_audiory_date }}</td>
-            <td>{{ IntegracionCurricular.external_audirory_obs }}</td>
+            <td>{{ IntegracionCurricular.internal_auditory_date }}</td>
+            <td>{{ IntegracionCurricular.internal_auditory_obs }}</td>
+            <td>{{ IntegracionCurricular.external_auditory_date }}</td>
+            <td>{{ IntegracionCurricular.external_auditory_obs }}</td>
             <td><a href="{{IntegracionCurricular.evidence }}" target="_blank">{{IntegracionCurricular.evidence }}</a></td>
         </tr>
         {% empty %}
         <tr>
-            <td colspan="9">No hay numerales.</td>
+            <td colspan="9">No hay registros.</td>
         </tr>
         {% endfor %}
     </tbody>

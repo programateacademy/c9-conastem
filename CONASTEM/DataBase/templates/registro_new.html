@@ -9,8 +9,7 @@
 <form method="POST" class="formulario"> {% csrf_token %}
 
     <div class="campo-formulario">
-        {{form.as_p}}
-            {% comment %} {{form.institution_name}}
+            {{form.institution_name}}
             {{form.nit}}
             {{ form.adress }}
             {{ form.institution_responsable }}
@@ -19,7 +18,7 @@
             {{ form.year }}
 
         <label for="{{ form.institution_model }}">Modelo a aplicar</label> 
-            {{ form.model }} {% endcomment %}
+            {{ form.model }}
     </div>
 
     <button type="submit" class="boton-formulario">Enviar</button>
