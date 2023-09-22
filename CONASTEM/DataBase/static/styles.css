@@ -43,3 +43,35 @@ header {
     transition: swap 0.3s;
     /* Transición para un cambio suave de color */
 }
+
+
+
+
+/* ---------sroll bar------------ */
+
+.tabla-contenedor {
+    overflow-x: auto; 
+    max-width: 100%; 
+                    }
+table {
+    width: auto;
+    table-layout: auto; 
+    border-collapse: collapse; 
+        }
+
+th, td {
+    min-width: 100px; 
+
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+    white-space: nowrap; 
+        }
+
+
+@media (max-width: 600px) {
+    th, td {
+        min-width: auto; 
+        width: auto; 
+    }
+            }
