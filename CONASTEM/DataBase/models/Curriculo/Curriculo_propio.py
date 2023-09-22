@@ -7,8 +7,8 @@ class CurriculoPropio(GeneralModel):
 
     ITEM_CHOICE = [
         ('2600', 'CURRÍCULO PROPIO'),
-        ("261", "El currículo es desarrollado por docentes o personas especializadas de la institución educativa, esto incluye la creación de actividades y proyectos."),
-        ("262", "El mejor aporte para un currículo en educación STEM será siempre aquel contenido creado por los propios profesores. Los profesores conocen sus estudiantes y saben qué temas y que aspectos les son interesantes y por eso pueden crear actividades y proyectos especiales para sus estudiantes."),
+        ("2610", "El currículo es desarrollado por docentes o personas especializadas de la institución educativa, esto incluye la creación de actividades y proyectos."),
+        ("2620", "El mejor aporte para un currículo en educación STEM será siempre aquel contenido creado por los propios profesores. Los profesores conocen sus estudiantes y saben qué temas y que aspectos les son interesantes y por eso pueden crear actividades y proyectos especiales para sus estudiantes."),
     ]
 
     numeral = models.CharField(

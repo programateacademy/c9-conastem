@@ -156,13 +156,13 @@ urlpatterns += [
     # PERSONAL DOCENTE Y ADMINISTRATIVO
     path("personal-docente-y-administrativo",PersonalDocenteyAdministrativoListView.as_view(), name="PersonalDocenteyAdministrativo"),
     path("profesional-calificado-educacion-stem",ProfesionalesEspecializadosEducacionSTEMListView.as_view(), name="ProfesionalesEspecializadosEducacionSTEM_List"),
-    path('profesionalesespecializadoseducacionSTEM/new', PersonalDocenteYAdministrativo.ProfesionalesespecializadoseducacionSTEM_new,name='profesionalesespecializadoseducacionSTEMnew'),
+    path('profesional-calificado-educacion-stem/new', PersonalDocenteYAdministrativo.ProfesionalesespecializadoseducacionSTEM_new,name='profesionalesespecializadoseducacionSTEMnew'),
     path("desarrollo-profesional-docentes-directores-consejeros-profesionales", DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionalesListView.as_view(), name="DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales_list"),
-    path('desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales/new', PersonalDocenteYAdministrativo.Desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales_new,name='desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionalesnew'),
+    path('desarrollo-profesional-docentes-directores-consejeros-profesionales/new', PersonalDocenteYAdministrativo.Desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales_new,name='desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionalesnew'),
     path("apoyo-pedagogico",ApoyoPedagogicoListView.as_view(), name="ApoyoPedagogico_List"),
-    path('apoyopedagogico/new', PersonalDocenteYAdministrativo.Apoyopedagogico_new,name='apoyopedagogiconew'),
+    path('apoyo-pedagogico/new', PersonalDocenteYAdministrativo.Apoyopedagogico_new,name='apoyopedagogiconew'),
     path("sostenibilidad-docente-administrativo", SostenibilidadDocenteAdministrativoListView.as_view(), name="SostenibilidadDocenteAdministrativo_List"),
-    path('sostenibilidaddocenteadministrativo/new', PersonalDocenteYAdministrativo.Sostenibilidaddocenteadministrativo_new,name='sostenibilidaddocenteadministrativonew'),
+    path('sostenibilidad-docente-administrativo/new', PersonalDocenteYAdministrativo.Sostenibilidaddocenteadministrativo_new,name='sostenibilidaddocenteadministrativonew'),
 ]
 
 urlpatterns += [
