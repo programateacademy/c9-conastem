@@ -36,7 +36,10 @@ from .models.Formacion_Instruccion_Evaluacion import PlaneacionyCreaciondeActivi
 from .models.Formacion_Instruccion_Evaluacion import AprendizajeExtendido
 
 # PERSONAL DOCENTE Y ADMINISTRATIVO
-
+from .models.Personal_Docente_y_Administrativo import ProfesionalesEspecializadosEducacionSTEM
+from .models.Personal_Docente_y_Administrativo import DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales
+from .models.Personal_Docente_y_Administrativo import ApoyoPedagogico
+from .models.Personal_Docente_y_Administrativo import SostenibilidadDocenteAdministrativo
 
 # ESCUELA COMUNIDAD Y PERTENENCIA
 from .models.Escuela_Comunidad_y_Pertenencia import CompromisodelaComunidad
@@ -308,7 +311,7 @@ class Form_AprendizajeCentrado (forms.ModelForm):
 class Form_Aprendizajeriguroso (forms.ModelForm):
     dep_responsable = forms.CharField(label= 'Departamento responsable', required= True, widget= forms.TextInput(attrs={'placeholder': 'Dirección'}))
     class Meta:
-        model = ApredizajeRiguroso.AprendizajeRiguroso
+        model = EducacionSTEM.EducacionSTEMIntegrada
         exclude = ['created_at', 'updated_at','codigo']
         widgets = {
             'priority' : TextInput(attrs={'class' : 'campo-formulario'}),
@@ -360,7 +363,7 @@ class Form_TecFormacionInstruccion (forms.ModelForm):
 class Form_Estrategiasformativas (forms.ModelForm):
     dep_responsable = forms.CharField(label= 'Departamento responsable', required= True, widget= forms.TextInput(attrs={'placeholder': 'Dirección'}))
     class Meta:
-        model = EstrategiasFormativas.EstrategiasFormativas
+        model = AprendizajeExtendido.AprendizajeExtendido
         exclude = ['created_at', 'updated_at','codigo']
         widgets = {
             'priority' : TextInput(attrs={'class' : 'campo-formulario'}),
@@ -386,7 +389,7 @@ class Form_EleccionCarrera (forms.ModelForm):
 class Form_Aprendizajeextendido (forms.ModelForm):
     dep_responsable = forms.CharField(label= 'Departamento responsable', required= True, widget= forms.TextInput(attrs={'placeholder': 'Dirección'}))
     class Meta:
-        model = AprendizajeExtendido.AprendizajeExtendido
+        model = DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales.DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales
         exclude = ['created_at', 'updated_at','codigo']
         widgets = {
             'priority' : TextInput(attrs={'class' : 'campo-formulario'}),

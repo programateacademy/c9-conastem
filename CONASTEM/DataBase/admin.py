@@ -11,7 +11,7 @@ from .models.Register import Register
 # INFRAESTRUCTURA
 from .models.Infraestructura.ambiente_escolar import AmbienteEscolar
 from .models.Infraestructura.desarrollo_de_equipos_lideres import DesarrolloDeEquiposLideres
-from .models.Infraestructura.equidad import Equidad
+from .models.Infraestructura.Equidad import Equidad
 from .models.Infraestructura.planeacion_institucional import PlaneacionInstitucional
 from .models.Infraestructura.recursos_tecnologicos import RecursosTecnologicos
 from .models.Infraestructura.sostenibilidad_infraestructura import Sostenibilidad
@@ -39,7 +39,7 @@ from .models.Formacion_Instruccion_Evaluacion.SostenibilidadFormacionInstruccion
 # PERSONAL DOCENTE Y ADMINISTRATIVO
 from .models.Personal_Docente_y_Administrativo.ProfesionalesEspecializadosEducacionSTEM import ProfesionalesEspecializadosEducacionSTEM
 from .models.Personal_Docente_y_Administrativo.DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales import DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales
-from .models.Personal_Docente_y_Administrativo.ApoyoPedagogicoParaelPersonal import ApoyoPedagogico
+from .models.Personal_Docente_y_Administrativo.ApoyoPedagogico import ApoyoPedagogico
 from .models.Personal_Docente_y_Administrativo.SostenibilidadDocenteAdministrativo import SostenibilidadDocenteAdministrativo
 
 # ESCUELA COMUNIDAD Y PERTENENCIA
