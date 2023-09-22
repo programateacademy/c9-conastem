@@ -1,1 +1,8 @@
+# Python cache
 *.pyc
+
+# Entornos virtuales
+.venv
+.env
+venv
+env

@@ -414,6 +414,58 @@ class Form_SostenibilidadFormacion (forms.ModelForm):
 
 # PERSONAL DOCENTE Y ADMINISTRATIVO
 
+# 4.1 PROFESIONALES ALTAMENTE CALIFICADOS ESPECIALIZADOS EN EDUCACIÓN STEM
+class Form_ProfesionalesEspecializadosEducacionSTEM (forms.ModelForm):
+    dep_responsable = forms.CharField(label= 'Departamento responsable', required= True, widget= forms.TextInput(attrs={'placeholder': 'Dirección'}))
+    class Meta:
+        model = ProfesionalesEspecializadosEducacionSTEM.ProfesionalesEspecializadosEducacionSTEM
+        exclude = ['created_at', 'updated_at','codigo']
+        widgets = {
+            'priority' : TextInput(attrs={'class' : 'campo-formulario'}),
+            'track_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'internal_auditory_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'external_auditory_date' : DateInput(attrs={'class': 'campo-formulario'})
+        }
+
+# 4.2 DESARROLLO PROFESIONAL INICIAL Y CONTINUO PARA DOCENTES, DIRECTORES DE ESCUELA Y CONSEJEROS PROFESIONALES
+class Form_DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales (forms.ModelForm):
+    dep_responsable = forms.CharField(label= 'Departamento responsable', required= True, widget= forms.TextInput(attrs={'placeholder': 'Dirección'}))
+    class Meta:
+        model = DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales.DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales
+        exclude = ['created_at', 'updated_at','codigo']
+        widgets = {
+            'priority' : TextInput(attrs={'class' : 'campo-formulario'}),
+            'track_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'internal_auditory_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'external_auditory_date' : DateInput(attrs={'class': 'campo-formulario'})
+        }
+
+# 4.3 APOYO PEDAGÓGICO PARA EL PERSONAL
+class Form_ApoyoPedagogico (forms.ModelForm):
+    dep_responsable = forms.CharField(label= 'Departamento responsable', required= True, widget= forms.TextInput(attrs={'placeholder': 'Dirección'}))
+    class Meta:
+        model = ApoyoPedagogico.ApoyoPedagogico
+        exclude = ['created_at', 'updated_at','codigo']
+        widgets = {
+            'priority' : TextInput(attrs={'class' : 'campo-formulario'}),
+            'track_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'internal_auditory_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'external_auditory_date' : DateInput(attrs={'class': 'campo-formulario'})
+        }
+
+# 4.4 SOSTENIBILIDAD - PERSONAL DOCENTE Y ADMINISTRATIVO
+class Form_SostenibilidadDocenteAdministrativo (forms.ModelForm):
+    dep_responsable = forms.CharField(label= 'Departamento responsable', required= True, widget= forms.TextInput(attrs={'placeholder': 'Dirección'}))
+    class Meta:
+        model = SostenibilidadDocenteAdministrativo.SostenibilidadDocenteAdministrativo
+        exclude = ['created_at', 'updated_at','codigo']
+        widgets = {
+            'priority' : TextInput(attrs={'class' : 'campo-formulario'}),
+            'track_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'internal_auditory_date' : DateInput(attrs={'class': 'campo-formulario'}),
+            'external_auditory_date' : DateInput(attrs={'class': 'campo-formulario'})
+        }
+
 
 # ESCUELA COMUNIDAD Y PERTENENCIA
 
