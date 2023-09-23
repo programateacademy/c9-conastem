@@ -1,0 +1,354 @@
+#main {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    flex-direction: column;
+    background-image: url(../images/StemGuardas.jpg);
+    background-size: cover;
+    background-position: center;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    display: inline-flex;
+}
+
+/* .container {
+    width: auto;
+    height: auto;
+    padding: 40px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+    display: flex;
+} */
+
+.container {
+    width: 90%; /* Ajusta el ancho al tamaño de la pantalla */
+    max-width: 1200px; /* Establece un ancho máximo para mantenerlo manejable en pantallas grandes */
+    margin: 0 auto; /* Centra el contenedor en la pantalla */
+    height: auto;
+    padding: 40px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+    display: flex;
+}
+
+.container-items {
+    width: 100%;
+    height: auto;
+    padding: 0 5%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+}
+
+.sections {
+    width: 100%;
+    height: auto;
+    padding: 5% 0;
+    align-self: stretch;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10%;
+    display: inline-flex;
+}
+
+#section1 {
+    flex: 1 1 0;
+    align-self: stretch;
+    padding: 10%;
+    background: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+#section2 {
+    background: rgba(38, 64, 148, 0);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    display: inline-flex;
+    width: 284px;
+}
+
+/* Media Queries para tamaños de pantalla específicos */
+@media screen and (min-width: 768px) {
+    /* Estilos para tablets y pantallas más grandes */
+    .container {
+        padding: 20px; 
+    }
+
+    .container-items {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    #section1 {
+        padding: 5%; /* Aumenta el espaciado en tabletas y pantallas más grandes */
+    }
+
+    #section2 {
+        width: 284; /* Ancho ajustable para tabletas y pantallas más grandes */
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    /* Estilos para pantallas de PC */
+    .container {
+        padding: 40px; /* Aumenta el espaciado en pantallas de PC */
+    }
+
+    .container-items {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    #section1 {
+        padding: 10%; /* Aumenta el espaciado en pantallas de PC */
+    }
+
+    #section2 {
+        width: 284; /* Ancho ajustable para pantallas de PC */
+    }
+}
+
+h1 {
+    padding: 0;
+    width: auto;
+    text-align: center;
+    color: #E51954;
+    font-size: 23px;
+    font-family: Inter;
+    font-weight: 800;
+    line-height: 38.50px;
+    word-wrap: break-word;
+}
+
+.form {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+}
+
+.formulario {
+    padding: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    display: flex;
+}
+
+.campo-formulario {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    display: flex;
+}
+
+.item-fill {
+    width: 250px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 50px;
+    border: 1px black solid;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    display: inline-flex;
+}
+
+.input {
+    color: black;
+    font-size: 16px;
+    font-family: Questrial;
+    font-weight: 400;
+    letter-spacing: 1.60px;
+    word-wrap: break-word;
+}
+
+.submit {
+    text-align: center;
+    color: white;
+    font-size: 17px;
+    font-family: Inter;
+    font-weight: 600;
+    line-height: 30px;
+    word-wrap: break-word;
+    padding: 10px 25px;
+    background: #264094;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.container-sect2 {
+    height: auto;
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.container2 {
+    border-radius: 25px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+}
+
+#section2 .img-book {
+    width: 284px;
+    height: 376px;
+    border-radius: 25px;
+}
+
+.container3 {
+    align-self: stretch;
+    height: auto;
+    padding: 30px 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+    display: flex;
+}
+
+#section3 .text {
+    align-self: stretch;
+    padding-left: 5px;
+    padding-right: 5px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    display: inline-flex;
+}
+
+#section3 p {
+    flex: 1 1 0;
+    text-align: right;
+    color: black;
+    font-size: 15px;
+    font-family: Questrial;
+    font-weight: 400;
+    line-height: 30px;
+    word-wrap: break-word;
+    flex: 1 1 0;
+}
+
+#section2 .buttons {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 5px;
+    display: flex;
+}
+
+#section2 .buttons2 {
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    display: flex;
+}
+
+.button1 {
+    padding: 5px 20px;
+    background: #264094;
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    display: inline-flex;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    font-family: Inter;
+    font-weight: 600;
+    line-height: 30px;
+    word-wrap: break-word;
+}
+
+.button2 {
+    text-align: right;
+    color: #264094;
+    font-size: 14px;
+    font-family: Inter;
+    font-weight: 500;
+    line-height: 30px;
+    word-wrap: break-word;
+}
+
+.cnt {
+    width: 191px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50px;
+    border: 1.50px #264094 solid;
+    justify-content: space-between;
+    align-items: center;
+    display: inline-flex;
+}
+
+.cntt {
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.cnt-item {
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+}
+
+.c1 {
+    width: 36px;
+    height: 32px;
+    border-radius: 25px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.btn-icon {
+    flex: 1 1 0;
+    align-self: stretch;
+    padding: 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    display: inline-flex;
+}
+
+#iconManual {
+    width: 27px;
+    height: 19px;
+}
