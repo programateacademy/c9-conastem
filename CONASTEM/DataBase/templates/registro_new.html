@@ -25,16 +25,31 @@
                     {% csrf_token %}
 
                     <div class="campo-formulario">
-                      {{ form.institution_name }}
-                      {{ form.nit }}
-                      {{ form.adress }}
-                      {{ form.institution_responsable }}
-                      {{ form.phone }}
-                      {{ form.email }}
-                      {{ form.year }}
-
-                      <label for="{{ form.institution_model }}">Modelo a aplicar</label>
-                      {{ form.model }}
+                      
+                      <div class="item">
+                        <div class="input">{{ form.institution_name }}</div>
+                      </div>
+                      <div class="item">
+                        <div class="input">{{ form.nit }}</div>
+                      </div>
+                      <div class="item">
+                        <div class="input">{{ form.adress }}</div>
+                      </div>
+                      <div class="item">
+                        <div class="input">{{ form.phone }}</div>
+                      </div>
+                      <div class="item">
+                        <div class="input">{{ form.email }}</div>
+                      </div>
+                      <div class="item">
+                        <div class="input">{{ form.year }}</div>
+                      </div>
+                      <div class="item">
+                        <div class="input">
+                          <label class="text" for="{{ form.institution_model }}">Modelo a aplicar</label>
+                          {{ form.model }}
+                        </div>
+                      </div>
                     </div>
                     <button type="submit" class="submit">Enviar</button>
                   </form>
@@ -50,20 +65,22 @@
                       <p>Página basada en el libro Educación STEM marco de referencia para América Latina</p>
                     </div>
                     <div class="buttons">
-                      <button class="button1" href="https://www.conastem.org/marcodereferencia">Mayor Información</button>
-                    </div>
-                    <button class="cnt" href="https://genius-botsitos-team.atlassian.net/l/cp/WpHQf6HC">
-                      <div class="cntt">
-                        <div class="cnt-item">
-                          <div class="c1">
-                            <div class="btn-icon">
-                              <img class="iconManual" src="{% static 'images/icons/IconManual.svg' %}" alt="Icono Manual" />
+                      <a href="https://www.conastem.org/marcodereferencia" target="_blank"><button class="button1">Mayor Información</button></a>
+                      <a href="https://genius-botsitos-team.atlassian.net/l/cp/WpHQf6HC" target="_blank">
+                        <button class="cnt" >
+                          <div class="cntt">
+                            <div class="cnt-item">
+                              <div class="c1">
+                                <div class="btn-icon">
+                                  <img class="iconManual" src="{% static 'images/icons/IconManual.svg' %}" alt="Icono Manual" />
+                                </div>
+                              </div>
+                              <div class="cutton2">Manual de Usuario</div>
                             </div>
                           </div>
-                          <div class="cutton2">Manual de Usuario</div>
-                        </div>
-                      </div>
-                    </button>
+                        </button>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </section>

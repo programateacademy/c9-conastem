@@ -12,7 +12,7 @@ header {
     justify-content: center;
     align-items: center;
     display: inline-flex;
-    index: 100;
+    z-index: 100;
 }
 
 header .container {
@@ -40,7 +40,7 @@ header .container-logo {
 
 header .logo {
     width: 251px;
-    height: 74px;
+    height: auto;
 }
 
 header #menu {
@@ -101,7 +101,7 @@ header .text {
     font-size: 12px;
     font-family: Inter;
     font-weight: 400;
-    letter-spacing: 1.60px;
+    letter-spacing: 1px;
     word-wrap: break-word;
 }
 
@@ -114,7 +114,7 @@ footer {
     justify-content: center;
     align-items: center;
     display: inline-flex;
-    index: 90;
+    z-index: 90;
 }
 
 footer .container {
@@ -136,4 +136,46 @@ footer h6 {
     font-weight: 400;
     line-height: 10px;
     word-wrap: break-word;
+}
+
+
+/* Media Query para dispositivos móviles (teléfonos) */
+@media screen and (max-width: 767px) {
+
+    header .logo {
+        width: 151px;
+        height: auto;
+    }
+
+    header #menu {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Color inicial del borde gris oscuro */
+    header #item-hover {
+        padding: 1.5px;
+    }
+
+    header .container-item,
+    img {
+        width: 20px;
+        height: 20px;
+    }
+
+    header .text {
+        font-size: 10px;
+        font-weight: 400;
+    }
+
+}
+
+
+/* Media Queries para tamaños de pantalla específicos */
+@media screen and (min-width: 768px) {
+    header .text {
+        font-size: 10px;
+        font-weight: 400;
+    }
+
 }
