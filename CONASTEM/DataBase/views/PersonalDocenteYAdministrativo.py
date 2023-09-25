@@ -21,59 +21,7 @@ class PersonalDocenteyAdministrativoListView (generic.ListView):
     context_object_name='PersonalDocenteAdministrativo_List'
     template_name='database/PersonalDocenteyAdministrativo/PersonalDocenteyAdministrativo.html'
 
-<<<<<<< HEAD
 # 4.1 PROFESIONALES ALTAMENTE CALIFICADOS ESPECIALIZADOS EN EDUCACIÓN STEM
-=======
-# VISTA DE APOYO PEDAGÓGICO PARA EL PERSONAL
-class ApoyoPedagogicoListView (generic.ListView):
-    model=ApoyoPedagogico
-    context_object_name='ApoyoPedagogico_List'
-    template_name='database/PersonalDocenteyAdministrativo/ApoyoPedagogico_List.html'
-    ordering = ['codigo']
-    def get_queryset(self):
-        return ApoyoPedagogico.objects.all().order_by('codigo')
-
-
-# FORMULARIO DE APOYO PEDAGÓGICO PARA EL PERSONAL
-
-def Apoyopedagogico_new(request):
-    if request.method == "POST":
-        form_new = Form_ApoyoPedagogico(request.POST)
-        if form_new.is_valid():
-            form_new.save()
-            return HttpResponseRedirect('/database/apoyo-pedagogico')
-    else:
-        form_new = Form_ApoyoPedagogico ()
-    return render(request, 'Form_Subcriterio.html', {'form_new': form_new, 'titulo': '4300 - APOYO PEDAGÓGICO PARA EL PERSONAL'})
-
-
-# VISTA DE DESARROLLO PROFESIONAL INICIAL Y CONTINUO PARA DOCENTES, DIRECTORES DE ESCUELA Y CONSEJEROS PROFESIONALES
-
-class DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionalesListView (generic.ListView):
-    model=DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales
-    context_object_name='DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales_list'
-    template_name='database/PersonalDocenteyAdministrativo/DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales_list.html'
-    ordering = ['codigo']
-    def get_queryset(self):
-        return DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales.objects.all().order_by('codigo')
-    
-
-# FORMULARIO DE DESARROLLO PROFESIONAL INICIAL Y CONTINUO PARA DOCENTES, DIRECTORES DE ESCUELA Y CONSEJEROS PROFESIONALES
-
-def Desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales_new(request):
-    if request.method == "POST":
-        form_new = Form_DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales(request.POST)
-        if form_new.is_valid():
-            form_new.save()
-            return HttpResponseRedirect('/database/desarrollo-profesional-docentes-directores-consejeros-profesionales')
-    else:
-        form_new = Form_DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales ()
-
-    return render(request, 'Form_Subcriterio.html', {'form_new': form_new, 'titulo': '4200 - DESARROLLO PROFESIONAL INICIAL Y CONTINUO PARA DOCENTES, DIRECTORES DE ESCUELA Y CONSEJEROS PROFESIONALES'})
-
-
-# VISTA DE PROFESIONALES ALTAMENTE CALIFICADOS ESPECIALIZADOS EN EDUCACIÓN STEM
->>>>>>> dd58d78e118c7fb52b302d76800f8ef9afb9f86d
 class ProfesionalesEspecializadosEducacionSTEMListView (generic.ListView):
     model=ProfesionalesEspecializadosEducacionSTEM
     context_object_name='ProfesionalesEspecializadosEducacionSTEM_List'

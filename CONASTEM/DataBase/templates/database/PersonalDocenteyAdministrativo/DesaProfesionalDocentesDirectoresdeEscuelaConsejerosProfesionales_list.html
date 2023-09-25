@@ -1,7 +1,10 @@
 {% extends "base_general.html" %}
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
 
 {% block content %}
-{% load static %}
+
 
 <div class= "titulo">
     <img src="{%static 'images/tabla_detail/icon_docente_admin.svg' %}">
@@ -11,6 +14,7 @@
     <h2 style="text-transform:uppercase">4200-DESARROLLO PROFESIONAL INICIAL Y CONTINUO PARA DOCENTES, DIRECTORES DE ESCUELA Y CONSEJEROS PROFESIONALES</h2>
     <a href="/database/desarrollo-profesional-docentes-directores-consejeros-profesionales/new"><img src="{%static 'images/crear_datos.svg'%}" alt="Crear datos"></a>
 </div>
+<div class="tabla-contenedor">
     <table>
         <thead>
             <tr>
@@ -24,7 +28,7 @@
                 <th>Fecha de auditoria externa</th>
                 <th>Comentarios Auditoria Externa</th>
                 <th>Enlaces</th>
-        </tr>
+            </tr>
         </thead>
         <tbody>
         {% for desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales in DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales_list %}
@@ -38,7 +42,7 @@
         <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.internal_auditory_obs}}</p>
         <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.external_auditory_date}}</p>
         <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.external_auditory_obs}}</p>
-        <td><a href="{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.evidence }}" target="_blank">{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.evidence}}</a></td>
+        <td><a href="{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.evidence }}" target="_blank">{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.evidence }}</a></td>
         </tr>
         {% empty %}
         <tr>
@@ -47,4 +51,6 @@
         {% endfor %}
         </tbody>
         </table>
+</div>
 {% endblock %}
+
