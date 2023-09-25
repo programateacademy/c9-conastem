@@ -21,10 +21,6 @@ class PersonalDocenteyAdministrativoListView (generic.ListView):
     context_object_name='PersonalDocenteAdministrativo_List'
     template_name='database/PersonalDocenteyAdministrativo/PersonalDocenteyAdministrativo.html'
 
-
-
-
-
 # VISTA DE APOYO PEDAGÓGICO PARA EL PERSONAL
 class ApoyoPedagogicoListView (generic.ListView):
     model=ApoyoPedagogico

@@ -1,0 +1,181 @@
+* {
+    font-family: Inter;
+}
+
+header {
+    width: 100%;
+    height: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom: 3px solid #264094;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    z-index: 100;
+}
+
+header .container {
+    align-self: stretch;
+    height: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    display: flex;
+}
+
+header .container-logo {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+}
+
+header .logo {
+    width: 251px;
+    height: auto;
+}
+
+header #menu {
+    align-self: stretch;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 0;
+    padding-bottom: 0;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-content: flex-end;
+    display: inline-flex;
+}
+
+/* Color inicial del borde gris oscuro */
+header #item-hover {
+    padding: 8px;
+    border-bottom: 3px #ffffff solid;
+    /* Color inicial gris oscuro del borde inferior */
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    display: inline-flex;
+    margin: 3px 5px;
+    transition: border-color 0.3s;
+    /* Transición suave para el cambio de color del borde */
+}
+
+/* Cambia el color del borde inferior al hacer hover */
+header #item-hover:hover {
+    border-color: #FBBB3D;
+    /* Color del borde inferior al hacer hover */
+}
+
+/* Mantiene el color del borde inferior al hacer clic */
+header #item-hover:active {
+    border-color: #FBBB3D;
+    /* Color del borde inferior al hacer clic */
+}
+
+header .container-item {
+    width: 30px;
+    height: 30px;
+    bottom: 2.50px;
+    position: relative;
+}
+
+header .container-icon {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+}
+
+header .text {
+    flex: 1 1 0;
+    color: black;
+    font-size: 12px;
+    font-family: Inter;
+    font-weight: 400;
+    letter-spacing: 1px;
+    word-wrap: break-word;
+}
+
+footer {
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+    border-top: 2px #264094 solid;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    z-index: 90;
+}
+
+footer .container {
+    padding-bottom: 1.04px;
+    padding-left: 33.10px;
+    padding-right: 32.90px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.05px;
+    display: flex;
+}
+
+footer h6 {
+    text-align: center;
+    color: black;
+    font-size: 14px;
+    font-family: Questrial;
+    font-weight: 400;
+    line-height: 10px;
+    word-wrap: break-word;
+}
+
+
+/* Media Query para dispositivos móviles (teléfonos) */
+@media screen and (max-width: 767px) {
+
+    header .logo {
+        width: 151px;
+        height: auto;
+    }
+
+    header #menu {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Color inicial del borde gris oscuro */
+    header #item-hover {
+        padding: 1.5px;
+    }
+
+    header .container-item,
+    img {
+        width: 20px;
+        height: 20px;
+    }
+
+    header .text {
+        font-size: 10px;
+        font-weight: 400;
+    }
+
+}
+
+
+/* Media Queries para tamaños de pantalla específicos */
+@media screen and (min-width: 768px) {
+    header .text {
+        font-size: 10px;
+        font-weight: 400;
+    }
+
+}
