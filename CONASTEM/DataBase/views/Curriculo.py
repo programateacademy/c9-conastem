@@ -1,16 +1,8 @@
 from django.http import HttpResponseRedirect
-from ..forms import Form_ConsideracionesSobreAreasYAsignaturas
-from ..forms import Form_IntegracionCurricular
-from ..forms import Form_DesarrolloHabilidadesSigloXXI
-from ..forms import Form_SostenibilidadCurriculo
-from typing import Any
-from django.db.models.query import QuerySet
-from django.shortcuts import render
 from django.shortcuts import render
 from django.views import generic
-from django.utils import timezone
 
-# Create your views here.
+# MODELOS
 from ..models.Curriculo.ConsideracionesSobreAreasYAsignaturas import ConsideracionesSobreAreasYAsignaturas
 from ..models.Curriculo.Inclusion_ingenieria_aula import InclusionIngenieriaAula
 from ..models.Curriculo.Desarrollo_ciudadania_digital import DesarrolloCiudadaniaDigital
@@ -22,11 +14,16 @@ from ..models.Curriculo.Evaluacion_estudiantes import EvaluacionEstudiantes
 from ..models.Curriculo.SostenibilidadCurriculo import SostenibilidadCurriculo
 
 # FORMULARIO
+from ..forms import Form_ConsideracionesSobreAreasYAsignaturas
+from ..forms import Form_IntegracionCurricular
+from ..forms import Form_DesarrolloHabilidadesSigloXXI
+from ..forms import Form_SostenibilidadCurriculo
 from ..forms import Form_IngenieriaAula
 from ..forms import Form_DesarrolloCiudadania
 from ..forms import Form_CurriculoProgresivo
 from ..forms import Form_CurriculoPropio 
 from ..forms import Form_EvaluacionEstudiantes
+
 
 # VISTA DE LOS SUBCRITERIOS
 class CurriculoListView(generic.ListView):
@@ -44,7 +41,7 @@ class ConsideracionesSobreAreasYAsignaturasListView(generic.ListView):
     def get_queryset(self):
         return ConsideracionesSobreAreasYAsignaturas.objects.all().order_by('codigo')
 
-# FORMULARIO
+    # FORMULARIO
 def ConsideracionesSobreAreasYAsignaturas_new(request):
     
     if request.method == "POST":
@@ -58,7 +55,7 @@ def ConsideracionesSobreAreasYAsignaturas_new(request):
     return render(request, 'Form_Subcriterio.html', {'form_new': form_new, 'titulo':'2100-CONSIDERACIONES SOBRE LAS ÁREAS Y LAS ASIGNATURAS'})
 
 
-# 2.2 Inclusion ingenieria aula
+# 2.2 INCLUSIÓN DE LA INGENIERÍA EN EL AULA
 class InclusionIngenieriaAulaListView(generic.ListView):
     model = InclusionIngenieriaAula
     context_object_name = 'Inclusion_ingenieria_aula_list'
@@ -73,13 +70,13 @@ def IngenieriaAula_new(request):
         form_new = Form_IngenieriaAula(request.POST)
         if form_new.is_valid():
             form_new.save()
-            return HttpResponseRedirect('/database/curriculo')
+            return HttpResponseRedirect('/database/inclusion-ingenieria-aula')
     else:
         form_new = Form_IngenieriaAula ()
 
     return render(request, 'Form_Subcriterio.html', {'form_new': form_new, 'titulo': '2200 - INCLUSIÓN DE LA INGENIERÍA EN EL AULA'})
 
-# 2.3 Desarrollo ciudadania digital
+# 2.3 DESARROLLO DE UNA CIUDADANÍA DIGITAL
 class DesarrolloCiudadaniaDigitalListView(generic.ListView):
     model = DesarrolloCiudadaniaDigital
     context_object_name = 'Desarrollo_ciudadania_digital_list'
@@ -94,7 +91,7 @@ def CiudadaniaDigital_new(request):
         form_new = Form_DesarrolloCiudadania(request.POST)
         if form_new.is_valid():
             form_new.save()
-            return HttpResponseRedirect('/database/curriculo')
+            return HttpResponseRedirect('/database/desarrollo-ciudadania-digital')
     else:
         form_new = Form_DesarrolloCiudadania ()
 
@@ -110,19 +107,18 @@ class IntegracionCurricularListView(generic.ListView):
     def get_queryset(self):
         return IntegracionCurricular.objects.all().order_by('codigo')
 
-# FORMULARIO
+    # FORMULARIO
 def IntegracionCurricular_new(request):
     
     if request.method == "POST":
         form_new = Form_IntegracionCurricular(request.POST)
         if form_new.is_valid():
             form_new.save()
-            return HttpResponseRedirect('/database/integracion-curicular/')
+            return HttpResponseRedirect('/database/integracion-curricular/')
     else:
         form_new = Form_IntegracionCurricular ()
 
     return render(request, 'Form_Subcriterio.html', {'form_new': form_new, 'titulo':'2400-INTEGRACIÓN CURRICULAR'})
-
 
 # 2.5 CURRÍCULO PROGRESIVO Y ALINEADO CON LOS ESTÁNDARES CURRICULARES
 class CurriculoProgresivoListView(generic.ListView):
@@ -139,7 +135,7 @@ def CurriculoProgresivo_new(request):
         form_new = Form_CurriculoProgresivo(request.POST)
         if form_new.is_valid():
             form_new.save()
-            return HttpResponseRedirect('/database/curriculo')
+            return HttpResponseRedirect('/database/curriculo-progresivo')
     else:
         form_new = Form_CurriculoProgresivo ()
 
@@ -160,7 +156,7 @@ def CurriculoPropio_new(request):
         form_new = Form_CurriculoPropio(request.POST)
         if form_new.is_valid():
             form_new.save()
-            return HttpResponseRedirect('/database/curriculo')
+            return HttpResponseRedirect('/database/curriculo-propio')
     else:
         form_new = Form_CurriculoPropio ()
 
@@ -176,7 +172,7 @@ class DesarrolloHabilidadesSigloXXIListView(generic.ListView):
     def get_queryset(self):
         return DesarrolloHabilidadesSigloXXI.objects.all().order_by('codigo')
 
-# FORMULARIO
+    # FORMULARIO
 def DesarrolloHabilidadesSigloXXI_new(request):
     
     if request.method == "POST":
@@ -205,7 +201,7 @@ def EvaluacionEstudiantes_new(request):
         form_new = Form_EvaluacionEstudiantes(request.POST)
         if form_new.is_valid():
             form_new.save()
-            return HttpResponseRedirect('/database/curriculo')
+            return HttpResponseRedirect('/database/evaluacion-estudiantes')
     else:
         form_new = Form_EvaluacionEstudiantes ()
 
@@ -222,9 +218,8 @@ class SostenibilidadCurriculoListView(generic.ListView):
     def get_queryset(self):
         return SostenibilidadCurriculo.objects.all().order_by('codigo')
 
-# FORMULARIO
+    # FORMULARIO
 def SostenibilidadCurriculo_new(request):
-    
     if request.method == "POST":
         form_new = Form_SostenibilidadCurriculo(request.POST)
         if form_new.is_valid():

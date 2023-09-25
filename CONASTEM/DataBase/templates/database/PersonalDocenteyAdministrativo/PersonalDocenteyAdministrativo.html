@@ -1,10 +1,24 @@
 {% extends "base_general.html" %}
+
 {% block content %}
-<h1> PERSONAL DOCENTE Y ADMINISTRATIVO </h1>
-<ul>
-<li><a href="{% url 'ProfesionalesEspecializadosEducacionSTEM_List' %}"> PROFESIONALES ALTAMENTE CALIFICADOS ESPECIALIZADOS EN EDUCACIÓN STEM </a></li>
-<li><a href="{% url 'DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales_list' %}"> DESARROLLO PROFESIONAL INICIAL Y CONTINUO PARA DOCENTES DIRECTORES DE ESCUELA Y CONSEJEROS PROFESIONALES </a></li>
-<li><a href="{% url 'ApoyoPedagogico_List' %}"> APOYO PEDAGÓGICO PARA EL PERSONAL </a></li>
-<li><a href="{% url 'SostenibilidadDocenteAdministrativo_List' %}"> SOSTENIBILIDAD - PERSONAL DOCENTE Y ADMINISTRATIVO </a></li>
-</ul>
+{% load static %}
+
+<div class= "titulo">
+    <img src="{%static 'images/tabla_detail/icon_docente_admin.svg' %}">
+    <h1 style="text-transform:uppercase">4000 - PERSONAL DOCENTE Y ADMINISTRATIVO <h1>
+</div>
+
+
+
+<p>Selecciona un subcriterio para continuar:</p>
+
+<section class= "lista">
+    <ul>
+        <li><a href="{% url 'ProfesionalesEspecializadosEducacionSTEM_List' %}">  4100-PROFESIONALES ALTAMENTE CALIFICADOS ESPECIALIZADOS EN EDUCACIÓN STEM </a></li>
+        <li><a href="{% url 'DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales_list' %}"> 4200-DESARROLLO PROFESIONAL INICIAL Y CONTINUO PARA DOCENTES DIRECTORES DE ESCUELA Y CONSEJEROS PROFESIONALES </a></li>
+        <li><a href="{% url 'ApoyoPedagogico_List' %}"> 4300-APOYO PEDAGÓGICO PARA EL PERSONAL </a></li>
+        <li><a href="{% url 'SostenibilidadDocenteAdministrativo_List' %}"> 4400-SOSTENIBILIDAD - PERSONAL DOCENTE Y ADMINISTRATIVO </a></li>
+    </ul>
+</section>
+
 {% endblock content %}
