@@ -20,6 +20,7 @@
             <tr>
                 <th>Código</th>
                 <th>Numeral</th>
+                <th>Prioridad<th>
                 <th>Departamento Responsable</th>
                 <th>Persona Responsable</th>
                 <th>Fecha límite de seguimiento</th>
@@ -34,16 +35,16 @@
         {% for profesionalesespecializadoseducacionSTEM in ProfesionalesEspecializadosEducacionSTEM_List %}
         <tr>
         <td>{{profesionalesespecializadoseducacionSTEM.codigo}}</td>
-        <td>{{profesionalesespecializadoseducacionSTEM.numeral}}</h1>
-        <td>{{profesionalesespecializadoseducacionSTEM.dep_responsable}}</p>
-        <td>{{profesionalesespecializadoseducacionSTEM.person_responsable}}</p>
-        <td>{{profesionalesespecializadoseducacionSTEM.track_date}}</p>
-        <td>{{profesionalesespecializadoseducacionSTEM.internal_auditory_date}}</p>
-        <td>{{profesionalesespecializadoseducacionSTEM.internal_auditory_obs}}</p>
-        <td>{{profesionalesespecializadoseducacionSTEM.external_auditory_date}}</p>
-        <td>{{profesionalesespecializadoseducacionSTEM.external_auditory_obs}}</p>
-        <td><a href="{{profesionalesespecializadoseducacionSTEM.evidence}}" target="_blank">
-            {{profesionalesespecializadoseducacionSTEM.evidence }}</a></td>
+        <td>{{profesionalesespecializadoseducacionSTEM.numeral}}</td>
+        <td>{{profesionalesespecializadoseducacionSTEM.priority}}</td>
+        <td>{{profesionalesespecializadoseducacionSTEM.dep_responsable}}</td>
+        <td>{{profesionalesespecializadoseducacionSTEM.person_responsable}}</td>
+        <td>{{profesionalesespecializadoseducacionSTEM.track_date}}</td>
+        <td>{{profesionalesespecializadoseducacionSTEM.internal_auditory_date}}</td>
+        <td>{{profesionalesespecializadoseducacionSTEM.internal_auditory_obs}}</td>
+        <td>{{profesionalesespecializadoseducacionSTEM.external_auditory_date}}</td>
+        <td>{{profesionalesespecializadoseducacionSTEM.external_auditory_obs}}</td>
+        <td><a href="{{profesionalesespecializadoseducacionSTEM.evidence}}" target="_blank">{{profesionalesespecializadoseducacionSTEM.evidence }}</a></td>
         </tr>
         {% empty %}
         <tr>

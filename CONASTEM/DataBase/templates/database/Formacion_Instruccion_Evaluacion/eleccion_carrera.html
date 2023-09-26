@@ -18,6 +18,7 @@
         <tr>
             <th>Código</th>
             <th>Numeral</th>
+            <th>Prioridad<th>
             <th>Departamento Responsable</th>
             <th>Persona Responsable</th>
             <th>Fecha límite de seguimiento</th>
@@ -31,15 +32,16 @@
     <tbody>
         {% for eleccioncarrera in eleccion_carrera_list %}
     <tr>
-        <td>{{ eleccioncarrera.codigo }}</h1>
-        <td>{{ eleccioncarrera.numeral }}</h1>
-        <td>{{eleccioncarrera.dep_responsable}}</p>
-        <td>{{eleccioncarrera.person_responsable}}</p>
-        <td>{{eleccioncarrera.track_date}}</p>
-        <td>{{eleccioncarrera.internal_auditory_date}}</p>
-        <td>{{eleccioncarrera.internal_auditory_obs}}</p>
-        <td>{{eleccioncarrera.external_auditory_date}}</p>
-        <td>{{eleccioncarrera.external_auditory_obs}}</p>
+        <td>{{ eleccioncarrera.codigo }}</td>
+        <td>{{ eleccioncarrera.numeral }}</td>
+        <td>{{eleccioncarrera.priority}}</td>
+        <td>{{eleccioncarrera.dep_responsable}}</td>
+        <td>{{eleccioncarrera.person_responsable}}</td>
+        <td>{{eleccioncarrera.track_date}}</td>
+        <td>{{eleccioncarrera.internal_auditory_date}}</td>
+        <td>{{eleccioncarrera.internal_auditory_obs}}</td>
+        <td>{{eleccioncarrera.external_auditory_date}}</td>
+        <td>{{eleccioncarrera.external_auditory_obs}}</td>
         <td><a href="{{eleccioncarrera.evidence}}" target="_blank">{{eleccioncarrera.evidence}}</a></td>
 
     </tr>

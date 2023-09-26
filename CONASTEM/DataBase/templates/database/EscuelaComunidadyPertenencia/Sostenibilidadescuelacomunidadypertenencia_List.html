@@ -17,6 +17,7 @@
          <tr>
              <th>Codigo</th>
              <th>Numeral</th>
+             <th>Prioridad<th>
              <th>Departamento Responsable</th>
              <th>Persona Responsable</th>
              <th>Fecha límite de seguimiento</th>
@@ -31,14 +32,15 @@
       {% for sostenibilidadescuelacomunidadypertenencia in Sostenibilidadescuelacomunidadypertenenecia_List %}
       <tr>
         <td>{{sostenibilidadescuelacomunidadypertenencia.codigo}}</td>
-        <td> {{ sostenibilidadescuelacomunidadypertenencia.numeral }}</h1>
-        <td>{{sostenibilidadescuelacomunidadypertenencia.dep_responsable}}</p>
-        <td>{{sostenibilidadescuelacomunidadypertenencia.person_responsable}}</p>
-        <td>{{sostenibilidadescuelacomunidadypertenencia.track_date}}</p>
-        <td>{{sostenibilidadescuelacomunidadypertenencia.internal_auditory_date}}</p>
-        <td>{{sostenibilidadescuelacomunidadypertenencia.internal_audirtory_obs}}</p>
-        <td>{{sostenibilidadescuelacomunidadypertenencia.external_auditory_date}}</p>
-        <td>{{sostenibilidadescuelacomunidadypertenencia.external_audirtory_obs}}</p>
+        <td>{{sostenibilidadescuelacomunidadypertenencia.numeral }}</td>
+        <td>{{sostenibilidadescuelacomunidadypertenencia.priority}}</td>
+        <td>{{sostenibilidadescuelacomunidadypertenencia.dep_responsable}}</td>
+        <td>{{sostenibilidadescuelacomunidadypertenencia.person_responsable}}</td>
+        <td>{{sostenibilidadescuelacomunidadypertenencia.track_date}}</td>
+        <td>{{sostenibilidadescuelacomunidadypertenencia.internal_auditory_date}}</td>
+        <td>{{sostenibilidadescuelacomunidadypertenencia.internal_audirtory_obs}}</td>
+        <td>{{sostenibilidadescuelacomunidadypertenencia.external_auditory_date}}</td>
+        <td>{{sostenibilidadescuelacomunidadypertenencia.external_audirtory_obs}}</td>
         <td><a href="{{ sostenibilidadescuelacomunidadypertenencia.evidence }}" target="_blank">{{ sostenibilidadescuelacomunidadypertenencia.evidence }}</a></td>
       </tr>
       {% empty %}
