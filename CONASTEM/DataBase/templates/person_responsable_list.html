@@ -1,25 +1,36 @@
-{% extends "base_general.html" %}
+{% extends 'base_general.html' %}
 
-{%block content%}
+{% block content %}
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<section class= "lista">
-    {%if responsable_list%}
+      {% load static %}
+      <link rel="stylesheet" href="{% static 'styles/records_detail.css' %}" />
+      <link href="https://fonts.googleapis.com/css2?family=Inter" rel="stylesheet" type="text/css" />
+      <link href="https://fonts.googleapis.com/css2?family=Questrial" rel="stylesheet" type="text/css" />
+    </head>
 
-        {%for personresponsable in responsable_list%}
-            <li>
-                <a href="{{personresponsable.get_absolute_url}}">{{personresponsable.last_name}} {{personresponsable.first_name}}</a>
-            </li>
-        {%endfor%}
-    
-    {%else%}
-    <p>No se encontraron registros</p>
+    <body>
+      <div class="content-list">
+        <section class="lista">
+          {% if responsable_list %}
+            {% for personresponsable in responsable_list %}
+              <li>
+                <a href="{{ personresponsable.get_absolute_url }}">{{ personresponsable.last_name }} {{ personresponsable.first_name }}</a>
+              </li>
+            {% endfor %}
+          {% else %}
+            <p>No se encontraron registros</p>
+          {% endif %}
+        </section>
 
-    {%endif%}
-
-</section>
-
-<div>
-    <a href="{%url 'person_responsable_new'%}"><button>Apregue responsable</button></a>
-</div>
-
-{%endblock content%}
+        <div>
+          <a href="{% url 'person_responsable_new' %}"><button>Agregue responsable</button></a>
+        </div>
+      </div>
+    </body>
+  </html>
+{% endblock %}

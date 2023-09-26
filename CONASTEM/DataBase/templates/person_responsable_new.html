@@ -1,19 +1,50 @@
-{% extends "base_general.html" %}
+{% extends 'base_general.html' %}
 
-{% load static %}
+{% block content %}
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-{%block content%} 
+      {% load static %}
+      <link rel="stylesheet" href="{% static 'styles/records_detail.css' %}" />
+      <link href="https://fonts.googleapis.com/css2?family=Inter" rel="stylesheet" type="text/css" />
+      <link href="https://fonts.googleapis.com/css2?family=Questrial" rel="stylesheet" type="text/css" />
+    </head>
 
-<h1>Datos del responsable</h1>
-
-<form method="POST" class="formulario"> {% csrf_token %}
-
-    <div class="campo-formulario">
-        {{form.as_p}}
-    </div>
-
-    <button type="submit" class="boton-formulario">Guardar</button>
-
-</form>
+    <body>
+      <section id="main">
+          <div class="container-items2">
+            <div class="sections">
+              <section id="section1">
+                <h1>Datos del responsable</h1>
+                <div class="form">
+                  <form method="POST" class="formulario">
+                    {% csrf_token %}
+                    <div class="campo-formulario" id="form">
+                        <div class="item">
+                            <div>{{form.as_p}}</div>
+                        </div>
+                    </div>
+                    <button id="open" type="submit" class="submit">Guardar</button>
+                    <div id="popUp" class="popup-container">
+                      <div class="popup-content">
+                        <h2>¡Registro exitoso!</h2>
+                        <div id="close" class="close">
+                          <a href="{%url 'person_responsable_new'%}"><p class="submit">Nuevo Registro</p></a>
+                          <a href="{%url 'responsable_list'%}"><p class="submit">Ver Registros</p></a>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </section>
+            </div>
+        </div>
+      </section>
+      <script type='text/javascript' src="{%static 'pop_up.js'%}"></script>
+    </body>
+  </html>
 
 {% endblock %}
