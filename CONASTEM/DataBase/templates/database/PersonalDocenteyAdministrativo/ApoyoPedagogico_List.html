@@ -1,9 +1,11 @@
 {% extends "base_general.html" %}
+
+
+{% block content %}
 {% load static %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
 
-{% block content %}
 <body>
     <div class="fondo">
 <div class= "margen-contenedor">
@@ -16,7 +18,7 @@
         <h2 style="text-transform:uppercase">4300-APOYO PEDAGÓGICO PARA EL PERSONAL</h2>
     </div>
     <div class= "imagen-crear-datos">
-        <a href="/database/apoyopedagogico/new">
+        <a href="/database/apoyo-pedagogico/new">
             <img src="{%static 'images/crear_datos.svg'%}" alt="Crear datos">
         </a>
     </div>

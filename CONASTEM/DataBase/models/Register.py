@@ -18,7 +18,7 @@ class Register (models.Model):
     PRIORITY_MODEL_CHOICE = (
         ("Exploratorio", "Exploratorio"),
         ("Introductorio", "Introductorio"),
-        ("Inmersgit ión parcial", "Inmersión parcial"),
+        ("Inmersión parcial", "Inmersión parcial"),
         ("Inmersión completa", "Inmersión completa"),
     )
 
