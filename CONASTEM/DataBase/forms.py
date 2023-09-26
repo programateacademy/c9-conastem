@@ -77,6 +77,13 @@ class FormPersonResponsable (forms.ModelForm):
     class Meta:
         model = PersonResponsable
         fields = ['first_name', 'last_name', 'phone_number', 'email']
+        widgets = {
+            'name': TextInput(attrs={'class' : 'campo-formulario'}),
+            'lastname': TextInput(attrs={'class' : 'campo-formulario'}),
+            'phone_number' : TextInput(attrs={'class' : 'campo-formulario'}),
+            'email' : TextInput(attrs={'class' : 'campo-formulario'}),
+            
+        }
 
 # INFRAESTRUCTURA
 
