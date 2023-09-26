@@ -14,23 +14,46 @@
     </head>
 
     <body>
-      <div class="content-list">
-        <section class="lista">
-          {% if responsable_list %}
-            {% for personresponsable in responsable_list %}
-              <li>
-                <a href="{{ personresponsable.get_absolute_url }}">{{ personresponsable.last_name }} {{ personresponsable.first_name }}</a>
-              </li>
-            {% endfor %}
-          {% else %}
-            <p>No se encontraron registros</p>
-          {% endif %}
-        </section>
+      <section id="main">
+        <div class="container-items2">
+          <div class="sections">
+            <section id="section1">
+              <h1>Responsables Registrados {{ responsable_detail }}</h1>
+              <div class="form">
+                <div class="campo-formulario" id="form">
+                  {% if responsable_list %}
+                    {% for personresponsable in responsable_list %}
+                      <a href="{{ personresponsable.get_absolute_url }}">
+                        <button class="cnt">
+                          <div class="cntt">
+                            <div class="cnt-item">
+                              <div class="textt">{{ personresponsable.last_name }} {{ personresponsable.first_name }}</div>
+                            </div>
+                          </div>
+                        </button>
+                      </a>
+                    {% endfor %}
+                  {% else %}
+                    <p>No se encontraron registros</p>
+                  {% endif %}
 
-        <div>
-          <a href="{% url 'person_responsable_new' %}"><button>Agregue responsable</button></a>
+                  <div>
+                    <a href="{% url 'person_responsable_new' %}">
+                      <button class="submit">
+                        <div class="cntt">
+                          <div class="cnt-item">
+                            <div>Agregar Responsable</div>
+                          </div>
+                        </div>
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
-      </div>
+      </section>
     </body>
   </html>
 {% endblock %}

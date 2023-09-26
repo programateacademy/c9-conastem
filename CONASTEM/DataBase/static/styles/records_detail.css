@@ -334,6 +334,19 @@ select {
     display: inline-flex;
 }
 
+
+.textt {
+    align-self: stretch;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    display: inline-flex;
+    font-weight: 600;
+}
+
 p,
 label {
     flex: 1 1 0;
@@ -385,8 +398,7 @@ label {
 
 .cnt {
     width: 100%;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 5px;
     background: rgba(255, 255, 255, 0.15);
     border-radius: 50px;
     border: 1.50px #264094 solid;
@@ -425,8 +437,7 @@ label {
     display: inline-flex;
 }
 
-#iconManual,
-img{
+#iconManual{
     width: auto;
     height: 12px;
 }
