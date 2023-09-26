@@ -24,7 +24,7 @@
                   <form method="POST" class="formulario">
                     {% csrf_token %}
 
-                    <div class="campo-formulario">
+                    <div class="campo-formulario" id="form">
                       
                       <div class="item">
                         <div class="input">{{ form.institution_name }}</div>
@@ -34,6 +34,9 @@
                       </div>
                       <div class="item">
                         <div class="input">{{ form.adress }}</div>
+                      </div>
+                      <div class="item">
+                        <div class="input">{{ form.institution_responsable }}</div>
                       </div>
                       <div class="item">
                         <div class="input">{{ form.phone }}</div>
@@ -51,7 +54,16 @@
                         </div>
                       </div>
                     </div>
-                    <button type="submit" class="submit">Enviar</button>
+                    <button id="open" type="submit" class="submit">Enviar</button>
+                    <div id="popUp" class="popup-container">
+                      <div class="popup-content">
+                        <h2>¡Registro exitoso!</h2>
+                        <div id="close" class="close">
+                          <a href="{%url 'criterio_list'%}"><p class="close1">Continuar</p></a>
+                          <a href="{%url 'responsable_list'%}"><p class="close2">Ver registros</p></a>
+                        </div>
+                      </div>
+                    </div>
                   </form>
                 </div>
               </section>
@@ -75,7 +87,7 @@
                                   <img class="iconManual" src="{% static 'images/icons/IconManual.svg' %}" alt="Icono Manual" />
                                 </div>
                               </div>
-                              <div class="cutton2">Manual de Usuario</div>
+                              <div class="button2">Manual de Usuario</div>
                             </div>
                           </div>
                         </button>
@@ -88,6 +100,7 @@
           </div>
         </div>
       </section>
+      <script type='text/javascript' src="{%static 'pop_up.js'%}"></script>
     </body>
   </html>
 {% endblock %}

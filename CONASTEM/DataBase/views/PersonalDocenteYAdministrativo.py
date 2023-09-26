@@ -21,16 +21,11 @@ class PersonalDocenteyAdministrativoListView (generic.ListView):
     context_object_name='PersonalDocenteAdministrativo_List'
     template_name='database/PersonalDocenteyAdministrativo/PersonalDocenteyAdministrativo.html'
 
-
-
-
-
-# VISTA DE APOYO PEDAGÓGICO PARA EL PERSONAL
-class ApoyoPedagogicoListView (generic.ListView):
-    model=ApoyoPedagogico
-    context_object_name='ApoyoPedagogico_List'
-    template_name='database/PersonalDocenteyAdministrativo/ApoyoPedagogico_List.html'
-    ordering = ['codigo']
+# 4.1 PROFESIONALES ALTAMENTE CALIFICADOS ESPECIALIZADOS EN EDUCACIÓN STEM
+class ProfesionalesEspecializadosEducacionSTEMListView (generic.ListView):
+    model=ProfesionalesEspecializadosEducacionSTEM
+    context_object_name='ProfesionalesEspecializadosEducacionSTEM_List'
+    template_name='database/PersonalDocenteyAdministrativo/ProfesionalesEspecializadosEducacionSTEM_List.html'
     def get_queryset(self):
         return ProfesionalesEspecializadosEducacionSTEM.objects.all().order_by('codigo')
 

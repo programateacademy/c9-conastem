@@ -1,7 +1,9 @@
 {% extends "base_general.html" %}
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
 
 {% block content %}
-{% load static %}
 
 <div class= "titulo">
     <img src="{%static 'images/tabla_detail/icon_docente_admin.svg' %}">
@@ -11,6 +13,7 @@
     <h2 style="text-transform:uppercase">4400-SOSTENIBILIDAD - PERSONAL DOCENTE Y ADMINISTRATIVO</h2>
     <a href="/database/sostenibilidad-docente-administrativo/new"><img src="{%static 'images/crear_datos.svg'%}" alt="Crear datos"></a>
 </div>
+<div class="tabla-contenedor">
     <table>
         <thead>
             <tr>
@@ -47,4 +50,5 @@
         {% endfor %}
         </tbody>
         </table>
+</div>
 {% endblock %}
