@@ -43,3 +43,140 @@ header {
     transition: swap 0.3s;
     /* Transición para un cambio suave de color */
 }
+
+
+
+
+/* ---------sroll bar------------ */
+
+.tabla-contenedor {
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+table {
+    width: auto;
+    table-layout: auto;
+    border-collapse: collapse; 
+    width: 100%; 
+
+}
+
+table td, table th {
+        border: 2px solid #FBBB3D;
+        padding: 8px; 
+        text-align: left; 
+}
+
+.margen-contenedor {
+    border-radius: 40px;
+    width: 169.2vh;
+    height: 70%;
+    background-color: #fffbe9;
+    padding: 0 3rem;
+    margin-left: -3.5rem;
+
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.fondo {
+    background-image: url('./images/StemGuardas.jpg'); /* Cambia '/ruta/de/tu/imagen.jpg' a la ruta de tu imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+    background-repeat: no-repeat;
+    padding: 10rem;
+}
+th, td {
+    min-width: 250px;
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+    white-space: wrap; 
+}
+
+
+@media (max-width:600px) {
+    th, td {
+        max-width: 600px;
+        min-height: 300px;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    th, td {
+        min-width: 200px;
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+        white-space: wrap;
+    }
+    .margen-contenedor {
+        border-radius: 40px;
+        width: 50vh;
+        height: 70%;
+        background-color: #fffbe9;
+        padding: 0;
+        margin-left: 10px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+    }
+    h1 {
+        font-size:15px;
+    }
+    
+    h2 {
+        font-size: 14px;
+        font-weight: 600;
+        margin-top: 90px;
+    }
+
+    hr {
+        margin-top: 5px;
+        background-color:#264094;
+        padding:1.5px;
+    }
+}
+
+
+/* ---------título------------ */
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -2rem;
+    gap: 0.25rem;
+    padding-top: 3rem;
+}
+
+
+.subtitulo {
+    display: flex;
+    color: #353535;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 38.5px;
+    justify-content: space-between;
+    vertical-align: baseline;
+    margin-bottom: -10px;
+}
+
+.titulo-texto {
+    display: flex;
+    vertical-align:baseline;
+    justify-content: baseline;
+    align-items: last baseline;
+}
+
+hr {
+    margin-bottom: 1.8rem;
+    background-color:#264094;
+    padding:1.5px;
+    margin-top: 0;
+}
+
