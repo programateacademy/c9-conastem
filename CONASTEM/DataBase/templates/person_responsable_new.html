@@ -24,21 +24,6 @@
                   <form method="POST" class="formulario">
                     {% csrf_token %}
 
-<<<<<<< HEAD
-<form method="POST" class="formulario"> {% csrf_token %}
-
-    <div class="campo-formulario">
-        {{form.as_p}}
-    </div>
-
-    <button type="submit" class="boton-formulario">Guardar</button>
-
-    
-
-</form>
-
-{% endblock %}
-=======
                     <div class="campo-formulario" id="form">
                       
                       <div class="item">
@@ -61,8 +46,6 @@
                       <div class="popup-content">
                         <h2>¡Registro exitoso!</h2>
                         <div id="close" class="close">
-                          <a href="{%url 'criterio_list'%}"><p class="close1">Continuar</p></a>
-                          <a href="{%url 'responsable_list'%}"><p class="close2">Ver registros</p></a>
                         </div>
                       </div>
                     </div>
@@ -106,4 +89,3 @@
     </body>
   </html>
 {% endblock %}
->>>>>>> 950e613d39575046529d0caf1b82c1c95f4cdab5
