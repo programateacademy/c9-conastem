@@ -5,7 +5,7 @@ from django.views import generic
 # MODELOS
 from ..models.Infraestructura.ambiente_escolar import AmbienteEscolar
 from ..models.Infraestructura.desarrollo_de_equipos_lideres import DesarrolloDeEquiposLideres
-from ..models.Infraestructura.equidad import Equidad
+from ..models.Infraestructura.Equidad import Equidad
 from ..models.Infraestructura.planeacion_institucional import PlaneacionInstitucional
 from ..models.Infraestructura.recursos_tecnologicos import RecursosTecnologicos
 from ..models.Infraestructura.sostenibilidad_infraestructura import Sostenibilidad

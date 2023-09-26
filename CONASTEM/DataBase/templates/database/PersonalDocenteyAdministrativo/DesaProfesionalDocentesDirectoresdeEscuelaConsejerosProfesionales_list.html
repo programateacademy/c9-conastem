@@ -16,6 +16,7 @@
             <tr>
                 <th>Código</th>
                 <th>Numeral</th>
+                <th>Prioridad<th>
                 <th>Departamento Responsable</th>
                 <th>Persona Responsable</th>
                 <th>Fecha límite de seguimiento</th>
@@ -30,14 +31,15 @@
         {% for desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales in DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales_list %}
         <tr>
         <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.codigo}}</td>
-        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.numeral}}</h1>
-        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.dep_responsable}}</p>
-        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.person_responsable}}</p>
-        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.track_date}}</p>
-        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.internal_auditory_date}}</p>
-        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.internal_auditory_obs}}</p>
-        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.external_auditory_date}}</p>
-        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.external_auditory_obs}}</p>
+        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.numeral}}</td>
+        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.priority}}</td>
+        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.dep_responsable}}</td>
+        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.person_responsable}}</td>
+        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.track_date}}</td>
+        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.internal_auditory_date}}</td>
+        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.internal_auditory_obs}}</td>
+        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.external_auditory_date}}</td>
+        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.external_auditory_obs}}</td>
         <td><a href="{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.evidence }}" target="_blank">{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.evidence}}</a></td>
         </tr>
         {% empty %}
