@@ -32,19 +32,19 @@
             </tr>
         </thead>
         <tbody>
-        {% for desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales in DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales_list %}
-        <tr>
-        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.codigo}}</td>
-        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.numeral}}</h1>
-        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.dep_responsable}}</p>
-        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.person_responsable}}</p>
-        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.track_date}}</p>
-        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.internal_auditory_date}}</p>
-        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.internal_auditory_obs}}</p>
-        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.external_auditory_date}}</p>
-        <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.external_auditory_obs}}</p>
-        <td><a href="{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.evidence }}" target="_blank">{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.evidence }}</a></td>
-        </tr>
+            {% for desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales in DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales_list %}
+            <tr>
+                <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.codigo}}</td>
+                <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.numeral}}</h1>
+                <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.dep_responsable}}</p>
+                <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.person_responsable}}</p>
+                <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.track_date}}</p>
+                <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.internal_auditory_date}}</p>
+                <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.internal_auditory_obs}}</p>
+                <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.external_auditory_date}}</p>
+                <td>{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.external_auditory_obs}}</p>
+                <td><a href="{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.evidence}}" target="_blank">{{desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales.evidence }}</a></td>
+            </tr>
         {% empty %}
         <tr>
             <td colstran="9">No hay numerales.</td>
