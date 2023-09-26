@@ -19,6 +19,7 @@
         <tr>
             <th>Código</th>
             <th>Numeral</th>
+            <th>Prioridad<th>
             <th>Departamento Responsable</th>
             <th>Persona Responsable</th>
             <th>Fecha límite de seguimiento</th>
@@ -32,15 +33,16 @@
     <tbody>
         {% for sostenibilidadformacioninstruccion in sostenibilidad_list %}
     <tr>
-        <td>{{sostenibilidadformacioninstruccion.codigo}}</h1>
-        <td>{{sostenibilidadformacioninstruccion.numeral}}</h1>
-        <td>{{sostenibilidadformacioninstruccion.dep_responsable}}</p>
-        <td>{{sostenibilidadformacioninstruccion.person_responsable}}</p>
-        <td>{{sostenibilidadformacioninstruccion.track_date}}</p>
-        <td>{{sostenibilidadformacioninstruccion.internal_auditory_date}}</p>
-        <td>{{sostenibilidadformacioninstruccion.internal_auditory_obs}}</p>
-        <td>{{sostenibilidadformacioninstruccion.external_auditory_date}}</p>
-        <td>{{sostenibilidadformacioninstruccion.external_auditory_obs}}</p>
+        <td>{{sostenibilidadformacioninstruccion.codigo}}</td>
+        <td>{{sostenibilidadformacioninstruccion.numeral}}</td>
+        <td>{{sostenibilidadformacioninstruccion.priority}}</td>
+        <td>{{sostenibilidadformacioninstruccion.dep_responsable}}</td>
+        <td>{{sostenibilidadformacioninstruccion.person_responsable}}</td>
+        <td>{{sostenibilidadformacioninstruccion.track_date}}</td>
+        <td>{{sostenibilidadformacioninstruccion.internal_auditory_date}}</td>
+        <td>{{sostenibilidadformacioninstruccion.internal_auditory_obs}}</td>
+        <td>{{sostenibilidadformacioninstruccion.external_auditory_date}}</td>
+        <td>{{sostenibilidadformacioninstruccion.external_auditory_obs}}</td>
         <td><a href="{{sostenibilidadformacioninstruccion.evidence}}" target="_blank">{{sostenibilidadformacioninstruccion.evidence}}</a></td>
 
     </tr>
