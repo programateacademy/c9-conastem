@@ -4,6 +4,7 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CONASTEM</title>
 
     <!-- Add additional CSS in static file -->
     {% load static %}
@@ -26,16 +27,16 @@
               <a href="{%url 'Infraestructura'%}"><img src="{% static 'images/icon_infraestructura.svg' %}" alt="Ícono Infraestructura" /></a>
             </div>
             <div id="item">
-              <a href="{%url 'Curriculo_list'%}"><img src="{% static 'images/icon_curriculo.svg' %}" alt="Ícono Currículo" /></a>
+              <a href="{%url 'Curriculo'%}"><img src="{% static 'images/icon_curriculo.svg' %}" alt="Ícono Currículo" /></a>
             </div>
             <div id="item">
-              <a href="{% url 'FormacionInstruccionEvaluacion' %}"><img src="{% static 'images/icon_form_instruc_eva.svg' %}" alt="Ícono Formación/ Instrucción/ Evaluación" /></a>
+              <a href="{% url 'FormacionInstruccionEvaluacion' %}"><img src="{% static 'images/icon_formacion_instruccion-evaluacion.svg' %}" alt="Ícono Formación/ Instrucción/ Evaluación" /></a>
             </div>
             <div id="item">
-              <a href="{% url 'PersonalDocenteyAdministrativo' %}"><img src="{% static 'images/icon_personal_doc_adm.svg' %}" alt="Ícono Personal docente y administrativo" /></a>
+              <a href="{% url 'PersonalDocenteyAdministrativo' %}"><img src="{% static 'images/icon_personal_docente_administrativo.svg' %}" alt="Ícono Personal docente y administrativo" /></a>
             </div>
             <div id="item">
-              <a href="{% url 'Escuelacomunidadypertenencia' %}"><img src="{% static 'images/icon_escuela_comu_perten.svg' %}" alt="Ícono Escuela, comunidad y pertenencia" /></a>
+              <a href="{% url 'Escuelacomunidadypertenencia' %}"><img src="{% static 'images/icon_escuela_comunidad_pertenencia.svg' %}" alt="Ícono Escuela, comunidad y pertenencia" /></a>
             </div>
           </div>
         </div>

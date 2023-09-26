@@ -27,8 +27,19 @@ class EleccionCarrera (GeneralModel):
         ('Las experiencias con expertos externos, así como las experiencias de orden universitario se incluyen dentro del diseño de actividades en educación STEM y no se limita a la educación media.', '3760'),
     ]
 
-    numeral = models.CharField (max_length=300, choices=ITEM_CHOICE)
+    numeral = models.CharField (
+        max_length=300, 
+        choices=[(choice[0], f"{choice[0]} - {choice[1]}") for choice in ITEM_CHOICE])
 
+    codigo = models.CharField(max_length=7, default='3000')
+    def save(self, *args, **kwargs):
+        for choice in self.ITEM_CHOICE:
+            if choice[0] == self.numeral:
+                self.codigo = choice[0]
+                self.numeral = choice[1]
+                break
+        super(EleccionCarrera, self).save(*args, **kwargs)
+    
     class Meta:
         verbose_name = ('Elección de carrera')
         verbose_name_plural = ('Elección de carrera')

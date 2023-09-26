@@ -14,13 +14,13 @@
 </div>
 
 <section class= "criterios">
-    {%if criterio_list%}
     <ul>
-        {%for criterio in criterio_list%}
-        <li> {{criterio.name}} </li>
-        {% endfor %}
+        <li><a href="{%url 'Infraestructura'%}"><img src="{%static 'images/tabla_detail/icon_infraestructura.svg'%}"><br> 1000 <br> INFRAESTRUCTURA</a></li>
+        <li><a href="{%url 'Curriculo'%}"><img src="{%static 'images/tabla_detail/icon_curriculo.svg'%}"><br> 2000 <br> CURRÍCULO</a></li>
+        <li><a href="{%url 'FormacionInstruccionEvaluacion'%}"><img src="{%static 'images/tabla_detail/icon_for_instrucc_eva.svg'%}"><br> 3000 <br> FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN</a></li>
+        <li><a href="{%url 'PersonalDocenteyAdministrativo'%}"><img src="{%static 'images/tabla_detail/icon_docente_admin.svg'%}"> <br> 4000 <br> PERSONAL DOCENTE Y ADMINISTRATIVO</a></li>
+        <li><a href="{% url 'Escuelacomunidadypertenencia' %}"><img src="{%static 'images/tabla_detail/icon_escu_comu_perten.svg'%}"><br>5000 <br> ESCUELA COMUNIDAD Y PERTENENCIA</a></li>
     </ul>
-    {% endif %}
 </section>
 
 <div class="container-2">

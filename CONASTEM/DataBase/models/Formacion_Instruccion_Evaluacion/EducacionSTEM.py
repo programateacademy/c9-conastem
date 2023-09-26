@@ -19,5 +19,25 @@ class EducacionSTEMIntegrada (GeneralModel):
 
     numeral = models.CharField(
         max_length= 200,
-        choices= ITEM_CHOICE
+        choices=[(choice[0], f"{choice[0]} - {choice[1]}") for choice in ITEM_CHOICE]
     )
+
+    codigo = models.CharField(max_length=7, default='3000')
+    def save(self, *args, **kwargs):
+        for choice in self.ITEM_CHOICE:
+            if choice[0] == self.numeral:
+                self.codigo = choice[0]
+                self.numeral = choice[1]
+
+                break
+        super(EducacionSTEMIntegrada, self).save(*args, **kwargs)
+    
+    class Meta:
+        verbose_name = ("Educación STEM integrada")
+        verbose_name_plural = ("Educación STEM integrada")
+
+    def __str__(self) :
+        return self.numeral
+    
+    def get_absolute_url(self):
+        return reverse("educacion_stem_detail", kwargs={"pk": self.pk})

@@ -2,16 +2,28 @@
 
 {% block content %}
 
-<h2>Curriculo</h2>
+{% load static %} 
+
+<div class= "titulo">
+        <img src="{%static 'images/tabla_detail/icon_curriculo.svg' %}">
+        <h1 style="text-transform:uppercase">2000 - CURRÍCULO</h1>
+</div>
+
+<p>Selecciona un subcriterio para continuar:</p>
 
 <section class="lista">
-    <ul>
-        <li><a href="{%url 'Inclusion_ingenieria_aula_list'%}">Inclusión de la ingeniería en el aula</a></li>
-        <li><a href="{%url 'desarrollo_ciudadania_digital_list'%}">Desarrollo de una ciudadanía digital</a></li>
-        <li><a href="{%url 'Curriculo_progresivo_list'%}">Currículo progresivo y alineado con los estándares curriculares</a></li>
-        <li><a href="{%url 'Curriculo_propio_list'%}">Currículo propio</a></li>
-        <li><a href="{%url 'Evaluacion_estudiantes_list'%}">Evaluación de los estudiantes</a></li>
-    </ul>
+<ul>
+        <li style="text-transform:uppercase"><a href="{%url 'ConsideracionesSobreAreasYAsignaturas_list'%}">2100 - CONSIDERACIONES SOBRE LAS ÁREAS Y ASIGNATURAS</a></li>
+        <li style="text-transform:uppercase"><a href="{%url 'Inclusion_ingenieria_aula_list'%}">2200 - Inclusión de la ingeniería en el aula</a></li>
+        <li style="text-transform:uppercase"><a href="{%url 'desarrollo_ciudadania_digital_list'%}">2300 - Desarrollo de una ciudadanía digital</a></li>
+        <li style="text-transform:uppercase"><a href="{%url 'IntegracionCurricular_list'%}">2400 - INTEGRACIÓN CURRICULAR </a></li>
+        <li style="text-transform:uppercase"><a href="{%url 'Curriculo_progresivo_list'%}">2500 - Currículo progresivo y alineado con los estándares curriculares</a></li>
+        <li style="text-transform:uppercase"><a href="{%url 'Curriculo_propio_list'%}">2600 - Currículo propio</a></li>
+        <li style="text-transform:uppercase"><a href="{%url 'DesarrolloHabilidadesSigloXXI_list'%}">2700 - DESARROLLO DE LAS HABILIDADES DEL SIGLO XXI </a></li>
+        <li style="text-transform:uppercase"><a href="{%url 'Evaluacion_estudiantes_list'%}">2800 - Evaluación de los estudiantes</a></li>
+        <li style="text-transform:uppercase"><a href="{%url 'SostenibiliadCurriculo_list'%}">2900 - SOSTENIBILIDAD - CURRICULO</a></li>
+</ul>
+
 </section>
 
 {% endblock content %}
