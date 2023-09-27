@@ -5,7 +5,7 @@ from ..GeneralModel import GeneralModel
 class PlaneacionInstitucional(GeneralModel):
 
     ITEM_CHOICE = [
-        ("1200","Planeacion Intitucional"),
+        ("1200","PLANEACIÓN INSTITUCIONAL"),
         ("1210","Colaboración entre docentes consistente. La institución auspicia el trabajo colaborativo entre grupos de docentes desde la planeación de unidades y actividades hasta la ejecución en el aula."),
         ("1220","La Integración entre asignaturas es fundamental para el desarrollo académico. La institución considera fundamental la actividad interdisciplinaria para el Programa en Educación STEM."),
         ("1230","La organización considera el tiempo suficiente para los proyectos. Se han hecho modificaciones en los horarios y las intensidades horarias de las asignaturas, así como en el currículo para dar espacio a la ejecución de proyectos en los diferentes grados escolares."),
