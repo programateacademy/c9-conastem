@@ -156,7 +156,7 @@ class UsoDeInfoForm (forms.ModelForm):
 class EquidadForm (forms.ModelForm):
     dep_responsable = forms.CharField(label= 'Departamento responsable', required= True, widget= forms.TextInput(attrs={'placeholder': 'Dirección'}))
     class Meta:
-        model =Equidad.Equidad
+        model = Equidad.Equidad
         exclude = ['created_at', 'updated_at','codigo']
         widgets = {
             'priority' : TextInput(attrs={'class' : 'campo-formulario'}),

@@ -15,14 +15,14 @@
 
     <body>
       <section id="main">
-        <div class="container">
-          <div class="container-items">
+          <div class="container-items2">
             <div class="sections">
               <section id="section1">
                 <h1>Datos del responsable</h1>
                 <div class="form">
                   <form method="POST" class="formulario">
                     {% csrf_token %}
+<<<<<<< HEAD
 
                     <div class="campo-formulario" id="form">
                       
@@ -42,16 +42,30 @@
                       </div>
                     </div>
                     <button id="open" type="submit" class="submit">Enviar</button>
+=======
+                    <div class="campo-formulario" id="form">
+                        <div class="item">
+                            <div>{{form.as_p}}</div>
+                        </div>
+                    </div>
+                    <button id="open" type="submit" class="submit">Guardar</button>
+>>>>>>> 2441bcc4846187ce3adbadeb4511fb44bd40d671
                     <div id="popUp" class="popup-container">
                       <div class="popup-content">
                         <h2>¡Registro exitoso!</h2>
                         <div id="close" class="close">
+<<<<<<< HEAD
+=======
+                          <a href="{%url 'person_responsable_new'%}"><p class="submit">Nuevo Registro</p></a>
+                          <a href="{%url 'responsable_list'%}"><p class="submit">Ver Registros</p></a>
+>>>>>>> 2441bcc4846187ce3adbadeb4511fb44bd40d671
                         </div>
                       </div>
                     </div>
                   </form>
                 </div>
               </section>
+<<<<<<< HEAD
               <section id="section2">
                 <div class="container-sect2">
                   <div class="container2">
@@ -83,9 +97,17 @@
               </section>
             </div>
           </div>
+=======
+            </div>
+>>>>>>> 2441bcc4846187ce3adbadeb4511fb44bd40d671
         </div>
       </section>
       <script type='text/javascript' src="{%static 'pop_up.js'%}"></script>
     </body>
   </html>
+<<<<<<< HEAD
 {% endblock %}
+=======
+
+{% endblock %}
+>>>>>>> 2441bcc4846187ce3adbadeb4511fb44bd40d671
