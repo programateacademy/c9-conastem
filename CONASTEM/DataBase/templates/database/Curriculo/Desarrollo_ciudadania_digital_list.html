@@ -19,6 +19,7 @@
         <tr>
             <th>Código</th>
             <th>Numeral</th>
+            <th>Prioridad<th>
             <th>Departamento Responsable</th>
             <th>Persona Responsable</th>
             <th>Fecha límite de seguimiento</th>
@@ -34,13 +35,14 @@
         <tr>
             <td>{{ DesarrolloCiudadaniaDigital.codigo }}</td>
             <td>{{ DesarrolloCiudadaniaDigital.numeral }}</td>
+            <td>{{ DesarrolloCiudadaniaDigital.priority}}</td>
             <td>{{ DesarrolloCiudadaniaDigital.dep_responsable }}</td>
             <td>{{ DesarrolloCiudadaniaDigital.person_responsable }}</td>
             <td>{{ DesarrolloCiudadaniaDigital.track_date }}</td>
-            <td>{{ DesarrolloCiudadaniaDigital.internal_audiory_date }}</td>
-            <td>{{ DesarrolloCiudadaniaDigital.internal_audirory_obs }}</td>
-            <td>{{ DesarrolloCiudadaniaDigital.external_audiory_date }}</td>
-            <td>{{ DesarrolloCiudadaniaDigital.external_audirory_obs }}</td>
+            <td>{{ DesarrolloCiudadaniaDigital.internal_auditory_date }}</td>
+            <td>{{ DesarrolloCiudadaniaDigital.internal_auditory_obs }}</td>
+            <td>{{ DesarrolloCiudadaniaDigital.external_auditory_date }}</td>
+            <td>{{ DesarrolloCiudadaniaDigital.external_auditory_obs }}</td>
             <td><a href="{{DesarrolloCiudadaniaDigital.evidence}}" traget="_blank">{{DesarrolloCiudadaniaDigital.evidence}}</a></td>
         </tr>
         {% empty %}

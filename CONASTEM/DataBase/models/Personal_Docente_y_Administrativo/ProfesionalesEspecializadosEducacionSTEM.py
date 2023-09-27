@@ -7,7 +7,7 @@ class ProfesionalesEspecializadosEducacionSTEM (GeneralModel):
 
     ITEM_CHOICE = [
         ("4000","PERSONAL DOCENTE Y ADMINISTRATIVO"),
-        ("4100","Profesionales Altamente Calificados Especializados en Edcuación STEM"),
+        ("4100","PROFESIONALES ALTAMENTE CALIFICADOS ESPECIALIZADOS EN EDUCACIÓN STEM"),
         ("4110","Se han adoptado modelos que han sido probados, pilotados y aprobados."),
         ("4120","Todos los docentes tienen una carrera profesional en la institución"),
         ("4130","Los evaluadores del programa tienen experiencia en educación STEM"),

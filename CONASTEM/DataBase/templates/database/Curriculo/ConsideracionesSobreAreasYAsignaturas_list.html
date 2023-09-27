@@ -1,15 +1,27 @@
 {% extends "base_general.html" %}
 
 {% block content %}
-<h1>Consideraciones sobre las áreas y las asignaturas</h1>
+
+{% load static %}
+
+<div class= "titulo">
+    <img src="{%static 'images/tabla_detail/icon_curriculo.svg' %}">
+    <h1>2000 - CURRÍCULO</h1>
+</div>
+<div class="subtitulo">
+    <h2>2100 - CONSIDERACIONES SOBRE LAS ÁREAS Y ASIGNATURAS</h2>
+    <a href="/database/consideraciones-areas-y-asignaturas/new"><img src="{%static 'images/crear_datos.svg'%}" alt="Crear datos"></a>
+</div>
+
 <table>
     <thead>
         <tr>
+            <th>Código</th>
             <th>Numeral</th>
+            <th>Prioridad<th>
             <th>Departamento Responsable</th>
             <th>Persona Responsable</th>
-            <th>Año</th>
-            <th>Fecha límite</th>
+            <th>Fecha límite de seguimiento</th>
             <th>Fecha de auditoria interna</th>
             <th>Comentarios Auditoria Interna</th>
             <th>Fecha de auditoria externa</th>
@@ -18,23 +30,27 @@
         </tr>
     </thead>
     <tbody>
+
         {% for ConsideracionesSobreAreasYAsignaturas in ConsideracionesSobreAreasYAsignaturas_list %}
         <tr>
+            <td>{{ ConsideracionesSobreAreasYAsignaturas.codigo }}</td>
             <td>{{ ConsideracionesSobreAreasYAsignaturas.numeral }}</td>
+            <td>{{ConsideracionesSobreAreasYAsignaturas.priority}}</td>
             <td>{{ ConsideracionesSobreAreasYAsignaturas.dep_responsable }}</td>
             <td>{{ ConsideracionesSobreAreasYAsignaturas.person_responsable }}</td>
-            <td>{{ ConsideracionesSobreAreasYAsignaturas.track_year }}</td>
             <td>{{ ConsideracionesSobreAreasYAsignaturas.track_date }}</td>
-            <td>{{ ConsideracionesSobreAreasYAsignaturas.internal_audiory_date }}</td>
-            <td>{{ ConsideracionesSobreAreasYAsignaturas.internal_audirory_obs }}</td>
-            <td>{{ ConsideracionesSobreAreasYAsignaturas.external_audiory_date }}</td>
-            <td>{{ ConsideracionesSobreAreasYAsignaturas.external_audirory_obs }}</td>
+            <td>{{ ConsideracionesSobreAreasYAsignaturas.internal_auditory_date }}</td>
+            <td>{{ ConsideracionesSobreAreasYAsignaturas.internal_auditory_obs }}</td>
+            <td>{{ ConsideracionesSobreAreasYAsignaturas.external_auditory_date }}</td>
+            <td>{{ ConsideracionesSobreAreasYAsignaturas.external_auditory_obs }}</td>
+            <td><a href="{{ConsideracionesSobreAreasYAsignaturas.evidence }}" target="_blank">{{ConsideracionesSobreAreasYAsignaturas.evidence }}</a></td>
         </tr>
         {% empty %}
         <tr>
-            <td colspan="9">No hay numerales.</td>
+            <td colspan="9">No hay registros.</td>
         </tr>
         {% endfor %}
     </tbody>
 </table>
+
 {% endblock content %}

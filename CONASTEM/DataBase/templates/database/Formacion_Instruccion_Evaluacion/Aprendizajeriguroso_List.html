@@ -4,8 +4,8 @@
 {% load static %}
 
 <div class= "titulo">
-    <img src="{%static 'images/icon_form_instruc_eva.svg' %}">
-    <h1>Formación / Instrucción / Evaluación</h1>
+    <img src="{%static 'images/tabla_detail/icon_for_instrucc_eva.svg' %}">
+    <h1 style="text-transform:uppercase">3000 - Formación / Instrucción / Evaluación</h1>
 </div>
 <div class="subtitulo">
     <h2 style="text-transform:uppercase">3200-APRENDIZAJE RIGUROSO</h2>
@@ -15,8 +15,9 @@
     <table>
        <thead>
           <tr>
-              <th>Codigo</th>
+              <th>Código</th>
               <th>Numeral</th>
+              <th>Prioridad<th>
               <th>Departamento Responsable</th>
               <th>Persona Responsable</th>
               <th>Fecha límite de seguimiento</th>
@@ -32,6 +33,7 @@
       <tr>
         <td>{{aprendizajeriguroso.codigo}}</td>
         <td> {{aprendizajeriguroso.numeral }}</td>
+        <td>{{aprendizajeriguroso.priority}}</td>
         <td> {{aprendizajeriguroso.dep_responsable}}</td>
         <td>{{aprendizajeriguroso.person_responsable}}</td>
         <td>{{aprendizajeriguroso.track_date}}</td>
@@ -43,7 +45,7 @@
   |   </tr>
   {% empty %}
   <tr>
-      <td colstran="9">No hay numerales.</td>
+      <td colstran="9">No hay registros.</td>
   </tr>
   {% endfor %}
 </tbody>

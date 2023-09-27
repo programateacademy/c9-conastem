@@ -1,36 +1,115 @@
-{% extends "base_general.html" %}
+{% extends 'base_general.html' %}
 
-{% load static %}
+{% block content %}
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-{%block content%} 
+      {% load static %}
+      <link rel="stylesheet" href="{% static 'styles/records_detail.css' %}" />
+      <link href="https://fonts.googleapis.com/css2?family=Inter" rel="stylesheet" type="text/css" />
+      <link href="https://fonts.googleapis.com/css2?family=Questrial" rel="stylesheet" type="text/css" />
+    </head>
 
-<h1>Datos de la Institución Educativa</h1>
+    <body>
+      <section id="main">
+        <div class="container">
+          <div class="container-items">
+            <div class="sections">
+              <section id="section1">
+                <h1>Información Institución Educativa</h1>
+                <div class="form">
+                  <form method="POST" class="formulario">
+                    {% csrf_token %}
 
-<form method="POST" class="formulario"> {% csrf_token %}
-
-    <div class="campo-formulario">
-        {{form.as_p}}
-            {% comment %} {{form.institution_name}}
-            {{form.nit}}
-            {{ form.adress }}
-            {{ form.institution_responsable }}
-            {{ form.phone }}
-            {{ form.email }}
-            {{ form.year }}
-
-        <label for="{{ form.institution_model }}">Modelo a aplicar</label> 
-            {{ form.model }} {% endcomment %}
-    </div>
-
-    <button type="submit" class="boton-formulario">Enviar</button>
-
-</form>
-
-<div class="container-2">
-    <img src="{%static 'images/Libro_STEM.svg'%}" alt="Educación STEM Marco de referencia para américa latina"/>
-    <p>Página basada en el libro Educación STEM marco de referencia para América Latina </p>
-    <a href="https://www.conastem.org/marcodereferencia" target="_blank">Descargar libro</a>
-    <a href="">Manual de usuario</a> <!-- Enlazar con la documentación -->
-</div>
-
-{%endblock content%}
+                    <div class="campo-formulario" id="form">
+                      
+                      <div class="item">
+                        <div class="input">{{ form.institution_name }}</div>
+                      </div>
+                      <div class="item">
+                        <div class="input">{{ form.nit }}</div>
+                      </div>
+                      <div class="item">
+                        <div class="input">{{ form.adress }}</div>
+                      </div>
+                      <div class="item">
+                        <div class="input">{{ form.institution_responsable }}</div>
+                      </div>
+                      <div class="item">
+                        <div class="input">{{ form.phone }}</div>
+                      </div>
+                      <div class="item">
+                        <div class="input">{{ form.email }}</div>
+                      </div>
+                      <div class="item">
+                        <div class="input">{{ form.year }}</div>
+                      </div>
+                      <div class="item">
+                        <div class="input">
+                          <label class="text" for="{{ form.institution_model }}">Modelo a aplicar</label>
+                          {{ form.model }}
+                        </div>
+                      </div>
+                    </div>
+                    <button id="open" type="submit" class="submit">Enviar</button>
+<<<<<<< HEAD
+                    <div id="modal" class="modal-container">
+                      <div class="modal-content">
+                        <h2>¡Registro exitoso!</h2>
+                        <a href="{%url 'criterio_list'%}"><p class="modal-item">Continuar</p></a>
+                        <a href="{%url 'responsable_list'%}"><p class="modal-item">Ver registros</p></a>
+                        <div id="close" class="modal-close">
+=======
+                    <div id="popUp" class="popup-container">
+                      <div class="popup-content">
+                        <h2>¡Registro exitoso!</h2>
+                        <div id="close" class="close">
+                          <a href="{%url 'criterio_list'%}"><p class="close1">Continuar</p></a>
+                          <a href="{%url 'responsable_list'%}"><p class="close2">Ver registros</p></a>
+>>>>>>> 950e613d39575046529d0caf1b82c1c95f4cdab5
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </section>
+              <section id="section2">
+                <div class="container-sect2">
+                  <div class="container2">
+                    <img class="img-book" src="{% static 'images/Libro_STEM.svg' %}" alt="Educación STEM Marco de referencia para américa latina" />
+                  </div>
+                  <div class="container3">
+                    <div class="text">
+                      <p>Página basada en el libro Educación STEM marco de referencia para América Latina</p>
+                    </div>
+                    <div class="buttons">
+                      <a href="https://www.conastem.org/marcodereferencia" target="_blank"><button class="button1">Mayor Información</button></a>
+                      <a href="https://genius-botsitos-team.atlassian.net/l/cp/WpHQf6HC" target="_blank">
+                        <button class="cnt" >
+                          <div class="cntt">
+                            <div class="cnt-item">
+                              <div class="c1">
+                                <div class="btn-icon">
+                                  <img class="iconManual" src="{% static 'images/icons/IconManual.svg' %}" alt="Icono Manual" />
+                                </div>
+                              </div>
+                              <div class="button2">Manual de Usuario</div>
+                            </div>
+                          </div>
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+      <script type='text/javascript' src="{%static 'pop_up.js'%}"></script>
+    </body>
+  </html>
+{% endblock %}

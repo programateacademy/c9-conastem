@@ -18,8 +18,8 @@ class Register (models.Model):
     PRIORITY_MODEL_CHOICE = (
         ("Exploratorio", "Exploratorio"),
         ("Introductorio", "Introductorio"),
-        ("Inmerción parcial", "Inmerción parcial"),
-        ("Inmerción completa", "Inmerción completa"),
+        ("Inmersión parcial", "Inmersión parcial"),
+        ("Inmersión completa", "Inmersión completa"),
     )
 
     model = models.CharField (choices=PRIORITY_MODEL_CHOICE, max_length=18)

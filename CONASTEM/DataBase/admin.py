@@ -14,7 +14,7 @@ from .models.Infraestructura.desarrollo_de_equipos_lideres import DesarrolloDeEq
 from .models.Infraestructura.Equidad import Equidad
 from .models.Infraestructura.planeacion_institucional import PlaneacionInstitucional
 from .models.Infraestructura.recursos_tecnologicos import RecursosTecnologicos
-from .models.Infraestructura.sostenibilidad import Sostenibilidad
+from .models.Infraestructura.sostenibilidad_infraestructura import Sostenibilidad
 from .models.Infraestructura.uso_de_informacion import UsoDeInformacion
 
 # CURRICULO
@@ -31,10 +31,10 @@ from .models.Formacion_Instruccion_Evaluacion.ApredizajeRiguroso import Aprendiz
 from .models.Formacion_Instruccion_Evaluacion.AprendizajeExtendido import AprendizajeExtendido
 from .models.Formacion_Instruccion_Evaluacion.EstrategiasFormativas import EstrategiasFormativas
 from .models.Formacion_Instruccion_Evaluacion.PlaneacionyCreaciondeActividades import PlaneacionyCreaciondeActividades
-# from .models.Formacion_Instruccion_Evaluacion.EducacionSTEM import EducacionStemIntegrada
+from .models.Formacion_Instruccion_Evaluacion.EducacionSTEM import EducacionSTEMIntegrada
 from .models.Formacion_Instruccion_Evaluacion.TecnologiaFormacionInstruccion import TecnologiaFormacion
 from .models.Formacion_Instruccion_Evaluacion.EleccionCarrera import EleccionCarrera
-from .models.Formacion_Instruccion_Evaluacion.Sostenibilidad import SostenibilidadFormacionInstruccion
+from .models.Formacion_Instruccion_Evaluacion.SostenibilidadFormacionInstruccion import SostenibilidadFormacionInstruccion
 
 # PERSONAL DOCENTE Y ADMINISTRATIVO
 from .models.Personal_Docente_y_Administrativo.ProfesionalesEspecializadosEducacionSTEM import ProfesionalesEspecializadosEducacionSTEM
@@ -78,7 +78,7 @@ admin.site.register(AprendizajeExtendido)
 admin.site.register(AprendizajeRiguroso)
 admin.site.register(PlaneacionyCreaciondeActividades)
 admin.site.register(EstrategiasFormativas)
-# admin.site.register(EducacionStemIntegrada)
+admin.site.register(EducacionSTEMIntegrada)
 admin.site.register(TecnologiaFormacion)
 admin.site.register(EleccionCarrera)
 admin.site.register(SostenibilidadFormacionInstruccion)

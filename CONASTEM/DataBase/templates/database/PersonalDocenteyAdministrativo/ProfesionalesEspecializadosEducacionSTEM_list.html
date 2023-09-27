@@ -10,7 +10,7 @@
 </div>
 <div class="subtitulo">
     <h2 style="text-transform: uppercase">4100-PROFESIONALES ALTAMENTE CALIFICADOS ESPECIALIZADOS EN EDUCACIÓN STEM</h2>
-    <a href="/database/profesionalesespecializadoseducacionSTEM/new">
+    <a href="/database/profesional-calificado-educacion-stem/new">
         <img src="{% static 'images/crear_datos.svg' %}" alt="Crear datos">
     </a>
 </div>
@@ -20,6 +20,7 @@
             <tr>
                 <th>Código</th>
                 <th>Numeral</th>
+                <th>Prioridad<th>
                 <th>Departamento Responsable</th>
                 <th>Persona Responsable</th>
                 <th>Fecha límite de seguimiento</th>
@@ -31,28 +32,25 @@
             </tr>
         </thead>
         <tbody>
-            {% for profesionalesespecializadoseducacionSTEM in ProfesionalesEspecializadosEducacionSTEM_List %}
-            <tr>
-                <td>{{ profesionalesespecializadoseducacionSTEM.codigo }}</td>
-                <td>{{ profesionalesespecializadoseducacionSTEM.numeral }}</td>
-                <td>{{ profesionalesespecializadoseducacionSTEM.dep_responsable }}</td>
-                <td>{{ profesionalesespecializadoseducacionSTEM.person_responsable }}</td>
-                <td>{{ profesionalesespecializadoseducacionSTEM.track_date }}</td>
-                <td>{{ profesionalesespecializadoseducacionSTEM.internal_auditory_date }}</td>
-                <td>{{ profesionalesespecializadoseducacionSTEM.internal_auditory_obs }}</td>
-                <td>{{ profesionalesespecializadoseducacionSTEM.external_auditory_date }}</td>
-                <td>{{ profesionalesespecializadoseducacionSTEM.external_auditory_obs }}</td>
-                <td>
-                    <a href="{{ profesionalesespecializadoseducacionSTEM.evidence }}" target="_blank">
-                        {{ profesionalesespecializadoseducacionSTEM.evidence }}
-                    </a>
-                </td>
-            </tr>
-            {% empty %}
-            <tr>
-                <td colspan="9">No hay numerales.</td>
-            </tr>
-            {% endfor %}
+        {% for profesionalesespecializadoseducacionSTEM in ProfesionalesEspecializadosEducacionSTEM_List %}
+        <tr>
+        <td>{{profesionalesespecializadoseducacionSTEM.codigo}}</td>
+        <td>{{profesionalesespecializadoseducacionSTEM.numeral}}</td>
+        <td>{{profesionalesespecializadoseducacionSTEM.priority}}</td>
+        <td>{{profesionalesespecializadoseducacionSTEM.dep_responsable}}</td>
+        <td>{{profesionalesespecializadoseducacionSTEM.person_responsable}}</td>
+        <td>{{profesionalesespecializadoseducacionSTEM.track_date}}</td>
+        <td>{{profesionalesespecializadoseducacionSTEM.internal_auditory_date}}</td>
+        <td>{{profesionalesespecializadoseducacionSTEM.internal_auditory_obs}}</td>
+        <td>{{profesionalesespecializadoseducacionSTEM.external_auditory_date}}</td>
+        <td>{{profesionalesespecializadoseducacionSTEM.external_auditory_obs}}</td>
+        <td><a href="{{profesionalesespecializadoseducacionSTEM.evidence}}" target="_blank">{{profesionalesespecializadoseducacionSTEM.evidence }}</a></td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colstran="9">No hay registros.</td>
+        </tr>
+        {% endfor %}
         </tbody>
     </table>
 </div>
