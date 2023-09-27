@@ -1,21 +1,32 @@
 {% extends "base_general.html" %}
+
+
+
 {% load static %}
-
-<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
-
 {% block content %}
-<div class="titulo">
+
+<link rel="stylesheet" type="text/css" href="{% static 'styles/styles.css' %}">
+
+<body>
+    <div class="fondo">
+<div class= "margen-contenedor">
+<div class= "titulo">
     <img src="{% static 'images/tabla_detail/icon_docente_admin.svg' %}">
     <h1>4000-PERSONAL DOCENTE Y ADMINISTRATIVO.</h1>
 </div>
 <div class="subtitulo">
-    <h2 style="text-transform: uppercase">4100-PROFESIONALES ALTAMENTE CALIFICADOS ESPECIALIZADOS EN EDUCACIÓN STEM</h2>
+    <div class="titulo-texto">
+        <h2 style="text-transform: uppercase">4100-PROFESIONALES ALTAMENTE CALIFICADOS ESPECIALIZADOS EN EDUCACIÓN STEM</h2>
+    </div>
+    <div class= "imagen-crear-datos">
     <a href="/database/profesional-calificado-educacion-stem/new">
         <img src="{% static 'images/crear_datos.svg' %}" alt="Crear datos">
     </a>
+    </div>
 </div>
+<hr>
 <div class="tabla-contenedor">
-    <table>
+    <table class="celdas">
         <thead>
             <tr>
                 <th>Código</th>
@@ -54,4 +65,7 @@
         </tbody>
     </table>
 </div>
+</div>
+</div>
+</body>
 {% endblock %}
