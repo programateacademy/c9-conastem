@@ -5,7 +5,7 @@ from ..GeneralModel import GeneralModel
 class EstrategiasFormativas (GeneralModel):
 
     ITEM_CHOICE = [
-        ("3600","Estrategias formativas"),
+        ("3600","ESTRATEGIAS FORMATIVAS"),
       	("3610","Los estudiantes utilizan el proceso de diseño en ingeniería en la mayor parte de las actividades escolares y por lo tanto sus procesos formativos se dan siempre en equipo. Todo esto en la búsqueda de la solución de problemas (en ingeniería) y de respuestas (en ciencias)."),
 		("3620","El docente sirve como facilitador a través de preguntas, las escucha y hace de guía de los estudiantes en el camino de su aprendizaje."),
 		("3630","Los profesores diseñan actividades basándose en las necesidades de los proyectos de los estudiantes."),

@@ -5,7 +5,7 @@ from ..GeneralModel import GeneralModel
 class AprendizajeExtendido (GeneralModel):
 
     ITEM_CHOICE = [
-        ("3800","Aprendizaje extendido"),
+        ("3800","APRENDIZAJE EXTENDIDO"),
 		("3810","Las experiencias STEM están directamente conectadas con el aprendizaje en clase."),
 		("3820","El aprendizaje extendido incluye experiencias de campo y aprendizaje auténtico y contextual."),
 		("3830","Existen oportunidades para que los estudiantes mayores participen en pasantías después de la jornada de estudio o los fines de semana."),

@@ -60,7 +60,7 @@ def index(request):
             register = form.save (commit=False)
             register.created_date = timezone.now()
             register.save()
-            return HttpResponseRedirect()
+            return HttpResponseRedirect('/database/home')
     else:
         form = FormRegister ()
     return render(request, 'registro_new.html', {'form': form})

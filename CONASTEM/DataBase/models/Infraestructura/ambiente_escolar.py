@@ -6,7 +6,7 @@ from ..GeneralModel import GeneralModel
 class AmbienteEscolar (GeneralModel):
 
     ITEM_CHOICE = [
-        ("1300","Ambiente escolar"),
+        ("1300","AMBIENTE ESCOLAR"),
         ("1310","Aulas colaborativas donde los docentes comparten la autoridad con los estudiantes de maneras muy específicas."),
         ("1320","Aprendizaje Virtual como parte del desarrollo de la auto gestión y el auto desarrollo."),
         ("1321","Los estudiantes deben desenvolverse bien en el trabajo en equipo de forma virtual."),
