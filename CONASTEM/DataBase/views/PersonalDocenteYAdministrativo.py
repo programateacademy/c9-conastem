@@ -26,7 +26,14 @@ class ProfesionalesEspecializadosEducacionSTEMListView (generic.ListView):
     model=ProfesionalesEspecializadosEducacionSTEM
     context_object_name='ProfesionalesEspecializadosEducacionSTEM_List'
     template_name='database/PersonalDocenteyAdministrativo/ProfesionalesEspecializadosEducacionSTEM_List.html'
+<<<<<<< HEAD
     ordering = ['codigo']
+=======
+<<<<<<< HEAD
+    ordering = ['codigo']
+=======
+>>>>>>> 2441bcc4846187ce3adbadeb4511fb44bd40d671
+>>>>>>> 56fe2f96fd4d9d4a954b1579bf552789ce199d36
     def get_queryset(self):
         return ProfesionalesEspecializadosEducacionSTEM.objects.all().order_by('codigo')
 

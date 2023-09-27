@@ -7,12 +7,9 @@
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-      {% load static %}
-      <link rel="stylesheet" href="{% static 'styles/records_detail.css' %}" />
-      <link href="https://fonts.googleapis.com/css2?family=Inter" rel="stylesheet" type="text/css" />
-      <link href="https://fonts.googleapis.com/css2?family=Questrial" rel="stylesheet" type="text/css" />
-    </head>
+{% load static %}
 
+<<<<<<< HEAD
     <body>
       <section id="main">
           <div class="container-items2">
@@ -111,3 +108,20 @@
 
 {% endblock %}
 >>>>>>> 2441bcc4846187ce3adbadeb4511fb44bd40d671
+=======
+{%block content%} 
+
+<h1>Datos del responsable</h1>
+
+<form method="POST" class="formulario"> {% csrf_token %}
+
+    <div class="campo-formulario">
+        {{form.as_p}}
+    </div>
+
+    <button type="submit" class="boton-formulario">Guardar</button>
+
+</form>
+
+{% endblock %}
+>>>>>>> 56fe2f96fd4d9d4a954b1579bf552789ce199d36
