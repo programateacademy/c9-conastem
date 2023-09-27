@@ -37,7 +37,6 @@
                     <p>No se encontraron registros</p>
                   {% endif %}
 
-                  <div>
                     <a href="{% url 'person_responsable_new' %}">
                       <button class="submit">
                         <div class="cntt">
@@ -47,7 +46,14 @@
                         </div>
                       </button>
                     </a>
-                  </div>
+                    
+                    <a href="{% url 'responsable_list' %}">
+                        <button class="ccnt">
+                              <div class="cnt-item">
+                                <div class="text">Atrás</div>
+                              </div>
+                        </button>               
+                    </a>
                 </div>
               </div>
             </section>

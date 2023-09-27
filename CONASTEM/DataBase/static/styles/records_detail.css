@@ -407,6 +407,17 @@ label {
     display: inline-flex;
 }
 
+
+.ccnt {
+    width: 100%;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50px;
+    border: 1.50px #E51954 solid;
+    justify-content: space-between;
+    align-items: center;
+    display: inline-flex;
+}
 .cntt {
     padding: 3px 10px;
     justify-content: center;

@@ -3,8 +3,8 @@
 {%block content%}
 
 <div class= "lista"> 
+    <h1> Información de la institución {{register_detail}} </h1>
     <ul>
-        <h1> Información de la institución {{register_detail}} </h1>
 
         <li>Nombre: {{register_detail.institution_name}} </li>
         <li>NIT: {{register_detail.nit}} </li>
@@ -17,7 +17,7 @@
     </ul>
 
 </div>  
-<div>
+<div class="submit">
     <a href="{%url 'register_list'%}"> Atrás </a>
 </div>  
 

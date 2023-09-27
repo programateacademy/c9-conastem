@@ -18,18 +18,18 @@
         <div class="container-items2">
           <div class="sections">
             <section id="section1">
-              <h1>Información de la institución {{ responsable_detail }}</h1>
+              <h1>Responsable {{ responsable_detail }}</h1>
               <div class="form">
                 <div class="campo-formulario" id="form">
-                  <div class="lista">
                     <ul>
                       <li>Nombre: {{ responsable_detail.first_name }} {{ responsable_detail.last_name }}</li>
                       <li>Teléfono: {{ responsable_detail.phone_number }}</li>
                       <li>Correo electrónico: {{ responsable_detail.email }}</li>
                     </ul>
-                  </div>
                   <div>
-                    <a href="{% url 'responsable_list' %}">Atrás</a>
+                    <a href="{% url 'responsable_list' %}">
+                        <button class="submit">Atrás</button>
+                    </a>
                   </div>
                 </div>
               </div>
