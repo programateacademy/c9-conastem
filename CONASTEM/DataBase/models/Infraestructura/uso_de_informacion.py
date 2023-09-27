@@ -5,7 +5,7 @@ from ..GeneralModel import GeneralModel
 class UsoDeInformacion(GeneralModel):
 
     ITEM_CHOICE = [
-        ("1500","Uso de informacion"),
+        ("1500","USO DE LA INFORMACIÓN"),
         ("1510","Uso de la información de pruebas estandarizadas estatales, además de otras evaluaciones."),
         ("1520","Seguimiento riguroso a la información de las evaluaciones formativas."),
         ("1530","Hay un proyecto de seguimiento del avance del programa con los estudiantes."),

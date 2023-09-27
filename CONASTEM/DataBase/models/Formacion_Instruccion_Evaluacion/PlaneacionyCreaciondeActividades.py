@@ -5,7 +5,7 @@ from ..GeneralModel import GeneralModel
 class PlaneacionyCreaciondeActividades (GeneralModel):
 
     ITEM_CHOICE = [
-        ("3300","Planeación y creación de actividades"),
+        ("3300","PLANEACIÓN Y CREACIÓN DE ACTIVIDADES"),
         ("3310","Las actividades planeadas y diseñadas incluyen métodos de indagación e investigación."),
         ("3320","Las actividades planeadas incluyen modelos explicativos y pensamiento crítico."),
         ("3330","Los estudiantes participarán en actividades que incluyen problemas auténticos del mundo real"),

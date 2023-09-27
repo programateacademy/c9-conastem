@@ -4,7 +4,7 @@ from ..GeneralModel import GeneralModel
 class Sostenibilidad(GeneralModel):
 
     ITEM_CHOICE = [
-        ("1700","Sostenibilidad-Infraestructura"),
+        ("1700","SOSTENIBILIDAD-INFRAESTRUCTURA"),
         ("1710","Se cuenta con un plan de financiación estatal o privado que aporte al programa y cubra por lo menos cinco años del proyecto."),
         ("1720","El equipo líder cuenta con condiciones laborales y de infraestructura específicas que garantizan la proyección del programa a través de los años."),
         ("1730","El equipo líder asegura que todas las partes interesadas tengan oportunidades continuas para acceder a la información y aprender sobre la implementación de STEM."),

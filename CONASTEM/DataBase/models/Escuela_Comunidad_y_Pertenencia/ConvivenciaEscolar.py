@@ -5,7 +5,7 @@ from ..GeneralModel import GeneralModel
 class ConvivenciaEscolar (GeneralModel):
 
     ITEM_CHOICE = [
-        ("5300","Convivencia Escolar"),
+        ("5300","CONVIVENCIA ESCOLAR"),
         ("5310","Los estudiantes se tratan con confianza y respeto."),
         ("5320","El docente facilita un ambiente positivo de aprendizaje social y emocional."),
         ("5330","El personal del colegio enfatiza en el código de conducta y los valores."),

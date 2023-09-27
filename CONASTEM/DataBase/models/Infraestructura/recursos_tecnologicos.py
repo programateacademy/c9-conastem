@@ -5,7 +5,7 @@ from ..GeneralModel import GeneralModel
 class RecursosTecnologicos(GeneralModel):
 
     ITEM_CHOICE = [
-        ("1400","Recursos Tecnologicos"),
+        ("1400","RECURSOS TECNOLOGICOS"),
         ("1410","Las necesidades tecnológicas de los estudiantes y el personal se identifican y abordan como parte del diseño del programa"),
         ("1420","Las compras de tecnología están completas o incluidas en un presupuesto futuro."),
         ("1430","Los profesores y los estudiantes tienen acceso a la solicitud de mantenimiento o apoyo para el uso de la tecnología de instrucción en el aula."),

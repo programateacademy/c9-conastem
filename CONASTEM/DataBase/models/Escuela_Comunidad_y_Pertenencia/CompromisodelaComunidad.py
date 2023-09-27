@@ -6,8 +6,8 @@ from ..GeneralModel import GeneralModel
 class CompromisodelaComunidad (GeneralModel):
 
     ITEM_CHOICE = [
-        ("5000","Escuela, Comunidad y Pertenencia"),
-        ("5100","Compromiso de la comunidad"),
+        ("5000","ESCUELA, COMUNIDAD Y PERTENENCIA"),
+        ("5100","COMPROMISO DE LA COMUNIDAD"),
         ("5110","Los miembros de la comunidad son socios en el liderazgo del Programa en Educación STEM, evaluación de necesidades y guía de ayuda para la institución."),
         ("5120","El programa ha incluido a diversos socios para guiar el trabajo en la institución."),
         ("5130","Existen oportunidades para presentar el trabajo de los estudiantes a través de eventos comunitarios a través de exposiciones en el sitio o en línea."),

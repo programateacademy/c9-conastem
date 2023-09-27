@@ -21,7 +21,6 @@
         </a>
     </div>
 </div>
-<hr>
 <div class="tabla-contenedor">
     <table class="celdas">
         <thead>
@@ -43,15 +42,15 @@
             {% for apoyopedagogico in ApoyoPedagogico_List  %}
             <tr>
                 <td>{{apoyopedagogico.codigo}}</td>
-                <td>{{apoyopedagogico.numeral}}</td>
-                <td>{{apoyopedagogico.priority}}</td>
-                <td>{{apoyopedagogico.dep_responsable}}</td>
-                <td>{{apoyopedagogico.person_responsable}}</td>
-                <td>{{apoyopedagogico.track_date}}</td>
-                <td>{{apoyopedagogico.internal_auditory_date}}</td>
-                <td>{{apoyopedagogico.internal_auditory_obs}}</td>
-                <td>{{apoyopedagogico.external_auditory_date}}</td>
-                <td>{{apoyopedagogico.external_auditory_obs}}</td>
+                <td>{{apoyopedagogico.numeral}}</h1>
+                <td>{{apoyopedagogico.priority}}</h1>
+                <td>{{apoyopedagogico.dep_responsable}}</p>
+                <td>{{apoyopedagogico.person_responsable}}</p>
+                <td>{{apoyopedagogico.track_date}}</p>
+                <td>{{apoyopedagogico.internal_auditory_date}}</p>
+                <td>{{apoyopedagogico.internal_auditory_obs}}</p>
+                <td>{{apoyopedagogico.external_auditory_date}}</p>
+                <td>{{apoyopedagogico.external_auditory_obs}}</p>
                 <td><a href="{{apoyopedagogico.evidence}}" target="_blank">{{apoyopedagogico.evidence }}</a></td>
             </tr>
         {% empty %}
@@ -60,7 +59,7 @@
         </tr>
         {% endfor %}
         </tbody>
-        </table>
+    </table>
 </div>
 </div>
 </div>
