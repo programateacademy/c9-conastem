@@ -180,3 +180,98 @@ hr {
     margin-top: 0;
 }
 
+
+.table-contenedor {
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+table {
+    width: 100%;
+    table-layout: auto;
+    border-collapse: collapse;
+}
+
+table td, table th {
+    border: 2px solid #FBBB3D;
+    padding: 8px;
+    text-align: left;
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.margen-contenedor {
+    border-radius: 40px;
+    width: 100%;
+    background-color: #fffbe9;
+    padding: 0 2rem;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+hr {
+    margin: 1rem 0;
+}
+
+
+@media (max-width: 768px) {
+    .margen-contenedor {
+        width: 75vh;
+        height: 80vw;
+        margin-left: -10rem;
+    }
+
+    h1 {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+
+    .tabla-contenedor {
+        padding: 1rem;
+    }
+
+    .tabla-contenedor {
+        overflow-x: auto;
+        max-width: 90%; 
+        max-height: 300px; 
+        white-space: nowrap; 
+    }
+    
+    .tabla-scroll {
+        overflow-x: auto;
+    }
+    
+    table {
+        width: auto;
+        table-layout: auto;
+        border-collapse: collapse;
+        white-space: nowrap; /* Evita que el texto se divida en celdas */
+        width: 100%;
+    }
+    
+    table td, table th {
+        border: 2px solid #FBBB3D;
+        padding: 6px;
+        text-align: left;
+        white-space: wrap; /* Evita que el texto se divida en celdas */
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    div.imagen-crear-datos {
+        display: flex;
+        align-items:end;
+        margin-bottom: -9px;
+    }
+}
