@@ -1,8 +1,9 @@
 {% extends "base_general.html" %}
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
-
 {% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'styles/styles.css' %}">
+
+
 <body>
     <div class="fondo">
 <div class= "margen-contenedor">
@@ -19,6 +20,7 @@
     </div>
 </div>
 <div class="tabla-contenedor">
+    <div class="tabla-scroll">
     <table class="celdas">
         <thead>
             <tr>
@@ -57,6 +59,7 @@
         {% endfor %}
         </tbody>
     </table>
+    </div>
 </div>
 </div>
 </div>
