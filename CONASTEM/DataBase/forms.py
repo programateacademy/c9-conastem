@@ -78,7 +78,11 @@ class FormPersonResponsable (forms.ModelForm):
         model = PersonResponsable
         fields = ['first_name', 'last_name', 'phone_number', 'email']
         widgets = {
-            # 'phone_number' : TextInput(attrs={'class' : 'campo-formulario'})
+            'name': TextInput(attrs={'class' : 'campo-formulario'}),
+            'lastname': TextInput(attrs={'class' : 'campo-formulario'}),
+            'phone_number' : TextInput(attrs={'class' : 'campo-formulario'}),
+            'email' : TextInput(attrs={'class' : 'campo-formulario'}),
+            
         }
 
 # INFRAESTRUCTURA
@@ -152,7 +156,7 @@ class UsoDeInfoForm (forms.ModelForm):
 class EquidadForm (forms.ModelForm):
     dep_responsable = forms.CharField(label= 'Departamento responsable', required= True, widget= forms.TextInput(attrs={'placeholder': 'Dirección'}))
     class Meta:
-        model = Equidad.Equidad
+        model =Equidad.Equidad
         exclude = ['created_at', 'updated_at','codigo']
         widgets = {
             'priority' : TextInput(attrs={'class' : 'campo-formulario'}),

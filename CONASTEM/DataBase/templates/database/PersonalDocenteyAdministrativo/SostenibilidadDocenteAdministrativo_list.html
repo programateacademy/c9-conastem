@@ -19,6 +19,7 @@
             <tr>
                 <th>Código</th>
                 <th>Numeral</th>
+                <th>Prioridad<th>
                 <th>Departamento Responsable</th>
                 <th>Persona Responsable</th>
                 <th>Fecha límite de seguimiento</th>
@@ -33,14 +34,15 @@
         {% for sostenibilidaddocenteadministrativo in SostenibilidadDocenteAdministrativo_List %}
         <tr>
         <td>{{sostenibilidaddocenteadministrativo.codigo}}</td>
-        <td>{{sostenibilidaddocenteadministrativo.numeral}}</h1>
-        <td>{{sostenibilidaddocenteadministrativo.dep_responsable}}</p>
-        <td>{{sostenibilidaddocenteadministrativo.person_responsable}}</p>
-        <td>{{sostenibilidaddocenteadministrativo.track_date}}</p>
-        <td>{{sostenibilidaddocenteadministrativo.internal_auditory_date}}</p>
-        <td>{{sostenibilidaddocenteadministrativo.internal_auditory_obs}}</p>
-        <td>{{sostenibilidaddocenteadministrativo.external_auditory_date}}</p>
-        <td>{{sostenibilidaddocenteadministrativo.external_auditory_obs}}</p>
+        <td>{{sostenibilidaddocenteadministrativo.numeral}}</td>
+        <td>{{sostenibilidaddocenteadministrativo.priority}}</td>
+        <td>{{sostenibilidaddocenteadministrativo.dep_responsable}}</td>
+        <td>{{sostenibilidaddocenteadministrativo.person_responsable}}</td>
+        <td>{{sostenibilidaddocenteadministrativo.track_date}}</td>
+        <td>{{sostenibilidaddocenteadministrativo.internal_auditory_date}}</td>
+        <td>{{sostenibilidaddocenteadministrativo.internal_auditory_obs}}</td>
+        <td>{{sostenibilidaddocenteadministrativo.external_auditory_date}}</td>
+        <td>{{sostenibilidaddocenteadministrativo.external_auditory_obs}}</td>
         <td><a href="{{sostenibilidaddocenteadministrativo.evidence }}" target="_blank">{{sostenibilidaddocenteadministrativo.evidence }}</a></td>
         </tr>
         {% empty %}
