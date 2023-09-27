@@ -90,7 +90,7 @@ urlpatterns += [
 
 urlpatterns += [
     # CURRICULO
-    path("curriculo/", CurriculoListView.as_view(), name="Curriculo_list"),
+    path("curriculo/", CurriculoListView.as_view(), name="Curriculo"),
     # 2.1 CONSIDERACIONES SOBRE LAS ÁREAS Y LAS ASIGNATURAS
     path("consideraciones-areas-y-asignaturas/", ConsideracionesSobreAreasYAsignaturasListView.as_view(), name="ConsideracionesSobreAreasYAsignaturas_list"),
     path("consideraciones-areas-y-asignaturas/new", Curriculo.ConsideracionesSobreAreasYAsignaturas_new, name="ConsideracionesSobreAreasYAsignaturas_new"),

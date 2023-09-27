@@ -1,6 +1,4 @@
-const icons = document.getElementById('icons');
-const items = document.getElementById('items');
-
+const icon = document.getElementById('icon');
 
 // Agrega un event listener al SVG para detectar clics
 icons.addEventListener('click', function() {
