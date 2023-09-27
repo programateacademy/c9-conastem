@@ -7,7 +7,7 @@ from .models.Person_Responsable import PersonResponsable
 # INFRAESTRUCTURA
 from .models.Infraestructura import ambiente_escolar
 from .models.Infraestructura import desarrollo_de_equipos_lideres
-from .models.Infraestructura import Equidad
+from .models.Infraestructura import equidad
 from .models.Infraestructura import planeacion_institucional
 from .models.Infraestructura import recursos_tecnologicos
 from .models.Infraestructura import sostenibilidad_infraestructura
@@ -156,7 +156,7 @@ class UsoDeInfoForm (forms.ModelForm):
 class EquidadForm (forms.ModelForm):
     dep_responsable = forms.CharField(label= 'Departamento responsable', required= True, widget= forms.TextInput(attrs={'placeholder': 'Dirección'}))
     class Meta:
-        model = Equidad.Equidad
+        model = equidad.Equidad
         exclude = ['created_at', 'updated_at','codigo']
         widgets = {
             'priority' : TextInput(attrs={'class' : 'campo-formulario'}),
