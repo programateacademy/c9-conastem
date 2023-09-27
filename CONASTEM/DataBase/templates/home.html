@@ -1,9 +1,14 @@
 {% extends "base_general.html" %}
 
-{% load static %}
 
 {%block content%}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'styles/home.css' %}">
 
+
+<div class= "fondo-home">
+<div class="todo-criterios">
+<div class= "contenedor-criterios">
 <div class= "container-1">
     <h1>Criterios del Marco de Referencia en la Educación STEM</h1>
     <p>Por medio de los siguientes criterios del marco de referencia, podrás realizar;
@@ -22,12 +27,17 @@
         <li><a href="{% url 'Escuelacomunidadypertenencia' %}"><img src="{%static 'images/tabla_detail/icon_escu_comu_perten.svg'%}"><br>5000 <br> ESCUELA COMUNIDAD Y PERTENENCIA</a></li>
     </ul>
 </section>
+</div>
 
 <div class="container-2">
     <img src="{%static 'images/Libro_STEM.svg'%}" alt="Educación STEM Marco de referencia para américa latina"/>
-    <p>Página basada en el libro Educación STEM marco de referencia para América Latina </p>
+    <div class="botones">  
     <a href="https://www.conastem.org/marcodereferencia" target="_blank">Descargar libro</a>
     <a href="">Manual de usuario</a> <!-- Enlazar con la documentación -->
+    </div>
 </div>
+</div>
+</div>
+
 
 {%endblock content%}

@@ -1,103 +1,110 @@
 {% extends "base_general.html" %}
 
-{% load static %}
 
 {%block content%}
 
-<link rel="stylesheet" type="text/css" href="{% static 'pop_up_styles.css' %}" />
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/pop_up.css' %}" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Questrial" rel="stylesheet" type="text/css" />
+</head>
 
-<form method="POST" class="formulario"> {% csrf_token %}
-    <h2>{{ titulo }}</h2>
+<body>
 
-    <section>
+    <form method="POST" class="formulario"> {% csrf_token %}
+        <h2>{{ titulo }}</h2>
 
-        <div class="campo-formulario">
-            <label for="{{numeral}}">Numeral</label>
+        <section>
+
+            <div class="campo-formulario">
+                <label for="{{numeral}}">Numeral</label>
                 {{ form_new.numeral }}
-        </div>
-        
-        <div class="campo-formulario">
-            <label for="{{priority}}">Prioridad</label>
+            </div>
+
+            <div class="campo-formulario">
+                <label for="{{priority}}">Prioridad</label>
                 {{form_new.priority}}
-        </div>
-    
-        
-        <div class="campo-formulario">
-            <label for="{{ person_responsable }}">Responsable</label>
+            </div>
+
+
+            <div class="campo-formulario">
+                <label for="{{ person_responsable }}">Responsable</label>
                 {{ form_new.person_responsable }}
-            <a href="{%url 'person_responsable_new'%}" target="_blank"><img src="{%static 'images/agregar.svg'%}"></a>
-        </div>
-    
-        <div class="campo-formulario">
-            <label for="{{ dep_responsable}}">Departamento responsable</label>
+                <a href="{%url 'person_responsable_new'%}" target="_blank"><img
+                        src="{%static 'images/agregar.svg'%}"></a>
+            </div>
+
+            <div class="campo-formulario">
+                <label for="{{ dep_responsable}}">Departamento responsable</label>
                 {{ form_new.dep_responsable }}
-        </div>
-    
-        <div class="campo-formulario">
-            <label for="{{ track_date }}">Fecha límite de seguimiento</label>
+            </div>
+
+            <div class="campo-formulario">
+                <label for="{{ track_date }}">Fecha límite de seguimiento</label>
                 {{ form_new.track_date }}
-        </div>
+            </div>
 
-    </section>
+        </section>
 
-    <section>
-        <h2>Auditoría interna</h2>
+        <section>
+            <h2>Auditoría interna</h2>
 
-        <div class="campo-formulario">
-            <label for="{{ internal_auditory_date }}">Año de registro</label>
+            <div class="campo-formulario">
+                <label for="{{ internal_auditory_date }}">Año de registro</label>
                 {{ form_new.internal_auditory_date }}
-        </div>
-    
-        <div class="campo-formulario">
-            <label for="{{ internal_auditory_obs }}">Observación</label>
+            </div>
+
+            <div class="campo-formulario">
+                <label for="{{ internal_auditory_obs }}">Observación</label>
                 {{ form_new.internal_auditory_obs }}
-        </div>
+            </div>
 
-    </section>
-    
-    <section>
+        </section>
 
-        <h2>Auditoría externa</h2>
-    
-        <div class="campo-formulario">
-            <label for="{{ external_auditory_date }}">Año de registro</label>
+        <section>
+
+            <h2>Auditoría externa</h2>
+
+            <div class="campo-formulario">
+                <label for="{{ external_auditory_date }}">Año de registro</label>
                 {{ form_new.external_auditory_date }}
-        </div>
-    
-        <div class="campo-formulario">
-            <label for="{{ external_auditory_obs }}">Observación</label>
+            </div>
+
+            <div class="campo-formulario">
+                <label for="{{ external_auditory_obs }}">Observación</label>
                 {{ form_new.external_auditory_obs }}
-        </div>
+            </div>
 
-    </section>
+        </section>
 
-    <section>
-        <h2>Evidencias</h2>
-        <div class="campo-formulario">
-            <label for="{{ evidence }}">Adjunta link de evidencia</label>
+        <section>
+            <h2>Evidencias</h2>
+            <div class="campo-formulario">
+                <label for="{{ evidence }}">Adjunta link de evidencia</label>
                 {{ form_new.evidence }}
+            </div>
+        </section>
+
+        <button id="open" type="submit" class="boton-formulario">Enviar</button>
+
+        <div id="popUp" class="popup-container">
+            <div id="close" class="popup-content">
+                <h2>¡Registro exitoso!</h2>
+            </div>
         </div>
-    </section>
-    
-    <button type="submit" class="boton-formulario">Enviar</button>
 
-    {% comment %} <a href="#0" class="cd-popup-trigger">View Pop-up</a>
+    </form>
+    <script type='text/javascript' src="{%static 'pop_up.js'%}"></script>
+</body>
 
-<div class="cd-popup" role="alert">
-	<div class="cd-popup-container">
-		<p>Are you sure you want to delete this element?</p>
-		<ul class="cd-buttons">
-			<li><a href="#0">Yes</a></li>
-			<li><a href="#0">No</a></li>
-		</ul>
-		<a href="#0" class="cd-popup-close img-replace">Close</a>
-	</div> <!-- cd-popup-container -->
-</div> <!-- cd-popup -->
-
-<script type="text/javascript" src="{% static 'pop_up.js' %}"></script> {% endcomment %}
-
-</form>
+</html>
 
 
 {%endblock content%}
