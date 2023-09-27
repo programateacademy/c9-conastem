@@ -148,7 +148,7 @@
 
 
 h1 {
-    padding: 15px;
+    padding: 0  15px 15px 15px;
     width: auto;
     text-align: center;
     color: #E51954;
@@ -195,7 +195,7 @@ h1 {
 
 input,
 select {
-    width: 70%;
+    width: 80%;
     border-radius: 50px;
     font-size: 13px;
     font-family: Questrial;
@@ -231,6 +231,21 @@ select {
     justify-content: center;
     align-items: center;
     gap: 10px;
+}
+
+
+.submit-fucsia {
+    text-align: center;
+    color: white;
+    font-size: 13px;
+    font-family: Inter;
+    font-weight: 500;
+    word-wrap: break-word;
+    padding: 5px 20px;
+    background: #E51954;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Pop up */
@@ -427,6 +442,7 @@ label {
 
 .cnt-item {
     justify-content: flex-start;
+    width: 100%;
     align-items: center;
     display: flex;
     gap: 3px;
