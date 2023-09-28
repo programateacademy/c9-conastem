@@ -2,10 +2,13 @@ from django.db import models
 from django.urls import reverse
 from ..GeneralModel import GeneralModel
 
+# 1.5 USO DE LA INFORMACIÓN (DATOS)
+
+
 class UsoDeInformacion(GeneralModel):
 
     ITEM_CHOICE = [
-        ("1500","Uso de informacion"),
+        ("1500","USO DE LA INFORMACIÓN (DATOS)"),
         ("1510","Uso de la información de pruebas estandarizadas estatales, además de otras evaluaciones."),
         ("1520","Seguimiento riguroso a la información de las evaluaciones formativas."),
         ("1530","Hay un proyecto de seguimiento del avance del programa con los estudiantes."),

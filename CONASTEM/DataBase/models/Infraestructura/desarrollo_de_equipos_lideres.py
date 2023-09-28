@@ -2,11 +2,13 @@ from django.db import models
 from django.urls import reverse
 from ..GeneralModel import GeneralModel
 
+# 1.1 DESARROLLO DE EQUIPOS LÍDERES
+
 class DesarrolloDeEquiposLideres(GeneralModel):
     
     ITEM_CHOICE = [
-        ("1000","Infraestructura"),
-        ("1100","Desarrollo de equipos lideres"),
+        ("1000","INFRAESTRUCTURA"),
+        ("1100","DESARROLLO DE EQUIPOS LIDERES"),
         ("1110","El equipo de liderazgo de educación STEM está definido y nombrado en la institución para establecer monitorear y evaluar el programa completo."),
         ("1120","Los equipos de docentes abordan las expectativas específicas del programa establecido por el equipo líder."),
         ("1130","El equipo líder se reúne regularmente para discutir investigaciones, mejores prácticas, éxitos y oportunidades de mejora hacia los objetivos del Programa en Educación STEM."),

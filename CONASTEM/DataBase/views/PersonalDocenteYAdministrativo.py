@@ -30,7 +30,6 @@ class ProfesionalesEspecializadosEducacionSTEMListView (generic.ListView):
     def get_queryset(self):
         return ProfesionalesEspecializadosEducacionSTEM.objects.all().order_by('codigo')
 
-    # FORMULARIO 
 def ProfesionalesespecializadoseducacionSTEM_new(request):
     if request.method == "POST":
         form_new = Form_ProfesionalesEspecializadosEducacionSTEM(request.POST)
@@ -51,7 +50,6 @@ class DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionalesListView 
     def get_queryset(self):
         return DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales.objects.all().order_by('codigo')
 
-    # FORMULARIO
 def Desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales_new(request):
     if request.method == "POST":
         form_new = Form_DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales(request.POST)
@@ -72,7 +70,6 @@ class ApoyoPedagogicoListView (generic.ListView):
     def get_queryset(self):
         return ApoyoPedagogico.objects.all().order_by('codigo')
 
-    # FORMULARIO
 def Apoyopedagogico_new(request):
     if request.method == "POST":
         form_new = Form_ApoyoPedagogico(request.POST)
@@ -92,7 +89,6 @@ class SostenibilidadDocenteAdministrativoListView (generic.ListView):
     def get_queryset(self):
         return SostenibilidadDocenteAdministrativo.objects.all().order_by('codigo')
 
-    # FORMULARIO 
 def  Sostenibilidaddocenteadministrativo_new(request):
     if request.method == "POST":
         form_new = Form_SostenibilidadDocenteAdministrativo(request.POST)

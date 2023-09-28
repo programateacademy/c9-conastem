@@ -1,19 +1,73 @@
-{% extends "base_general.html" %}
-{% block content %}
-{% load static %}
+{% extends "base_general.html" %} {%block content%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-
-<div class= "titulo">
-    <img src="{%static 'images/tabla_detail/icon_escu_comu_perten.svg' %}">
-    <h1 style="text-transform:uppercase">5000-Escuela, comunidad y pertenencia</h1>
-</div>
-
-<p>Selecciona un subcriterio para continuar:</p>
-
-<ul>
-<li><a href="{% url 'Compromisodelacomunidad_List' %}">5100-COMPROMISO DE LA COMUNIDAD</a></li>
-<li><a href="{% url 'Relacionesconlacomunidad_List' %}">5200-RELACIONES CON LA COMUNIDAD</a></li>
-<li><a href="{% url 'Convivenciaescolar_List' %}">5300-CONVIVENCIA ESCOLAR</a></li>
-<li><a href="{% url 'Sostenibilidadescuelacomunidadypertenecia_List' %}">5400-SOSTENIBILIDAD-ESCUELA, COMUNIDAD Y PERTENENCIA</a></li>
-</ul>
-{% endblock content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/subcriterio_styles.css' %}"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial" rel="stylesheet" type="text/css"/>
+  </head>                   
+  <body>
+    <section id="main">
+      <div class="container-items2">
+        <div class="sections">
+          <section id="section1">
+            <div class="encabezado">
+                <div class="titulo-principal">
+                    <div class="container-icon">
+                        <img id="icon"src="{% static 'images/icons/IconPeople.svg' %}" alt="Ícono Escuela, comunidad y pertenencia" />
+                    </div>
+                    <h1>5000. ESCUELA, COMUNIDAD Y PERTENENCIA</h1>
+                </div>
+            </div>
+            <div class="form">
+              <div class="campo-formulario" id="form">
+                <p>Selecciona un subcriterio para continuar:</p>
+                <a href="{% url 'Compromisodelacomunidad_List' %}">
+                    <button class="cnt">
+                        <div class="cntt">
+                            <div class="cnt-item">
+                                <div class="textt"><b>5100.</b>COMPROMISO DE LA COMUNIDAD</div>
+                            </div>
+                        </div>
+                    </button>
+                </a>
+                <a href="{% url 'Relacionesconlacomunidad_List' %}">
+                    <button class="cnt">
+                        <div class="cntt">
+                            <div class="cnt-item">
+                                <div class="textt"><b>5200.</b>RELACIONES CON LA COMUNIDAD</div>
+                            </div>
+                        </div>
+                    </button>
+                </a>
+                <a href="{% url 'Convivenciaescolar_List' %}">
+                    <button class="cnt">
+                        <div class="cntt">
+                            <div class="cnt-item">
+                                <div class="textt"><b>5300.</b>CONVIVENCIA ESCOLAR</div>
+                            </div>
+                        </div>
+                    </button>
+                </a>
+                <a href="{% url 'Sostenibilidadescuelacomunidadypertenecia_List' %}">
+                    <button class="cnt">
+                        <div class="cntt">
+                            <div class="cnt-item">
+                                <div class="textt"><b>5400.</b>SOSTENIBILIDAD-ESCUELA, COMUNIDAD Y PERTENENCIA</div>
+                            </div>
+                        </div>
+                    </button>
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+{%endblock content%}

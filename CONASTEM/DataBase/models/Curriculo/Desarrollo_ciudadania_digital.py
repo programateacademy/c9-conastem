@@ -2,6 +2,7 @@ from django.db import models
 from ..GeneralModel import GeneralModel
 
 # 2.3 DESARROLLO DE UNA CIUDADANÍA DIGITAL
+
 class DesarrolloCiudadaniaDigital(GeneralModel):
 
     ITEM_CHOICE = [
