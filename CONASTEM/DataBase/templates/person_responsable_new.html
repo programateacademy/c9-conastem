@@ -8,115 +8,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <body>
-      <section id="main">
-          <div class="container-items2">
-            <div class="sections">
-              <section id="section1">
-                <h1>Datos del responsable</h1>
-                <div class="form">
-                  <form method="POST" class="formulario">
-                    {% csrf_token %}
-<<<<<<< HEAD
-
-                    <div class="campo-formulario" id="form">
-                      
-                      <div class="item">
-                        <div class="input">{{ form.first_name }}</div>
-                      </div>
-                      <div class="item">
-                        <div class="input">{{ form.last_name }}</div>
-                      </div>
-                      <div class="item">
-                        <div class="input">{{ form.phone_number }}</div>
-                      </div>
-                      <div class="item">
-                        <div class="input">{{ form.email }}</div>
-                      </div>
-                      <div class="item">
-                      </div>
-                    </div>
-                    <button id="open" type="submit" class="submit">Enviar</button>
-=======
-                    <div class="campo-formulario" id="form">
-                        <div class="item">
-                            <div>{{form.as_p}}</div>
-                        </div>
-                    </div>
-                    <button id="open" type="submit" class="submit">Guardar</button>
->>>>>>> 2441bcc4846187ce3adbadeb4511fb44bd40d671
-                    <div id="popUp" class="popup-container">
-                      <div class="popup-content">
-                        <h2>¡Registro exitoso!</h2>
-                        <div id="close" class="close">
-<<<<<<< HEAD
-=======
-                          <a href="{%url 'person_responsable_new'%}"><p class="submit">Nuevo Registro</p></a>
-                          <a href="{%url 'responsable_list'%}"><p class="submit">Ver Registros</p></a>
->>>>>>> 2441bcc4846187ce3adbadeb4511fb44bd40d671
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </section>
-<<<<<<< HEAD
-              <section id="section2">
-                <div class="container-sect2">
-                  <div class="container2">
-                    <img class="img-book" src="{% static 'images/Libro_STEM.svg' %}" alt="Educación STEM Marco de referencia para américa latina" />
-                  </div>
-                  <div class="container3">
-                    <div class="text">
-                      <p>Página basada en el libro Educación STEM marco de referencia para América Latina</p>
-                    </div>
-                    <div class="buttons">
-                      <a href="https://www.conastem.org/marcodereferencia" target="_blank"><button class="button1">Mayor Información</button></a>
-                      <a href="https://genius-botsitos-team.atlassian.net/l/cp/WpHQf6HC" target="_blank">
-                        <button class="cnt" >
-                          <div class="cntt">
-                            <div class="cnt-item">
-                              <div class="c1">
-                                <div class="btn-icon">
-                                  <img class="iconManual" src="{% static 'images/icons/IconManual.svg' %}" alt="Icono Manual" />
-                                </div>
-                              </div>
-                              <div class="button2">Manual de Usuario</div>
-                            </div>
-                          </div>
-                        </button>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
-          </div>
-=======
-            </div>
->>>>>>> 2441bcc4846187ce3adbadeb4511fb44bd40d671
-        </div>
-      </section>
-      <script type='text/javascript' src="{%static 'pop_up.js'%}"></script>
-    </body>
-  </html>
-<<<<<<< HEAD
-{% endblock %}
-=======
-
-{% endblock %}
->>>>>>> 2441bcc4846187ce3adbadeb4511fb44bd40d671
-=======
-{%block content%} 
-=======
     {% load static %}
     <link rel="stylesheet" href="{% static 'styles/records_detail.css' %}" />
     <link href="https://fonts.googleapis.com/css2?family=Inter" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css2?family=Questrial" rel="stylesheet" type="text/css" />
   </head>
->>>>>>> 45873878c932810174936483946336fcf12b6f42
 
     <body>
       <section id="main">
@@ -152,4 +48,3 @@
   </html>
 
 {% endblock %}
->>>>>>> 56fe2f96fd4d9d4a954b1579bf552789ce199d36
