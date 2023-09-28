@@ -155,7 +155,7 @@ h2 {
     display: flex;
 }
 
-.campo-formulario {
+.camp-formulario {
     width: 100%;
     flex-direction: column;
     justify-content: center;
@@ -191,6 +191,10 @@ h2 {
     align-self: stretch;
     gap: 15px;
 }
+#plus img {
+    width: 30px !important;
+    height: auto;
+}
 
 .item-camp {
     display: flex;
@@ -224,7 +228,8 @@ input[type="text"],
 option,
 input,
 select,
-textarea {
+textarea,
+.campo-formulario {
     border-radius: 50px;
     font-size: 13px;
     font-family: Questrial;
@@ -234,11 +239,16 @@ textarea {
     border-radius: 50px;
     border: 1px black solid;
     vertical-align: middle;
-    width: 80%;
+    width: auto;
+    max-width: 80%;
+    min-width: 70px;
     gap: 10px;
     height: auto;
-    justify-content: left;
+    justify-content: flex-start;
+    flex-direction: row !important;
     display: flex;
+    word-wrap: break-word;
+
 }
 
 input[type="date"] {

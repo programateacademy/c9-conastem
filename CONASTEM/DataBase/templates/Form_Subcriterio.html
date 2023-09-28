@@ -20,7 +20,7 @@
                         <div class="form">
                             <form method="POST" class="formulario">
                                 {% csrf_token %}
-                                <div class="campo-formulario" id="form">
+                                <div class="camp-formulario" id="form">
                                     <section class="section-datos">
                                         <div class="titulo">
                                             <h2>Datos Generales</h2>
@@ -45,7 +45,7 @@
                                                 <div class="input">
                                                     {{ form_new.person_responsable }}
                                                     <a href="{% url 'person_responsable_new' %}" target="_blank">
-                                                        <img src="{% static 'images/agregar.svg' %}" alt="Agregar Responsable">
+                                                        <img id="plus" src="{% static 'images/agregar.svg' %}" alt="Agregar Responsable">
                                                     </a>
                                                 </div>
                                             </div>
