@@ -269,6 +269,7 @@ select {
     align-items: center;
 }
 
+
 /* Pop up */
 
 .popup-container {
@@ -320,13 +321,7 @@ select {
     text-decoration: none;
 }
 
-.close a:hover {
-    background-color: hsl(226, 59%, 60%);
-}
-
-/* ---------------------------------------- */
-
-.container-sect2 {
+/* .container-sect2 {
     height: auto;
     background: white;
     border-radius: 25px;
@@ -490,4 +485,4 @@ label {
 #iconManual {
     width: auto;
     height: 12px;
-}
+} */

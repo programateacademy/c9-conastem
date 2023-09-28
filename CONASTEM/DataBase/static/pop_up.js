@@ -1,3 +1,5 @@
+// Pop Up
+
 let openPopUp = document.getElementById('open');
 let popup = document.getElementById('popUp');
 let close = document.getElementById('close');

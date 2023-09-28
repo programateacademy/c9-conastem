@@ -1,3 +1,5 @@
+// Animaciones header
+
 const icon = document.getElementById('icon');
 
 // Agrega un event listener al SVG para detectar clics
@@ -10,3 +12,4 @@ items.addEventListener('click', function() {
     items.style.border = "2px #000 solid";
     ; // Cambia a amarillo
 });
+
