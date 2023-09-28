@@ -1,27 +1,100 @@
-{% extends "base_general.html" %}
+{% extends "base_general.html" %} {%block content%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-{%block content%}
-
-{% load static %}
-
-<div class= "titulo">
-        <img src="{%static 'images/tabla_detail/icon_infraestructura.svg' %}">
-        <h1 style="text-transform:uppercase">1000-INFRAESTRUCTURA</h1>
-</div>
-
-<p>Selecciona un subcriterio para continuar:</p>
-
-<section class= "lista">
-<ul>
-    <li><a href="{% url 'Desarrollo_de_equipos_lideres_list' %}">1100-DESARROLLO DE EQUIPOS LIDERES</a></li>
-    <li><a href="{% url 'Planeacion_institucional_list' %}">1200-PLANEACIÓN INSTITUCIONAL</a></li>
-    <li><a href="{% url 'Ambiente_escolar_list' %}">1300-AMBIENTE ESCOLAR</a></li>
-    <li><a href="{% url 'Recursos_tecnologicos_list' %}">1400-RECURSOS TECNOLÓGICOS</a></li>
-    <li><a href="{% url 'Uso_informacion_list' %}">1500-USO DE LA INFORMACIÓN (DATOS)</a></li>
-    <li><a href="{% url 'Equidad_list' %}">1600-EQUIDAD</a></li>
-    <li><a href="{% url 'Sostenibilidad_list' %}">1700-SOSTENIBILIDAD - INFRAESTRUCTURA</a></li>
-</ul> 
-
-</section>
-
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/subcriterio_styles.css' %}"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial" rel="stylesheet" type="text/css"/>
+  </head>                   
+  <body>
+    <section id="main">
+      <div class="container-items2">
+        <div class="sections">
+          <section id="section1">
+            <div class="encabezado">
+                <div class="titulo-principal">
+                    <div class="container-icon">
+                        <img id="icon" src="{% static 'images/icons/IconBuilding.svg' %}" alt="Ícono Infraestructura" />
+                    </div>
+                    <h1>1000. INFRAESTRUCTURA</h1>
+                </div>
+            </div>
+            <div class="form">
+              <div class="campo-formulario" id="form">
+                <p>Selecciona un subcriterio para continuar:</p>
+                <a href="{% url 'Desarrollo_de_equipos_lideres_list' %}">
+                    <button class="cnt">
+                        <div class="cntt">
+                            <div class="cnt-item">
+                                <div class="textt"><b>1100.</b>DESARROLLO DE EQUIPOS LIDERES</div>
+                            </div>
+                        </div>
+                    </button>
+                </a>
+                <a href="{% url 'Planeacion_institucional_list' %}">
+                    <button class="cnt">
+                        <div class="cntt">
+                            <div class="cnt-item">
+                                <div class="textt"><b>1200.</b>PLANEACIÓN INSTITUCIONAL</div>
+                            </div>
+                        </div>
+                    </button>
+                </a>
+                <a href="{% url 'Ambiente_escolar_list' %}">
+                    <button class="cnt">
+                        <div class="cntt">
+                            <div class="cnt-item">
+                                <div class="textt"><b>1300.</b>AMBIENTE ESCOLAR</div>
+                            </div>
+                        </div>
+                    </button>
+                </a>
+                <a href="{% url 'Recursos_tecnologicos_list' %}">
+                    <button class="cnt">
+                        <div class="cntt">
+                            <div class="cnt-item">
+                                <div class="textt"><b>1400.</b>RECURSOS TECNOLÓGICOS</div>
+                            </div>
+                        </div>
+                    </button>
+                </a>
+                <a href="{% url 'Uso_informacion_list' %}">
+                    <button class="cnt">
+                        <div class="cntt">
+                            <div class="cnt-item">
+                            <div class="textt"><b>1500.</b>USO DE LA INFORMACIÓN (DATOS)</div>
+                            </div>
+                        </div>
+                    </button>
+                </a>
+                <a href="{% url 'Equidad_list' %}">
+                    <button class="cnt">
+                        <div class="cntt">
+                            <div class="cnt-item">
+                                <div class="textt"><b>1600.</b>EQUIDAD</div>
+                            </div>
+                        </div>
+                    </button>
+                </a>
+                <a href="{% url 'Sostenibilidad_list' %}">
+                    <button class="cnt">
+                        <div class="cntt">
+                            <div class="cnt-item">
+                                <div class="textt"><b>1700.</b>SOSTENIBILIDAD - INFRAESTRUCTURA</div>
+                            </div>
+                        </div>
+                    </button>
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
 {%endblock content%}
