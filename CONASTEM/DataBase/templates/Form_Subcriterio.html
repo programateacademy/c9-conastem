@@ -20,73 +20,108 @@
                         <div class="form">
                             <form method="POST" class="formulario">
                                 {% csrf_token %}
-                                <div class="campo-formulario" id="form">
+                                <div class="camp-formulario" id="form">
                                     <section class="section-datos">
                                         <div class="titulo">
                                             <h2>Datos Generales</h2>
                                         </div>
                                         <div class="contenido">
                                             <div class="item-camp">
-                                                <label for="{{numeral}}">Numeral</label>
-                                                {{ form_new.numeral }}
+                                                <div class="item-camp-text">
+                                                    <label for="{{ form_new.numeral.id_for_label }}">Numeral</label>
+                                                </div>
+                                                <div class="input">{{ form_new.numeral }}</div>
                                             </div>
                                             <div class="item-camp">
-                                                <label for="{{priority}}" class="item-camp-text">Prioridad</label>
-                                                {{form_new.priority}}
+                                                <div class="item-camp-text">
+                                                    <label for="{{ form_new.priority.id_for_label }}">Prioridad</label>
+                                                </div>
+                                                <div class="input">{{ form_new.priority }}</div>
                                             </div>
                                             <div class="item-camp">
-                                                <label for="{{ person_responsable }}">Responsable</label>
-                                                {{ form_new.person_responsable }}
-                                                <a href="{%url 'person_responsable_new'%}" target="_blank"><img
-                                                        src="{%static 'images/agregar.svg'%}"></a>
+                                                <div class="item-camp-text">
+                                                    <label for="{{ form_new.person_responsable.id_for_label }}">Responsable</label>
+                                                </div>
+                                                <div class="input">
+                                                    {{ form_new.person_responsable }}
+                                                    <a href="{% url 'person_responsable_new' %}" target="_blank">
+                                                        <img id="plus" src="{% static 'images/agregar.svg' %}" alt="Agregar Responsable">
+                                                    </a>
+                                                </div>
                                             </div>
                                             <div class="item-camp">
-                                                <label for="{{ dep_responsable}}">Departamento responsable</label>
-                                                {{ form_new.dep_responsable }}
+                                                <div class="item-camp-text">
+                                                    <label for="{{ form_new.dep_responsable.id_for_label }}">Departamento responsable</label>
+                                                </div>
+                                                <div class="input">{{ form_new.dep_responsable }}</div>
                                             </div>
                                             <div class="item-camp">
-                                                <label for="{{ track_date }}">Fecha límite de seguimiento</label>
-                                                {{ form_new.track_date }}
+                                                <div class="item-camp-text">
+                                                    <label for="{{ form_new.track_date.id_for_label }}">Fecha límite de seguimiento</label>
+                                                </div>
+                                                <div class="input">{{ form_new.track_date }}</div>
                                             </div>
                                         </div>
                                     </section>
+                                    
                             
-                                    <section>
-                                        <h2>Auditoría interna</h2>
-                            
-                                        <div class="campo-formulario">
-                                            <label for="{{ internal_auditory_date }}">Año de registro</label>
-                                            {{ form_new.internal_auditory_date }}
+                                    <section class="section-datos">
+                                        <div class="titulo">
+                                            <h2>Auditoría Interna</h2>
                                         </div>
-                            
-                                        <div class="campo-formulario">
-                                            <label for="{{ internal_auditory_obs }}">Observación</label>
-                                            {{ form_new.internal_auditory_obs }}
+                                        <div class="contenido">
+                                            <div class="item-camp">
+                                                <div class="item-camp-text">
+                                                    <label for="{{ internal_auditory_date }}">Año de registro</label>
+                                                </div>
+                                                <div>{{ form_new.internal_auditory_date }}</div>
+                                            </div>
                                         </div>
-                            
+                                        <div class="contenido">
+                                            <div class="item-camp">
+                                                <div class="item-camp-text">
+                                                    <label for="{{ internal_auditory_obs }}">Observación</label>
+                                                </div>
+                                            <div class="input">{{ form_new.internal_auditory_obs }} </div>
+                                        </div>
                                     </section>
                             
-                                    <section>
-                            
-                                        <h2>Auditoría externa</h2>
-                            
-                                        <div class="campo-formulario">
-                                            <label for="{{ external_auditory_date }}">Año de registro</label>
-                                            {{ form_new.external_auditory_date }}
+
+                                    
+                                    <section class="section-datos">
+                                        <div class="titulo">
+                                            <h2>Auditoría Externa</h2>
                                         </div>
-                            
-                                        <div class="campo-formulario">
-                                            <label for="{{ external_auditory_obs }}">Observación</label>
-                                            {{ form_new.external_auditory_obs }}
+                                        <div class="contenido">
+                                            <div class="item-camp">
+                                                <div class="item-camp-text">
+                                                    <label for="{{ external_auditory_date }}">Año de registro</label>
+                                                </div>
+                                                <div>{{ form_new.external_auditory_date }}
+                                                </div>
+                                            </div>
                                         </div>
-                            
+                                        <div class="contenido">
+                                            <div class="item-camp">
+                                                <div class="item-camp-text">
+                                                    <label for="{{ external_auditory_obs }}">Observación</label>
+                                                </div>
+                                            <div class="input">{{ form_new.external_auditory_obs }}</div>
+                                        </div>
                                     </section>
-                            
-                                    <section>
-                                        <h2>Evidencias</h2>
-                                        <div class="campo-formulario">
-                                            <label for="{{ evidence }}">Adjunta link de evidencia</label>
-                                            {{ form_new.evidence }}
+
+                                    
+                                    <section class="section-datos">
+                                        <div class="titulo">
+                                            <h2>Evidencias</h2>
+                                        </div>
+                                        <div class="contenido">
+                                            <div class="item-camp">
+                                                <div class="item-camp-text">
+                                                    <label for="{{ evidence }}">Adjunta link de evidencia</label>
+                                                </div>
+                                                <div class="input">{{ form_new.evidence }}</div>
+                                            </div>
                                         </div>
                                     </section>
                                 </div>
@@ -106,5 +141,5 @@
         </section>
         <script type='text/javascript' src="{%static 'pop_up.js'%}"></script>
     </body>
-</html>
-{%endblock content%}
+  </html>
+{% endblock %}
