@@ -1,25 +1,73 @@
-{% extends "base_general.html" %}
-{% load static %}
+{% extends "base_general.html" %} {%block content%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-{% block content %}
-
-
-<div class= "Criterios">
-    <img src="{%static 'images/icons/IconSecure.svg' %}">
-    <h1 style="text-transform:uppercase">4000 - PERSONAL DOCENTE Y ADMINISTRATIVO <h1>
-</div>
-
-
-
-<p>Selecciona un subcriterio para continuar:</p>
-
-<section class= "lista">
-    <ul>
-        <li><a href="{% url 'ProfesionalesEspecializadosEducacionSTEM_List' %}">  4100-PROFESIONALES ALTAMENTE CALIFICADOS ESPECIALIZADOS EN EDUCACIÓN STEM </a></li>
-        <li><a href="{% url 'DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales_list' %}"> 4200-DESARROLLO PROFESIONAL INICIAL Y CONTINUO PARA DOCENTES DIRECTORES DE ESCUELA Y CONSEJEROS PROFESIONALES </a></li>
-        <li><a href="{% url 'ApoyoPedagogico_List' %}"> 4300-APOYO PEDAGÓGICO PARA EL PERSONAL </a></li>
-        <li><a href="{% url 'SostenibilidadDocenteAdministrativo_List' %}"> 4400-SOSTENIBILIDAD - PERSONAL DOCENTE Y ADMINISTRATIVO </a></li>
-    </ul>
-</section>
-
-{% endblock content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/subcriterio_styles.css' %}"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial" rel="stylesheet" type="text/css"/>
+  </head>                   
+  <body>
+    <section id="main">
+      <div class="container-items2">
+        <div class="sections">
+          <section id="section1">
+            <div class="encabezado">
+                <div class="titulo-principal">
+                    <div class="container-icon">
+                        <img id="icon" src="{% static 'images/icons/IconSecure.svg' %}" alt="Ícono Personal docente y administrativo"/>
+                    </div>
+                    <h1>4000.PERSONAL DOCENTE Y ADMINISTRATIVO</h1>
+                </div>
+            </div>
+            <div class="form">
+              <div class="campo-formulario" id="form">
+                <p>Selecciona un subcriterio para continuar:</p>
+                <a href="{% url 'ProfesionalesEspecializadosEducacionSTEM_List' %}">
+                    <button class="cnt">
+                        <div class="cntt">
+                            <div class="cnt-item">
+                                <div class="textt"><b>4100.</b>PROFESIONALES ALTAMENTE CALIFICADOS ESPECIALIZADOS EN EDUCACIÓN STEM </div>
+                            </div>
+                        </div>
+                    </button>
+                </a>
+                <a href="{% url 'DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales_list' %}">
+                    <button class="cnt">
+                        <div class="cntt">
+                            <div class="cnt-item">
+                                <div class="textt"><b>4200.</b>DESARROLLO PROFESIONAL INICIAL Y CONTINUO PARA DOCENTES DIRECTORES DE ESCUELA Y CONSEJEROS PROFESIONALES</div>
+                            </div>
+                        </div>
+                    </button>
+                </a>
+                <a href="{% url 'ApoyoPedagogico_List' %}">
+                    <button class="cnt">
+                        <div class="cntt">
+                            <div class="cnt-item">
+                                <div class="textt"><b>4300.</b>APOYO PEDAGÓGICO PARA EL PERSONAL</div>
+                            </div>
+                        </div>
+                    </button>
+                </a>
+                <a href="{% url 'SostenibilidadDocenteAdministrativo_List' %}">
+                    <button class="cnt">
+                        <div class="cntt">
+                            <div class="cnt-item">
+                                <div class="textt"><b>4400.</b>SOSTENIBILIDAD - PERSONAL DOCENTE Y ADMINISTRATIVO</div>
+                            </div>
+                        </div>
+                    </button>
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+{%endblock content%}
