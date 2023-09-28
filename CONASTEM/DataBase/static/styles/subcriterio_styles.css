@@ -208,12 +208,11 @@ h1 {
 
 .textt {
     font-family: inherit;
-    font-size:xx-small;
-    align-self: stretch;
+    font-size: small;
+    /* align-self: ; */
     padding-left: 5px;
     padding-right: 5px;
     width: 100%;
-    letter-spacing: 2px;
     justify-content: center;
     align-items: center;
     gap: 10px;
