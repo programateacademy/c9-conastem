@@ -2,6 +2,7 @@ from django.db import models
 from django.urls import reverse
 from ..GeneralModel import GeneralModel
 
+# 1.3 AMBIENTE ESCOLAR
 
 class AmbienteEscolar (GeneralModel):
 

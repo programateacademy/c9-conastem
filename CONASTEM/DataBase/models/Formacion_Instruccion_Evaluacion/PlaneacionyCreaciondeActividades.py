@@ -1,6 +1,7 @@
 from django.db import models
 from ..GeneralModel import GeneralModel
 
+# 3.3 PLANEACIÓN Y CREACIÓN DE ACTIVIDADES
 
 class PlaneacionyCreaciondeActividades (GeneralModel):
 

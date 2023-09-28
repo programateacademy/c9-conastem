@@ -1,6 +1,7 @@
 from django.db import models
 from ..GeneralModel import GeneralModel
 
+# 5.4 SOSTENIBILIDAD - ESCUELA, COMUNIDAD Y PERTENENCIA
 
 class SostenibilidadEscuelaComunidadyPertenencia (GeneralModel):
 

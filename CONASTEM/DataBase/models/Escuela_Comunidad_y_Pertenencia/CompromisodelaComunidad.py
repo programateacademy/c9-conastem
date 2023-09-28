@@ -2,6 +2,7 @@ from django.db import models
 from django.urls import reverse
 from ..GeneralModel import GeneralModel
 
+# 5.1 COMPROMISO DE LA COMUNIDAD
 
 class CompromisodelaComunidad (GeneralModel):
 

@@ -2,6 +2,8 @@ from django.db import models
 from django.urls import reverse
 from ..GeneralModel import GeneralModel
 
+# 1.4 RECURSOS TECNOLÓGICOS
+
 class RecursosTecnologicos(GeneralModel):
 
     ITEM_CHOICE = [

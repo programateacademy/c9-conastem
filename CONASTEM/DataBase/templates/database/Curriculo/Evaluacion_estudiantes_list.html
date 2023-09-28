@@ -1,14 +1,15 @@
 {% extends "base_general.html" %}
+{% block content %}
 {% load static %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/tables.css' %}">
 
-{% block content %}
+
 <body>
     <div class="fondo">
 <div class= "margen-contenedor">
 <div class= "titulo">
-    <img src="{%static 'images/tabla_detail/icon_curriculo.svg' %}">
+    <img src="{%static 'images/icons/IconDoc.svg' %}">
     <h1 style="text-transform:uppercase">2000 - Currículo</h1>
 </div>
 <div class="subtitulo">
@@ -20,6 +21,7 @@
     </div>
 </div>
 <div class="tabla-contenedor">
+    <div class="tabla-scroll">
     <table class="celdas">
         <thead>
             <tr>
@@ -58,6 +60,7 @@
         {% endfor %}
         </tbody>
     </table>
+    </div>  
 </div>
 </div>
 </div>

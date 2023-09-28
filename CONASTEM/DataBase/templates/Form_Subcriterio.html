@@ -1,110 +1,110 @@
-{% extends "base_general.html" %}
+{% extends 'base_general.html' %}
 
-
-{%block content%}
-
-<!DOCTYPE html>
+{% block content %}
 <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      {% load static %}
+      <link rel="stylesheet" href="{% static 'styles/form_subcriterio.css' %}" />
+      <link href="https://fonts.googleapis.com/css2?family=Inter" rel="stylesheet" type="text/css" />
+      <link href="https://fonts.googleapis.com/css2?family=Questrial" rel="stylesheet" type="text/css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'styles/pop_up.css' %}" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css2?family=Questrial" rel="stylesheet" type="text/css" />
-</head>
-
-<body>
-
-    <form method="POST" class="formulario"> {% csrf_token %}
-        <h2>{{ titulo }}</h2>
-
-        <section>
-
-            <div class="campo-formulario">
-                <label for="{{numeral}}">Numeral</label>
-                {{ form_new.numeral }}
+    <body>
+        <section id="main">
+            <div class="container-items2">
+                <div class="sections">
+                    <section id="section1">
+                        <h1>Registro Nuevo Subcriterio</h1>
+                        <div class="form">
+                            <form method="POST" class="formulario">
+                                {% csrf_token %}
+                                <div class="campo-formulario" id="form">
+                                    <section class="section-datos">
+                                        <div class="titulo">
+                                            <h2>Datos Generales</h2>
+                                        </div>
+                                        <div class="contenido">
+                                            <div class="item-camp">
+                                                <label for="{{numeral}}">Numeral</label>
+                                                {{ form_new.numeral }}
+                                            </div>
+                                            <div class="item-camp">
+                                                <label for="{{priority}}" class="item-camp-text">Prioridad</label>
+                                                {{form_new.priority}}
+                                            </div>
+                                            <div class="item-camp">
+                                                <label for="{{ person_responsable }}">Responsable</label>
+                                                {{ form_new.person_responsable }}
+                                                <a href="{%url 'person_responsable_new'%}" target="_blank"><img
+                                                        src="{%static 'images/agregar.svg'%}"></a>
+                                            </div>
+                                            <div class="item-camp">
+                                                <label for="{{ dep_responsable}}">Departamento responsable</label>
+                                                {{ form_new.dep_responsable }}
+                                            </div>
+                                            <div class="item-camp">
+                                                <label for="{{ track_date }}">Fecha límite de seguimiento</label>
+                                                {{ form_new.track_date }}
+                                            </div>
+                                        </div>
+                                    </section>
+                            
+                                    <section>
+                                        <h2>Auditoría interna</h2>
+                            
+                                        <div class="campo-formulario">
+                                            <label for="{{ internal_auditory_date }}">Año de registro</label>
+                                            {{ form_new.internal_auditory_date }}
+                                        </div>
+                            
+                                        <div class="campo-formulario">
+                                            <label for="{{ internal_auditory_obs }}">Observación</label>
+                                            {{ form_new.internal_auditory_obs }}
+                                        </div>
+                            
+                                    </section>
+                            
+                                    <section>
+                            
+                                        <h2>Auditoría externa</h2>
+                            
+                                        <div class="campo-formulario">
+                                            <label for="{{ external_auditory_date }}">Año de registro</label>
+                                            {{ form_new.external_auditory_date }}
+                                        </div>
+                            
+                                        <div class="campo-formulario">
+                                            <label for="{{ external_auditory_obs }}">Observación</label>
+                                            {{ form_new.external_auditory_obs }}
+                                        </div>
+                            
+                                    </section>
+                            
+                                    <section>
+                                        <h2>Evidencias</h2>
+                                        <div class="campo-formulario">
+                                            <label for="{{ evidence }}">Adjunta link de evidencia</label>
+                                            {{ form_new.evidence }}
+                                        </div>
+                                    </section>
+                                </div>
+                                <button id="open" type="submit" class="submit">Enviar</button>
+                                <div id="popUp" class="popup-container">
+                                    <div class="popup-content">
+                                        <h2>¡Registro exitoso!</h2>
+                                        <div id="close" class="close">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                </div>
             </div>
-
-            <div class="campo-formulario">
-                <label for="{{priority}}">Prioridad</label>
-                {{form_new.priority}}
-            </div>
-
-
-            <div class="campo-formulario">
-                <label for="{{ person_responsable }}">Responsable</label>
-                {{ form_new.person_responsable }}
-                <a href="{%url 'person_responsable_new'%}" target="_blank"><img
-                        src="{%static 'images/agregar.svg'%}"></a>
-            </div>
-
-            <div class="campo-formulario">
-                <label for="{{ dep_responsable}}">Departamento responsable</label>
-                {{ form_new.dep_responsable }}
-            </div>
-
-            <div class="campo-formulario">
-                <label for="{{ track_date }}">Fecha límite de seguimiento</label>
-                {{ form_new.track_date }}
-            </div>
-
         </section>
-
-        <section>
-            <h2>Auditoría interna</h2>
-
-            <div class="campo-formulario">
-                <label for="{{ internal_auditory_date }}">Año de registro</label>
-                {{ form_new.internal_auditory_date }}
-            </div>
-
-            <div class="campo-formulario">
-                <label for="{{ internal_auditory_obs }}">Observación</label>
-                {{ form_new.internal_auditory_obs }}
-            </div>
-
-        </section>
-
-        <section>
-
-            <h2>Auditoría externa</h2>
-
-            <div class="campo-formulario">
-                <label for="{{ external_auditory_date }}">Año de registro</label>
-                {{ form_new.external_auditory_date }}
-            </div>
-
-            <div class="campo-formulario">
-                <label for="{{ external_auditory_obs }}">Observación</label>
-                {{ form_new.external_auditory_obs }}
-            </div>
-
-        </section>
-
-        <section>
-            <h2>Evidencias</h2>
-            <div class="campo-formulario">
-                <label for="{{ evidence }}">Adjunta link de evidencia</label>
-                {{ form_new.evidence }}
-            </div>
-        </section>
-
-        <button id="open" type="submit" class="boton-formulario">Enviar</button>
-
-        <div id="popUp" class="popup-container">
-            <div id="close" class="popup-content">
-                <h2>¡Registro exitoso!</h2>
-            </div>
-        </div>
-
-    </form>
-    <script type='text/javascript' src="{%static 'pop_up.js'%}"></script>
-</body>
-
+        <script type='text/javascript' src="{%static 'pop_up.js'%}"></script>
+    </body>
 </html>
-
-
 {%endblock content%}
