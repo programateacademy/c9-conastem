@@ -1,0 +1,51 @@
+.fondo-home {
+    width: 100%;
+    height: auto;
+    padding: 5rem;
+    flex-direction: column;
+    background-image: url(../images/StemGuardas.jpg);
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    display: inline-flex;
+}
+.todo-criterios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+
+}
+.contenedor-criterios{
+    border-radius: 50px;
+    background: #FFF;
+    margin-right: 80px;
+    min-width: 900px;
+    min-height: 650px;
+    max-width: 60vh;
+    margin:90px
+}
+.latina{
+    border-radius: 25px 25px 0 0;
+    width: 284px;
+    height: 376px;
+    padding: 0 2rem;
+}
+.botones {
+display: flex;
+padding: 6.85%;
+flex-direction: column;
+justify-content: center;
+align-items: flex-end;
+gap: 20px;
+align-self: stretch;
+background-color: #FFF;
+border-radius: 0 0 25px 25px;
+min-width: 245px;
+height: auto;
+padding-top: 50px;
+
+}
+
