@@ -70,9 +70,9 @@ table td, table th {
 
 .margen-contenedor {
     border-radius: 40px;
-    width: 169.2vh;
+    width: 30%;
     height: 70%;
-    background-color: #fffbe9;
+    background-color: #ffffff;
     padding: 0 3rem;
     margin-left: -3.5rem;
 
@@ -116,7 +116,7 @@ th, td {
         border-radius: 40px;
         width: 50vh;
         height: 70%;
-        background-color: #fffbe9;
+        background-color: #ffffff;
         padding: 0;
         margin-left: 10px;
         justify-content: center;
@@ -203,10 +203,10 @@ table td, table th {
 
 .margen-contenedor {
     border-radius: 40px;
-    width: 100%;
-    background-color: #fffbe9;
+    width: 106%;
+    background-color: #ffffff;
     padding: 0 2rem;
-    margin: 0;
+    margin-right: 3rem;
     box-sizing: border-box;
 }
 
@@ -225,9 +225,9 @@ hr {
 
 @media (max-width: 768px) {
     .margen-contenedor {
-        width: 75vh;
-        height: 80vw;
-        margin-left: -10rem;
+        width: 167%;
+        height: 90%;
+        margin-left: -9.3rem;
     }
 
     h1 {
