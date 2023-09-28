@@ -1,6 +1,7 @@
 from django.db import models
 from ..GeneralModel import GeneralModel
 
+# 3.8 APRENDIZAJE EXTENDIDO
 
 class AprendizajeExtendido (GeneralModel):
 

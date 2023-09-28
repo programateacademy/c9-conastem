@@ -1,6 +1,9 @@
 from django.db import models
 from django.urls import reverse
 from ..GeneralModel import GeneralModel
+
+# 1.7 SOSTENIBILIDAD - INFRAESTRUCTURA
+
 class Sostenibilidad(GeneralModel):
 
     ITEM_CHOICE = [

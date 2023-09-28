@@ -2,6 +2,8 @@ from django.db import models
 from django.urls import reverse
 from ..GeneralModel import GeneralModel
 
+# 1.1 DESARROLLO DE EQUIPOS LÍDERES
+
 class DesarrolloDeEquiposLideres(GeneralModel):
     
     ITEM_CHOICE = [

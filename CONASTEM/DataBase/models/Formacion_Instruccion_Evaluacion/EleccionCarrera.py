@@ -2,6 +2,8 @@ from django.db import models
 from django.urls import reverse
 from ..GeneralModel import GeneralModel
 
+# 3.7 ELECCIÓN DE CARRERA
+
 class EleccionCarrera (GeneralModel):
 
     ITEM_CHOICE = [

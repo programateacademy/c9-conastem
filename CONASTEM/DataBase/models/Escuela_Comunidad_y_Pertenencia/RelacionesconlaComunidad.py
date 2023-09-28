@@ -1,6 +1,8 @@
 from django.db import models
 from ..GeneralModel import GeneralModel
 
+# 5.2 RELACIONES CON LA COMUNIDAD
+
 class RelacionesconlaComunidad(GeneralModel):
 
     ITEM_CHOICE =  ITEM_CHOICE = [

@@ -128,31 +128,31 @@ urlpatterns += [
 urlpatterns += [
 # FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
     path("formacion-instruccion-evaluacion/", Formacion_Instruccion_Evaluacion.FormacionInstruccionEvaluacionListView.as_view(), name="FormacionInstruccionEvaluacion"),
-        # 3.1 APRENDIZAJE CENTRADO EN EL ESTUDIANTE
+    # 3.1 APRENDIZAJE CENTRADO EN EL ESTUDIANTE
     path('aprendizaje-centrado', Formacion_Instruccion_Evaluacion.AprendizajeCentradoListView.as_view(), name='aprendizaje_centrado_list'),
     path("aprendizaje-centrado/new", Formacion_Instruccion_Evaluacion.Aprendizajecentrado_new, name="aprendizaje_centrado_new"),
-        # 3.2 APRENDIZAJE RIGUROSO
+    # 3.2 APRENDIZAJE RIGUROSO
     path('aprendizajeriguroso', AprendizajeRigurosoListView.as_view(),name="AprendizajeRiguroso_List"),
     path('aprendizajeriguroso/new', Formacion_Instruccion_Evaluacion.Aprendizajeriguroso_new, name='aprendizajerigurosonew'),
-        # 3.3 PLANEACIÓN Y CREACIÓN DE ACTIVIDADES
+    # 3.3 PLANEACIÓN Y CREACIÓN DE ACTIVIDADES
     path('planeacionycreaciondeactividades', PlaneacionyCreaciondeActividadesListView.as_view(),name="PlaneacionyCreaciondeActividades_List"),
     path('planeacionycreaciondeactividades/new', Formacion_Instruccion_Evaluacion.Planeacionycreaciondeactividades_new, name='planeacionycreaciondeactividadesnew'),
-        # 3.4 EDUCACIÓN STEM INTEGRADA
+    # 3.4 EDUCACIÓN STEM INTEGRADA
     path("educacion-stem-integrada/", Formacion_Instruccion_Evaluacion.EducacionStemIntegradaListView.as_view(), name='educacion_stem_integrada_list'),
     path("educacion-stem-integrada/new", Formacion_Instruccion_Evaluacion.EducacionSTEM_new, name="educacion_stem_integrada_new"),
-        # 3.5 TECNOLOGÍA PARA LA FORMACIÓN / INSTRUCCIÓN
+    # 3.5 TECNOLOGÍA PARA LA FORMACIÓN / INSTRUCCIÓN
     path("tecnologia-para-formacion/", Formacion_Instruccion_Evaluacion.TecnologiaFormacionListView.as_view(), name='tecnologia_para_Formacion_list'), 
     path("tecnologia-para-formacion/new", Formacion_Instruccion_Evaluacion.TecnologiaFormacion_new , name="tecnologia_para_Formacion_new"),
-        # 3.6 ESTRATEGIAS FORMATIVAS
+    # 3.6 ESTRATEGIAS FORMATIVAS
     path('estrategiasformativas', EstrategiasFormativasListView.as_view(), name="EstrategiasFormativas_List"),
     path('estrategiasformativas/new', Formacion_Instruccion_Evaluacion.Estrategiasformativas_new, name='estrategiasformativasnew'),
-        # 3.7 ELECCIÓN DE CARRERA
+    # 3.7 ELECCIÓN DE CARRERA
     path("eleccion-carrera/", Formacion_Instruccion_Evaluacion.EleccionCarreraListView.as_view(), name='eleccion_carrera_list'),
     path("eleccion-carrera/new", Formacion_Instruccion_Evaluacion.Eleccioncarrera_new, name="eleccion_carrera_new"),
-        # 3.8 APRENDIZAJE EXTENDIDO
+    # 3.8 APRENDIZAJE EXTENDIDO
     path('aprendizajeextendido', AprendizajeExtendidoListView.as_view(),name="AprendizajeExtendido_List"),
     path('aprendizajeextendido/new', Formacion_Instruccion_Evaluacion.Aprendizajeextendido_new, name='aprendizajeextendidonew'),
-        # 3.9 SOSTENIBILIDAD - FORMACIÓN/INSTRUCCIÓN/EVALUACIÓN
+    # 3.9 SOSTENIBILIDAD - FORMACIÓN/INSTRUCCIÓN/EVALUACIÓN
     path("sostenibilidad-formacion-instruccion/", Formacion_Instruccion_Evaluacion.SostenibilidadListView.as_view(), name="sostenibilidad_list"),
     path("sostenibilidad-formacion-instruccion/new", Formacion_Instruccion_Evaluacion.SostenibilidadFormacion_new, name="sostenibilidad_new"),
 ]
@@ -160,12 +160,16 @@ urlpatterns += [
 urlpatterns += [
     # PERSONAL DOCENTE Y ADMINISTRATIVO
     path("personal-docente-y-administrativo",PersonalDocenteyAdministrativoListView.as_view(), name="PersonalDocenteyAdministrativo"),
+    # 4.1 PROFESIONALES ALTAMENTE CALIFICADOS ESPECIALIZADOS EN EDUCACIÓN STEM
     path("profesional-calificado-educacion-stem",ProfesionalesEspecializadosEducacionSTEMListView.as_view(), name="ProfesionalesEspecializadosEducacionSTEM_List"),
     path('profesional-calificado-educacion-stem/new', PersonalDocenteYAdministrativo.ProfesionalesespecializadoseducacionSTEM_new,name='profesionalesespecializadoseducacionSTEMnew'),
+    # 4.2 DESARROLLO PROFESIONAL INICIAL Y CONTINUO PARA DOCENTES, DIRECTORES DE ESCUELA Y CONSEJEROS PROFESIONALES
     path("desarrollo-profesional-docentes-directores-consejeros-profesionales", DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionalesListView.as_view(), name="DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales_list"),
     path('desarrollo-profesional-docentes-directores-consejeros-profesionales/new', PersonalDocenteYAdministrativo.Desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionales_new,name='desaprofesionaldocentesdirectoresdeescuelaconsejerosprofesionalesnew'),
+    # 4.3 APOYO PEDAGÓGICO PARA EL PERSONAL
     path("apoyo-pedagogico",ApoyoPedagogicoListView.as_view(), name="ApoyoPedagogico_List"),
     path('apoyo-pedagogico/new', PersonalDocenteYAdministrativo.Apoyopedagogico_new,name='apoyopedagogiconew'),
+    # 4.4 SOSTENIBILIDAD - PERSONAL DOCENTE Y ADMINISTRATIVO
     path("sostenibilidad-docente-administrativo", SostenibilidadDocenteAdministrativoListView.as_view(), name="SostenibilidadDocenteAdministrativo_List"),
     path('sostenibilidad-docente-administrativo/new', PersonalDocenteYAdministrativo.Sostenibilidaddocenteadministrativo_new,name='sostenibilidaddocenteadministrativonew'),
 ]

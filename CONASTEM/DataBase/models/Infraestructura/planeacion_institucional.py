@@ -2,6 +2,8 @@ from django.db import models
 from django.urls import reverse
 from ..GeneralModel import GeneralModel
 
+# 1.2 PLANEACIÓN INSTITUCIONAL
+
 class PlaneacionInstitucional(GeneralModel):
 
     ITEM_CHOICE = [

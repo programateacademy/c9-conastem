@@ -2,6 +2,8 @@ from django.db import models
 from django.urls import reverse
 from ..GeneralModel import GeneralModel
 
+# 1.6 EQUIDAD 
+
 class Equidad(GeneralModel):
 
     ITEM_CHOICE = [
