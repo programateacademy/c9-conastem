@@ -53,11 +53,16 @@ from .views.EscuelaComunidadYPertenencia import SostenibilidadEscuelaComunidadyP
 
 # GENERAL
 urlpatterns= [
+    # REGISTRO DE INSTITUCIONES
     path ('', views.index, name= 'index'),
+    # INICIO / CRITERIOS
     path("home/", views.CriterioList.as_view(), name="criterio_list"),
+    # LISTA DE INSTITUCIONES REGISTRADAS
     path('instituciones/', views.RegisterListView.as_view(), name= 'register_list'),
     path('instituciones/<int:pk>', views.RegisterListDetail.as_view(), name= 'register_detail'),
+    # REGISTRO DE PERSONA RESPONSABLE
     path("responsable/new", views.person_responsablenew, name="person_responsable_new"),
+    # LISTA DE RESPONSABLES REGISTRADOS
     path("responsables/", views.PersonResponsableListView .as_view(), name="responsable_list"),
     path("responsables/<int:pk>", views.PersonResponsableDetail .as_view(), name="responsable_detail"),
 ]

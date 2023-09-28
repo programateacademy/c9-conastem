@@ -45,7 +45,7 @@ def person_responsablenew(request):
 class RegisterListView(generic.ListView):
     model = Register
     context_object_name= 'register_list'
-    template_name= 'records.html'
+    template_name= 'records_list.html'
     # DETALLE
 class RegisterListDetail(generic.DetailView):
     model = Register
@@ -63,4 +63,4 @@ def index(request):
             return HttpResponseRedirect('/database/home')
     else:
         form = FormRegister ()
-    return render(request, 'registro_new.html', {'form': form})
+    return render(request, 'records_new.html', {'form': form})
