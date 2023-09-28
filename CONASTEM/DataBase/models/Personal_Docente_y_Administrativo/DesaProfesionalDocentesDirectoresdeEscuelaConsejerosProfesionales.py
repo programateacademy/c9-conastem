@@ -2,6 +2,7 @@ from django.db import models
 from django.urls import reverse
 from ..GeneralModel import GeneralModel
 
+# 4.2 DESARROLLO PROFESIONAL INICIAL Y CONTINUO PARA DOCENTES, DIRECTORES DE ESCUELA Y CONSEJEROS PROFESIONALES
 
 class DesaProfesionalDocentesDirectoresdeEscuelaConsejerosProfesionales (GeneralModel):
 

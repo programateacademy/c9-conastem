@@ -2,7 +2,8 @@ from django.db import models
 from django.urls import reverse
 from ..GeneralModel import GeneralModel
 
-# 2.4 Integración curricular
+# 2.4 INTEGRACIÓN CURRICULAR
+
 class IntegracionCurricular(GeneralModel):
 
     ITEM_CHOICE = [

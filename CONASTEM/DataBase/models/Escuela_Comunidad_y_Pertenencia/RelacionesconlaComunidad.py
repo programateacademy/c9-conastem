@@ -1,10 +1,12 @@
 from django.db import models
 from ..GeneralModel import GeneralModel
 
+# 5.2 RELACIONES CON LA COMUNIDAD
+
 class RelacionesconlaComunidad(GeneralModel):
 
     ITEM_CHOICE =  ITEM_CHOICE = [
-        ("5200","Relaciones con la Comunidad"),
+        ("5200","RELACIONES CON LA COMUNIDAD"),
         ("5210", "Los estudiantes tienen experiencias directas con profesionales de áreas STEM en entornos auténticos."),
         ("5220", "Las experiencias de campo y con profesionales invitados están integrados dentro de las actividades para aumentar el conocimiento de los estudiantes y ayudar en la selección de carrera."),
     ]

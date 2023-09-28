@@ -2,51 +2,67 @@
 
 {% block content %}
 {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'styles/tables.css' %}">
 
+<body>
+    <div class="fondo">
+<div class= "margen-contenedor">
 <div class= "titulo">
-    <img src="{%static 'images/tabla_detail/icon_infraestructura.svg' %}">
+    <img src="{%static 'images/icons/IconBuilding.svg' %}">
     <h1>1000-INFRAESTRUCTURA</h1>
 </div>
 <div class="subtitulo">
-    <h2 style="text-transform:uppercase">1100-DESARROLLO DE EQUIPOS LIDERES</h2>
-    <a href="/database/desarrollo-de-equipos-lideres/new/"><img src="{%static 'images/crear_datos.svg'%}" alt="Crear datos"></a>
+    <div class="titulo-texto">
+        <h2 style="text-transform:uppercase">1100-DESARROLLO DE EQUIPOS LIDERES</h2>
+    </div>
+    <div class= "imagen-crear-datos">
+        <a href="/database/desarrollo-de-equipos-lideres/new/"><img src="{%static 'images/crear_datos.svg'%}" alt="Crear datos"></a>
+    </div>
 </div>
-    <table>
-       <thead>
-          <tr>
-              <th>Codigo</th>
-              <th>Numeral</th>
-              <th>Prioridad<th>
-              <th>Departamento Responsable</th>
-              <th>Persona Responsable</th>
-              <th>Fecha límite de seguimiento</th>
-              <th>Fecha de auditoria interna</th>
-              <th>Comentarios Auditoria Interna</th>
-              <th>Fecha de auditoria externa</th>
-              <th>Comentarios Auditoria Externa</th>
-              <th>Enlaces</th>
-          </tr>
-       </thead>
-       <tbody>
-           {% for DesarrolloDeEquiposLideres in Desarrollo_de_equipos_lideres_list %}
-      <tr>
-        <td>{{DesarrolloDeEquiposLideres.codigo}}</td>
-        <td> {{DesarrolloDeEquiposLideres.numeral }}</td>
-        <td>{{DesarrolloDeEquiposLideres.priority}}</td>
-        <td> {{DesarrolloDeEquiposLideres.dep_responsable}}</td>
-        <td>{{DesarrolloDeEquiposLideres.person_responsable}}</td>
-        <td>{{DesarrolloDeEquiposLideres.track_date}}</td>
-        <td>{{DesarrolloDeEquiposLideres.internal_auditory_date}}</td>
-        <td>{{DesarrolloDeEquiposLideres.internal_auditory_obs}}</td>
-        <td>{{DesarrolloDeEquiposLideres.external_auditory_date}}</td>
-        <td>{{DesarrolloDeEquiposLideres.external_auditory_obs}}</td>
-        <td><a href="{{ DesarrolloDeEquiposLideres.evidence }}" target="_blank">{{ DesarrolloDeEquiposLideres.evidence }}</a></td>
-  |   </tr>
-  {% empty %}
-  <tr>
-      <td colstran="9">No hay numerales.</td>
-  </tr>
-  {% endfor %}
-</tbody>
-</table>
-{% endblock %}
+<div class="tabla-contenedor">
+    <div class="tabla-scroll">
+    <table class="celdas">
+        <thead>
+            <tr>
+                <th>Codigo</th>
+                <th>Numeral</th>
+                <th>Prioridad</th>
+                <th>Departamento Responsable</th>
+                <th>Persona Responsable</th>
+                <th>Fecha límite de seguimiento</th>
+                <th>Fecha de auditoria interna</th>
+                <th>Comentarios Auditoria Interna</th>
+                <th>Fecha de auditoria externa</th>
+                <th>Comentarios Auditoria Externa</th>
+                <th>Enlaces</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for DesarrolloDeEquiposLideres in Desarrollo_de_equipos_lideres_list %}
+            <tr>
+                <td>{{DesarrolloDeEquiposLideres.codigo}}</td>
+                <td> {{DesarrolloDeEquiposLideres.numeral }}</td>
+                <td>{{DesarrolloDeEquiposLideres.priority}}</td>
+                <td> {{DesarrolloDeEquiposLideres.dep_responsable}}</td>
+                <td>{{DesarrolloDeEquiposLideres.person_responsable}}</td>
+                <td>{{DesarrolloDeEquiposLideres.track_date}}</td>
+                <td>{{DesarrolloDeEquiposLideres.internal_auditory_date}}</td>
+                <td>{{DesarrolloDeEquiposLideres.internal_auditory_obs}}</td>
+                <td>{{DesarrolloDeEquiposLideres.external_auditory_date}}</td>
+                <td>{{DesarrolloDeEquiposLideres.external_auditory_obs}}</td>
+                <td><a href="{{ DesarrolloDeEquiposLideres.evidence }}" target="_blank">{{ DesarrolloDeEquiposLideres.evidence }}</a></td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colstran="9">No hay registros.</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+    </div>
+    </body>
+    
+    {% endblock %}

@@ -2,6 +2,7 @@ from django.db import models
 from django.urls import reverse
 from ..GeneralModel import GeneralModel
 
+# 3.1 APRENDIZAJE CENTRADO EN EL ESTUDIANTE
 
 class AprendizajeCentrado (GeneralModel):
 

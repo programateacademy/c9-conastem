@@ -3,6 +3,7 @@ from django.urls import reverse
 from ..GeneralModel import GeneralModel
 
 # 2.8 EVALUACIÓN DE LOS ESTUDIANTES
+
 class EvaluacionEstudiantes(GeneralModel):
 
     ITEM_CHOICE = [
