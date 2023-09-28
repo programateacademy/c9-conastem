@@ -1,8 +1,56 @@
+/* * {
+    font-family: Inter;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+    border-bottom: 4px solid #264094;
+    width: 100%;
+}
+
+
+.logo {
+    display: flex;
+    padding: 0.9375rem 1.875rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.625rem;
+}
+
+#menu {
+    display: flex;
+    padding: 0rem 6.25rem;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-content: flex-end;
+    row-gap: 0.125rem;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+
+#item {
+    display: flex;
+    padding: 1px 15px;
+    flex-direction: column;
+    border-bottom: 2px #000 solid;
+    transition: border 0.3s;
+}
+
+#icons img{
+    transition: swap 0.3s;
+    /* Transición para un cambio suave de color */
+
+
+
+
 /* ---------sroll bar------------ */
 
 .tabla-contenedor {
-    overflow-x: auto;
-    max-width: 100%;
+    overflow: auto;
+    width: 100%;
 }
 
 table {
@@ -21,7 +69,7 @@ table td, table th {
 
 .margen-contenedor {
     border-radius: 40px;
-    width: 169.2vh;
+    width: 100%;
     height: 70%;
     background-color: #fffbe9;
     padding: 0 3rem;
@@ -65,7 +113,7 @@ th, td {
     }
     .margen-contenedor {
         border-radius: 40px;
-        width: 50vh;
+        width: 100%;
         height: 70%;
         background-color: #fffbe9;
         padding: 0;
@@ -88,6 +136,11 @@ th, td {
         margin-top: 5px;
         background-color:#264094;
         padding:1.5px;
+    }
+
+    .tabla-contenedor {
+        overflow: auto;
+        width: 100%;
     }
 }
 
