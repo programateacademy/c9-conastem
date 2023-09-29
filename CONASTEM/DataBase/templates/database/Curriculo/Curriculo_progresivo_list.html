@@ -1,56 +1,70 @@
 {% extends "base_general.html" %}
-
 {% block content %}
-
 {% load static %}
 
+<link rel="stylesheet" type="text/css" href="{% static 'styles/tables.css' %}">
+
+<body>
+    <div class="fondo">
+<div class= "margen-contenedor">
 <div class= "titulo">
-    <img src="{%static 'images/tabla_detail/icon_curriculo.svg' %}">
+    <img src="{%static 'images/icons/IconDoc.svg' %}">
     <h1 style="text-transform:uppercase">2000 - Currículo</h1>
 </div>
 <div class="subtitulo">
-    <h2 style="text-transform:uppercase">2500 - Currículo progresivo y alineado con los estándares curriculares</h2>
-    <a href="/database/curriculo-progresivo/new"><img src="{%static 'images/crear_datos.svg'%}" alt="Crear datos"></a>
+    <div class="titulo-texto">
+        <h2 style="text-transform:uppercase">2500 - Currículo progresivo y alineado con los estándares curriculares</h2>
+    </div>
+    <div class= "imagen-crear-datos">
+        <a href="/database/curriculo-progresivo/new">
+            <img src="{%static 'images/crear_datos.svg'%}" alt="Crear datos">
+        </a>
+    </div>
 </div>
-
-
-<table>
-    <thead>
-        <tr>
-            <th>Código</th>
-            <th>Numeral</th>
-            <th>Prioridad<th>
-            <th>Departamento Responsable</th>
-            <th>Persona Responsable</th>
-            <th>Fecha límite de seguimiento</th>
-            <th>Fecha de auditoria interna</th>
-            <th>Comentarios Auditoria Interna</th>
-            <th>Fecha de auditoria externa</th>
-            <th>Comentarios Auditoria Externa</th>
-            <th>Enlaces</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for CurriculoProgresivo in Curriculo_progresivo_list %}
-        <tr>
-            <td>{{ CurriculoProgresivo.codigo }}</td>
-            <td>{{ CurriculoProgresivo.numeral }}</td>
-            <td>{{CurriculoProgresivo.priority}}</td>
-            <td>{{ CurriculoProgresivo.dep_responsable }}</td>
-            <td>{{ CurriculoProgresivo.person_responsable }}</td>
-            <td>{{ CurriculoProgresivo.track_date }}</td>
-            <td>{{ CurriculoProgresivo.internal_auditory_date }}</td>
-            <td>{{ CurriculoProgresivo.internal_auditory_obs }}</td>
-            <td>{{ CurriculoProgresivo.external_auditory_date }}</td>
-            <td>{{ CurriculoProgresivo.external_auditory_obs }}</td>
-            <td><a href="{{CurriculoProgresivo.evidence}}" traget="_blank">{{CurriculoProgresivo.evidence}}</a></td>
-        </tr>
+<hr>
+<div class="tabla-contenedor">
+    <div class="tabla-scroll">
+    <table class="celdas">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Numeral</th>
+                <th>Prioridad</th>
+                <th>Departamento Responsable</th>
+                <th>Persona Responsable</th>
+                <th>Fecha límite de seguimiento</th>
+                <th>Fecha de auditoria interna</th>
+                <th>Comentarios Auditoria Interna</th>
+                <th>Fecha de auditoria externa</th>
+                <th>Comentarios Auditoria Externa</th>
+                <th>Enlaces</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for CurriculoProgresivo in Curriculo_progresivo_list %}
+            <tr>
+                <td>{{CurriculoProgresivo.codigo}}</td>
+                <td>{{CurriculoProgresivo.numeral}}</td>
+                <td>{{CurriculoProgresivo.priority}}</td>
+                <td>{{CurriculoProgresivo.dep_responsable }}</td>
+                <td>{{CurriculoProgresivo.person_responsable }}</td>
+                <td>{{CurriculoProgresivo.track_date }}</td>
+                <td>{{CurriculoProgresivo.internal_auditory_date }}</td>
+                <td>{{CurriculoProgresivo.internal_auditory_obs }}</td>
+                <td>{{CurriculoProgresivo.external_auditory_date }}</td>
+                <td>{{CurriculoProgresivo.external_auditory_obs }}</td>
+                <td><a href="{{CurriculoProgresivo.evidence}}" traget="_blank">{{CurriculoProgresivo.evidence}}</a></td>
+            </tr>
         {% empty %}
         <tr>
             <td colspan="9">No hay registros.</td>
         </tr>
         {% endfor %}
-    </tbody>
-</table>
-
+        </tbody>
+    </table>
+    </div>
+</div>
+</div>
+</div>
+</body>
 {% endblock %}

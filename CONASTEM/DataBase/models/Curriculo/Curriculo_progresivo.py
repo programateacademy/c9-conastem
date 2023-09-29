@@ -3,6 +3,7 @@ from django.urls import reverse
 from ..GeneralModel import GeneralModel
 
 # 2.5 CURRÍCULO PROGRESIVO Y ALINEADO CON LOS ESTÁNDARES CURRICULARES
+
 class CurriculoProgresivo(GeneralModel):
 
     ITEM_CHOICE = [

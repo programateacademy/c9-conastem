@@ -3,6 +3,7 @@ from django.urls import reverse
 from ..GeneralModel import GeneralModel
 
 # 2.9 SOSTENBILIDAD - CURRÍCULO
+
 class SostenibilidadCurriculo(GeneralModel):
 
     ITEM_CHOICE = [

@@ -1,11 +1,12 @@
 from django.db import models
 from ..GeneralModel import GeneralModel
 
+# 3.2 APRENDIZAJE RIGUROSO
 
 class AprendizajeRiguroso (GeneralModel):
 
     ITEM_CHOICE = [
-        ("3200","Aprendizaje Riguroso"),
+        ("3200","APRENDIZAJE RIGUROSO"),
         ("3210","Los estudiantes deben enfrentar problemas del mundo real, globales, de su país, región o ciudad, problemas que le son de su diario vivir."),
         ("3220","Trabajo cognitivo exigente. Los estudiantes utilizan hábitos mentales, llegan a conclusiones basadas en la evidencia, predicen fenómenos y comportamientos, analizan datos, explican y razonan."),
         ("3221","Conclusiones basadas en la evidencia"),

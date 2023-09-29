@@ -1,53 +1,68 @@
 {% extends "base_general.html" %}
-
 {% block content %}
 {% load static %}
 
+<link rel="stylesheet" type="text/css" href="{% static 'styles/tables.css' %}">
+
+<body>
+    <div class="fondo">
+<div class= "margen-contenedor">
 <div class= "titulo">
-    <img src="{%static 'images/tabla_detail/icon_for_instrucc_eva.svg' %}">
+    <img src="{%static 'images/icons/IconGraph.svg' %}">
     <h1 style="text-transform:uppercase">3000 - Formación / Instrucción / Evaluación</h1>
 </div>
 <div class="subtitulo">
-    <h2 style="text-transform:uppercase">3200-APRENDIZAJE RIGUROSO</h2>
-    <a href="/database/aprendizajeriguroso/new"><img src="{%static 'images/crear_datos.svg'%}" alt="Crear datos"></a>
+    <div class="titulo-texto">
+        <h2 style="text-transform:uppercase">3200-APRENDIZAJE RIGUROSO</h2>
+    </div>
+    <div class= "imagen-crear-datos">
+        <a href="/database/aprendizajeriguroso/new"><img src="{%static 'images/crear_datos.svg'%}" alt="Crear datos"></a>
+    </div>
 </div>
- 
-    <table>
-       <thead>
-          <tr>
-              <th>Código</th>
-              <th>Numeral</th>
-              <th>Prioridad<th>
-              <th>Departamento Responsable</th>
-              <th>Persona Responsable</th>
-              <th>Fecha límite de seguimiento</th>
-              <th>Fecha de auditoria interna</th>
-              <th>Comentarios Auditoria Interna</th>
-              <th>Fecha de auditoria externa</th>
-              <th>Comentarios Auditoria Externa</th>
-              <th>Enlaces</th>
-          </tr>
-       </thead>
-       <tbody>
-           {% for aprendizajeriguroso in AprendizajeRiguroso_List %}
-      <tr>
-        <td>{{aprendizajeriguroso.codigo}}</td>
-        <td> {{aprendizajeriguroso.numeral }}</td>
-        <td>{{aprendizajeriguroso.priority}}</td>
-        <td> {{aprendizajeriguroso.dep_responsable}}</td>
-        <td>{{aprendizajeriguroso.person_responsable}}</td>
-        <td>{{aprendizajeriguroso.track_date}}</td>
-        <td>{{aprendizajeriguroso.internal_auditory_date}}</td>
-        <td>{{aprendizajeriguroso.internal_auditory_obs}}</td>
-        <td>{{aprendizajeriguroso.external_auditory_date}}</td>
-        <td>{{aprendizajeriguroso.external_auditory_obs}}</td>
-        <td><a href="{{ aprendizajeriguroso.evidence }}" target="_blank">{{ aprendizajeriguroso.evidence }}</a></td>
-  |   </tr>
-  {% empty %}
-  <tr>
-      <td colstran="9">No hay registros.</td>
-  </tr>
-  {% endfor %}
-</tbody>
-</table>
+<div class="tabla-contenedor">
+    <div class="tabla-scroll">
+    <table class="celdas">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Numeral</th>
+                <th>Prioridad</th>
+                <th>Departamento Responsable</th>
+                <th>Persona Responsable</th>
+                <th>Fecha límite de seguimiento</th>
+                <th>Fecha de auditoria interna</th>
+                <th>Comentarios Auditoria Interna</th>
+                <th>Fecha de auditoria externa</th>
+                <th>Comentarios Auditoria Externa</th>
+                <th>Enlaces</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for aprendizajeriguroso in AprendizajeRiguroso_List %}
+            <tr>
+                <td>{{aprendizajeriguroso.codigo}}</td>
+                <td> {{aprendizajeriguroso.numeral }}</td>
+                <td>{{aprendizajeriguroso.priority}}</td>
+                <td> {{aprendizajeriguroso.dep_responsable}}</td>
+                <td>{{aprendizajeriguroso.person_responsable}}</td>
+                <td>{{aprendizajeriguroso.track_date}}</td>
+                <td>{{aprendizajeriguroso.internal_auditory_date}}</td>
+                <td>{{aprendizajeriguroso.internal_auditory_obs}}</td>
+                <td>{{aprendizajeriguroso.external_auditory_date}}</td>
+                <td>{{aprendizajeriguroso.external_auditory_obs}}</td>
+                <td><a href="{{ aprendizajeriguroso.evidence }}" target="_blank">{{ aprendizajeriguroso.evidence }}</a></td>
+            </tr>
+        {% empty %}
+        <tr>
+            <td colstran="9">No hay registros.</td>
+         </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+</div>
+</div>
+</div>
+</body>
+    
 {% endblock %}

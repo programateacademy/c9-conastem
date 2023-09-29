@@ -2,6 +2,8 @@ from django.db import models
 from django.urls import reverse
 from ..GeneralModel import GeneralModel
 
+# 3.4 EDUCACIÓN STEM INTEGRADA
+
 class EducacionSTEMIntegrada (GeneralModel):
 
     ITEM_CHOICE = [

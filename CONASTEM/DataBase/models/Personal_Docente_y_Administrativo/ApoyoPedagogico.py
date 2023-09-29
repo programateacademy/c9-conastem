@@ -2,6 +2,7 @@ from django.db import models
 from django.urls import reverse
 from ..GeneralModel import GeneralModel
 
+# 4.3 APOYO PEDAGÓGICO PARA EL PERSONAL
 
 class ApoyoPedagogico(GeneralModel):
 

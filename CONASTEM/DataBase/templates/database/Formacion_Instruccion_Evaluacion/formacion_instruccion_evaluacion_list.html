@@ -1,7 +1,7 @@
 {% extends "base_general.html" %} {%block content%}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -9,22 +9,22 @@
     <link rel="stylesheet" href="{% static 'styles/subcriterio_styles.css' %}"/>
     <link href="https://fonts.googleapis.com/css2?family=Inter" rel="stylesheet" type="text/css"/>
     <link href="https://fonts.googleapis.com/css2?family=Questrial" rel="stylesheet" type="text/css"/>
-  </head>                   
-  <body>
+</head>                   
+<body>
     <section id="main">
-      <div class="container-items2">
+        <div class="container-items2">
         <div class="sections">
-          <section id="section1">
+            <section id="section1">
             <div class="encabezado">
                 <div class="titulo-principal">
                     <div class="container-icon">
                         <img id="icon" src="{% static 'images/icons/IconGraph.svg' %}" alt="Ícono Formación/ Instrucción/ Evaluación" />
                     </div>
-                    <h1>3000.Formación, Instrucción Y Evaluación</h1>
+                    <h1>3000. Formación, Instrucción Y Evaluación</h1>
                 </div>
             </div>
             <div class="form">
-              <div class="campo-formulario" id="form">
+                <div class="campo-formulario" id="form">
                 <p>Selecciona un subcriterio para continuar:</p>
                 <a href="{%url 'aprendizaje_centrado_list'%}">
                     <button class="cnt">

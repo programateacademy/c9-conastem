@@ -3,6 +3,7 @@ from django.urls import reverse
 from ..GeneralModel import GeneralModel
 
 # 2.6 CURRÍCULO PROPIO
+
 class CurriculoPropio(GeneralModel):
 
     ITEM_CHOICE = [
