@@ -184,6 +184,7 @@ select {
     border-radius: 50px;
     justify-content: center;
     align-items: center;
+    margin: 30px;
 }
 
 /* Pop up */
