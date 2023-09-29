@@ -214,17 +214,17 @@ h1 {
     padding-right: 5px;
     width: 100%;
     letter-spacing: 2px;
-    justify-content: center;
-    align-items: center;
+    justify-content:flex-start;
+    align-items: left;
     gap: 10px;
     display: inline-flex;
     font-weight: 450;
+    text-align: left;
 }
 
 p,
 label {
     flex: 1 1 0;
-    text-align: right;
     color: black;
     font-size: 13px;
     font-family:Questrial;
@@ -254,9 +254,10 @@ label {
 .cnt-item {
     justify-content: flex-start;
     width: 100%;
-    align-items: center;
+    align-items: flex-start;
     display: flex;
     gap: 3px;
+    text-align: start;
 }
 
 .cnt:hover {
