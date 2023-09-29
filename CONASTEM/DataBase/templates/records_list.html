@@ -1,21 +1,57 @@
-{% extends "base_general.html" %}
+{% extends 'base_general.html' %}
 
-{%block content%}
+{% block content %}
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<section class= "lista">
-    {%if register_list%}
+      {% load static %}
+      <link rel="stylesheet" href="{% static 'styles/records_detail.css' %}" />
+      <link href="https://fonts.googleapis.com/css2?family=Inter" rel="stylesheet" type="text/css" />
+      <link href="https://fonts.googleapis.com/css2?family=Questrial" rel="stylesheet" type="text/css" />
+    </head>
 
-        {%for register in register_list%}
-            <li>
-                <a href="{{register.get_absolute_url}}">{{register.institution_name}}</a>
-            </li>
-        {%endfor%}
-    
-    {%else%}
-    <p>No se encontraron registros</p>
+    <body>
+      <section id="main">
+        <div class="container-items2">
+          <div class="sections">
+            <section id="section1">
+              <h1>Instituciones Educativas</h1>
+              <div class="form">
+                <div class="campo-formulario" id="form">
+                  {% if register_list %}
+                    {%for register in register_list%}
+                    <a href="{{register.get_absolute_url}}">
+                    <button class="cnt">
+                          <div class="cntt">
+                            <div class="cnt-item">
+                              <div class="textt">{{register.institution_name}}</div>
+                            </div>
+                          </div>
+                        </button>
+                      </a>
+                    {% endfor %}
+                  {% else %}
+                    <p>No se encontraron registros</p>
+                  {% endif %}
 
-    {%endif%}
-
-</section>
-
-{%endblock content%}
+                    <a href="{% url 'index' %}">
+                      <button class="submit">
+                        <div class="cntt">
+                          <div class="cnt-item">
+                            <div>Agregar Institución</div>
+                          </div>
+                        </div>
+                      </button>
+                    </a>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </body>
+  </html>
+{% endblock %}
