@@ -33,7 +33,7 @@
 }
 
 #section1 {
-    width: auto;
+    width: 90%;
     flex: 1 1 0;
     align-self: stretch;
     padding: 8%;
@@ -53,11 +53,6 @@
         flex-direction: column;
         /* Despliega hacia abajo en dispositivos móviles */
     }
-
-    #section1 {
-        padding: 10px;
-        /* Reduzco el espaciado en dispositivos móviles */
-    }
 }
 
 /* Media Queries para tamaños de pantalla específicos */
@@ -68,10 +63,6 @@
         /* Aumenta el espaciado en tabletas y pantallas más grandes */
     }
 
-    #section2 {
-        width: 284;
-        /* Ancho ajustable para tabletas y pantallas más grandes */
-    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -84,11 +75,6 @@
     #section1 {
         padding: 10%;
         /* Aumenta el espaciado en pantallas de PC */
-    }
-
-    #section2 {
-        width: 284;
-        /* Ancho ajustable para pantallas de PC */
     }
 }
 
@@ -109,6 +95,7 @@ h2 {
     font-size: 20px;
     font-weight: 600;
     padding: 0 20px;
+    margin: 5px;
 }
 
 .form {
@@ -143,7 +130,7 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 30px;
+    gap: 20px;
     align-self: stretch;
 }
 
@@ -194,7 +181,7 @@ label {
     font-size: 13px;
     font-family: Questrial;
     line-height: 15px;
-    width: 100%;
+    width: 110px;
 }
 
 input[type="date"],
@@ -236,12 +223,12 @@ textarea {
 
 .input {
     width: 80%;
-    align-items: flex-start;
     gap: 10px;
     display: flex;
-    padding: 5px;    
+    padding: 5px;
     height: auto;
     justify-content: left;
+    align-items: flex-end;
 }
 
 .submit {
@@ -258,6 +245,22 @@ textarea {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    margin: 30px;
+}
+
+
+.submit-fucsia {
+    text-align: center;
+    color: white;
+    font-size: 13px;
+    font-family: Inter;
+    font-weight: 500;
+    word-wrap: break-word;
+    padding: 5px 20px;
+    background: #E51954;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
     margin: 30px;
 }
 

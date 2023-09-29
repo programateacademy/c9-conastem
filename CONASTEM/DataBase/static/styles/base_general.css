@@ -97,8 +97,8 @@ header #item-hover:active {
 }
 
 img {
-    width: 25px;
-    height: auto;
+    width: auto;
+    height: 100%;
 }
 
 header .text{
