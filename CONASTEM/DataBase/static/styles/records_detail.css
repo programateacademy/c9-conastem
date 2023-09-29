@@ -354,7 +354,7 @@ label {
 }
 
 .cnt {
-    width: 350px;
+    width: 100%;
     padding: 5px;
     background: rgba(255, 255, 255, 0.15);
     border-radius: 50px;

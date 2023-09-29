@@ -12,18 +12,7 @@
     display: inline-flex;
 }
 
-.container {
-    width: 90%; /* Ajusta el ancho al tamaño de la pantalla */
-    max-width: 1200px; /* Establece un ancho máximo para mantenerlo manejable en pantallas grandes */
-    margin: 0 auto; /* Centra el contenedor en la pantalla */
-    height: auto;
-    padding: 40px;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 25px;
-    display: flex;
-}
+
 
 .container-items {
     width: 80%;
@@ -85,15 +74,12 @@
 
 /* Media Query para dispositivos móviles (teléfonos) */
 @media screen and (max-width: 767px) {
-    .container,
     .container-items,
     .sections {
         flex-direction: column; /* Despliega hacia abajo en dispositivos móviles */
     }
 
-    .container {
-        padding: 10px;
-    }
+    
 
     .sections {
         padding-top: 10px; /* Reduzco el espacio superior en dispositivos móviles */
@@ -108,9 +94,7 @@
 /* Media Queries para tamaños de pantalla específicos */
 @media screen and (min-width: 768px) {
     /* Estilos para tablets y pantallas más grandes */
-    .container {
-        padding: 20px; 
-    }
+    
 
     .container-items {
         padding-left: 10%;
@@ -124,9 +108,7 @@
 
 @media screen and (min-width: 1024px) {
     /* Estilos para pantallas de PC */
-    .container {
-        padding: 40px; /* Aumenta el espaciado en pantallas de PC */
-    }
+    
 
     .container-items {
         padding-left: 5%;

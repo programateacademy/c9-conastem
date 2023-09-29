@@ -1,65 +1,105 @@
-{% extends "base_general.html" %}
+{% extends "base_general.html" %} {%block content%} {% load static %}
 
+<link rel="stylesheet" type="text/css" href="{% static 'styles/home.css' %}" />
 
-{%block content%}
-{% load static %}
-
-<link rel="stylesheet" type="text/css" href="{% static 'styles/home.css' %}">
-
-
-<div class= "fondo-home">
-<div class="todo-criterios">
-<div class= "contenedor-criterios">
-<div class= "container-1">
-    <h1> Criterios del Marco de Referencia para la  Educación STEM </h1>
-    <p> Por medio de los siguientes criterios del marco de referencia, podrás realizar
-    un diagnóstico, subir avances, sistematizar y hacer seguimiento de sus iniciativas en STEM
-    y Educación STEM institucionales.</p>
-    <br>
-    <p> Selecciona un criterio para continuar :</p>
-</div>
-<section class= "criterios">
-    <ul>
-        <li><a href="{%url 'Infraestructura'%}"><img src="{%static 'images/icons/IconBuilding.svg'%}"><br> 1000 <br> INFRAESTRUCTURA</a></li>
-        <li><a href="{%url 'Curriculo'%}"><img src="{%static 'images/icons/IconDoc.svg'%}"><br> 2000 <br> CURRÍCULO</a></li>
-        <li><a href="{%url 'FormacionInstruccionEvaluacion'%}"><img src="{%static 'images/icons/IconGraph.svg'%}"><br> 3000 <br> FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN</a></li>
-        <li><a href="{%url 'PersonalDocenteyAdministrativo'%}"><img src="{%static 'images/icons/IconSecure.svg'%}"> <br> 4000 <br> PERSONAL DOCENTE Y ADMINISTRATIVO</a></li>
-        <li><a href="{%url 'Escuelacomunidadypertenencia' %}"><img src="{%static 'images/icons/IconPeople.svg'%}"><br>5000 <br> ESCUELA COMUNIDAD Y PERTENENCIA</a></li>
-    </ul>
-</section>
-</div>
-<div class="libro">
-<section id="section2">
-    <div class="container-sect2">
-      <div class="container2">
-        <img class="img-book" src="{% static 'images/Libro_STEM.svg' %}" alt="Educación STEM Marco de referencia para américa latina" />
+<div class="fondo-home">
+  <div class="todo-criterios">
+    <div class="contenedor-criterios">
+      <div class="container-1">
+        <h1>Criterios del Marco de Referencia para la Educación STEM</h1>
+        <p>
+          Por medio de los siguientes criterios del marco de referencia, podrás
+          realizar un diagnóstico, subir avances, sistematizar y hacer
+          seguimiento de sus iniciativas en STEM y Educación STEM
+          institucionales.
+        </p>
+        <br />
+        <p>Selecciona un criterio para continuar :</p>
       </div>
-      <div class="container3">
-        <div class="text">
-          <p>Página basada en el libro Educación STEM marco de referencia para América Latina</p>
-        </div>
-        <div class="buttons">
-          <a href="https://www.conastem.org/marcodereferencia" target="_blank"><button class="button1">Mayor Información</button></a>
-          <a href="https://docs.google.com/document/d/127lgMV3lCmBqFuBtjxBVZ-jISmPfltUPC9e7IqP0xaY/edit?usp=sharing" target="_blank">
-            <button class="cnt" >
-              <div class="cntt">
-                <div class="cnt-item">
-                  <div class="c1">
-                    <div class="btn-icon">
-                      <img class="iconManual" src="{% static 'images/icons/IconManual.svg' %}" alt="Icono Manual" />
+      <section class="criterios">
+        <ul>
+          <li>
+            <div class="li-container">
+              <a href="{%url 'Infraestructura'%}">
+              <div>
+                <img src="{%static 'images/icons/IconBuilding.svg'%}" />
+                <br/> 1000 <br/> INFRAESTRUCTURA
+              </div>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="li-container">
+              <a href="{%url 'Curriculo'%}">
+              <div>
+                <img src="{%static 'images/icons/IconDoc.svg'%}" />
+                <br/> 2000 <br/> CURRÍCULO
+              </div>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="li-container">
+              <a href="{%url 'FormacionInstruccionEvaluacion'%}">
+              <div>
+                <img src="{%static 'images/icons/IconGraph.svg'%}"/>
+                <br/> 3000 <br/> FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN
+              </div>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="li-container">
+              <a href="{%url 'PersonalDocenteyAdministrativo'%}">
+              <div>
+                <img src="{%static 'images/icons/IconSecure.svg'%}" /> 
+                <br/> 4000 <br/> PERSONAL DOCENTE Y ADMINISTRATIVO
+              </div>  
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="li-container">
+              <a href="{%url 'Escuelacomunidadypertenencia' %}">
+              <div>
+                <img src="{%static 'images/icons/IconPeople.svg'%}"/>
+                <br/>5000<br/>ESCUELA COMUNIDAD Y PERTENENCIA</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <section id="section2">
+      <div class="container-sect2">
+        <div class="container2">
+          <img class="img-book" src="{% static 'images/Libro_STEM.svg' %}" alt="Educación STEM Marco de referencia para américa latina" />
+          <div class="container3">
+            <div class="text">
+              <p>Página basada en el libro Educación STEM marco de referencia para América Latina</p>
+            </div>
+            <div class="buttons">
+              <a href="https://www.conastem.org/marcodereferencia" target="_blank"><button class="button1">Mayor Información</button></a>
+              <a href="https://docs.google.com/document/d/127lgMV3lCmBqFuBtjxBVZ-jISmPfltUPC9e7IqP0xaY/edit?usp=sharing" target="_blank">
+                <button class="cnt" >
+                  <div class="cntt">
+                    <div class="cnt-item">
+                      <div class="c1">
+                        <div class="btn-icon">
+                          <img class="iconManual" src="{% static 'images/icons/IconManual.svg' %}" alt="Icono Manual" />
+                        </div>
+                      </div>
+                      <div class="button2">Manual de Usuario</div>
                     </div>
                   </div>
-                  <div class="button2">Manual de Usuario</div>
-                </div>
-              </div>
-            </button>
-          </a>
+                </button>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-</div>  
-</div>
+    </section>
+  </div>
 </div>
 
 {%endblock content%}
