@@ -173,7 +173,7 @@ h1 {
     font-weight: normal;
     word-wrap: break-word;
     display: flex;
-    line-height: 8px;
+    /* line-height: initial; */
     margin: auto;
     padding: 0%;
 }

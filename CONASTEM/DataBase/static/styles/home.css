@@ -14,9 +14,12 @@
 .todo-criterios {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     align-self: stretch;
-    margin-right: 4rem;
+    margin: 5%;
+    width: auto;
+    flex-wrap: wrap;
+    gap: 3%;
 }
 /* Estilo para el contenedor de criterios */
 .contenedor-criterios h1 {
@@ -72,7 +75,7 @@
 
 /* ---------------------------------------LIBRO-------------------------------------- */
 .libro{
-    margin: 5em;
+    /* margin: 5em; */
     max-width: 284px;
     min-width: 284px;
     min-height:648px;
@@ -249,8 +252,8 @@
 .contenedor-criterios {
     min-width: 41%; /* Reduce el ancho mínimo del contenedor principal */
     max-width: 41%; /* Reduce el ancho máximo del contenedor principal */
-    margin: 15px;
-    padding: 120px; ; /* Centra el contenedor en la pantalla */
+    /* margin: 15px; */
+    padding: 9%;  /* Centra el contenedor en la pantalla */
 }
 
 .criterios li {

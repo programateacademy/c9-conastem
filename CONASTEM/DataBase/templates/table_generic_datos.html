@@ -1,0 +1,63 @@
+{% extends "base_general.html" %}
+
+
+<TABLE border="1" frame="border" rules="groups" align="center">
+
+    {%block encabezado%}
+
+    <CAPTION>{{Subcriterio}}</CAPTION>
+
+    <COLGROUP align="center"></COLGROUP>
+    <COLGROUP align="left"></COLGROUP>
+    <COLGROUP align="center" span="2"></COLGROUP>
+    <COLGROUP align="center" span="2"></COLGROUP>
+    <COLGROUP align="center" span="2"></COLGROUP>
+    <COLGROUP align="center" span="6"></COLGROUP>
+
+    <THEAD>
+        <TR>
+            <TH COLSPAN=1>Código</TH>
+            <TH COLSPAN=1>Numeral</TH>
+            <TH COLSPAN=2>Auditoría interna</TH>
+            <TH COLSPAN=2>Auditoría externa</TH>
+            <TH COLSPAN=2>Responsable</TH>
+            <TH COLSPAN=6>Fecha límite</TH>
+            <TH COLSPAN=1>Enlaces</TH>
+        </TR>
+        <TR>
+            <TH></TH>
+            <TH></TH>
+            <TH>Fecha</TH>
+            <TH>Observación</TH>
+            <TH>Fecha</TH>
+            <TH>Observación</TH>
+            <TH>Departamento</TH>
+            <TH>Persona</TH>
+            <TH>Año 1</TH>
+            <TH>Año 2</TH>
+            <TH>Año 3</TH>
+            <TH>Año 4</TH>
+            <TH>Año 5</TH>
+            <TH>Año 6</TH>
+            <TH></TH>
+        </TR>
+    </THEAD>
+    {%endblock encabezado%}
+    {%block content%}
+    <TBODY>
+        <TR>
+            <TD>A</TD>
+            <TD>B</TD>
+            <TD>C</TD>
+            <TD>D</TD>
+        </TR>
+        <TR>
+            <TD>E</TD>
+            <TD>F</TD>
+            <TD>G</TD>
+            <TD>H</TD>
+        </TR>
+    </TBODY>
+    {%endblock content%}
+</TABLE>
+

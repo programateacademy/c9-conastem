@@ -22,17 +22,18 @@
 }
 
 .sections {
-    width: 100%;
+    width: 90%;
     height: auto;
+    padding: 5%;
     align-self: stretch;
     justify-content: center;
-    align-items: center;
-    gap: 10%;
+    gap: 15px;
     display: inline-flex;
+    flex-wrap: wrap;
 }
 
 #section1 {
-    width: auto;
+    width: 90%;
     flex: 1 1 0;
     align-self: stretch;
     padding: 8%;
@@ -52,56 +53,20 @@
         flex-direction: column;
         /* Despliega hacia abajo en dispositivos móviles */
     }
-
-    .container {
-        padding: 10px;
-    }
-
-    .sections {
-        padding-top: 10px;
-        /* Reduzco el espacio superior en dispositivos móviles */
-        padding-bottom: 10px;
-        /* Reduzco el espacio inferior en dispositivos móviles */
-    }
-
-    #section1 {
-        padding: 10px;
-        /* Reduzco el espaciado en dispositivos móviles */
-    }
 }
 
 /* Media Queries para tamaños de pantalla específicos */
 @media screen and (min-width: 768px) {
-
     /* Estilos para tablets y pantallas más grandes */
-    .container {
-        padding: 20px;
-    }
-
-    .container-items {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-
     #section1 {
         padding: 5%;
         /* Aumenta el espaciado en tabletas y pantallas más grandes */
     }
 
-    #section2 {
-        width: 284;
-        /* Ancho ajustable para tabletas y pantallas más grandes */
-    }
 }
 
 @media screen and (min-width: 1024px) {
-
     /* Estilos para pantallas de PC */
-    .container {
-        padding: 40px;
-        /* Aumenta el espaciado en pantallas de PC */
-    }
-
     .container-items {
         padding-left: 5%;
         padding-right: 5%;
@@ -110,11 +75,6 @@
     #section1 {
         padding: 10%;
         /* Aumenta el espaciado en pantallas de PC */
-    }
-
-    #section2 {
-        width: 284;
-        /* Ancho ajustable para pantallas de PC */
     }
 }
 
@@ -135,6 +95,7 @@ h2 {
     font-size: 20px;
     font-weight: 600;
     padding: 0 20px;
+    margin: 5px;
 }
 
 .form {
@@ -169,7 +130,7 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 30px;
+    gap: 20px;
     align-self: stretch;
 }
 
@@ -220,7 +181,7 @@ label {
     font-size: 13px;
     font-family: Questrial;
     line-height: 15px;
-    width: 100%;
+    width: 110px;
 }
 
 input[type="date"],
@@ -262,12 +223,12 @@ textarea {
 
 .input {
     width: 80%;
-    align-items: flex-start;
     gap: 10px;
     display: flex;
-    padding: 5px;    
+    padding: 5px;
     height: auto;
     justify-content: left;
+    align-items: flex-end;
 }
 
 .submit {
@@ -287,6 +248,21 @@ textarea {
     margin: 30px;
 }
 
+
+.submit-fucsia {
+    text-align: center;
+    color: white;
+    font-size: 13px;
+    font-family: Inter;
+    font-weight: 500;
+    word-wrap: break-word;
+    padding: 5px 20px;
+    background: #E51954;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
 
 /* Pop up */
 

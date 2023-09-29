@@ -2,6 +2,10 @@
     font-family: Inter;
 }
 
+.text {
+    text-align: right;
+}
+
 body {
     margin: 150px 0 0 0 ;
 }
@@ -17,18 +21,19 @@ header {
     z-index: 100;
     position: fixed;
     top: 0;
-    background-color: #fff9f9;
+    background-color: #fff;
 }
 
 header .container {
     align-self: stretch;
     height: 100%;
-    padding-top: 0;
-    padding-bottom: 0;
+    width: 100%;
+    padding:0;
+    margin: auto;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    gap: 5px;
+    gap: 0;
     display: flex;
 }
 
@@ -47,13 +52,13 @@ header .logo {
 
 header #menu {
     align-self: stretch;
-    width: 100%;
-    padding: 1% 2%;
+    width: auto;
     justify-content: space-between;
     align-items: flex-end;
     align-content: flex-end;
     display: inline-flex;
-    gap: auto;
+    gap: 5px;
+    padding: 0 4%;
 }
 
 /* Color inicial del borde gris oscuro */
@@ -62,49 +67,53 @@ header #item-hover {
     border-bottom: 3px #ffffff solid;
     /* Color inicial gris oscuro del borde inferior */
     flex-direction: row;
-    gap: auto;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-end;
     text-align: center;
+    vertical-align: bottom;
     display: inline-flex;
     margin: 3px 5px;
+    color: #353535;
+
     transition: border-color 0.3s;
     /* Transición suave para el cambio de color del borde */
+
 }
 
 /* Cambia el color del borde inferior al hacer hover */
 header #item-hover:hover {
     border-color: #FBBB3D;
+    color: #000;
+
     /* Color del borde inferior al hacer hover */
 }
 
 /* Mantiene el color del borde inferior al hacer clic */
 header #item-hover:active {
     border-color: #FBBB3D;
+    color: #000;
+
     /* Color del borde inferior al hacer clic */
 }
 
-header .container-item {
-    width: 30px;
-    height: 30px;
-    bottom: 2.50px;
-}
-
-header .container-icon,
 img {
-    width: 25px;
-    height: auto;
+    width: auto;
+    height: 100%;
 }
 
-header .text {
-    flex: 1 1 0;
-    color: black;
-    font-size: 12px;
-    font-family: Inter;
+header .text{
+    justify-content: flex-end;
+    flex-direction: column;
+    font-size: 10px;
     font-weight: 400;
-    letter-spacing: 1px;
+    font-family: Inter;
+    letter-spacing: 1.15px;
+    gap:0;
     word-wrap: break-word;
     text-align: left;
+    display: inline-flex;
+    align-items: baseline;
+
 }
 
 footer {
@@ -139,49 +148,7 @@ footer h6 {
 
 /* Media Query para dispositivos móviles (teléfonos) */
 @media screen and (max-width: 767px) {
-
-    header .logo {
-        width: 151px;
-        height: auto;
-    }
-
-    header #menu {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    /* Color inicial del borde gris oscuro */
-    header #item-hover {
-        padding: 1.5px;
-    }
-
-    header .container-item,
-    img {
-        width: 20px;
-        height: 20px;
-    }
-
-    header .text {
-        font-size: 10px;
-        font-weight: 400;
-    }
-}
-
-/* Media Queries para tamaños de pantalla específicos */
-@media screen and (min-width: 768px) {
-    header .text {
-        font-size: 10px;
-        font-weight: 400;
-    }
-
-    header #menu {
-        width: 100%;
-        padding: 0;
-    }
-
-    header .container-icon,
-    img {
-        width: 20px;
-        height: auto;
+    header .text{
+        visibility: hidden;
     }
 }
