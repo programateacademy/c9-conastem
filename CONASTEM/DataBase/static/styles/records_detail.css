@@ -12,30 +12,6 @@
     display: inline-flex;
 }
 
-.container {
-    width: 90%; /* Ajusta el ancho al tamaño de la pantalla */
-    max-width: 1200px; /* Establece un ancho máximo para mantenerlo manejable en pantallas grandes */
-    margin: 0 auto; /* Centra el contenedor en la pantalla */
-    height: auto;
-    padding: 40px;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 25px;
-    display: flex;
-}
-
-.container-items {
-    width: 80%;
-    height: auto;
-    padding: 10%;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    display: flex;
-}
-
-
 .container-items2 {
     width: 50%;
     height: auto;

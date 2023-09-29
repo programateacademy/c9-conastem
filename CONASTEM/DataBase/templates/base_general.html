@@ -18,8 +18,10 @@
       {% block sidebar %}
         <div class="container">
           <div class="container-logo">
-            <img class="logo" src="{% static 'images/Logo_conastem.svg' %}" alt="Logo_CONASTEM" />
-          </div>
+            <a href="{% url 'criterio_list' %}">
+              <img class="logo" src="{% static 'images/Logo_conastem.svg' %}" alt="Logo_CONASTEM" />
+            </a>
+            </div>
           <div id="menu">
             <a href="{% url 'criterio_list' %}">
               <div id="item-hover">
