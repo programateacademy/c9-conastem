@@ -228,6 +228,9 @@ select {
     flex: 1 1 0;
 }
 
+#close p {
+    color: 000;
+}
 .close {
     cursor: pointer;
     justify-content: center;
