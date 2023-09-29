@@ -48,12 +48,13 @@ header .logo {
 
 header #menu {
     align-self: stretch;
-    width: 100%;
+    width: auto;
     justify-content: space-between;
     align-items: flex-end;
     align-content: flex-end;
     display: inline-flex;
-    gap: auto;
+    gap: 5px;
+    padding: 0 4%;
 }
 
 /* Color inicial del borde gris oscuro */
@@ -141,11 +142,3 @@ footer h6 {
     word-wrap: break-word;
 }
 
-/* Media Query para dispositivos móviles (teléfonos) */
-@media screen and (max-width: 767px) {
-
-    header .logo {
-        width: 131px;
-        height: auto;
-    }
-}
