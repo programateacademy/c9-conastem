@@ -1,7 +1,7 @@
 .fondo-home {
     width: 100%;
     height: auto;
-    padding: 5rem;
+    padding: 0rem;
     flex-direction: column;
     background-image: url(../images/StemGuardas.jpg);
     background-size: cover;
@@ -14,38 +14,297 @@
 .todo-criterios {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     align-self: stretch;
-
+    margin: 5%;
+    width: auto;
+    flex-wrap: wrap;
+    gap: 3%;
 }
-.contenedor-criterios{
-    border-radius: 50px;
+/* Estilo para el contenedor de criterios */
+.contenedor-criterios h1 {
+    color: #E61A55; 
+}
+.contenedor-criterios {
+    border-radius: 30px;
     background: #FFF;
-    margin-right: 80px;
-    min-width: 900px;
-    min-height: 650px;
-    max-width: 60vh;
-    margin:90px
-}
-.latina{
-    border-radius: 25px 25px 0 0;
-    width: 284px;
-    height: 376px;
-    padding: 0 2rem;
-}
-.botones {
-display: flex;
-padding: 6.85%;
-flex-direction: column;
-justify-content: center;
-align-items: flex-end;
-gap: 20px;
-align-self: stretch;
-background-color: #FFF;
-border-radius: 0 0 25px 25px;
-min-width: 245px;
-height: auto;
-padding-top: 50px;
-
+    text-align: center;
 }
 
+  /* Estilo para la lista no ordenada <ul> dentro de la clase "criterios" */
+.criterios ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+  /* Estilo para cada elemento <li> dentro de la clase "criterios" */
+.criterios li {
+    margin: 10px 0; 
+    padding: 10px;
+    border: 3px solid #ccc; 
+    border-radius: 35px; 
+    width: 200px; 
+    height: 130px; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    text-align: center;
+}
+
+  /* Estilo para las imágenes dentro de cada elemento <li> */
+.criterios li img {
+    max-width: 50px;
+}
+
+  /* Estilo para los enlaces dentro de cada elemento <li> */
+.criterios li a {
+    text-decoration: none; /* Eliminar subrayado de los enlaces */
+    color: #333; /* Cambiar el color del texto del enlace */
+}
+
+  /* Estilo para los enlaces cuando se pasan por encima con el cursor */
+.criterios li:hover {
+    border-color: #FBBB3D;
+}
+
+.li-container {
+    margin: 5px;
+}
+/* ---------------------------------------LIBRO-------------------------------------- */
+.libro{
+    /* margin: 5em; */
+    max-width: 284px;
+    min-width: 284px;
+    min-height:648px;
+    max-height:648px;
+}
+
+.container-sect2 {
+    height: auto;
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.container2 {
+    border-radius: 25px;
+    overflow: hidden;
+    display: inline-flex;
+    flex-direction: column;
+    align-content: flex-end;
+    align-items: flex-end;
+    width: 204px;
+}
+
+#section2 .img-book {
+    width: 204px;
+    height: auto;
+    border-radius: 25px;
+}
+
+.container3 {
+    align-self: stretch;
+    height: auto;
+    padding: 0 15px 30px 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    display: flex;
+}
+
+#section3 .text {
+    align-self: stretch;
+    padding-left: 5px;
+    padding-right: 5px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    display: inline-flex;
+}
+
+.text {
+    align-self: stretch;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    display: inline-flex;
+    font-weight: 500;
+}
+
+.container3 p {
+    flex: 1 1 0;
+    text-align: right;
+    color: black;
+    font-size: 13px;
+    font-family: Questrial;
+    line-height: 20px;
+    word-wrap: break-word;
+}
+
+#section2 .buttons {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 5px;
+    display: flex;
+}
+
+#section2 .buttons2 {
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    display: flex;
+}
+
+.button1 {
+    padding: 5px 15px;
+    background: #264094;
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+    font-family: Inter;
+    font-weight: 600;
+}
+
+.button2 {
+    text-align: right;
+    color: #264094;
+    font-size: 12px;
+    font-family: Inter;
+    font-weight: 500;
+}
+
+.cnt {
+    width: 100%;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50px;
+    border: 1.50px #264094 solid;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+}
+
+
+.ccnt {
+    width: 100%;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50px;
+    border: 1.50px #E51954 solid;
+    justify-content: space-between;
+    align-items: center;
+    display: inline-flex;
+}
+.cntt {
+    padding: 3px 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.cnt-item {
+    justify-content: flex-start;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    gap: 3px;
+}
+
+.c1 {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.btn-icon {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+}
+
+#iconManual{
+    width: auto;
+    height: 12px;
+}
+
+---------------------media-----------------------
+
+.fondo-home {
+    padding: 520rem 10rem; 
+}
+
+.todo-criterios {
+    flex-direction:row;
+}
+
+.contenedor-criterios {
+    min-width: 41%; /* Reduce el ancho mínimo del contenedor principal */
+    max-width: 60%; /* Reduce el ancho máximo del contenedor principal */
+    /* margin: 15px; */
+    padding: 3%;  /* Centra el contenedor en la pantalla */
+}
+
+  /* Media query para pantallas de tabletas en orientación vertical (768px x 1024px) */
+
+@media (max-width: 768px) and (min-width: 1024px) {
+.fondo-home {
+    padding: 2rem; 
+}
+
+.todo-criterios {
+    flex-direction: column;
+}
+
+.contenedor-criterios {
+    min-width: 100%; 
+    max-width: 100%; 
+}
+
+.criterios li {
+    width: 100%; 
+}
+
+
+/* Estilos para pantallas pequeñas (menos de 768px) */
+
+@media (max-width: 767px) {
+
+.fondo-home {
+    padding: 1rem;
+}
+
+.todo-criterios {
+    flex-direction:column-reverse;
+}
+
+.contenedor-criterios {
+    min-width: 100%; 
+    max-width: 100%; 
+}
+
+.criterios li {
+    width: 100%; 
+}
+}
+}

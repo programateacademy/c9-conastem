@@ -1,11 +1,12 @@
 from django.db import models
 from ..GeneralModel import GeneralModel
 
+# 5.4 SOSTENIBILIDAD - ESCUELA, COMUNIDAD Y PERTENENCIA
 
 class SostenibilidadEscuelaComunidadyPertenencia (GeneralModel):
 
     ITEM_CHOICE = [
-        ("5400","Sostenibilidad-Escuela, Comunidad y Pertenencia"),
+        ("5400","SOSTENIBILIDAD-ESCUELA, COMUNIDAD Y COMPROMISO"),
         ("5410","Se mantienen relaciones de cooperación de la empresa privada, entidades educativas y universidades para lograr las experiencias profesionales que requieren los estudiantes en su proceso de selección de carrera."),
         ("5420","Se establecen nuevas relaciones con la comunidad y se mantienen las antiguas para garantizar el liderazgo de la comunidad en el Programa en Educación STEM."),
         ]

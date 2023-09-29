@@ -3,6 +3,7 @@ from django.urls import reverse
 from ..GeneralModel import GeneralModel
 
 # 2.2 INCLUSION DE LA INGENIERIA EN EL AULA
+
 class InclusionIngenieriaAula(GeneralModel):
 
     ITEM_CHOICE = [
