@@ -234,7 +234,7 @@ select {
     place-items: center;
 }
 
-.close a:visited .close a:active .close a:link{
+.close .close a:active .close a:link{
     text-decoration: none;
 }
 

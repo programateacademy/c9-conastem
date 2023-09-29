@@ -2,6 +2,10 @@
     font-family: Inter;
 }
 
+.text {
+    text-align: right;
+}
+
 body {
     margin: 150px 0 0 0 ;
 }
@@ -142,3 +146,9 @@ footer h6 {
     word-wrap: break-word;
 }
 
+/* Media Query para dispositivos móviles (teléfonos) */
+@media screen and (max-width: 767px) {
+    header .text{
+        visibility: hidden;
+    }
+}
