@@ -2,6 +2,8 @@ from django.db import models
 from django.urls import reverse
 from ..GeneralModel import GeneralModel
 
+# 3.5 TECNOLOGÍA PARA LA FORMACIÓN / INSTRUCCIÓN
+
 class TecnologiaFormacion(GeneralModel):
 
     ITEM_CHOICE = [

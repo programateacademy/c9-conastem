@@ -1,57 +1,8 @@
-* {
-    font-family: Inter;
-}
-
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-self: stretch;
-    border-bottom: 4px solid #264094;
-    width: 100%;
-}
-
-
-.logo {
-    display: flex;
-    padding: 0.9375rem 1.875rem;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.625rem;
-}
-
-#menu {
-    display: flex;
-    padding: 0rem 6.25rem;
-    justify-content: space-between;
-    align-items: flex-end;
-    align-content: flex-end;
-    row-gap: 0.125rem;
-    align-self: stretch;
-    flex-wrap: wrap;
-}
-
-#item {
-    display: flex;
-    padding: 1px 15px;
-    flex-direction: column;
-    border-bottom: 2px #000 solid;
-    transition: border 0.3s;
-}
-
-#icons img{
-    transition: swap 0.3s;
-    /* Transición para un cambio suave de color */
-}
-
-
-
-
 /* ---------sroll bar------------ */
 
 .tabla-contenedor {
-    overflow-x: auto;
-    max-width: 100%;
+    overflow: auto;
+    width: 100%;
 }
 
 table {
@@ -73,19 +24,21 @@ table td, table th {
     width: 30%;
     height: 70%;
     background-color: #ffffff;
-    padding: 0 3rem;
-    margin-left: -3.5rem;
-
+    padding: 2rem;
+    margin: 3rem;
 }
+
 body {
-    margin: 0;
+    margin-top: 150px;
     padding: 0;
 }
 .fondo {
     background-image:  url(../images/StemGuardas.jpg);
     background-size: cover; 
     background-repeat: no-repeat;
-    padding: 10rem;
+    padding: 3%;
+    display: flex;
+    justify-content: center;
 }
 th, td {
     min-width: 250px;
@@ -114,14 +67,13 @@ th, td {
     }
     .margen-contenedor {
         border-radius: 40px;
-        width: 50vh;
+        width: 100%;
         height: 70%;
         background-color: #ffffff;
-        padding: 0;
-        margin-left: 10px;
+        padding: 2rem;
+        margin: 3rem;
         justify-content: center;
         align-items: center;
-        margin-top: 2rem;
     }
     h1 {
         font-size:15px;
@@ -138,6 +90,11 @@ th, td {
         background-color:#264094;
         padding:1.5px;
     }
+
+    .tabla-contenedor {
+        overflow: auto;
+        width: 100%;
+    }
 }
 
 
@@ -147,9 +104,7 @@ th, td {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: -2rem;
     gap: 0.25rem;
-    padding-top: 3rem;
 }
 
 
@@ -160,10 +115,10 @@ th, td {
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
-    line-height: 38.5px;
     justify-content: space-between;
     vertical-align: baseline;
     margin-bottom: -10px;
+    align-items: flex-end;
 }
 
 .titulo-texto {
@@ -171,6 +126,8 @@ th, td {
     vertical-align:baseline;
     justify-content: baseline;
     align-items: last baseline;
+    margin-left: 15px;
+    margin-top: -50px;
 }
 
 hr {
@@ -203,10 +160,10 @@ table td, table th {
 
 .margen-contenedor {
     border-radius: 40px;
-    width: 106%;
+    width: 100%;
     background-color: #ffffff;
-    padding: 0 2rem;
-    margin-right: 3rem;
+    padding: 2rem;
+    margin: 3rem;
     box-sizing: border-box;
 }
 
@@ -222,12 +179,22 @@ hr {
     margin: 1rem 0;
 }
 
+.subtitulo a {
+    width: auto;
+    height: auto;
+}
+
+#imagen-crear-datos img, #imagen-crear-datos{
+    width: 120px;
+    height: auto;
+    margin: 0;
+}
 
 @media (max-width: 768px) {
     .margen-contenedor {
-        width: 167%;
+        width: 100%;
         height: 90%;
-        margin-left: -9.3rem;
+        /* margin-left: -9.3rem; */
     }
 
     h1 {
@@ -269,7 +236,7 @@ hr {
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    div.imagen-crear-datos {
+    #imagen-crear-datos {
         display: flex;
         align-items:end;
         margin-bottom: -9px;

@@ -18,16 +18,16 @@
         <div class="container-items2">
           <div class="sections">
             <section id="section1">
-              <h1>Responsables Registrados {{ responsable_detail }}</h1>
+              <h1>Instituciones Educativas</h1>
               <div class="form">
                 <div class="campo-formulario" id="form">
-                  {% if responsable_list %}
-                    {% for personresponsable in responsable_list %}
-                      <a href="{{ personresponsable.get_absolute_url }}">
-                        <button class="cnt">
+                  {% if register_list %}
+                    {%for register in register_list%}
+                    <a href="{{register.get_absolute_url}}">
+                    <button class="cnt">
                           <div class="cntt">
                             <div class="cnt-item">
-                              <div class="textt">{{ personresponsable.last_name }} {{ personresponsable.first_name }}</div>
+                              <div class="textt">{{register.institution_name}}</div>
                             </div>
                           </div>
                         </button>
@@ -37,11 +37,11 @@
                     <p>No se encontraron registros</p>
                   {% endif %}
 
-                    <a href="{% url 'person_responsable_new' %}">
+                    <a href="{% url 'index' %}">
                       <button class="submit">
                         <div class="cntt">
                           <div class="cnt-item">
-                            <div>Agregar Responsable</div>
+                            <div>Agregar Institución</div>
                           </div>
                         </div>
                       </button>

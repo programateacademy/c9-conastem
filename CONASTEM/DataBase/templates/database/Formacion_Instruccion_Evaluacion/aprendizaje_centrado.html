@@ -1,58 +1,72 @@
 {% extends "base_general.html" %}
+{% block content %}
+{% load static %}
 
-{%block content%}
+<link rel="stylesheet" type="text/css" href="{% static 'styles/tables.css' %}">
 
-{% load static %}<div class= "titulo">
-    <img src="{%static 'images/tabla_detail/icon_for_instrucc_eva.svg' %}">
+<body>
+    <div class="fondo">
+<div class= "margen-contenedor">
+<div class= "titulo">
+    <img src="{%static 'images/icons/IconGraph.svg' %}">
     <h1 style="text-transform:uppercase">3000 - Formación / Instrucción / Evaluación</h1>
 </div>
 <div class="subtitulo">
-    <h2 style="text-transform:uppercase">3100 - Aprendizaje centrado en el estudiante</h2>
-    <a href="/database/aprendizaje-centrado/new"><img src="{%static 'images/crear_datos.svg'%}" alt="Crear datos"></a>
+    <div class="titulo-texto">
+        <h2 style="text-transform:uppercase">3100 - Aprendizaje centrado en el estudiante</h2>
+    </div>
+    <a href="/database/aprendizaje-centrado/new">
+        <div id="imagen-crear-datos">
+            <img src="{%static 'images/crear_datos.svg'%}" alt="Crear datos">
+        </div>
+    </a>
 </div>
+<hr>
 
-
-<table >
-    <thead>
+<div class="tabla-contenedor">
+    <div class="tabla-scroll">
+    <table class="celdas">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Numeral</th>
+                <th>Prioridad</th>
+                <th>Departamento Responsable</th>
+                <th>Persona Responsable</th>
+                <th>Fecha límite de seguimiento</th>
+                <th>Fecha de auditoria interna</th>
+                <th>Comentarios Auditoria Interna</th>
+                <th>Fecha de auditoria externa</th>
+                <th>Comentarios Auditoria Externa</th>
+                <th>Enlaces</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for aprendizajecentrado in aprendizaje_centrado_list %}
+            <tr>
+                <td>{{ aprendizajecentrado.codigo }}</td>
+                <td>{{ aprendizajecentrado.numeral }}</td>
+                <td>{{aprendizajecentrado.priority}}</td>
+                <td>{{aprendizajecentrado.dep_responsable}}</td>
+                <td>{{aprendizajecentrado.person_responsable}}</td>
+                <td>{{aprendizajecentrado.track_date}}</td>
+                <td>{{aprendizajecentrado.internal_auditory_date}}</td>
+                <td>{{aprendizajecentrado.internal_auditory_obs}}</td>
+                <td>{{aprendizajecentrado.external_auditory_date}}</td>
+                <td>{{aprendizajecentrado.external_auditory_obs}}</td>
+                <td><a href="{{aprendizajecentrado.evidence}}" traget="_blank">{{aprendizajecentrado.evidence}}</a></td>
+            </tr>
+         {% empty %}
         <tr>
-            <th>Código</th>
-            <th>Numeral</th>
-            <th>Prioridad<th>
-            <th>Departamento Responsable</th>
-            <th>Persona Responsable</th>
-            <th>Fecha límite de seguimiento</th>
-            <th>Fecha de auditoria interna</th>
-            <th>Comentarios Auditoria Interna</th>
-            <th>Fecha de auditoria externa</th>
-            <th>Comentarios Auditoria Externa</th>
-            <th>Enlaces</th>
+            <td colstran="9">No hay registros.</td>
         </tr>
-    </thead>
-    <tbody>
-        
-        {% for aprendizajecentrado in aprendizaje_centrado_list %}
-    <tr>
-        <td>{{ aprendizajecentrado.codigo }}</td>
-        <td>{{ aprendizajecentrado.numeral }}</td>
-        <td>{{aprendizajecentrado.priority}}</td>
-        <td>{{aprendizajecentrado.dep_responsable}}</td>
-        <td>{{aprendizajecentrado.person_responsable}}</td>
-        <td>{{aprendizajecentrado.track_date}}</td>
-        <td>{{aprendizajecentrado.internal_auditory_date}}</td>
-        <td>{{aprendizajecentrado.internal_auditory_obs}}</td>
-        <td>{{aprendizajecentrado.external_auditory_date}}</td>
-        <td>{{aprendizajecentrado.external_auditory_obs}}</td>
-        <td><a href="{{aprendizajecentrado.evidence}}" traget="_blank">{{aprendizajecentrado.evidence}}</a></td>
-
-    </tr>
-    {% empty %}
-    <tr>
-        <td colstran="9">No hay registros.</td>
-    </tr>
-    {% endfor %}
-    
-    </tbody>
-</table>
-
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+</div>
+</div>
+</div>
+</body>
 
 {%endblock content%}

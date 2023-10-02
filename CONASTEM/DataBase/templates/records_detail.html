@@ -1,33 +1,43 @@
-{% extends "base_general.html" %}
+{% extends 'base_general.html' %}
 
-{%block content%}
+{% block content %}
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<div class= "lista"> 
-    <ul>
-        <h1> Información de la institución {{register_detail}} </h1>
+      {% load static %}
+      <link rel="stylesheet" href="{% static 'styles/records_detail.css' %}" />
+      <link href="https://fonts.googleapis.com/css2?family=Inter" rel="stylesheet" type="text/css" />
+      <link href="https://fonts.googleapis.com/css2?family=Questrial" rel="stylesheet" type="text/css" />
+    </head>
 
-        <li>Nombre: {{register_detail.institution_name}} </li>
-        <li>NIT: {{register_detail.nit}} </li>
-        <li>Dirección: {{register_detail.adress}} </li>
-        <li>Responsable: {{register_detail.institution_responsable}} </li>
-        <li>Teléfono: {{register_detail.phone}} </li>
-        <li>Correo electrónico: {{register_detail.email}} </li>
-        <li>Modelo aplicado: {{register_detail.model}} </li>
-        <li>Año de aplicación: {{register_detail.year}} </li>
-    </ul>
-
-</div>  
-<div>
-    <a href="{%url 'register_list'%}"> Atrás </a>
-</div>  
-
-<div class="container-2">
-    <a href="{%url 'person_responsable_new'%}"><button>Apregue responsable</button></a>
-    <img src="{%static 'images/Libro_STEM.svg'%}" alt="Educación STEM Marco de referencia para américa latina"/>
-    <p>Página basada en el libro Educación STEM marco de referencia para América Latina </p>
-    <a href="https://www.conastem.org/marcodereferencia" target="_blank">Descargar libro</a>
-    <a href="">Manual de usuario</a> <!-- Enlazar con la documentación -->
-</div>
-
-
-{%endblock content%}
+    <body>
+      <section id="main">
+        <div class="container-items2">
+          <div class="sections">
+            <section id="section1">
+              <h1>Información de la institución {{ register_detail }}</h1>
+              <div class="form">
+                <div class="campo-formulario" id="form">
+                  <ul>
+                    <li><b>Nombre:</b> {{ register_detail.institution_name }}</li>
+                    <li><b>NIT:</b> {{ register_detail.nit }}</li>
+                    <li><b>Dirección:</b> {{ register_detail.adress }}</li>
+                    <li><b>Responsable:</b> {{ register_detail.institution_responsable }}</li>
+                    <li><b>Teléfono:</b> {{ register_detail.phone }}</li>
+                    <li><b>Correo electrónico:</b> {{ register_detail.email }}</li>
+                    <li><b>Modelo aplicado:</b> {{ register_detail.model }}</li>
+                    <li><b>Año de aplicación:</b> {{ register_detail.year }}</li>
+                  </ul>
+                  <a href="{% url 'register_list' %}"><button class="submit-fucsia">Atrás</button></a>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </body>
+  </html>
+{% endblock %}

@@ -2,7 +2,7 @@ from django.db import models
 from django.urls import reverse
 from ..GeneralModel import GeneralModel
 
-# 2.1 Consideraciones sobre las áreas y asignaturas
+# 2.1 CONSIDERACIONES SOBRE LAS ÁREAS Y LAS ASIGNATURAS
 
 class ConsideracionesSobreAreasYAsignaturas (GeneralModel):
     ITEM_CHOICE = [

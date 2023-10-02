@@ -2,7 +2,8 @@ from django.db import models
 from django.urls import reverse
 from ..GeneralModel import GeneralModel
 
-# 2.7 Desarrollo de las habilidadees del siglo XXI
+# 2.7 DESARROLLO DE LAS HABILIDADES DEL SIGLO XXI
+
 class DesarrolloHabilidadesSigloXXI(GeneralModel):
 
     ITEM_CHOICE = [

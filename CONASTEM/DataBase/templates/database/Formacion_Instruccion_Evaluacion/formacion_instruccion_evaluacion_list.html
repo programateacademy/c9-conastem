@@ -1,29 +1,118 @@
-{% extends "base_general.html" %}
+{% extends "base_general.html" %} {%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-{%block content%}
-
-{% load static %}
-
-<div class= "titulo">
-        <img src="{%static 'images/tabla_detail/icon_for_instrucc_eva.svg' %}">
-        <h1 style="text-transform:uppercase">3000 - Formación / Instrucción / Evaluación</h1>
-</div>
-
-<p>Selecciona un subcriterio para continuar:</p>
-
-<section class= "lista">
-<ul>
-        <li><a href="{%url 'aprendizaje_centrado_list'%}">3100-APRENDIZAJE CENTRADO EN EL ESTUDIANTE</a></li>
-        <li><a href="{%url 'AprendizajeRiguroso_List'%}">3200-APRENDIZAJE RIGUROSO</a></li>
-        <li><a href="{%url 'PlaneacionyCreaciondeActividades_List'%}">3300-PLANEACIÓN Y CREACIÓN DE ACTIVIDADES</a></li>
-        <li><a href="{%url 'educacion_stem_integrada_list'%}">3400-EDUCACION STEM INTEGRADA</a></li>
-        <li><a href="{%url 'tecnologia_para_Formacion_list'%}">3500-TECNOLOGÍA PARA LA FORMACIÓN / INSTRUCCIÓN</a></li>
-        <li><a href="{%url 'EstrategiasFormativas_List'%}">3600-ESTRATEGIAS FORMATIVAS</a></li>
-        <li><a href="{%url 'eleccion_carrera_list'%}">3700-ELECCIÓN DE CARRERA</a></li>
-        <li><a href="{%url 'AprendizajeExtendido_List'%}">3800-APRENDIZAJE EXTENDIDO</a></li>
-        <li><a href="{%url 'sostenibilidad_list'%}">3900-SOSTENIBILIDAD - FORMACIÓN / INSTRUCCIÓN / EVALUACIÓN</a></li>
-</ul>
-
-</section>
-
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/subcriterio_styles.css' %}"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial" rel="stylesheet" type="text/css"/>
+</head>                   
+<body>
+    <section id="main">
+        <div class="container-items2">
+        <div class="sections">
+            <section id="section1">
+            <div class="encabezado">
+                <div class="titulo-principal">
+                    <div class="container-icon">
+                        <img id="icon" src="{% static 'images/icons/IconGraph.svg' %}" alt="Ícono Formación/ Instrucción/ Evaluación" />
+                    </div>
+                    <h1>3000. Formación, Instrucción Y Evaluación</h1>
+                </div>
+            </div>
+            <div class="form">
+                <div class="campo-formulario" id="form">
+                <p>Selecciona un subcriterio para continuar:</p>
+                <a href="{%url 'aprendizaje_centrado_list'%}">
+                    <button class="cnt">
+                        <div class="cntt">
+                            <div class="cnt-item">
+                                <div class="textt"><b>3100.</b>APRENDIZAJE CENTRADO EN EL ESTUDIANTE</div>
+                            </div>
+                        </div>
+                    </button>
+                </a>
+                <a href="{%url 'AprendizajeRiguroso_List'%}">
+                    <button class="cnt">
+                        <div class="cntt">
+                            <div class="cnt-item">
+                                <div class="textt"><b>3200.</b>APRENDIZAJE RIGUROSO</div>
+                            </div>
+                        </div>
+                    </button>
+                </a>
+                <a href="{%url 'PlaneacionyCreaciondeActividades_List'%}">
+                    <button class="cnt">
+                        <div class="cntt">
+                            <div class="cnt-item">
+                                <div class="textt"><b>3300.</b>PLANEACIÓN Y CREACIÓN DE ACTIVIDADES</div>
+                            </div>
+                        </div>
+                    </button>
+                </a>
+                <a href="{%url 'educacion_stem_integrada_list'%}">
+                    <button class="cnt">
+                        <div class="cntt">
+                            <div class="cnt-item">
+                                <div class="textt"><b>3400.</b>EDUCACION STEM INTEGRADA</div>
+                            </div>
+                        </div>
+                    </button>
+                </a>
+                <a href="{%url 'tecnologia_para_Formacion_list'%}">
+                    <button class="cnt">
+                        <div class="cntt">
+                            <div class="cnt-item">
+                            <div class="textt"><b>3500.</b>TECNOLOGÍA PARA LA FORMACIÓN E INSTRUCCIÓN</div>
+                            </div>
+                        </div>
+                    </button>
+                </a>
+                <a href="{%url 'EstrategiasFormativas_List'%}">
+                    <button class="cnt">
+                        <div class="cntt">
+                            <div class="cnt-item">
+                                <div class="textt"><b>3600.</b>ESTRATEGIAS FORMATIVAS</div>
+                            </div>
+                        </div>
+                    </button>
+                </a>
+                <a href="{%url 'eleccion_carrera_list'%}">
+                    <button class="cnt">
+                        <div class="cntt">
+                            <div class="cnt-item">
+                                <div class="textt"><b>3700.</b>ELECCIÓN DE CARRERA</div>
+                            </div>
+                        </div>
+                    </button>
+                </a>
+                <a href="{%url 'AprendizajeExtendido_List'%}">
+                        <button class="cnt">
+                            <div class="cntt">
+                                <div class="cnt-item">
+                                    <div class="textt"><b>3800.</b>APRENDIZAJE EXTENDIDO</div>
+                                </div>
+                            </div>
+                        </button>
+                </a>
+                <a href="{%url 'sostenibilidad_list'%}">
+                        <button class="cnt">
+                            <div class="cntt">
+                                <div class="cnt-item">
+                                    <div class="textt"><b>3900.</b>SOSTENIBILIDAD, FORMACIÓN, INSTRUCCIÓN Y EVALUACIÓN</div>
+                                </div>
+                            </div>
+                        </button>
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
 {%endblock content%}

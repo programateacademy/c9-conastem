@@ -2,10 +2,12 @@ from django.db import models
 from django.urls import reverse
 from ..GeneralModel import GeneralModel
 
+# 1.6 EQUIDAD 
+
 class Equidad(GeneralModel):
 
     ITEM_CHOICE = [
-        ("1600","Equidad"),
+        ("1600","EQUIDAD"),
         ("1610","Todos los estudiantes reciben acceso equitativo a la formación y a los programas. No se selecciona únicamente a los estudiantes con gusto por las asignaturas S.T.E.M., todos los estudiantes hacen parte del programa."),
         ("1620","Todos los estudiantes con necesidades específicas e identificadas están siendo ubicados para facilitar su adaptación. Aprendizaje individualizado."),
         ("1630","Se han diseñado acciones o planes especiales para alentar a los estudiantes con bajo interés o desempeño a desarrollar interés en las carreras STEM."),
