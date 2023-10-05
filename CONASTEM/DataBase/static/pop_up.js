@@ -15,6 +15,6 @@ close.onclick = function() {
 }
 
 // Cerrar en ventana y redirigir a una nueva pestaña
-// popup.onclick = function() {
-// 	popup.style.visibility = "hidden";
-// }
+popup.onclick = function() {
+	popup.style.visibility = "hidden";
+}
