@@ -14,9 +14,12 @@
 .todo-criterios {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     align-self: stretch;
-    margin-right: 4rem;
+    margin: 5%;
+    width: auto;
+    flex-wrap: wrap;
+    gap: 3%;
 }
 /* Estilo para el contenedor de criterios */
 .contenedor-criterios h1 {
@@ -28,15 +31,16 @@
     text-align: center;
 }
 
-
-
   /* Estilo para la lista no ordenada <ul> dentro de la clase "criterios" */
 .criterios ul {
-    list-style: none; /* Eliminar los puntos de la lista */
-    padding: 0; /* Eliminar el espacio interior en la lista */
-    display: flex; /* Hacer que los elementos de la lista sean flexibles */
-    flex-direction: column; /* Cambiar la dirección a columna */
-    align-items: center; /* Centrar los elementos verticalmente */
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
 }
 
   /* Estilo para cada elemento <li> dentro de la clase "criterios" */
@@ -45,8 +49,8 @@
     padding: 10px;
     border: 3px solid #ccc; 
     border-radius: 35px; 
-    width: 150px; 
-    height: 150px; 
+    width: 200px; 
+    height: 130px; 
     display: flex;
     flex-direction: column; 
     justify-content: center;
@@ -69,10 +73,12 @@
     border-color: #FBBB3D;
 }
 
-
+.li-container {
+    margin: 5px;
+}
 /* ---------------------------------------LIBRO-------------------------------------- */
 .libro{
-    margin: 5em;
+    /* margin: 5em; */
     max-width: 284px;
     min-width: 284px;
     min-height:648px;
@@ -88,35 +94,31 @@
     justify-content: center;
     align-items: center;
     display: flex;
-    max-width: 284px;
-    min-width: 284px;
-    max-height:648px;
 }
-
-
 
 .container2 {
     border-radius: 25px;
     overflow: hidden;
-    justify-content: center;
-    align-items: center;
     display: inline-flex;
+    flex-direction: column;
+    align-content: flex-end;
+    align-items: flex-end;
+    width: 204px;
 }
 
 #section2 .img-book {
-    width: 284px;
-    height: 376px;
+    width: 204px;
+    height: auto;
     border-radius: 25px;
 }
 
 .container3 {
     align-self: stretch;
     height: auto;
-    padding: 30px 15px;
+    padding: 0 15px 30px 15px;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    gap: 20px;
     display: flex;
 }
 
@@ -130,16 +132,24 @@
     display: inline-flex;
 }
 
-#section3 p {
+.text {
+    align-self: stretch;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    display: inline-flex;
+    font-weight: 500;
+}
+
+.container3 p {
     flex: 1 1 0;
     text-align: right;
     color: black;
-    font-size: 15px;
+    font-size: 13px;
     font-family: Questrial;
-    font-weight: 400;
-    line-height: 30px;
+    line-height: 20px;
     word-wrap: break-word;
-    flex: 1 1 0;
 }
 
 #section2 .buttons {
@@ -159,30 +169,25 @@
 }
 
 .button1 {
-    padding: 5px 20px;
+    padding: 5px 15px;
     background: #264094;
     border-radius: 25px;
     justify-content: center;
     align-items: center;
-    gap: 10px;
     display: inline-flex;
     text-align: center;
-    color: white;
-    font-size: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 13px;
     font-family: Inter;
     font-weight: 600;
-    line-height: 30px;
-    word-wrap: break-word;
 }
 
 .button2 {
     text-align: right;
     color: #264094;
-    font-size: 14px;
+    font-size: 12px;
     font-family: Inter;
     font-weight: 500;
-    line-height: 30px;
-    word-wrap: break-word;
 }
 
 .cnt {
@@ -190,15 +195,25 @@
     padding: 5px;
     background: rgba(255, 255, 255, 0.15);
     border-radius: 50px;
-    border: 1.5px #264094 solid;
-    justify-content: space-between;
+    border: 1.50px #264094 solid;
+    justify-content: center;
     align-items: center;
     display: inline-flex;
 }
 
+
+.ccnt {
+    width: 100%;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50px;
+    border: 1.50px #E51954 solid;
+    justify-content: space-between;
+    align-items: center;
+    display: inline-flex;
+}
 .cntt {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 3px 10px;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -206,14 +221,15 @@
 
 .cnt-item {
     justify-content: flex-start;
+    width: 100%;
     align-items: center;
     display: flex;
+    gap: 3px;
 }
 
 .c1 {
-    width: 36px;
-    height: 32px;
-    border-radius: 25px;
+    width: auto;
+    height: auto;
     overflow: hidden;
     justify-content: center;
     align-items: center;
@@ -221,19 +237,15 @@
 }
 
 .btn-icon {
-    flex: 1 1 0;
-    align-self: stretch;
-    padding: 15px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
     display: inline-flex;
 }
 
-#iconManual {
-    width: 27px;
-    height: 19px;
+#iconManual{
+    width: auto;
+    height: 12px;
 }
 
 ---------------------media-----------------------
@@ -248,13 +260,9 @@
 
 .contenedor-criterios {
     min-width: 41%; /* Reduce el ancho mínimo del contenedor principal */
-    max-width: 41%; /* Reduce el ancho máximo del contenedor principal */
-    margin: 15px;
-    padding: 120px; ; /* Centra el contenedor en la pantalla */
-}
-
-.criterios li {
-    width: 200px; 
+    max-width: 60%; /* Reduce el ancho máximo del contenedor principal */
+    /* margin: 15px; */
+    padding: 3%;  /* Centra el contenedor en la pantalla */
 }
 
   /* Media query para pantallas de tabletas en orientación vertical (768px x 1024px) */
